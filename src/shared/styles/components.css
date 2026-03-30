@@ -314,12 +314,10 @@
   pointer-events: none;
 }
 
-/* text-wrap: balance handles the letter-spacing that pretext can't measure */
+/* No letter-spacing here — pretext can't measure it, and we use pretext to balance this title */
 .hero__title {
   font-size: var(--text-4xl);
   font-weight: var(--font-weight-bold);
-  letter-spacing: -0.035em;
-  text-wrap: balance;
   margin-bottom: var(--space-4);
   background: linear-gradient(135deg, #fff 0%, var(--color-text-secondary) 100%);
   -webkit-background-clip: text;
@@ -331,7 +329,6 @@
 .hero__tagline {
   font-size: var(--text-xl);
   color: var(--color-text-secondary);
-  text-wrap: balance;
   margin-bottom: var(--space-10);
   max-width: 480px;
   margin-left: auto;

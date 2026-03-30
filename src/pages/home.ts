@@ -1,4 +1,4 @@
-import { prepare, layout } from '@chenglou/pretext'
+import { prepare, layout, prepareWithSegments, walkLineRanges } from '@chenglou/pretext'
 import { waitForFonts, timeExecution } from '../shared/pretext-helpers'
 import { tracks } from '../shared/nav-data'
 
@@ -95,6 +95,61 @@ async function init() {
       </div>
     </div>
   `
+
+  // --- Balance the hero title with pretext ---
+  const heroTitle = document.getElementById('hero-title')!
+
+  function balanceTitle() {
+    // Clear any previous constraint and force layout flush
+    heroTitle.style.maxWidth = 'none'
+    const maxWidth = heroTitle.offsetWidth // offsetWidth forces reflow
+
+    // Build font string from individual computed properties — avoids
+    // the full fallback chain that getComputedStyle().font includes
+    const cs = getComputedStyle(heroTitle)
+    const font = `${cs.fontWeight} ${cs.fontSize} Inter`
+    const lh = parseFloat(cs.lineHeight) || 68
+
+    const prepared = prepareWithSegments(HERO_TEXT, font)
+    const normalLines = layout(prepared, maxWidth, lh).lineCount
+    if (normalLines <= 1) {
+      heroTitle.style.maxWidth = ''
+      return
+    }
+
+    // Find min width that keeps the same line count
+    let lo = 0, hi = maxWidth
+    while (hi - lo > 1) {
+      const mid = (lo + hi) >>> 1
+      layout(prepared, mid, lh).lineCount <= normalLines ? hi = mid : lo = mid
+    }
+    const minWidth = hi
+
+    // Sample across the valid range, pick the width with most even lines
+    let bestWidth = maxWidth
+    let bestImbalance = Infinity
+    const samples = 50
+    const step = Math.max(1, (maxWidth - minWidth) / samples)
+    for (let w = minWidth; w <= maxWidth; w += step) {
+      const rw = Math.round(w)
+      if (layout(prepared, rw, lh).lineCount !== normalLines) continue
+      const widths: number[] = []
+      walkLineRanges(prepared, rw, (line) => { widths.push(line.width) })
+      if (widths.length < 2) continue
+      const imbalance = Math.max(...widths) - Math.min(...widths)
+      if (imbalance < bestImbalance) {
+        bestImbalance = imbalance
+        bestWidth = rw
+      }
+    }
+
+    heroTitle.style.maxWidth = `${bestWidth}px`
+    heroTitle.style.marginLeft = 'auto'
+    heroTitle.style.marginRight = 'auto'
+  }
+
+  balanceTitle()
+  new ResizeObserver(() => requestAnimationFrame(balanceTitle)).observe(heroTitle.parentElement!)
 
   // --- Hero canvas background animation ---
   const heroCanvas = document.getElementById('hero-canvas') as HTMLCanvasElement
