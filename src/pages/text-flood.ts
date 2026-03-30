@@ -142,7 +142,8 @@ async function init() {
     totalLayoutTime = 0
     solved = false
     resultArea.innerHTML = ''
-    gameArea.style.width = `${level.containerWidth + 32}px`
+    // containerWidth + 32px padding + 2px border = exact text content width match
+    gameArea.style.width = `${level.containerWidth + 34}px`
     renderWords()
   }
 
