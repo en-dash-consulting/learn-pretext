@@ -39,8 +39,8 @@ const LEVEL_DEFS: LevelDef[] = [
   },
 ]
 
-// Built at runtime after fonts load — target = one fewer line than the full text
-let LEVELS: { text: string; containerWidth: number; targetHeight: number; par: number }[] = []
+// targetHeight is calibrated at runtime in loadLevel() using the actual DOM width
+const LEVELS: { text: string; containerWidth: number; targetHeight: number; par: number }[] = LEVEL_DEFS.map(d => ({ ...d, targetHeight: 0 }))
 
 async function init() {
   const content = document.getElementById('page-content')
@@ -48,13 +48,7 @@ async function init() {
 
   await waitForFonts()
 
-  // Calibrate levels: measure each text at its width, set target = height minus one line
-  LEVELS = LEVEL_DEFS.map(def => {
-    const prepared = prepare(def.text, FONT)
-    const fullResult = layout(prepared, def.containerWidth, LINE_HEIGHT)
-    const targetHeight = (fullResult.lineCount - 1) * LINE_HEIGHT
-    return { ...def, targetHeight }
-  })
+  // Calibration happens in loadLevel after we can read the DOM width
 
   content.innerHTML = `
     <div class="content__header">
@@ -134,6 +128,10 @@ async function init() {
 
   resetBtn.addEventListener('click', loadLevel)
 
+  // The actual text content width, read from the DOM after rendering.
+  // This ensures pretext measures at exactly the same width the browser uses.
+  let measuredContentWidth = 0
+
   function loadLevel() {
     const level = LEVELS[currentLevel]!
     words = level.text.split(' ')
@@ -142,8 +140,16 @@ async function init() {
     totalLayoutTime = 0
     solved = false
     resultArea.innerHTML = ''
-    // containerWidth + 32px padding + 2px border = exact text content width match
-    gameArea.style.width = `${level.containerWidth + 34}px`
+    gameArea.style.width = `${level.containerWidth}px`
+    // Force layout, then read the actual text content width
+    textContainer.textContent = 'x'
+    measuredContentWidth = textContainer.clientWidth
+
+    // Calibrate target: measure full text at the real width, target = one fewer line
+    const prepared = prepare(level.text, FONT)
+    const fullResult = layout(prepared, measuredContentWidth, LINE_HEIGHT)
+    level.targetHeight = (fullResult.lineCount - 1) * LINE_HEIGHT
+
     renderWords()
   }
 
@@ -151,10 +157,10 @@ async function init() {
     return words.filter((_, i) => !removed.has(i)).join(' ')
   }
 
-  function measureHeight(text: string, width: number): { height: number; lineCount: number; elapsed: number } {
+  function measureHeight(text: string): { height: number; lineCount: number; elapsed: number } {
     const { result, elapsed } = timeExecution(() => {
       const prepared = prepare(text, FONT)
-      return layout(prepared, width, LINE_HEIGHT)
+      return layout(prepared, measuredContentWidth, LINE_HEIGHT)
     })
     layoutCalls++
     totalLayoutTime += elapsed
@@ -164,8 +170,7 @@ async function init() {
   function renderWords() {
     const level = LEVELS[currentLevel]!
     const text = getCurrentText()
-    const contentWidth = level.containerWidth
-    const { height, lineCount, elapsed } = measureHeight(text, contentWidth)
+    const { height, lineCount, elapsed } = measureHeight(text)
 
     textContainer.innerHTML = ''
     const remainingIndices = words.map((_, idx) => idx).filter(idx => !removed.has(idx))
