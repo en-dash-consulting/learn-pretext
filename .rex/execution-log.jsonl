@@ -40,3 +40,40 @@
 {"timestamp":"2026-03-30T01:23:08.778Z","event":"status_changed","itemId":"e22af7a0-a0c5-4782-a507-169d7cff062b","detail":"in_progress → pending (forced)"}
 {"timestamp":"2026-03-30T01:50:15.220Z","event":"status_changed","itemId":"d2a4a3fd-f55f-400b-ac28-9c86263814f7","detail":"in_progress → completed"}
 {"timestamp":"2026-03-30T01:50:54.230Z","event":"task-completed","itemId":"d2a4a3fd-f55f-400b-ac28-9c86263814f7","detail":"Project Scaffold: Vite MPA + TS strict + pretext + shiki + vitest + jsdom. 18 page HTML entries, CSS architecture, nav-data, pretext-helpers, 5 shared components, all 18 page implementations. tsc clean, vite build passes, 16 tests pass."}
+{"timestamp":"2026-03-30T01:51:42.547Z","event":"status_changed","itemId":"1a9d1d3f-a35e-4b4f-80b0-190d598f8426","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:44.663Z","event":"status_changed","itemId":"bf466bd8-62e3-4cfc-a982-e991093ee53a","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:47.493Z","event":"status_changed","itemId":"3c87c2d2-58a9-47f7-b9cc-614db08c2101","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:49.896Z","event":"status_changed","itemId":"3ece01fe-1ef6-4ec0-b95b-ca7622390a3a","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:53.280Z","event":"status_changed","itemId":"7fd31069-6377-4976-82c2-658d29c11510","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:53.286Z","event":"auto_completed","itemId":"d271ba4e-9b6f-4a11-9e7d-4d8788fcc2bd","detail":"Auto-completed epic: Site Shell & Infrastructure (all children done)"}
+{"timestamp":"2026-03-30T01:51:56.476Z","event":"status_changed","itemId":"e22af7a0-a0c5-4782-a507-169d7cff062b","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:59.387Z","event":"status_changed","itemId":"08d86e0c-b096-42d8-9221-e705c2edfcf0","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:51:59.395Z","event":"auto_completed","itemId":"3b107d39-55eb-4a75-871e-96ee27dfa7fa","detail":"Auto-completed epic: Design System (all children done)"}
+{"timestamp":"2026-03-30T01:52:05.413Z","event":"status_changed","itemId":"36fe57b2-d535-42b7-9578-bfc5303229f7","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:08.501Z","event":"status_changed","itemId":"ad332b2b-3c64-4d32-85d7-72d81c567cfd","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:11.810Z","event":"status_changed","itemId":"fae6a69e-2a9a-4ad5-bf10-f1602135ad36","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:11.817Z","event":"auto_completed","itemId":"7d6202f1-cfbf-453a-ab31-977c681dde94","detail":"Auto-completed epic: Foundations Track (all children done)"}
+{"timestamp":"2026-03-30T01:52:14.274Z","event":"status_changed","itemId":"e6361419-8a0d-450e-b984-26e6ec4ae986","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:17.902Z","event":"status_changed","itemId":"fbea8d75-c077-41cb-80a9-8b3c49e1fd7b","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:20.552Z","event":"status_changed","itemId":"c98a11b0-4ae0-4e8a-b153-5c3d84ded6fe","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:22.803Z","event":"status_changed","itemId":"c1a789c2-3354-487d-bbbd-f41c6e106bfe","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:25.548Z","event":"status_changed","itemId":"cc1e9124-ab85-4553-b313-b10fedc29148","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:25.555Z","event":"auto_completed","itemId":"ba2fa61a-c689-4b7d-8e6b-830370ce8b73","detail":"Auto-completed epic: Core Patterns Track (all children done)"}
+{"timestamp":"2026-03-30T01:52:30.593Z","event":"status_changed","itemId":"ee448aec-553a-439f-989a-3084df394b63","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:33.716Z","event":"status_changed","itemId":"9638b4d5-db9b-4d8a-bd5e-5bbf8aca780f","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:36.387Z","event":"status_changed","itemId":"6df49f0c-6ed1-4f15-aa14-3f343951733b","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:39.073Z","event":"status_changed","itemId":"0b0e76d0-b524-47bd-9531-a27034f9cfdf","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:42.090Z","event":"status_changed","itemId":"ae92b1d7-9b74-4671-a3cb-8c568e4699a3","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:42.096Z","event":"auto_completed","itemId":"07e67b04-1e69-4fb7-ba9f-2a77e1968ac3","detail":"Auto-completed epic: Advanced Track (all children done)"}
+{"timestamp":"2026-03-30T01:52:45.713Z","event":"status_changed","itemId":"5d4237c2-2bb6-46fc-bda2-f7329a2c7507","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:48.427Z","event":"status_changed","itemId":"8c4e8e8d-8af5-48d4-9951-5b19244dc78d","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:48.433Z","event":"auto_completed","itemId":"bebd5052-6761-435f-b072-6d1e2c9e68cd","detail":"Auto-completed epic: Creative Track (all children done)"}
+{"timestamp":"2026-03-30T01:52:51.047Z","event":"status_changed","itemId":"be677976-b312-4cae-8b2a-72df950cf37b","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:53.332Z","event":"status_changed","itemId":"8d20e4da-abc8-4891-89cc-d92cf2bbbcf6","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:56.202Z","event":"status_changed","itemId":"d042e4bd-5d1e-4f31-ad1e-ad9865738354","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:52:56.208Z","event":"auto_completed","itemId":"d08e1b27-9ce4-486b-8cc1-b9836f1554f7","detail":"Auto-completed epic: Reference Track (all children done)"}
+{"timestamp":"2026-03-30T01:53:02.823Z","event":"status_changed","itemId":"c08597dc-87e9-48e1-aebe-6d00033234db","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:53:06.136Z","event":"status_changed","itemId":"ce00ef46-dc0c-4329-9ef3-e52cfd6d624c","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:53:09.688Z","event":"status_changed","itemId":"f0c3fcfa-5d48-44e5-b2b1-24d4576b3182","detail":"pending → completed"}
+{"timestamp":"2026-03-30T01:53:09.694Z","event":"auto_completed","itemId":"87bf1bc3-77f0-4663-b638-dd32d37ebe3d","detail":"Auto-completed epic: Non-Functional Requirements (all children done)"}
+{"timestamp":"2026-03-30T01:53:17.211Z","event":"project-complete","detail":"All 8 epics and 29 features completed. Initial scaffold commit with all 18 pages, shell, design system, shared components, tests (16 passing). tsc clean, vite build passes. Rex fully up to date."}
