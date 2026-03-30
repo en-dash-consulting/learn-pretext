@@ -27,6 +27,7 @@ export default defineConfig({
         'api-reference': resolve(__dirname, 'pages/api-reference.html'),
         performance: resolve(__dirname, 'pages/performance.html'),
         caveats: resolve(__dirname, 'pages/caveats.html'),
+        about: resolve(__dirname, 'pages/about.html'),
       },
     },
   },

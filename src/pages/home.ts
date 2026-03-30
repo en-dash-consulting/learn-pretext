@@ -37,11 +37,15 @@ async function init() {
 
       <div style="position:relative;z-index:1;">
         <div class="hero__badge" style="display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-3);background:var(--color-accent-muted);border:1px solid rgba(129,140,248,0.15);border-radius:var(--radius-lg);font-size:var(--text-xs);color:var(--color-accent);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-6);letter-spacing:0.02em;">
-          @chenglou/pretext
+          A community learning resource
         </div>
 
         <h1 class="hero__title" id="hero-title">${HERO_TEXT}</h1>
         <p class="hero__tagline">${SUBTITLE_TEXT}</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-tertiary);max-width:480px;margin:0 auto var(--space-6);text-align:center;">
+          Interactive demos and tutorials for <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener" style="color:var(--color-accent);">pretext</a>, created by <a href="https://github.com/chenglou" target="_blank" rel="noopener" style="color:var(--color-accent);">Cheng Lou</a>.
+          This site is an independent resource by <a href="https://endash.us" target="_blank" rel="noopener" style="color:var(--color-accent);">En Dash</a>.
+        </p>
 
         <div id="hero-perf" style="display:flex;justify-content:center;gap:var(--space-6);margin-bottom:var(--space-8);flex-wrap:wrap;"></div>
 

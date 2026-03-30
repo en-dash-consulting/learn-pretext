@@ -51,6 +51,7 @@ export const tracks: NavTrack[] = [
       { slug: 'api-reference', title: 'API Reference', href: '/pages/api-reference.html' },
       { slug: 'performance', title: 'Performance Guide', href: '/pages/performance.html' },
       { slug: 'caveats', title: 'Caveats & Recipes', href: '/pages/caveats.html' },
+      { slug: 'about', title: 'About This Site', href: '/pages/about.html' },
     ],
   },
 ]

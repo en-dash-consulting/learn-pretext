@@ -6,9 +6,9 @@ describe('nav-data', () => {
     expect(tracks).toHaveLength(5)
   })
 
-  it('has 18 total pages', () => {
+  it('has 19 total pages', () => {
     const total = tracks.reduce((sum, t) => sum + t.pages.length, 0)
-    expect(total).toBe(18)
+    expect(total).toBe(19)
   })
 
   it('track names are correct', () => {
@@ -52,7 +52,7 @@ describe('nav-data', () => {
   })
 
   it('getNextPage returns null for last page', () => {
-    expect(getNextPage('caveats')).toBeNull()
+    expect(getNextPage('about')).toBeNull()
   })
 
   it('all pages have valid hrefs', () => {

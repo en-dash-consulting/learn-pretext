@@ -2,8 +2,6 @@ import { prepare, layout } from '@chenglou/pretext'
 import { waitForFonts, FONT, LINE_HEIGHT, timeExecution } from '../shared/pretext-helpers'
 import { createSourceViewer } from '../components/source-viewer'
 import { createPerfMeter } from '../components/performance-meter'
-import { createToggle } from '../components/toggle'
-
 const SAMPLE_TEXTS = Array.from({ length: 200 }, (_, i) => {
   const variants = [
     'The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow.',
@@ -57,13 +55,12 @@ async function init() {
 
     <div class="content__section">
       <h2>Live Comparison: 200 Text Blocks</h2>
-      <div id="toggle-container" style="margin-bottom:var(--space-4)"></div>
-      <div id="perf-container" style="margin-bottom:var(--space-4)"></div>
-      <div class="demo-area" id="demo-area">
-        <p style="color:var(--color-text-secondary);font-size:var(--text-sm)">Click "Run Benchmark" to measure 200 text blocks using both methods.</p>
-        <button id="run-btn" style="margin-top:var(--space-3);padding:var(--space-2) var(--space-4);background:var(--color-accent);color:var(--color-text-inverse);border:none;border-radius:var(--radius-sm);cursor:pointer;font-weight:500;">Run Benchmark</button>
-        <div id="result-display" style="margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-secondary)"></div>
+      <p>Both methods measure the same 200 texts at 400px width. Hit the button to see the difference on your hardware.</p>
+      <div class="demo-area" id="demo-area" style="text-align:center;">
+        <button id="run-btn" style="padding:var(--space-3) var(--space-6);background:var(--gradient-accent);color:var(--color-text-inverse);border:none;border-radius:var(--radius-md);cursor:pointer;font-weight:600;font-size:var(--text-base);box-shadow:var(--shadow-md);transition:all 200ms ease;">Run Benchmark</button>
+        <div id="result-display" style="margin-top:var(--space-6);text-align:left;"></div>
       </div>
+      <div id="perf-container" style="margin-top:var(--space-4)"></div>
       <div id="source-comparison"></div>
     </div>
 
@@ -97,33 +94,42 @@ async function init() {
   const resultDisplay = document.getElementById('result-display')!
   const runBtn = document.getElementById('run-btn') as HTMLButtonElement
 
-  let useDom = true
-
-  createToggle(document.getElementById('toggle-container')!, {
-    label: 'Use DOM Measurement (toggle off for Pretext)',
-    active: true,
-    onChange: (active) => { useDom = active },
-  })
-
   runBtn.addEventListener('click', () => {
     const width = 400
+    runBtn.textContent = 'Running...'
+    runBtn.disabled = true
 
-    // Always run both to compare
-    const { elapsed: domTime } = timeExecution(() => domMeasureBatch(SAMPLE_TEXTS, width))
-    const { elapsed: pretextTime } = timeExecution(() => pretextMeasureBatch(preparedTexts, width))
+    // Slight delay so the button state renders
+    requestAnimationFrame(() => {
+      const { elapsed: domTime } = timeExecution(() => domMeasureBatch(SAMPLE_TEXTS, width))
+      const { elapsed: pretextTime } = timeExecution(() => pretextMeasureBatch(preparedTexts, width))
 
-    perfMeter.update([
-      { label: 'DOM (200 texts)', value: domTime, slow: true },
-      { label: 'Pretext (200 texts)', value: pretextTime },
-    ])
+      perfMeter.update([
+        { label: 'DOM (200 texts)', value: domTime, slow: true },
+        { label: 'Pretext (200 texts)', value: pretextTime },
+      ])
 
-    const speedup = domTime / Math.max(pretextTime, 0.001)
-    resultDisplay.innerHTML = `
-      <p>DOM measurement: <strong style="color:var(--color-error)">${domTime.toFixed(2)}ms</strong></p>
-      <p>Pretext: <strong style="color:var(--color-accent)">${pretextTime.toFixed(2)}ms</strong></p>
-      <p>Pretext is <strong style="color:var(--color-success)">${speedup.toFixed(0)}x faster</strong></p>
-      <p style="margin-top:var(--space-2);color:var(--color-text-tertiary)">Each run measures all 200 text blocks at ${width}px width.</p>
-    `
+      const speedup = domTime / Math.max(pretextTime, 0.001)
+      resultDisplay.innerHTML = `
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--space-4);text-align:center;">
+          <div style="padding:var(--space-4);background:var(--color-bg-surface);border-radius:var(--radius-md);border:1px solid var(--color-border);">
+            <div style="font-family:var(--font-code);font-size:var(--text-2xl);font-weight:700;color:var(--color-error);font-variant-numeric:tabular-nums;">${domTime.toFixed(1)}ms</div>
+            <div style="font-size:var(--text-xs);color:var(--color-text-tertiary);margin-top:var(--space-1);text-transform:uppercase;letter-spacing:0.05em;">DOM</div>
+          </div>
+          <div style="padding:var(--space-4);background:var(--color-bg-surface);border-radius:var(--radius-md);border:1px solid var(--color-border);">
+            <div style="font-family:var(--font-code);font-size:var(--text-2xl);font-weight:700;color:var(--color-success);font-variant-numeric:tabular-nums;">${pretextTime < 0.1 ? pretextTime.toFixed(2) : pretextTime.toFixed(1)}ms</div>
+            <div style="font-size:var(--text-xs);color:var(--color-text-tertiary);margin-top:var(--space-1);text-transform:uppercase;letter-spacing:0.05em;">Pretext</div>
+          </div>
+          <div style="padding:var(--space-4);background:var(--gradient-accent-soft);border-radius:var(--radius-md);border:1px solid rgba(129,140,248,0.15);">
+            <div style="font-family:var(--font-code);font-size:var(--text-2xl);font-weight:700;color:var(--color-accent);font-variant-numeric:tabular-nums;">${speedup.toFixed(0)}x</div>
+            <div style="font-size:var(--text-xs);color:var(--color-text-tertiary);margin-top:var(--space-1);text-transform:uppercase;letter-spacing:0.05em;">Faster</div>
+          </div>
+        </div>
+      `
+
+      runBtn.textContent = 'Run Again'
+      runBtn.disabled = false
+    })
   })
 
   const sourceCode = `import { prepare, layout } from '@chenglou/pretext'
