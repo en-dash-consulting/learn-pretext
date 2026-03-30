@@ -11,8 +11,9 @@ import './styles/global.css'
 import './styles/layout.css'
 import './styles/components.css'
 
-import { tracks, getCurrentSlug, getPrevPage, getNextPage, getTrackForSlug } from './nav-data'
+import { tracks, getCurrentSlug, getPrevPage, getNextPage, getTrackForSlug, getBase } from './nav-data'
 import { createSearchButton, initSearch, openSearch } from '../components/search'
+import { initAnalytics } from './analytics'
 
 const slug = getCurrentSlug()
 
@@ -45,7 +46,7 @@ function buildHeader(): string {
   const activeTrack = getTrackForSlug(slug)
   return `
     <header class="header">
-      <a href="/" class="header__logo">Learn Pretext</a>
+      <a href="${getBase()}/" class="header__logo">Learn Pretext</a>
       <nav class="header__nav" aria-label="Track navigation">
         ${tracks.map(t => `
           <a href="${t.pages[0]!.href}"${t.title === activeTrack?.title ? ' class="active"' : ''}>${t.title}</a>
@@ -139,3 +140,4 @@ function bindEvents() {
 }
 
 buildShell()
+initAnalytics()
