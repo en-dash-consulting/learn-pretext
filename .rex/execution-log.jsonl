@@ -1,0 +1,42 @@
+{"timestamp":"2026-03-30T01:18:56.533Z","event":"item_added","itemId":"d271ba4e-9b6f-4a11-9e7d-4d8788fcc2bd","detail":"Added epic: Site Shell & Infrastructure"}
+{"timestamp":"2026-03-30T01:18:56.549Z","event":"item_added","itemId":"7d6202f1-cfbf-453a-ab31-977c681dde94","detail":"Added epic: Foundations Track"}
+{"timestamp":"2026-03-30T01:18:56.556Z","event":"item_added","itemId":"ba2fa61a-c689-4b7d-8e6b-830370ce8b73","detail":"Added epic: Core Patterns Track"}
+{"timestamp":"2026-03-30T01:18:56.657Z","event":"item_added","itemId":"07e67b04-1e69-4fb7-ba9f-2a77e1968ac3","detail":"Added epic: Advanced Track"}
+{"timestamp":"2026-03-30T01:18:56.728Z","event":"item_added","itemId":"bebd5052-6761-435f-b072-6d1e2c9e68cd","detail":"Added epic: Creative Track"}
+{"timestamp":"2026-03-30T01:18:56.792Z","event":"item_added","itemId":"d08e1b27-9ce4-486b-8cc1-b9836f1554f7","detail":"Added epic: Reference Track"}
+{"timestamp":"2026-03-30T01:18:56.804Z","event":"item_added","itemId":"87bf1bc3-77f0-4663-b638-dd32d37ebe3d","detail":"Added epic: Non-Functional Requirements"}
+{"timestamp":"2026-03-30T01:18:56.807Z","event":"item_added","itemId":"3b107d39-55eb-4a75-871e-96ee27dfa7fa","detail":"Added epic: Design System"}
+{"timestamp":"2026-03-30T01:19:05.087Z","event":"item_added","itemId":"d2a4a3fd-f55f-400b-ac28-9c86263814f7","detail":"Added feature: Project Scaffold"}
+{"timestamp":"2026-03-30T01:19:09.139Z","event":"item_added","itemId":"1a9d1d3f-a35e-4b4f-80b0-190d598f8426","detail":"Added feature: Global Header"}
+{"timestamp":"2026-03-30T01:19:12.864Z","event":"item_added","itemId":"bf466bd8-62e3-4cfc-a982-e991093ee53a","detail":"Added feature: Sidebar Navigation"}
+{"timestamp":"2026-03-30T01:19:15.413Z","event":"item_added","itemId":"3c87c2d2-58a9-47f7-b9cc-614db08c2101","detail":"Added feature: Footer"}
+{"timestamp":"2026-03-30T01:19:18.562Z","event":"item_added","itemId":"3ece01fe-1ef6-4ec0-b95b-ca7622390a3a","detail":"Added feature: Page Navigation (Prev/Next)"}
+{"timestamp":"2026-03-30T01:19:23.430Z","event":"item_added","itemId":"7fd31069-6377-4976-82c2-658d29c11510","detail":"Added feature: Shared Components"}
+{"timestamp":"2026-03-30T01:19:32.193Z","event":"item_added","itemId":"36fe57b2-d535-42b7-9578-bfc5303229f7","detail":"Added feature: Home / Landing Page"}
+{"timestamp":"2026-03-30T01:19:37.465Z","event":"item_added","itemId":"ad332b2b-3c64-4d32-85d7-72d81c567cfd","detail":"Added feature: Why Pretext — The Problem"}
+{"timestamp":"2026-03-30T01:19:42.257Z","event":"item_added","itemId":"fae6a69e-2a9a-4ad5-bf10-f1602135ad36","detail":"Added feature: Getting Started"}
+{"timestamp":"2026-03-30T01:19:51.186Z","event":"item_added","itemId":"e6361419-8a0d-450e-b984-26e6ec4ae986","detail":"Added feature: Accordion — Height Prediction"}
+{"timestamp":"2026-03-30T01:19:56.152Z","event":"item_added","itemId":"fbea8d75-c077-41cb-80a9-8b3c49e1fd7b","detail":"Added feature: Chat Bubbles — Shrink-Wrap"}
+{"timestamp":"2026-03-30T01:19:59.694Z","event":"item_added","itemId":"c98a11b0-4ae0-4e8a-b153-5c3d84ded6fe","detail":"Added feature: Masonry — Card Grid"}
+{"timestamp":"2026-03-30T01:20:03.234Z","event":"item_added","itemId":"c1a789c2-3354-487d-bbbd-f41c6e106bfe","detail":"Added feature: Balanced Text"}
+{"timestamp":"2026-03-30T01:20:08.636Z","event":"item_added","itemId":"cc1e9124-ab85-4553-b313-b10fedc29148","detail":"Added feature: The Pipeline — prepare() Deep Dive"}
+{"timestamp":"2026-03-30T01:20:17.505Z","event":"item_added","itemId":"ee448aec-553a-439f-989a-3084df394b63","detail":"Added feature: Rich API Overview"}
+{"timestamp":"2026-03-30T01:20:22.427Z","event":"item_added","itemId":"9638b4d5-db9b-4d8a-bd5e-5bbf8aca780f","detail":"Added feature: Editorial Layout — Variable-Width Flow"}
+{"timestamp":"2026-03-30T01:20:27.333Z","event":"item_added","itemId":"6df49f0c-6ed1-4f15-aa14-3f343951733b","detail":"Added feature: Virtualized Lists"}
+{"timestamp":"2026-03-30T01:20:31.328Z","event":"item_added","itemId":"0b0e76d0-b524-47bd-9531-a27034f9cfdf","detail":"Added feature: Canvas Rendering — Beyond the DOM"}
+{"timestamp":"2026-03-30T01:20:36.553Z","event":"item_added","itemId":"ae92b1d7-9b74-4671-a3cb-8c568e4699a3","detail":"Added feature: i18n Deep Dive"}
+{"timestamp":"2026-03-30T01:20:44.210Z","event":"item_added","itemId":"5d4237c2-2bb6-46fc-bda2-f7329a2c7507","detail":"Added feature: Kinetic Typography"}
+{"timestamp":"2026-03-30T01:20:49.028Z","event":"item_added","itemId":"8c4e8e8d-8af5-48d4-9951-5b19244dc78d","detail":"Added feature: ASCII Art & Fluid Text"}
+{"timestamp":"2026-03-30T01:20:54.015Z","event":"item_added","itemId":"be677976-b312-4cae-8b2a-72df950cf37b","detail":"Added feature: API Reference"}
+{"timestamp":"2026-03-30T01:20:58.020Z","event":"item_added","itemId":"8d20e4da-abc8-4891-89cc-d92cf2bbbcf6","detail":"Added feature: Performance Guide"}
+{"timestamp":"2026-03-30T01:21:02.895Z","event":"item_added","itemId":"d042e4bd-5d1e-4f31-ad1e-ad9865738354","detail":"Added feature: Caveats & Recipes"}
+{"timestamp":"2026-03-30T01:21:08.279Z","event":"item_added","itemId":"c08597dc-87e9-48e1-aebe-6d00033234db","detail":"Added feature: Performance Standards"}
+{"timestamp":"2026-03-30T01:21:14.694Z","event":"item_added","itemId":"ce00ef46-dc0c-4329-9ef3-e52cfd6d624c","detail":"Added feature: Accessibility"}
+{"timestamp":"2026-03-30T01:21:16.866Z","event":"item_added","itemId":"f0c3fcfa-5d48-44e5-b2b1-24d4576b3182","detail":"Added feature: Responsive Design"}
+{"timestamp":"2026-03-30T01:21:22.535Z","event":"item_added","itemId":"e22af7a0-a0c5-4782-a507-169d7cff062b","detail":"Added feature: Visual Theme & Typography"}
+{"timestamp":"2026-03-30T01:21:26.856Z","event":"item_added","itemId":"08d86e0c-b096-42d8-9221-e705c2edfcf0","detail":"Added feature: Animation & Interaction Design"}
+{"timestamp":"2026-03-30T01:22:25.457Z","event":"status_changed","itemId":"d2a4a3fd-f55f-400b-ac28-9c86263814f7","detail":"pending → in_progress"}
+{"timestamp":"2026-03-30T01:22:25.473Z","event":"status_changed","itemId":"e22af7a0-a0c5-4782-a507-169d7cff062b","detail":"pending → in_progress"}
+{"timestamp":"2026-03-30T01:23:08.778Z","event":"status_changed","itemId":"e22af7a0-a0c5-4782-a507-169d7cff062b","detail":"in_progress → pending (forced)"}
+{"timestamp":"2026-03-30T01:50:15.220Z","event":"status_changed","itemId":"d2a4a3fd-f55f-400b-ac28-9c86263814f7","detail":"in_progress → completed"}
+{"timestamp":"2026-03-30T01:50:54.230Z","event":"task-completed","itemId":"d2a4a3fd-f55f-400b-ac28-9c86263814f7","detail":"Project Scaffold: Vite MPA + TS strict + pretext + shiki + vitest + jsdom. 18 page HTML entries, CSS architecture, nav-data, pretext-helpers, 5 shared components, all 18 page implementations. tsc clean, vite build passes, 16 tests pass."}

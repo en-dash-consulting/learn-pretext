@@ -1,0 +1,676 @@
+{
+  "schema": "rex/v1",
+  "title": "ts-css",
+  "items": [
+    {
+      "id": "d271ba4e-9b6f-4a11-9e7d-4d8788fcc2bd",
+      "title": "Site Shell & Infrastructure",
+      "status": "pending",
+      "level": "epic",
+      "description": "Global site scaffold: Vite MPA project, header (\"Learn Pretext\"), sidebar navigation, footer (\"Built by En Dash\" / \"Built with n-dx and Claude\"), shared components (source viewer, performance meter, demo container, slider, toggle), page navigation (prev/next), CSS architecture, font hosting.",
+      "priority": "critical",
+      "tags": [
+        "infrastructure",
+        "shell"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "d2a4a3fd-f55f-400b-ac28-9c86263814f7",
+          "title": "Project Scaffold",
+          "status": "completed",
+          "level": "feature",
+          "description": "Vite MPA project with TypeScript strict mode. Install @chenglou/pretext, vite, typescript, shiki. Configure Vite with multi-page input entries for all 18 pages. CSS architecture: reset, variables, global, layout, components files. Self-host Inter (body) and JetBrains Mono (code) fonts. Verify pretext prepare/layout works in dev.",
+          "acceptanceCriteria": [
+            "Vite dev server runs with all 18 page entries",
+            "TypeScript strict mode with no errors",
+            "@chenglou/pretext prepare() and layout() execute successfully",
+            "Inter and JetBrains Mono fonts load correctly",
+            "CSS architecture files created and imported"
+          ],
+          "priority": "critical",
+          "tags": [
+            "infrastructure"
+          ],
+          "startedAt": "2026-03-30T01:22:25.452Z",
+          "completedAt": "2026-03-30T01:50:15.215Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Vite MPA project scaffolded with TypeScript strict mode, @chenglou/pretext, shiki, vitest. All 18 HTML page entries configured. CSS architecture (reset, variables, global, layout, components), nav data, shared helpers, reusable components (source-viewer, perf-meter, slider, toggle), and all 18 page TS implementations created. 16 tests passing."
+        },
+        {
+          "id": "1a9d1d3f-a35e-4b4f-80b0-190d598f8426",
+          "title": "Global Header",
+          "status": "pending",
+          "level": "feature",
+          "description": "\"Learn Pretext\" text/wordmark left-aligned. Navigation links to track landing pages. Sticky on scroll. Current page/track indicator. Responsive: collapses to hamburger on mobile.",
+          "acceptanceCriteria": [
+            "Header displays 'Learn Pretext' wordmark",
+            "Nav links to each track's first page",
+            "Sticks to top on scroll",
+            "Current track highlighted",
+            "Hamburger menu on viewports < 768px"
+          ],
+          "priority": "critical",
+          "tags": [
+            "shell",
+            "navigation"
+          ]
+        },
+        {
+          "id": "bf466bd8-62e3-4cfc-a982-e991093ee53a",
+          "title": "Sidebar Navigation",
+          "status": "pending",
+          "level": "feature",
+          "description": "Full page tree grouped by track (Foundations, Core Patterns, Advanced, Creative, Reference). Track headings with expandable page lists. Active page highlighted. Scrollable independently. Desktop: always visible ~240px. Mobile: slide-out drawer from hamburger.",
+          "acceptanceCriteria": [
+            "All 18 pages listed grouped under 5 tracks",
+            "Active page visually highlighted",
+            "Sidebar scrolls independently of content",
+            "Desktop: sidebar always visible",
+            "Mobile: drawer opens/closes from hamburger"
+          ],
+          "priority": "critical",
+          "tags": [
+            "shell",
+            "navigation"
+          ]
+        },
+        {
+          "id": "3c87c2d2-58a9-47f7-b9cc-614db08c2101",
+          "title": "Footer",
+          "status": "pending",
+          "level": "feature",
+          "description": "Footer on every page: \"Built by En Dash\", \"Built with n-dx and Claude\". Links to pretext GitHub repo, npm package, and Cheng Lou's site.",
+          "acceptanceCriteria": [
+            "'Built by En Dash' displayed",
+            "'Built with n-dx and Claude' displayed",
+            "GitHub and npm links work",
+            "Footer present on all pages"
+          ],
+          "priority": "high",
+          "tags": [
+            "shell"
+          ]
+        },
+        {
+          "id": "3ece01fe-1ef6-4ec0-b95b-ca7622390a3a",
+          "title": "Page Navigation (Prev/Next)",
+          "status": "pending",
+          "level": "feature",
+          "description": "← Previous / Next → links at bottom of every content page. Shows destination page title for context. Follows linear progression order across all tracks.",
+          "acceptanceCriteria": [
+            "Prev/Next links on every page except first/last",
+            "Destination page title shown",
+            "Links follow correct linear order across tracks"
+          ],
+          "priority": "high",
+          "tags": [
+            "shell",
+            "navigation"
+          ]
+        },
+        {
+          "id": "7fd31069-6377-4976-82c2-658d29c11510",
+          "title": "Shared Components",
+          "status": "pending",
+          "level": "feature",
+          "description": "Reusable components used across demo pages: Source Viewer (Shiki-highlighted TypeScript, line numbers, copy button, annotation highlights, collapsible on mobile), Performance Meter (real-time performance.now() display for prepare/layout/DOM timings), Demo Container (wrapper: demo area + explanation + source viewer), Slider (range input with live value label), Toggle (on/off switch with label).",
+          "acceptanceCriteria": [
+            "Source viewer renders highlighted TypeScript with line numbers and copy button",
+            "Performance meter shows live sub-millisecond timings",
+            "Demo container provides consistent layout for all demo pages",
+            "Slider and toggle components functional with ARIA labels"
+          ],
+          "priority": "critical",
+          "tags": [
+            "components"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7d6202f1-cfbf-453a-ab31-977c681dde94",
+      "title": "Foundations Track",
+      "status": "pending",
+      "level": "epic",
+      "description": "3-page beginner track: Home/Landing (hero with live text reflow, performance counter), Why Pretext (layout thrashing visualization, DOM vs pretext comparison), Getting Started (install, first example, interactive sandbox). Establishes what pretext is, why it matters, and how to start.",
+      "priority": "critical",
+      "tags": [
+        "track-1",
+        "foundations",
+        "beginner"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "36fe57b2-d535-42b7-9578-bfc5303229f7",
+          "title": "Home / Landing Page",
+          "status": "pending",
+          "level": "feature",
+          "description": "Hero section with live pretext-powered text reflow animation. Tagline: \"Text layout at the speed of arithmetic\". One-paragraph description of what pretext is. Live performance counter: pretext layout() vs DOM measurement timing. \"Start Learning\" CTA → Why Pretext page. Quick-jump links to all 5 tracks for returning visitors. Font loading gate: content appears after Inter font ready.",
+          "acceptanceCriteria": [
+            "Hero text reflows live on viewport resize using pretext",
+            "Performance counter shows real timing comparison",
+            "Start Learning button navigates to Why Pretext",
+            "Track quick-links navigate correctly",
+            "Content waits for font load before displaying"
+          ],
+          "priority": "critical",
+          "tags": [
+            "page",
+            "foundations"
+          ]
+        },
+        {
+          "id": "ad332b2b-3c64-4d32-85d7-72d81c567cfd",
+          "title": "Why Pretext — The Problem",
+          "status": "pending",
+          "level": "feature",
+          "description": "Explains layout thrashing with animated visual timeline. Interactive comparison: 100+ text blocks measured via DOM (interleaved reads/writes) vs pretext. Toggle between approaches — feel the frame drops vs smooth 60fps. Side-by-side ms/frame display. \"What CSS can't do\" section listing impossible layouts: obstacle avoidance, true shrink-wrap, virtualization, balanced text.",
+          "acceptanceCriteria": [
+            "Animated timeline visualizes layout thrash",
+            "100+ text blocks toggle between DOM and pretext measurement",
+            "Frame timing difference is visible and measurable",
+            "What CSS can't do section lists at least 4 impossible layouts"
+          ],
+          "priority": "critical",
+          "tags": [
+            "page",
+            "foundations"
+          ]
+        },
+        {
+          "id": "fae6a69e-2a9a-4ad5-bf10-f1602135ad36",
+          "title": "Getting Started",
+          "status": "pending",
+          "level": "feature",
+          "description": "Install commands (npm, bun, yarn). First working example in ≤10 lines with live result. Two-phase mental model explained: prepare once, layout many. Interactive sandbox: user types text, picks font, drags width slider → live lineCount + height update. Font loading caveat explained with code example.",
+          "acceptanceCriteria": [
+            "Install commands shown for npm/bun/yarn",
+            "10-line example renders live result",
+            "Interactive sandbox responds to text input, font selection, and width slider",
+            "Font loading caveat documented with code"
+          ],
+          "priority": "critical",
+          "tags": [
+            "page",
+            "foundations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ba2fa61a-c689-4b7d-8e6b-830370ce8b73",
+      "title": "Core Patterns Track",
+      "status": "pending",
+      "level": "epic",
+      "description": "5-page intermediate track teaching one API + one real UI pattern per page: Accordion (prepare+layout for height prediction), Chat Bubbles (walkLineRanges for shrink-wrap), Masonry (prepare+layout at scale), Balanced Text (walkLineRanges binary search), Pipeline Deep Dive (prepare internals visualization).",
+      "priority": "high",
+      "tags": [
+        "track-2",
+        "core-patterns",
+        "intermediate"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "e6361419-8a0d-450e-b984-26e6ec4ae986",
+          "title": "Accordion — Height Prediction",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: prepare() + layout(). Demo with ≥5 expandable sections with varied text lengths. Smooth CSS height transition (heights predicted before animation starts). \"Without pretext\" toggle showing DOM measurement with visible jank on rapid toggling. Annotated source: prepare on mount, layout for height calc. User can edit accordion content and see heights recalculate.",
+          "acceptanceCriteria": [
+            "≥5 accordion sections with smooth height animations",
+            "Heights calculated via prepare+layout before animation",
+            "Without-pretext toggle shows jank",
+            "Source viewer with annotated API calls",
+            "Editable content recalculates heights"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ]
+        },
+        {
+          "id": "fbea8d75-c077-41cb-80a9-8b3c49e1fd7b",
+          "title": "Chat Bubbles — Shrink-Wrap",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: walkLineRanges(). Chat UI with ≥20 pre-populated messages. User can type and send new messages. Each bubble width = tightest shrink-wrap via walkLineRanges(). Side-by-side comparison: CSS fit-content vs pretext optimal width. Pixel savings displayed per bubble. Annotated source.",
+          "acceptanceCriteria": [
+            "≥20 messages displayed in chat UI",
+            "User can type and send new messages",
+            "Bubbles shrink-wrapped via walkLineRanges",
+            "CSS fit-content vs pretext comparison visible",
+            "Pixel savings shown per bubble"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ]
+        },
+        {
+          "id": "c98a11b0-4ae0-4e8a-b153-5c3d84ded6fe",
+          "title": "Masonry — Card Grid",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: prepare() + layout() at scale. 50+ cards with variable text content. Heights predicted via pretext, placed in shortest column. Responsive: 1–4 columns based on viewport width. Smooth re-layout on resize without DOM measurement. Annotated source.",
+          "acceptanceCriteria": [
+            "50+ cards with varied text",
+            "Heights predicted without DOM reads",
+            "1–4 columns responsive to viewport",
+            "Smooth relayout on resize",
+            "Annotated source viewer"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ]
+        },
+        {
+          "id": "c1a789c2-3354-487d-bbbd-f41c6e106bfe",
+          "title": "Balanced Text",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: walkLineRanges() with binary search pattern. Paragraph with \"Normal\" vs \"Balanced\" toggle. Binary search for optimal container width so all lines are ~equal length. Visual diff between modes. Annotated source showing the binary search algorithm.",
+          "acceptanceCriteria": [
+            "Normal vs Balanced toggle works",
+            "Balanced mode produces approximately equal line widths",
+            "Binary search algorithm shown in source",
+            "Visual diff between modes is clear"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ]
+        },
+        {
+          "id": "cc1e9124-ab85-4553-b313-b10fedc29148",
+          "title": "The Pipeline — prepare() Deep Dive",
+          "status": "pending",
+          "level": "feature",
+          "description": "Interactive visualization of the full prepare() pipeline: raw text → normalize → segment → merge/glue rules → measure → cache. User types custom text and sees segments highlighted by break kind (8 colors for text, space, preserved-space, tab, glue, zero-width-break, soft-hyphen, hard-break). Width cache visualization showing hits/misses. Timing breakdown per pipeline stage.",
+          "acceptanceCriteria": [
+            "Pipeline stages visualized step by step",
+            "Custom text input with live segmentation",
+            "8 break kinds color-coded",
+            "Cache hits/misses visualized",
+            "Per-stage timing displayed"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "educational"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07e67b04-1e69-4fb7-ba9f-2a77e1968ac3",
+      "title": "Advanced Track",
+      "status": "pending",
+      "level": "epic",
+      "description": "5-page advanced track: Rich API Overview (prepareWithSegments, layoutWithLines, layoutNextLine), Editorial Layout (variable-width flow with draggable obstacles at 60fps), Virtualized Lists (10K+ items), Canvas Rendering (pan/zoom canvas text), i18n Deep Dive (CJK kinsoku, bidi, emoji, Thai, Arabic, Hindi).",
+      "priority": "high",
+      "tags": [
+        "track-3",
+        "advanced"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "ee448aec-553a-439f-989a-3084df394b63",
+          "title": "Rich API Overview",
+          "status": "pending",
+          "level": "feature",
+          "description": "Decision guide: when to use rich API vs fast path. What prepareWithSegments() returns (segments, widths, kinds, bidi levels). layoutWithLines() vs layout() — when you need line objects. layoutNextLine() — the iterator pattern for variable-width. Interactive: same text through all three APIs, showing outputs side by side.",
+          "acceptanceCriteria": [
+            "Decision guide explains when to use each API",
+            "Same text processed through all APIs with visible output comparison",
+            "prepareWithSegments output displayed with segments/widths/kinds",
+            "layoutWithLines vs layout difference demonstrated"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "educational"
+          ]
+        },
+        {
+          "id": "9638b4d5-db9b-4d8a-bd5e-5bbf8aca780f",
+          "title": "Editorial Layout — Variable-Width Flow",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: layoutNextLine() in depth. Magazine spread with ≥2 draggable obstacle elements (images/shapes). Text flows around obstacles using per-line variable widths. 60fps maintained during obstacle drag. Multi-column flow with cross-column obstacles. Annotated source showing layoutNextLine() loop with per-line width calc.",
+          "acceptanceCriteria": [
+            "Magazine layout with ≥2 draggable obstacles",
+            "Text reflows around obstacles at 60fps during drag",
+            "Multi-column text flow works",
+            "layoutNextLine loop shown in annotated source",
+            "This is the 'impossible in CSS' showcase"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo"
+          ]
+        },
+        {
+          "id": "6df49f0c-6ed1-4f15-aa14-3f343951733b",
+          "title": "Virtualized Lists",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: prepare() + layout() for 10K+ items. 10,000+ text items with variable lengths in virtual scroll container. Only visible items + buffer rendered. Total scroll height computed via pretext without rendering all items. Scroll position accurate within 1px. FPS counter during fast scroll. Annotated source.",
+          "acceptanceCriteria": [
+            "10K+ items in virtual scroll",
+            "Only visible items rendered (verify via DOM inspection)",
+            "Scroll height accurate without rendering all items",
+            "60fps maintained during fast scroll",
+            "FPS counter visible"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo"
+          ]
+        },
+        {
+          "id": "0b0e76d0-b524-47bd-9531-a27034f9cfdf",
+          "title": "Canvas Rendering — Beyond the DOM",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: prepareWithSegments() + layoutWithLines() + ctx.fillText(). Canvas element with multiline text rendering and proper word wrap matching browser behavior. Pan (mouse drag) and zoom (scroll wheel). Text re-wraps at each zoom level using pretext. Annotated source.",
+          "acceptanceCriteria": [
+            "Canvas renders multiline text with correct word wrap",
+            "Pan via mouse drag works",
+            "Zoom via scroll wheel works",
+            "Text re-wraps at each zoom level",
+            "Annotated source shows prepareWithSegments + layoutWithLines + fillText"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo"
+          ]
+        },
+        {
+          "id": "ae92b1d7-9b74-4671-a3cb-8c568e4699a3",
+          "title": "i18n Deep Dive",
+          "status": "pending",
+          "level": "feature",
+          "description": "API focus: setLocale(), segmentation across scripts. Language selector: English, Chinese, Japanese, Arabic, Thai, Hindi, Myanmar, emoji. CJK kinsoku rules visualized (prohibited line-start/end characters highlighted). Bidi text: mixed LTR/RTL rendered correctly. Emoji: ZWJ sequences, width correction. User can paste any text and see how pretext segments and measures it. Annotated source.",
+          "acceptanceCriteria": [
+            "Language selector with ≥8 options",
+            "CJK kinsoku rules visually highlighted",
+            "RTL/bidi text renders correctly",
+            "Emoji ZWJ sequences handled",
+            "User can paste custom text in any language"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo",
+            "i18n"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bebd5052-6761-435f-b072-6d1e2c9e68cd",
+      "title": "Creative Track",
+      "status": "pending",
+      "level": "epic",
+      "description": "2-page creative track pushing pretext beyond utility: Kinetic Typography (particle text, calligrams, flowing text), ASCII Art & Fluid Text (proportional ASCII, fluid simulation as characters, 3D wireframe through character grid).",
+      "priority": "medium",
+      "tags": [
+        "track-4",
+        "creative"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "5d4237c2-2bb6-46fc-bda2-f7329a2c7507",
+          "title": "Kinetic Typography",
+          "status": "pending",
+          "level": "feature",
+          "description": "Multiple sub-demos on one page: particle text, shaped text (calligrams), flowing text. Uses per-segment/per-grapheme measurement data from prepareWithSegments(). Animated at 60fps via requestAnimationFrame. Source viewer for each sub-demo.",
+          "acceptanceCriteria": [
+            "At least 2 kinetic typography sub-demos",
+            "60fps animation",
+            "Per-segment measurement data used creatively",
+            "Source for each sub-demo"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ]
+        },
+        {
+          "id": "8c4e8e8d-8af5-48d4-9951-5b19244dc78d",
+          "title": "ASCII Art & Fluid Text",
+          "status": "pending",
+          "level": "feature",
+          "description": "Variable-width proportional ASCII rendering (not monospace). Fluid simulation rendered as typographic characters. 3D wireframe through a character grid. Source for each sub-demo. Inspired by chenglou's official variable typographic ASCII demo and somnai-dreams fluid smoke/wireframe torus demos.",
+          "acceptanceCriteria": [
+            "Proportional (non-monospace) ASCII art rendering",
+            "At least one fluid/animated text visualization",
+            "Source for each sub-demo"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d08e1b27-9ce4-486b-8cc1-b9836f1554f7",
+      "title": "Reference Track",
+      "status": "pending",
+      "level": "epic",
+      "description": "3-page reference track: API Reference (every function documented with interactive try-it blocks), Performance Guide (benchmarks, caching, browser profiles), Caveats & Recipes (system-ui bug, font matching, CSS limitations, common integration patterns).",
+      "priority": "medium",
+      "tags": [
+        "track-5",
+        "reference"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "be677976-b312-4cae-8b2a-72df950cf37b",
+          "title": "API Reference",
+          "status": "pending",
+          "level": "feature",
+          "description": "Every exported function documented: signature, parameters, return type, description. Interactive \"try it\" code blocks for each API (editable, live result). All exported types documented. Cross-links to demo pages that use each API.",
+          "acceptanceCriteria": [
+            "All 7 public functions documented (prepare, layout, prepareWithSegments, layoutWithLines, walkLineRanges, layoutNextLine, clearCache, setLocale)",
+            "Interactive try-it blocks execute live",
+            "All exported types listed",
+            "Cross-links to relevant demo pages"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference"
+          ]
+        },
+        {
+          "id": "8d20e4da-abc8-4891-89cc-d92cf2bbbcf6",
+          "title": "Performance Guide",
+          "status": "pending",
+          "level": "feature",
+          "description": "Benchmark table: prepare vs layout vs DOM measurement (Chrome and Safari numbers). When to call prepare vs layout. Caching strategy: what's cached internally, when to use clearCache(). Browser engine profiles and their implications. Performance measurement code patterns (performance.now() wrappers, ResizeObserver pattern).",
+          "acceptanceCriteria": [
+            "Benchmark table with Chrome/Safari numbers",
+            "Caching strategy explained",
+            "Browser profiles documented",
+            "Copy-paste performance patterns provided"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference"
+          ]
+        },
+        {
+          "id": "d042e4bd-5d1e-4f31-ad1e-ad9865738354",
+          "title": "Caveats & Recipes",
+          "status": "pending",
+          "level": "feature",
+          "description": "system-ui font bug explained with fix. Font string matching rules. CSS target limitations (white-space, word-break, overflow-wrap, line-break). pre-wrap mode usage. Soft hyphens behavior. Recipes: resize handler pattern, React integration, animation loop, font loading with document.fonts.ready.",
+          "acceptanceCriteria": [
+            "system-ui caveat documented with workaround",
+            "Font matching rules clear",
+            "CSS target limitations listed",
+            "At least 4 copy-paste recipe patterns"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "87bf1bc3-77f0-4663-b638-dd32d37ebe3d",
+      "title": "Non-Functional Requirements",
+      "status": "pending",
+      "level": "epic",
+      "description": "Cross-cutting quality requirements: Performance (< 800ms first paint, 60fps demos, < 50KB per-page bundle), Accessibility (keyboard nav, ARIA, WCAG AA, no user-select:none on content), Responsive (320px–2560px+, touch support), Browser Support (Chrome 94+, Safari 17.4+, Firefox 125+), Code Quality (strict TS, no any).",
+      "priority": "high",
+      "tags": [
+        "nfr",
+        "quality"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "c08597dc-87e9-48e1-aebe-6d00033234db",
+          "title": "Performance Standards",
+          "status": "pending",
+          "level": "feature",
+          "description": "Per-page first paint < 800ms. Per-page interactive < 1.5s. Per-page JS bundle < 50KB (excluding shared). Shared JS bundle < 60KB. All demos maintain 60fps during interaction. Pretext layout() calls < 1ms on all demos.",
+          "acceptanceCriteria": [
+            "Lighthouse performance score ≥90 on all pages",
+            "No demo drops below 60fps during interaction",
+            "Bundle sizes within budget"
+          ],
+          "priority": "high",
+          "tags": [
+            "nfr",
+            "performance"
+          ]
+        },
+        {
+          "id": "ce00ef46-dc0c-4329-9ef3-e52cfd6d624c",
+          "title": "Accessibility",
+          "status": "pending",
+          "level": "feature",
+          "description": "All interactive elements keyboard-accessible. ARIA labels on custom controls (sliders, toggles, nav drawer). WCAG AA color contrast throughout. Screen reader navigable (landmarks, headings hierarchy). No user-select:none or pointer-events:none on readable content. Skip-to-content link on every page.",
+          "acceptanceCriteria": [
+            "All controls operable via keyboard",
+            "ARIA labels on all custom components",
+            "WCAG AA contrast ratio met",
+            "Skip-to-content link present",
+            "No user-select:none on content text"
+          ],
+          "priority": "high",
+          "tags": [
+            "nfr",
+            "a11y"
+          ]
+        },
+        {
+          "id": "f0c3fcfa-5d48-44e5-b2b1-24d4576b3182",
+          "title": "Responsive Design",
+          "status": "pending",
+          "level": "feature",
+          "description": "Mobile (320px) through ultrawide (2560px+). Sidebar collapses to drawer on mobile. Demos adapt on mobile (fewer items, stacked layout where needed). Touch support for drag interactions. No horizontal scroll on any page.",
+          "acceptanceCriteria": [
+            "No layout issues at 320px, 768px, 1024px, 1440px, 2560px",
+            "Sidebar becomes drawer on mobile",
+            "Touch drag works on editorial/creative demos",
+            "No horizontal scroll at any breakpoint"
+          ],
+          "priority": "high",
+          "tags": [
+            "nfr",
+            "responsive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3b107d39-55eb-4a75-871e-96ee27dfa7fa",
+      "title": "Design System",
+      "status": "pending",
+      "level": "epic",
+      "description": "Visual design system: Dark theme (#0a0a0a–#1a1a1a), typography scale (12–64px, Inter body, JetBrains Mono code), CSS custom properties, animation guidelines (subtle transitions, rAF for pretext animations, prefers-reduced-motion), interaction patterns (focus indicators, hover states, drag handles, slider labels).",
+      "priority": "high",
+      "tags": [
+        "design",
+        "theme"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "e22af7a0-a0c5-4782-a507-169d7cff062b",
+          "title": "Visual Theme & Typography",
+          "status": "pending",
+          "level": "feature",
+          "description": "Dark background (#0a0a0a–#1a1a1a). Light text with high contrast. Accent color for interactive elements. Inter for body (matches pretext test corpus), JetBrains Mono for code. Type scale: 12/14/16/20/24/32/48/64px. Line heights: 1.2 headings, 1.5 body, 1.6 code. Max reading width 65ch. CSS custom properties for all values.",
+          "acceptanceCriteria": [
+            "Dark theme applied globally",
+            "Inter and JetBrains Mono render correctly",
+            "Type scale implemented via CSS custom properties",
+            "65ch max-width on prose content",
+            "Accent color used consistently on interactive elements"
+          ],
+          "priority": "high",
+          "tags": [
+            "design"
+          ],
+          "startedAt": "2026-03-30T01:22:25.469Z"
+        },
+        {
+          "id": "08d86e0c-b096-42d8-9221-e705c2edfcf0",
+          "title": "Animation & Interaction Design",
+          "status": "pending",
+          "level": "feature",
+          "description": "Subtle CSS transitions for UI state changes. requestAnimationFrame for pretext-driven animations. prefers-reduced-motion respected (disable animations). Visible focus indicators on all interactive elements. Hover states on all clickable elements. Drag handles clearly indicated. Sliders with live value labels. Toggles with clear on/off states.",
+          "acceptanceCriteria": [
+            "prefers-reduced-motion disables all animations",
+            "Focus indicators visible on all interactive elements",
+            "Hover states on all clickable elements",
+            "Drag handles have visual affordance",
+            "Slider values update live as dragged"
+          ],
+          "priority": "high",
+          "tags": [
+            "design",
+            "interaction"
+          ]
+        }
+      ]
+    }
+  ]
+}

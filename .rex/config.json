@@ -1,0 +1,6 @@
+{
+  "schema": "rex/v1",
+  "project": "ts-css",
+  "adapter": "file",
+  "sourcevision": "auto"
+}
