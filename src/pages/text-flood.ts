@@ -2,44 +2,59 @@ import { prepare, layout } from '@chenglou/pretext'
 import { waitForFonts, FONT, LINE_HEIGHT, timeExecution } from '../shared/pretext-helpers'
 import { createSourceViewer } from '../components/source-viewer'
 
-const LEVELS = [
+// Levels are calibrated at runtime — targetHeight is set to
+// (fullHeight - 1 line), requiring at least `par` word removals
+// to drop down one line. This ensures the puzzle is tight.
+interface LevelDef {
+  text: string
+  containerWidth: number
+  par: number
+}
+
+const LEVEL_DEFS: LevelDef[] = [
   {
-    text: 'Typography is the art and technique of arranging type to make written language legible readable and appealing when displayed. The arrangement of type involves selecting typefaces point sizes line lengths and letter spacing.',
-    containerWidth: 320,
-    targetHeight: 120,
+    text: 'Typography is the art and technique of arranging type to make written language legible readable and appealing when displayed.',
+    containerWidth: 280,
+    par: 2,
+  },
+  {
+    text: 'Pretext measures multiline text without ever touching the DOM. It uses pure arithmetic over cached glyph widths to compute line counts and heights instantly.',
+    containerWidth: 260,
     par: 3,
   },
   {
-    text: 'Pretext measures multiline text without ever touching the DOM. It uses pure arithmetic over cached glyph widths to compute line counts and heights. This makes resize driven relayout essentially free compared to traditional browser measurement approaches.',
-    containerWidth: 280,
-    targetHeight: 144,
+    text: 'The quick brown fox jumps over the lazy dog. Sphinx of black quartz judge my vow. We promptly judged antique ivory buckles for the next prize.',
+    containerWidth: 240,
     par: 4,
   },
   {
-    text: 'The quick brown fox jumps over the lazy dog. Sphinx of black quartz judge my vow. We promptly judged antique ivory buckles for the next prize. Crazy Frederick bought many very exquisite opal jewels. Waltz nymph for quick jigs vex bud.',
-    containerWidth: 250,
-    targetHeight: 168,
+    text: 'Web developers have struggled with text measurement for decades. Every call to getBoundingClientRect forces the browser to recalculate layout. When you measure hundreds of elements this creates layout thrashing that destroys frame rate.',
+    containerWidth: 260,
+    par: 4,
+  },
+  {
+    text: 'Creating beautiful editorial layouts on the web has always been limited by the browser layout engine. Text cannot flow around arbitrary shapes and predicting how much space text will occupy requires rendering it first. With pretext these constraints disappear.',
+    containerWidth: 240,
     par: 5,
   },
-  {
-    text: 'Web developers have struggled with text measurement for decades. Every call to getBoundingClientRect forces the browser to recalculate layout. When you measure hundreds of elements this creates layout thrashing that destroys performance. The solution is to measure text with pure math bypassing the DOM entirely.',
-    containerWidth: 300,
-    targetHeight: 144,
-    par: 4,
-  },
-  {
-    text: 'Creating beautiful editorial layouts on the web has always been limited by the browser layout engine. Text cannot flow around arbitrary shapes and predicting how much space text will occupy requires rendering it first. With pretext these constraints disappear because layout computation is instant and independent of the DOM.',
-    containerWidth: 260,
-    targetHeight: 168,
-    par: 6,
-  },
 ]
+
+// Built at runtime after fonts load — target = one fewer line than the full text
+let LEVELS: { text: string; containerWidth: number; targetHeight: number; par: number }[] = []
 
 async function init() {
   const content = document.getElementById('page-content')
   if (!content) return
 
   await waitForFonts()
+
+  // Calibrate levels: measure each text at its width, set target = height minus one line
+  LEVELS = LEVEL_DEFS.map(def => {
+    const prepared = prepare(def.text, FONT)
+    const fullResult = layout(prepared, def.containerWidth, LINE_HEIGHT)
+    const targetHeight = (fullResult.lineCount - 1) * LINE_HEIGHT
+    return { ...def, targetHeight }
+  })
 
   content.innerHTML = `
     <div class="content__header">
