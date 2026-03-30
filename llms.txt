@@ -1,0 +1,69 @@
+# Learn Pretext
+
+> An interactive learning site for @chenglou/pretext — a JavaScript library for multiline text measurement and layout without DOM reflow.
+
+## About
+
+Learn Pretext (learn-pretext.com) is an independent educational resource built by En Dash (endash.us). It teaches developers how to use the pretext library through interactive demos with annotated source code.
+
+Pretext is a library by Cheng Lou (github.com/chenglou) that computes multiline text line breaks, heights, and widths using pure arithmetic — no DOM reads, no layout thrashing. It is ~300x faster than browser measurement.
+
+This site is NOT an official project of Cheng Lou or the pretext library.
+
+## Key pretext concepts
+
+- `prepare(text, font)` — one-time measurement pass, caches glyph widths (~0.1ms)
+- `layout(prepared, maxWidth, lineHeight)` — pure arithmetic layout, returns lineCount + height (~0.005ms)
+- `prepareWithSegments()` — like prepare but exposes segment data (text, widths, break kinds)
+- `layoutWithLines()` — returns array of LayoutLine objects with per-line text and width
+- `layoutNextLine()` — iterator-style, one line at a time with variable maxWidth per line
+- `walkLineRanges()` — callback per line with width data, no string allocation
+
+## Site structure
+
+20 pages across 5 learning tracks:
+
+### Foundations (3 pages)
+- Home — hero with live text reflow animation and performance counter
+- Why Pretext — layout thrashing explanation, DOM vs pretext benchmark
+- Getting Started — install, first example, interactive sandbox
+
+### Core Patterns (5 pages)
+- Accordion — height prediction with prepare() + layout()
+- Chat Bubbles — shrink-wrap with walkLineRanges()
+- Masonry — card grid with predicted heights
+- Balanced Text — binary search for optimal width
+- The Pipeline — prepare() internals visualization
+
+### Advanced (5 pages)
+- Rich API — three API paths compared side by side
+- Editorial Layout — layoutNextLine() with draggable obstacles at 60fps
+- Virtualized Lists — 10,000 items with pretext height prediction
+- Canvas Rendering — multiline text on canvas with pan/zoom
+- i18n Deep Dive — CJK, Arabic, Thai, Hindi, emoji handling
+
+### Creative (2 pages)
+- Kinetic Typography — wave text, scatter/gather animation
+- ASCII Art — proportional ASCII rendering with pretext-measured widths
+
+### Reference (5 pages)
+- API Reference — all functions documented with interactive try-it blocks
+- Performance Guide — benchmarks, caching, browser profiles
+- Caveats & Recipes — system-ui bug, font matching, code patterns
+- Accessibility — a11y patterns for pretext-powered UIs
+- About — attribution and credits
+
+## Tech stack
+
+- Vanilla TypeScript + Vite (multi-page app)
+- @chenglou/pretext for text measurement
+- Shiki for code highlighting
+- Inter + JetBrains Mono fonts
+- GitHub Pages deployment
+
+## Links
+
+- Site: https://learn-pretext.com
+- Source: https://github.com/en-dash-consulting/learn-pretext
+- Pretext library: https://github.com/chenglou/pretext
+- Built by: https://endash.us
