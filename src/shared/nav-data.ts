@@ -49,6 +49,9 @@ export const tracks: NavTrack[] = [
     pages: [
       { slug: 'kinetic', title: 'Kinetic Typography', href: href('/pages/kinetic.html') },
       { slug: 'ascii-art', title: 'ASCII Art', href: href('/pages/ascii-art.html') },
+      { slug: 'text-physics', title: 'Text Physics', href: href('/pages/text-physics.html') },
+      { slug: 'ascii-tanks', title: 'ASCII Tanks', href: href('/pages/ascii-tanks.html') },
+      { slug: 'text-rain', title: 'Text Rain', href: href('/pages/text-rain.html') },
     ],
   },
   {
