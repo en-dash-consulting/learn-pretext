@@ -6,12 +6,12 @@ import { createPerfMeter } from '../components/performance-meter'
 
 const SENTENCES = [
   'The quick brown fox jumps over the lazy dog.',
-  'Pack my box with five dozen liquor jugs.',
-  'How vexingly quick daft zebras jump!',
   'Sphinx of black quartz, judge my vow.',
+  'How vexingly quick daft zebras jump!',
   'Two driven jocks help fax my big quiz.',
-  'The five boxing wizards jump quickly at dawn.',
-  'Amazingly few discotheques provide jukeboxes.',
+  'We promptly judged antique ivory buckles for the next prize.',
+  'By Jove, my quick study of lexicography won a prize.',
+  'Waltz, nymph, for quick jigs vex bud.',
   'My girl wove six dozen plaid jackets before she quit.',
   'We promptly judged antique ivory buckles for the next prize.',
   'Sixty zippers were quickly picked from the woven jute bag.',

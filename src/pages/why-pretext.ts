@@ -6,14 +6,14 @@ import { createToggle } from '../components/toggle'
 
 const SAMPLE_TEXTS = Array.from({ length: 200 }, (_, i) => {
   const variants = [
-    'The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.',
-    'How vexingly quick daft zebras jump! The five boxing wizards jump quickly at dawn.',
-    'Sphinx of black quartz, judge my vow. Two driven jocks help fax my big quiz.',
-    'The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump.',
-    'Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit.',
+    'The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow.',
+    'How vexingly quick daft zebras jump! Two driven jocks help fax my big quiz.',
     'We promptly judged antique ivory buckles for the next prize. Crazy Frederick bought many very exquisite opal jewels.',
     'Sixty zippers were quickly picked from the woven jute bag. A quick movement of the enemy will jeopardize six gunboats.',
     'All questions asked by five watched experts amaze the judge. Jack quietly moved up front and seized the big ball of wax.',
+    'Grumpy wizards make toxic brew for the evil queen and jack. The jay, pig, fox, and my wolves quack nonstop.',
+    'By Jove, my quick study of lexicography won a prize. Waltz, nymph, for quick jigs vex bud.',
+    'My faxed joke won a pager in the cable TV quiz show. The five curious gnomes jumped over a low brick wall quickly.',
   ]
   return variants[i % variants.length]!
 })

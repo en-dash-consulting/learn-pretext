@@ -3,7 +3,7 @@ import { waitForFonts, FONT, LINE_HEIGHT, timeExecution } from '../shared/pretex
 import { createSourceViewer } from '../components/source-viewer'
 import { createPerfMeter } from '../components/performance-meter'
 
-const BENCHMARK_TEXT = 'The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump!'
+const BENCHMARK_TEXT = 'The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump!'
 const LONG_TEXT = Array(10).fill(BENCHMARK_TEXT).join(' ')
 
 async function init() {

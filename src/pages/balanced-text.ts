@@ -7,7 +7,7 @@ import { createPerfMeter } from '../components/performance-meter'
 
 const SAMPLE_TEXTS = [
   'Pretext measures and lays out multiline text without ever touching the DOM, using pure arithmetic.',
-  'The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.',
+  'The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow.',
   'This headline is designed to demonstrate how balanced text wrapping creates a more harmonious visual appearance than the default behavior.',
   'Sometimes the last line of a paragraph has only one or two orphaned words sitting alone, which looks awkward.',
   'A great typographic tool helps designers craft beautiful, readable layouts by understanding how text flows and breaks across lines.',

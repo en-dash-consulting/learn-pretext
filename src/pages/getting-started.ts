@@ -56,7 +56,7 @@ console.log(result) // { lineCount: 1, height: 24 }</code></pre>
       <div class="demo-area" style="margin-top:var(--space-4)">
         <div style="margin-bottom:var(--space-4)">
           <label style="display:block;font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-2)">Input text</label>
-          <textarea id="sandbox-input" rows="4" style="width:100%;background:var(--color-bg-surface);border:1px solid var(--color-border);border-radius:var(--radius-sm);padding:var(--space-3);color:var(--color-text);font:var(--text-base) var(--font-body);resize:vertical;">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump!</textarea>
+          <textarea id="sandbox-input" rows="4" style="width:100%;background:var(--color-bg-surface);border:1px solid var(--color-border);border-radius:var(--radius-sm);padding:var(--space-3);color:var(--color-text);font:var(--text-base) var(--font-body);resize:vertical;">The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. How vexingly quick daft zebras jump!</textarea>
         </div>
         <div id="sandbox-slider" style="margin-bottom:var(--space-4)"></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)">

@@ -105,8 +105,8 @@ function buildFooter(): string {
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__credits">
-          <span>Built by En Dash</span>
-          <span>Built with n-dx and Claude</span>
+          <span>Built by <a href="https://endash.us" target="_blank" rel="noopener">En Dash</a></span>
+          <span>Built with <a href="https://n-dx.dev" target="_blank" rel="noopener">n-dx</a> and <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></span>
         </div>
         <div class="footer__links">
           <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener">GitHub</a>

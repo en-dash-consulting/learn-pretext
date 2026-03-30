@@ -14,7 +14,7 @@ const KIND_COLORS: Record<string, string> = {
   'zero-width-break': '#f97316',
 }
 
-const DEFAULT_TEXT = 'The quick brown\u00A0fox jumps over the lazy dog. Pack my box with\u00ADfive dozen liquor jugs!'
+const DEFAULT_TEXT = 'The quick brown\u00A0fox jumps over the lazy dog. Sphinx of\u00ADblack quartz, judge my vow!'
 
 async function init() {
   const content = document.getElementById('page-content')
