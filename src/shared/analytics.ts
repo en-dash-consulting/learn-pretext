@@ -8,9 +8,11 @@ export function initAnalytics() {
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
   document.head.appendChild(script)
 
-  const w = window as typeof window & { dataLayer: unknown[]; gtag: (...args: unknown[]) => void }
+  // gtag requires pushing the raw arguments object, not a spread array
+  const w = window as typeof window & { dataLayer: IArguments[]; gtag: (...args: unknown[]) => void }
   w.dataLayer = w.dataLayer || []
-  w.gtag = function (...args: unknown[]) { w.dataLayer.push(args) }
+  // eslint-disable-next-line prefer-rest-params
+  w.gtag = function () { w.dataLayer.push(arguments as unknown as IArguments) }
   w.gtag('js', new Date())
   w.gtag('config', GA_ID)
 }
