@@ -1,11 +1,8 @@
-import { prepare, layout, prepareWithSegments, walkLineRanges } from '@chenglou/pretext'
+import { prepare, layout } from '@chenglou/pretext'
 import { waitForFonts, timeExecution } from '../shared/pretext-helpers'
 import { tracks } from '../shared/nav-data'
 
 const HERO_TEXT = `Text layout at the speed of arithmetic`
-const HERO_FONT = 'bold 3.75rem Inter'
-const HERO_LINE_HEIGHT = 68
-
 const SUBTITLE_TEXT = `Pretext measures multiline text without the DOM. No reflows, no guesswork — just pure math over cached glyph widths.`
 
 const DEMO_PARAGRAPHS = [
@@ -98,73 +95,6 @@ async function init() {
       </div>
     </div>
   `
-
-  // --- Balance the hero title using pretext ---
-  // Finds the width where lines are most even (min difference between longest and shortest)
-  function balanceElement(el: HTMLElement, text: string, font: string, lineHeight: number) {
-    const prepared = prepareWithSegments(text, font)
-    const maxWidth = el.clientWidth
-    const normalResult = layout(prepared, maxWidth, lineHeight)
-    if (normalResult.lineCount <= 1) return
-
-    function getLineImbalance(width: number): number {
-      const widths: number[] = []
-      walkLineRanges(prepared, width, (line) => { widths.push(line.width) })
-      if (widths.length <= 1) return 0
-      return Math.max(...widths) - Math.min(...widths)
-    }
-
-    // Search: try widths from narrow to wide, find the one with the least imbalance
-    // while keeping the same line count
-    let bestWidth = maxWidth
-    let bestImbalance = getLineImbalance(maxWidth)
-
-    // Find the narrowest width that keeps the same line count (lower bound)
-    let lo = 0
-    let hi = maxWidth
-    while (hi - lo > 1) {
-      const mid = (lo + hi) >>> 1
-      if (layout(prepared, mid, lineHeight).lineCount <= normalResult.lineCount) {
-        hi = mid
-      } else {
-        lo = mid
-      }
-    }
-    const minWidth = hi
-
-    // Sample widths between minWidth and maxWidth to find the most balanced
-    const steps = 40
-    const step = (maxWidth - minWidth) / steps
-    for (let i = 0; i <= steps; i++) {
-      const w = Math.round(minWidth + step * i)
-      if (layout(prepared, w, lineHeight).lineCount !== normalResult.lineCount) continue
-      const imbalance = getLineImbalance(w)
-      if (imbalance < bestImbalance) {
-        bestImbalance = imbalance
-        bestWidth = w
-      }
-    }
-
-    el.style.maxWidth = `${bestWidth}px`
-    el.style.marginLeft = 'auto'
-    el.style.marginRight = 'auto'
-  }
-
-  const heroTitle = document.getElementById('hero-title')!
-
-  function doBalance() {
-    heroTitle.style.maxWidth = ''
-    const font = getComputedStyle(heroTitle).font
-    const lh = parseFloat(getComputedStyle(heroTitle).lineHeight) || 68
-    balanceElement(heroTitle, HERO_TEXT, font, lh)
-  }
-
-  doBalance()
-
-  const heroResizeObserver = new ResizeObserver(() => {
-    requestAnimationFrame(doBalance)
-  })
-  heroResizeObserver.observe(heroTitle.parentElement!)
 
   // --- Hero canvas background animation ---
   const heroCanvas = document.getElementById('hero-canvas') as HTMLCanvasElement
