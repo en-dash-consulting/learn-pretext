@@ -82,6 +82,7 @@ async function init() {
   let currentTextIndex = 0
   let isBalanced = false
   let containerWidth = 500
+  const TEXT_PADDING = 24 // 12px each side (var(--space-3))
   const textDisplay = document.getElementById('text-display')!
   const widthInfo = document.getElementById('width-info')!
   const perfMeter = createPerfMeter(document.getElementById('balance-perf')!)
@@ -129,15 +130,18 @@ async function init() {
     const text = SAMPLE_TEXTS[currentTextIndex]!
     const prepared = prepareWithSegments(text, FONT)
 
+    // The text content width is the box width minus padding
+    const textWidth = containerWidth - TEXT_PADDING
+
     let displayWidth: number
-    let balancedWidth: number | null = null
+    let balancedTextWidth: number | null = null
     let searchElapsed = 0
 
     if (isBalanced) {
-      const timed = timeExecution(() => findBalancedWidth(prepared, containerWidth, LINE_HEIGHT))
-      balancedWidth = timed.result
+      const timed = timeExecution(() => findBalancedWidth(prepared, textWidth, LINE_HEIGHT))
+      balancedTextWidth = timed.result
       searchElapsed = timed.elapsed
-      displayWidth = balancedWidth
+      displayWidth = balancedTextWidth + TEXT_PADDING
     } else {
       displayWidth = containerWidth
     }
@@ -145,18 +149,19 @@ async function init() {
     textDisplay.style.width = `${displayWidth}px`
     textDisplay.textContent = text
 
-    // Get line details
+    // Get line details using the actual text width
+    const actualTextWidth = displayWidth - TEXT_PADDING
     const lines: number[] = []
-    walkLineRanges(prepared, displayWidth, (line) => {
+    walkLineRanges(prepared, actualTextWidth, (line) => {
       lines.push(line.width)
     })
 
-    const normalResult = layout(prepared, containerWidth, LINE_HEIGHT)
+    const normalResult = layout(prepared, textWidth, LINE_HEIGHT)
 
-    if (isBalanced && balancedWidth !== null) {
-      const saved = containerWidth - balancedWidth
+    if (isBalanced && balancedTextWidth !== null) {
+      const saved = textWidth - balancedTextWidth
       widthInfo.innerHTML = `
-        Normal: ${containerWidth}px | Balanced: ${balancedWidth}px | Saved: <span style="color:var(--color-success)">${saved}px</span> | Lines: ${lines.length}
+        Normal: ${containerWidth}px | Balanced: ${displayWidth}px | Saved: <span style="color:var(--color-success)">${saved}px</span> | Lines: ${lines.length}
       `
       perfMeter.update([
         { label: 'Binary search', value: searchElapsed },
