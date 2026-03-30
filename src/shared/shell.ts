@@ -12,6 +12,7 @@ import './styles/layout.css'
 import './styles/components.css'
 
 import { tracks, getCurrentSlug, getPrevPage, getNextPage, getTrackForSlug } from './nav-data'
+import { createSearchButton, initSearch, openSearch } from '../components/search'
 
 const slug = getCurrentSlug()
 
@@ -50,6 +51,7 @@ function buildHeader(): string {
           <a href="${t.pages[0]!.href}"${t.title === activeTrack?.title ? ' class="active"' : ''}>${t.title}</a>
         `).join('')}
       </nav>
+      ${createSearchButton()}
       <button class="header__hamburger" id="hamburger" aria-label="Open navigation">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -129,6 +131,11 @@ function bindEvents() {
 
   hamburger?.addEventListener('click', toggleSidebar)
   overlay?.addEventListener('click', toggleSidebar)
+
+  // Search
+  initSearch()
+  const searchTrigger = document.getElementById('search-trigger')
+  searchTrigger?.addEventListener('click', openSearch)
 }
 
 buildShell()

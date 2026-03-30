@@ -6,9 +6,9 @@ describe('nav-data', () => {
     expect(tracks).toHaveLength(5)
   })
 
-  it('has 19 total pages', () => {
+  it('has 20 total pages', () => {
     const total = tracks.reduce((sum, t) => sum + t.pages.length, 0)
-    expect(total).toBe(19)
+    expect(total).toBe(20)
   })
 
   it('track names are correct', () => {
