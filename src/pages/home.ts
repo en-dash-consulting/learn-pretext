@@ -1,10 +1,10 @@
-import { prepare, layout, prepareWithSegments, layoutWithLines } from '@chenglou/pretext'
+import { prepare, layout, prepareWithSegments } from '@chenglou/pretext'
 import { waitForFonts, timeExecution } from '../shared/pretext-helpers'
 import { tracks } from '../shared/nav-data'
 
 const HERO_TEXT = `Text layout at the speed of arithmetic`
-const HERO_FONT = '48px Inter'
-const HERO_LINE_HEIGHT = 56
+const HERO_FONT = 'bold 3.75rem Inter'
+const HERO_LINE_HEIGHT = 68
 
 const SUBTITLE_TEXT = `Pretext measures multiline text without the DOM. No reflows, no guesswork — just pure math over cached glyph widths.`
 
@@ -21,9 +21,6 @@ async function init() {
   if (!content) return
 
   await waitForFonts()
-
-  // Pre-prepare the hero text for the animation
-  const heroPrepared = prepareWithSegments(HERO_TEXT, HERO_FONT)
 
   // Prepare demo paragraphs
   const demoPrepared = DEMO_PARAGRAPHS.map(t => ({
@@ -101,6 +98,44 @@ async function init() {
       </div>
     </div>
   `
+
+  // --- Balance the hero title using pretext ---
+  function balanceElement(el: HTMLElement, text: string, font: string, lineHeight: number) {
+    const prepared = prepare(text, font)
+    const maxWidth = el.clientWidth
+    const normalResult = layout(prepared, maxWidth, lineHeight)
+    if (normalResult.lineCount <= 1) return
+
+    let lo = 0
+    let hi = maxWidth
+    while (hi - lo > 1) {
+      const mid = (lo + hi) >>> 1
+      if (layout(prepared, mid, lineHeight).lineCount <= normalResult.lineCount) {
+        hi = mid
+      } else {
+        lo = mid
+      }
+    }
+    el.style.maxWidth = `${hi}px`
+    el.style.marginLeft = 'auto'
+    el.style.marginRight = 'auto'
+  }
+
+  const heroTitle = document.getElementById('hero-title')!
+  // Use computed font since the CSS var --text-4xl resolves at runtime
+  const computedFont = getComputedStyle(heroTitle).font
+  balanceElement(heroTitle, HERO_TEXT, computedFont, heroTitle.offsetHeight / Math.max(1, Math.round(heroTitle.offsetHeight / parseFloat(getComputedStyle(heroTitle).lineHeight))))
+
+  // Re-balance on resize
+  const heroResizeObserver = new ResizeObserver(() => {
+    heroTitle.style.maxWidth = ''
+    requestAnimationFrame(() => {
+      const cf = getComputedStyle(heroTitle).font
+      const lh = parseFloat(getComputedStyle(heroTitle).lineHeight)
+      balanceElement(heroTitle, HERO_TEXT, cf, lh)
+    })
+  })
+  heroResizeObserver.observe(heroTitle.parentElement!)
 
   // --- Hero canvas background animation ---
   const heroCanvas = document.getElementById('hero-canvas') as HTMLCanvasElement
