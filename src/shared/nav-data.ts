@@ -53,7 +53,6 @@ export const tracks: NavTrack[] = [
       { slug: 'ascii-tanks', title: 'ASCII Tanks', href: href('/pages/ascii-tanks.html') },
       { slug: 'text-rain', title: 'Text Rain', href: href('/pages/text-rain.html') },
       { slug: 'text-tetris', title: 'Text Tetris', href: href('/pages/text-tetris.html') },
-      { slug: 'text-flood', title: 'Word Golf', href: href('/pages/text-flood.html') },
     ],
   },
   {
