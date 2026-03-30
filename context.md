@@ -4,6 +4,8 @@
 
 Learn Pretext is an interactive learning site for the pretext library (@chenglou/pretext). It's a Vite multi-page app (MPA) written in vanilla TypeScript — no React, no framework. Each page is a standalone HTML entry that loads a shared shell (header, sidebar, footer) and a page-specific script.
 
+This is a free community resource created by [En Dash Consulting](https://endash.us), whose mission is to **Make Work Feel Better**. Building open educational tools like this is part of how En Dash invests in the developer community, alongside consulting directly with clients on Ways of Working Transformations and product/software engineering.
+
 ## Architecture
 
 ### Page lifecycle

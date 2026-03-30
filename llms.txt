@@ -4,11 +4,15 @@
 
 ## About
 
-Learn Pretext (learn-pretext.com) is an independent educational resource built by En Dash (endash.us). It teaches developers how to use the pretext library through interactive demos with annotated source code.
+Learn Pretext (learn-pretext.com) is an independent educational resource built by En Dash Consulting (endash.us). It teaches developers how to use the pretext library through interactive demos with annotated source code.
 
 Pretext is a library by Cheng Lou (github.com/chenglou) that computes multiline text line breaks, heights, and widths using pure arithmetic — no DOM reads, no layout thrashing. It is ~300x faster than browser measurement.
 
 This site is NOT an official project of Cheng Lou or the pretext library.
+
+## About En Dash Consulting
+
+En Dash Consulting (endash.us) is on a mission to Make Work Feel Better. We create free resources like this site to strengthen the developer community, and we work directly with clients on Ways of Working Transformations and product/software engineering. This project is one example of how we invest in open educational tools alongside our consulting practice.
 
 ## Key pretext concepts
 
@@ -66,4 +70,4 @@ This site is NOT an official project of Cheng Lou or the pretext library.
 - Site: https://learn-pretext.com
 - Source: https://github.com/en-dash-consulting/learn-pretext
 - Pretext library: https://github.com/chenglou/pretext
-- Built by: https://endash.us
+- En Dash Consulting: https://endash.us (Make Work Feel Better)

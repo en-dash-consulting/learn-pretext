@@ -24,8 +24,8 @@ async function init() {
     <div class="content__section">
       <h2>About Learn Pretext</h2>
       <div class="explanation">
-        <p>This site was built by <a href="https://endash.us" target="_blank" rel="noopener" style="font-weight:var(--font-weight-medium);">En Dash</a> as an independent educational resource. Our goal is to make pretext more accessible through interactive demos and step-by-step tutorials that show both what the library can do and how to implement it.</p>
-        <p>Every demo on this site is a working implementation with annotated source code — so you're not just seeing what's possible, you're learning how to build it yourself.</p>
+        <p>This site was built by <a href="https://endash.us" target="_blank" rel="noopener" style="font-weight:var(--font-weight-medium);">En Dash Consulting</a> as a free community resource. En Dash is on a mission to <strong>Make Work Feel Better</strong> — we do that by creating open educational tools like this, and by working directly with clients on Ways of Working Transformations and product/software engineering.</p>
+        <p>Our goal here is to make pretext more accessible through interactive demos and step-by-step tutorials that show both what the library can do and how to implement it. Every demo is a working implementation with annotated source code — so you're not just seeing what's possible, you're learning how to build it yourself.</p>
         <p>This site is <strong>not</strong> an official project of Cheng Lou or the pretext library. For authoritative documentation, bug reports, and feature requests, please visit the <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener">official GitHub repository</a>.</p>
       </div>
     </div>

@@ -8,7 +8,7 @@ An interactive learning site for [@chenglou/pretext](https://github.com/chenglou
 
 Pretext is a pure JS/TS library by [Cheng Lou](https://github.com/chenglou) that measures and lays out multiline text using arithmetic over cached glyph widths — no DOM reads, no layout thrashing, ~300x faster than `getBoundingClientRect()`.
 
-This site is an **independent community resource** by [En Dash](https://endash.us). It is not affiliated with or endorsed by the pretext author.
+This site is an **independent community resource** by [En Dash Consulting](https://endash.us). It is not affiliated with or endorsed by the pretext author.
 
 ## What's on the site
 
@@ -71,4 +71,6 @@ Deployed to GitHub Pages via GitHub Actions on push to `main`. Custom domain: `l
 - [n-dx](https://n-dx.dev) for product development
 - [Claude](https://claude.ai) via Claude Code
 
-Built by [En Dash](https://endash.us).
+## About En Dash Consulting
+
+[En Dash Consulting](https://endash.us) is on a mission to **Make Work Feel Better**. We do that by creating free resources like this site, and by working directly with clients on Ways of Working Transformations and product/software engineering. Learn more at [endash.us](https://endash.us).
