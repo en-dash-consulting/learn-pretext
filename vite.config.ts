@@ -30,6 +30,7 @@ export default defineConfig({
         'text-rain': resolve(__dirname, 'pages/text-rain.html'),
         'text-tetris': resolve(__dirname, 'pages/text-tetris.html'),
         'text-flood': resolve(__dirname, 'pages/text-flood.html'),
+        'breaking-spaces': resolve(__dirname, 'pages/breaking-spaces.html'),
         'api-reference': resolve(__dirname, 'pages/api-reference.html'),
         performance: resolve(__dirname, 'pages/performance.html'),
         caveats: resolve(__dirname, 'pages/caveats.html'),
