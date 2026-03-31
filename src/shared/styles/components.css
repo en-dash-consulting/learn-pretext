@@ -478,6 +478,45 @@
   }
 }
 
+/* Star repo button in header */
+.header__star {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-2);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  transition: all var(--duration-fast) var(--ease-out);
+  flex-shrink: 0;
+  height: 34px;
+}
+
+.header__star:hover {
+  color: #e3b341;
+  border-color: rgba(227, 179, 65, 0.4);
+  background: rgba(227, 179, 65, 0.08);
+}
+
+.header__star svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .header__star-text {
+    display: none;
+  }
+
+  .header__star {
+    padding: var(--space-1) var(--space-2);
+    min-width: 34px;
+    justify-content: center;
+  }
+}
+
 /* Search modal */
 .search-modal {
   position: fixed;
