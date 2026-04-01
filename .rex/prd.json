@@ -1,13 +1,13 @@
 {
   "schema": "rex/v1",
-  "title": "ts-css",
+  "title": "Learn Pretext",
   "items": [
     {
       "id": "d271ba4e-9b6f-4a11-9e7d-4d8788fcc2bd",
       "title": "Site Shell & Infrastructure",
       "status": "completed",
       "level": "epic",
-      "description": "Global site scaffold: Vite MPA project, header (\"Learn Pretext\"), sidebar navigation, footer (\"Built by En Dash\" / \"Built with n-dx and Claude\"), shared components (source viewer, performance meter, demo container, slider, toggle), page navigation (prev/next), CSS architecture, font hosting.",
+      "description": "Global site scaffold: Vite MPA project with 26 page entries, header (\"Learn Pretext\"), sidebar navigation, footer (\"Built by En Dash\" / \"Built with n-dx and Claude\"), shared components (source viewer, performance meter, demo container, slider, toggle, search), page navigation (prev/next), CSS architecture, font hosting, Google Analytics.",
       "priority": "critical",
       "tags": [
         "infrastructure",
@@ -24,7 +24,7 @@
           "level": "feature",
           "description": "Vite MPA project with TypeScript strict mode. Install @chenglou/pretext, vite, typescript, shiki. Configure Vite with multi-page input entries for all 18 pages. CSS architecture: reset, variables, global, layout, components files. Self-host Inter (body) and JetBrains Mono (code) fonts. Verify pretext prepare/layout works in dev.",
           "acceptanceCriteria": [
-            "Vite dev server runs with all 18 page entries",
+            "Vite dev server runs with all 26 page entries",
             "TypeScript strict mode with no errors",
             "@chenglou/pretext prepare() and layout() execute successfully",
             "Inter and JetBrains Mono fonts load correctly",
@@ -69,7 +69,7 @@
           "level": "feature",
           "description": "Full page tree grouped by track (Foundations, Core Patterns, Advanced, Creative, Reference). Track headings with expandable page lists. Active page highlighted. Scrollable independently. Desktop: always visible ~240px. Mobile: slide-out drawer from hamburger.",
           "acceptanceCriteria": [
-            "All 18 pages listed grouped under 5 tracks",
+            "All 26 pages listed grouped under 5 tracks",
             "Active page visually highlighted",
             "Sidebar scrolls independently of content",
             "Desktop: sidebar always visible",
@@ -514,7 +514,7 @@
       "title": "Creative Track",
       "status": "completed",
       "level": "epic",
-      "description": "2-page creative track pushing pretext beyond utility: Kinetic Typography (particle text, calligrams, flowing text), ASCII Art & Fluid Text (proportional ASCII, fluid simulation as characters, 3D wireframe through character grid).",
+      "description": "7-page creative track pushing pretext beyond utility: Kinetic Typography, ASCII Art, Text Physics, ASCII Tanks, Text Rain, Text Tetris, Breaking Spaces. Each page showcases creative, non-traditional uses of text measurement.",
       "priority": "medium",
       "tags": [
         "track-4",
@@ -568,6 +568,114 @@
           "completedAt": "2026-03-30T01:52:48.424Z",
           "resolutionType": "code-change",
           "resolutionDetail": "Animated particle field as proportional ASCII, brightness-to-character mapping, pretext character width measurement, 60fps. src/pages/ascii-art.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000001",
+          "title": "Text Physics",
+          "status": "completed",
+          "level": "feature",
+          "description": "Physics simulation applied to text — use pretext measurement data for realistic text particle effects and collisions. Canvas-based 60fps animation.",
+          "acceptanceCriteria": [
+            "Text reacts to physics simulation",
+            "60fps animation maintained",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": ["page", "creative", "demo"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Physics simulation with text particles, gravity, collisions. src/pages/text-physics.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000002",
+          "title": "ASCII Tanks",
+          "status": "completed",
+          "level": "feature",
+          "description": "ASCII Tanks game rendered with character-based graphics using pretext for real-time text layout and positioning.",
+          "acceptanceCriteria": [
+            "Playable tank game with ASCII graphics",
+            "Pretext used for character positioning",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": ["page", "creative", "demo"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "ASCII tanks game with keyboard controls and pretext-measured character grid. src/pages/ascii-tanks.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000003",
+          "title": "Text Rain",
+          "status": "completed",
+          "level": "feature",
+          "description": "Text rain animation — characters fall down the screen with pretext-powered real-time position tracking and measurement.",
+          "acceptanceCriteria": [
+            "Characters rain down the screen",
+            "Real-time position tracking via pretext",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": ["page", "creative", "demo"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Matrix-style text rain with variable character widths via pretext. src/pages/text-rain.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000004",
+          "title": "Text Tetris",
+          "status": "completed",
+          "level": "feature",
+          "description": "Text Tetris game combining pretext measurement with classic falling-block gameplay, rendered entirely with text characters.",
+          "acceptanceCriteria": [
+            "Playable Tetris with text-based rendering",
+            "Pretext used for character measurement",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": ["page", "creative", "demo"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Tetris with text-character blocks, pretext measurement for grid layout. src/pages/text-tetris.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000005",
+          "title": "Text Flood",
+          "status": "completed",
+          "level": "feature",
+          "description": "Text flood fill animation — dynamic text expansion using pretext for real-time measurement and flow.",
+          "acceptanceCriteria": [
+            "Text flood fill animation runs",
+            "Pretext used for text expansion measurement",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": ["page", "creative", "demo"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Text flood fill with pretext measurement. src/pages/text-flood.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000006",
+          "title": "Breaking Spaces",
+          "status": "completed",
+          "level": "feature",
+          "description": "Interactive exploration of breaking spaces and word-wrap behavior — visualize how pretext handles line breaks across different Unicode break types.",
+          "acceptanceCriteria": [
+            "Break types visualized with colors",
+            "User can input custom text",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": ["page", "creative", "demo"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Breaking spaces visualization with color-coded break types. src/pages/breaking-spaces.ts"
         }
       ]
     },
@@ -576,7 +684,7 @@
       "title": "Reference Track",
       "status": "completed",
       "level": "epic",
-      "description": "3-page reference track: API Reference (every function documented with interactive try-it blocks), Performance Guide (benchmarks, caching, browser profiles), Caveats & Recipes (system-ui bug, font matching, CSS limitations, common integration patterns).",
+      "description": "5-page reference track: API Reference (every function documented with interactive try-it blocks), Performance Guide (benchmarks, caching, browser profiles), Caveats & Recipes (system-ui bug, font matching, CSS limitations, common integration patterns), Accessibility (screen reader and assistive tech guidance), About This Site (project background and credits).",
       "priority": "medium",
       "tags": [
         "track-5",
@@ -651,6 +759,42 @@
           "completedAt": "2026-03-30T01:52:56.198Z",
           "resolutionType": "code-change",
           "resolutionDetail": "system-ui caveat, font matching rules, CSS limitations, pre-wrap mode, soft hyphens with live demo, 6 code recipes. src/pages/caveats.ts"
+        },
+        {
+          "id": "c1d2e3f4-6001-4000-a001-000000000001",
+          "title": "Accessibility Page",
+          "status": "completed",
+          "level": "feature",
+          "description": "Dedicated accessibility guide for pretext — how to ensure text measured with pretext remains accessible to screen readers and assistive technology. Covers ARIA patterns, focus management, and content reflow accessibility.",
+          "acceptanceCriteria": [
+            "Screen reader guidance documented",
+            "ARIA patterns for pretext-driven layouts explained",
+            "Practical code examples provided"
+          ],
+          "priority": "medium",
+          "tags": ["page", "reference", "a11y"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Accessibility guide with ARIA patterns, focus management, screen reader considerations. src/pages/accessibility.ts"
+        },
+        {
+          "id": "c1d2e3f4-6001-4000-a001-000000000002",
+          "title": "About This Site",
+          "status": "completed",
+          "level": "feature",
+          "description": "About page with project background, credits, and links. Explains that Learn Pretext is a free resource by En Dash Consulting for the @chenglou/pretext library.",
+          "acceptanceCriteria": [
+            "Project background explained",
+            "Credits to En Dash Consulting and Cheng Lou",
+            "Links to relevant resources"
+          ],
+          "priority": "low",
+          "tags": ["page", "reference"],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "About page with project background, credits, resource links. src/pages/about.ts"
         }
       ]
     },
@@ -802,7 +946,7 @@
     {
       "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
       "title": "Interactive Homepage — Newspaper Editor",
-      "status": "in-progress",
+      "status": "completed",
       "level": "epic",
       "description": "Transform the homepage into an interactive canvas-rendered newspaper front page where visitors drag procedurally-drawn images from a tray onto a multi-column layout and text reflows around them in real-time at 60fps using pretext's layoutNextLine() API.",
       "priority": "high",
@@ -812,6 +956,7 @@
         "demo"
       ],
       "startedAt": "2026-04-01T00:00:00.000Z",
+      "completedAt": "2026-04-01T00:00:00.000Z",
       "children": [
         {
           "id": "a1b2c3d4-1001-4000-a001-000000000001",
@@ -925,6 +1070,93 @@
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
           "resolutionDetail": "HTML section in home.ts with explanation, editorial link, and track-grid cards."
+        }
+      ]
+    },
+    {
+      "id": "d1e2f3a4-7001-4000-a001-000000000000",
+      "title": "SEO, GEO & Branding",
+      "status": "completed",
+      "level": "epic",
+      "description": "Comprehensive SEO, GEO (Generative Engine Optimization), and AEO (AI Engine Optimization) overhaul. Favicon update to match endash.us branding, unique meta descriptions per page, Open Graph and Twitter Card metadata, canonical URLs, JSON-LD structured data, robots.txt, XML sitemap, and apple-touch-icon.",
+      "priority": "high",
+      "tags": ["seo", "branding", "infrastructure"],
+      "startedAt": "2026-04-01T13:00:00.000Z",
+      "completedAt": "2026-04-01T13:30:00.000Z",
+      "children": [
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000001",
+          "title": "Favicon & Branding Update",
+          "status": "completed",
+          "level": "feature",
+          "description": "Updated favicon to match endash.us branding — purple background, no border, rounded corners. Added favicon.ico (from endash.us), updated favicon.svg, and added apple-touch-icon.png. All 26 HTML pages reference SVG, ICO, and apple-touch-icon formats.",
+          "acceptanceCriteria": [
+            "Favicon matches endash.us purple branding",
+            "favicon.svg, favicon.ico, apple-touch-icon.png all present",
+            "All 26 pages reference all three favicon formats"
+          ],
+          "priority": "high",
+          "tags": ["branding"],
+          "startedAt": "2026-04-01T13:00:00.000Z",
+          "completedAt": "2026-04-01T13:10:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "favicon.ico downloaded from endash.us, favicon.svg updated with purple background (#6C4BF6) and rounded corners, apple-touch-icon.png extracted. All HTML files updated with three favicon link tags."
+        },
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000002",
+          "title": "Per-Page SEO Metadata",
+          "status": "completed",
+          "level": "feature",
+          "description": "Unique, descriptive meta descriptions for all 26 pages (replacing generic boilerplate). Added canonical URLs, og:url, og:locale, twitter:title, twitter:description, and meta robots tags to every page. Changed og:type from 'website' to 'article' on content pages.",
+          "acceptanceCriteria": [
+            "Every page has a unique meta description",
+            "Canonical URLs on all 26 pages",
+            "Full Open Graph and Twitter Card metadata on all pages",
+            "meta robots index,follow on all pages"
+          ],
+          "priority": "high",
+          "tags": ["seo"],
+          "startedAt": "2026-04-01T13:10:00.000Z",
+          "completedAt": "2026-04-01T13:25:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "All 26 HTML files updated with unique descriptions, canonical URLs, og:url, og:locale, twitter:title/description, meta robots. Fixed 'Api Reference' capitalization to 'API Reference'."
+        },
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000003",
+          "title": "JSON-LD Structured Data",
+          "status": "completed",
+          "level": "feature",
+          "description": "Added Schema.org JSON-LD structured data to all pages. Homepage has WebSite, SoftwareApplication, and BreadcrumbList schemas. All content pages have Article schema with publisher and site reference. About page uses AboutPage schema.",
+          "acceptanceCriteria": [
+            "Homepage has WebSite + SoftwareApplication + BreadcrumbList schemas",
+            "All content pages have Article schema",
+            "Publisher references En Dash Consulting",
+            "Valid JSON-LD passes schema.org validation"
+          ],
+          "priority": "high",
+          "tags": ["seo", "structured-data"],
+          "startedAt": "2026-04-01T13:10:00.000Z",
+          "completedAt": "2026-04-01T13:25:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "JSON-LD structured data added to all 26 HTML files. Homepage: @graph with WebSite, SoftwareApplication, BreadcrumbList. Content pages: Article. About: AboutPage."
+        },
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000004",
+          "title": "robots.txt & XML Sitemap",
+          "status": "completed",
+          "level": "feature",
+          "description": "Added robots.txt with universal Allow and sitemap reference. Added sitemap.xml with all 26 pages, appropriate changefreq and priority values.",
+          "acceptanceCriteria": [
+            "robots.txt allows all crawlers and references sitemap",
+            "sitemap.xml lists all 26 pages",
+            "Priority values reflect page importance hierarchy"
+          ],
+          "priority": "high",
+          "tags": ["seo"],
+          "startedAt": "2026-04-01T13:25:00.000Z",
+          "completedAt": "2026-04-01T13:30:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "public/robots.txt and public/sitemap.xml created. Sitemap covers all 26 pages with priority 1.0 (home) to 0.5 (about)."
         }
       ]
     }
