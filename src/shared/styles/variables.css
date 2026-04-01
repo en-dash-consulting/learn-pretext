@@ -9,8 +9,8 @@
   --color-border-bright: rgba(255, 255, 255, 0.1);
 
   --color-text: #ededf0;
-  --color-text-secondary: #a0a0b0;
-  --color-text-tertiary: #5c5c6e;
+  --color-text-secondary: #b8b8ca;
+  --color-text-tertiary: #8585a0;
   --color-text-inverse: #09090b;
 
   /* Accent — electric indigo with warm glow */
@@ -37,8 +37,8 @@
   --font-code: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
   --text-xs: 0.75rem;
-  --text-sm: 0.8125rem;  /* 13px — tighter than default */
-  --text-base: 0.9375rem; /* 15px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;      /* 16px */
   --text-lg: 1.125rem;    /* 18px */
   --text-xl: 1.375rem;    /* 22px */
   --text-2xl: 1.875rem;   /* 30px */
