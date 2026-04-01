@@ -12,15 +12,17 @@ This site is an **independent community resource** by [En Dash Consulting](https
 
 ## What's on the site
 
-20 interactive pages across 5 learning tracks:
+26 interactive pages across 5 learning tracks:
 
 | Track | Pages | What you'll learn |
 |-------|-------|-------------------|
 | **Foundations** | Home, Why Pretext, Getting Started | What pretext is, layout thrashing, first `prepare()` + `layout()` |
 | **Core Patterns** | Accordion, Chat Bubbles, Masonry, Balanced Text, Pipeline | Height prediction, shrink-wrap, card grids, binary search, `prepare()` internals |
 | **Advanced** | Rich API, Editorial Layout, Virtualized Lists, Canvas, i18n | `layoutNextLine()` obstacle avoidance, 10K virtual scroll, canvas text, CJK/RTL/emoji |
-| **Creative** | Kinetic Typography, ASCII Art | Character-level animation, proportional ASCII rendering |
-| **Reference** | API Reference, Performance Guide, Caveats, Accessibility, About | Full API docs, benchmarks, recipes, a11y patterns |
+| **Creative** | Kinetic Typography, ASCII Art, Text Physics, ASCII Tanks, Text Rain, Text Tetris, Breaking Spaces | Character-level animation, proportional ASCII rendering, physics simulation, text games |
+| **Reference** | API Reference, Performance Guide, Caveats & Recipes, Accessibility, About | Full API docs, benchmarks, recipes, a11y patterns |
+
+The homepage features an interactive canvas-rendered newspaper ("The Pretext Times") where you can drag procedurally-drawn images onto a multi-column layout and watch text reflow around them in real-time at 60fps.
 
 Every demo is live and interactive. Every demo includes annotated source code showing exactly how it's implemented.
 
@@ -44,8 +46,16 @@ npm run preview  # Preview production build
 ### Project structure
 
 ```
-index.html                    # Landing page
-pages/*.html                  # One HTML entry per page
+index.html                    # Landing page (interactive newspaper editor)
+pages/*.html                  # One HTML entry per page (25 pages)
+public/
+  favicon.svg                 # SVG favicon (En Dash branding)
+  favicon.ico                 # ICO favicon
+  apple-touch-icon.png        # Apple touch icon
+  og-image.png                # Open Graph social image
+  robots.txt                  # Search engine crawling rules
+  sitemap.xml                 # XML sitemap for search engines
+  CNAME                       # Custom domain config
 src/
   shared/
     shell.ts                  # Header, sidebar, footer (injected on every page)
@@ -58,12 +68,21 @@ src/
     performance-meter.ts      # Live timing display
     slider.ts, toggle.ts      # Interactive controls
   pages/
-    home.ts ... about.ts      # Page-specific logic
+    home.ts ... about.ts      # Page-specific logic (26 files)
+docs/                         # Research and planning documents
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
 
 ## Deployment
 
 Deployed to GitHub Pages via GitHub Actions on push to `main`. Custom domain: `learn-pretext.com`.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Built with
 
