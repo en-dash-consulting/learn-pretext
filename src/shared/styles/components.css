@@ -364,6 +364,26 @@
   transform: translateY(0);
 }
 
+/* Newspaper homepage — full-bleed canvas */
+.content--newspaper {
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+.content--newspaper .content__body {
+  max-width: none;
+}
+
+.content--newspaper .page-nav {
+  display: none;
+}
+
+.newspaper-below-fold {
+  padding: var(--space-12) var(--space-6) var(--space-16);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
 /* Track links grid */
 .track-grid {
   display: grid;

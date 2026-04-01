@@ -798,6 +798,135 @@
           "resolutionDetail": "CSS transitions for UI states, prefers-reduced-motion zeroes all durations, focus indicators, hover states, slider/toggle interaction patterns. In variables.css + components.css."
         }
       ]
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "title": "Interactive Homepage — Newspaper Editor",
+      "status": "in-progress",
+      "level": "epic",
+      "description": "Transform the homepage into an interactive canvas-rendered newspaper front page where visitors drag procedurally-drawn images from a tray onto a multi-column layout and text reflows around them in real-time at 60fps using pretext's layoutNextLine() API.",
+      "priority": "high",
+      "tags": [
+        "homepage",
+        "interactive",
+        "demo"
+      ],
+      "startedAt": "2026-04-01T00:00:00.000Z",
+      "children": [
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000001",
+          "title": "Canvas Newspaper Layout Engine",
+          "status": "completed",
+          "level": "feature",
+          "description": "Full-bleed canvas rendering of a newspaper front page with masthead ('THE PRETEXT TIMES'), dateline with live performance metrics, multi-column text layout via layoutNextLine(), column dividers, and responsive column count (3/2/1).",
+          "acceptanceCriteria": [
+            "Canvas renders masthead with title and live dateline",
+            "Text renders in 3 columns on desktop, 2 on tablet, 1 on mobile",
+            "Column dividers drawn between columns",
+            "ResizeObserver triggers re-render on container resize"
+          ],
+          "priority": "critical",
+          "tags": ["canvas", "layout"],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Implemented in src/pages/home.ts with drawMasthead(), drawColumnRules(), drawColumnarText() functions. Responsive config via getResponsiveConfig()."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000002",
+          "title": "Rectangular Obstacle Avoidance",
+          "status": "completed",
+          "level": "feature",
+          "description": "Real-time text reflow around rectangular image obstacles using per-line width computation with layoutNextLine(). Adapted from editorial demo's circular chord geometry to rectangle math.",
+          "acceptanceCriteria": [
+            "Text reflows around placed rectangular images",
+            "Left/right/center obstacle positions handled correctly",
+            "Padding around obstacles for visual clearance",
+            "Reflow completes in under 1ms for 60fps"
+          ],
+          "priority": "critical",
+          "tags": ["layout", "interaction"],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Implemented getLineWidthAndOffset() in src/pages/home.ts with rectangle-based obstacle avoidance."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000003",
+          "title": "Image Tray with Procedural Art",
+          "status": "completed",
+          "level": "feature",
+          "description": "Bottom dock tray with 5 draggable image thumbnails. Each image is a procedurally-drawn geometric composition (skyline, waves, Mondrian grid, mountains, typography) rendered entirely on canvas with no bundled assets.",
+          "acceptanceCriteria": [
+            "5 distinct geometric compositions render correctly",
+            "Tray displays available images with figure labels",
+            "Empty tray state shows 'All images placed' message",
+            "Hint text appears for first-time visitors"
+          ],
+          "priority": "high",
+          "tags": ["canvas", "art"],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "5 drawing functions in src/shared/newspaper-images.ts. Tray rendering in drawTray() in home.ts."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000004",
+          "title": "Drag-and-Drop Interaction",
+          "status": "completed",
+          "level": "feature",
+          "description": "Desktop mouse and mobile touch interaction for dragging images from tray to canvas, repositioning placed images, and returning images to tray via double-click/double-tap. State machine: idle → dragging-from-tray / dragging-placed → idle.",
+          "acceptanceCriteria": [
+            "Desktop: drag from tray to place, drag placed to reposition, double-click to return",
+            "Mobile: tap tray to select, tap canvas to place, long-press to drag, double-tap to return",
+            "Cursor changes to grab/grabbing during interaction",
+            "Text reflows in real-time during drag at 60fps"
+          ],
+          "priority": "high",
+          "tags": ["interaction", "touch"],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Drag state machine with onPointerDown/Move/Up handlers in src/pages/home.ts. Mobile tap-to-select via selectedTrayIndex."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000005",
+          "title": "Entrance Animation and Performance Showcase",
+          "status": "completed",
+          "level": "feature",
+          "description": "Staggered text reveal animation on page load (printing press feel), tray appearance, and first-visit tooltip. In-canvas 'PRESS ROOM' performance overlay showing live reflow time and line count. Respects prefers-reduced-motion.",
+          "acceptanceCriteria": [
+            "Text reveals line-by-line with ease-out animation",
+            "PRESS ROOM overlay shows live reflow timing",
+            "prefers-reduced-motion skips animation",
+            "Dateline shows live performance metrics"
+          ],
+          "priority": "medium",
+          "tags": ["animation", "performance"],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "animateEntrance() with cubic ease-out in home.ts. drawPerfOverlay() for PRESS ROOM box. Reduced motion check via matchMedia."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000006",
+          "title": "Below-Fold Educational Context",
+          "status": "completed",
+          "level": "feature",
+          "description": "Explanatory section below the canvas explaining the demo uses layoutNextLine() with no DOM reflow. Link to editorial layout demo for source code. Preserved track navigation cards.",
+          "acceptanceCriteria": [
+            "Explanation text appears below canvas",
+            "Link to editorial layout demo page",
+            "Track navigation cards preserved and functional"
+          ],
+          "priority": "medium",
+          "tags": ["content", "navigation"],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "HTML section in home.ts with explanation, editorial link, and track-grid cards."
+        }
+      ]
     }
   ]
 }
