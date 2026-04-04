@@ -1,17 +1,17 @@
-/* Demo container */
+/* Museum installation — demos break free of containers */
 .demo-container {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-12);
 }
 
 .demo-area {
   background: var(--color-bg-raised);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
   margin-bottom: var(--space-4);
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   background-image: var(--gradient-surface);
 }
 
@@ -24,9 +24,23 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
   pointer-events: none;
+}
+
+/* Full-bleed installation mode */
+.demo-area--installation {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  margin-left: calc(-1 * var(--space-8));
+  margin-right: calc(-1 * var(--space-8));
+  padding: var(--space-16) var(--space-8);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Source viewer */
@@ -257,7 +271,7 @@
 
 /* Explanation blocks */
 .explanation {
-  margin: var(--space-6) 0;
+  margin: var(--space-8) 0;
   max-width: var(--content-max-width);
 }
 
@@ -295,7 +309,7 @@
   border: 1px solid rgba(129,140,248,0.15);
 }
 
-/* Hero (landing page) */
+/* Museum hero — immersive entry */
 .hero {
   text-align: center;
   padding: var(--space-20) var(--space-6) var(--space-16);
@@ -372,6 +386,7 @@
 
 .content--newspaper .content__body {
   max-width: none;
+  padding: 0;
 }
 
 .content--newspaper .page-nav {
@@ -379,18 +394,18 @@
 }
 
 .newspaper-below-fold {
-  padding: var(--space-12) var(--space-6) var(--space-16);
-  max-width: 920px;
+  padding: var(--space-16) var(--space-6) var(--space-20);
+  max-width: var(--content-wide-max-width);
   margin: 0 auto;
 }
 
 /* Track links grid */
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--space-3);
-  margin-top: var(--space-10);
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -398,8 +413,8 @@
 .track-card {
   background: var(--color-bg-raised);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
   transition: all var(--duration-normal) var(--ease-out);
   background-image: var(--gradient-surface);
   position: relative;
@@ -419,9 +434,9 @@
 }
 
 .track-card:hover {
-  border-color: rgba(129,140,248,0.2);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(129,140,248,0.15);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .track-card:hover::after {
@@ -440,84 +455,54 @@
   color: var(--color-text-tertiary);
 }
 
-/* Search button in header */
+/* Search button in nav */
 .header__search {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
   border-radius: var(--radius-md);
-  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-2);
   cursor: pointer;
   color: var(--color-text-tertiary);
   font-family: var(--font-body);
   font-size: var(--text-sm);
   transition: all var(--duration-fast) var(--ease-out);
-  margin-left: auto;
-  flex-shrink: 0;
-  height: 34px;
 }
 
 .header__search:hover {
   color: var(--color-text-secondary);
-  border-color: var(--color-border-bright);
-  background: var(--color-bg-elevated);
+  background: rgba(255,255,255,0.04);
 }
 
 .header__search svg {
   flex-shrink: 0;
-  opacity: 0.6;
 }
 
 .header__search-text {
-  margin-right: var(--space-1);
+  display: none;
 }
 
 .header__search-kbd {
-  font-family: var(--font-code);
-  font-size: 0.625rem;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: 1px 5px;
-  line-height: 1.4;
-  color: var(--color-text-tertiary);
+  display: none;
 }
 
-@media (max-width: 768px) {
-  .header__search-text,
-  .header__search-kbd {
-    display: none;
-  }
-
-  .header__search {
-    padding: var(--space-1) var(--space-2);
-    min-width: 34px;
-    justify-content: center;
-  }
-}
-
-/* Star repo button in header */
+/* Star repo in nav */
 .header__star {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  background: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   border-radius: var(--radius-md);
-  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-2);
   color: var(--color-text-tertiary);
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
   transition: all var(--duration-fast) var(--ease-out);
-  flex-shrink: 0;
-  height: 34px;
 }
 
 .header__star:hover {
   color: #e3b341;
-  border-color: rgba(227, 179, 65, 0.4);
   background: rgba(227, 179, 65, 0.08);
 }
 
@@ -525,16 +510,8 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-  .header__star-text {
-    display: none;
-  }
-
-  .header__star {
-    padding: var(--space-1) var(--space-2);
-    min-width: 34px;
-    justify-content: center;
-  }
+.header__star-text {
+  display: none;
 }
 
 /* Search modal */
@@ -557,9 +534,9 @@
 .search-modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .search-modal__panel {
@@ -569,7 +546,7 @@
   background: var(--color-bg-raised);
   border: 1px solid var(--color-border-bright);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg), 0 0 80px rgba(129,140,248,0.06);
+  box-shadow: var(--shadow-xl);
   overflow: hidden;
   transform: scale(0.96) translateY(-8px);
   transition: transform var(--duration-normal) var(--ease-spring);
@@ -731,4 +708,221 @@
   min-width: 18px;
   text-align: center;
   line-height: 1.4;
+}
+
+/* ========================================
+   Museum Portal — Immersive Homepage
+   ======================================== */
+
+.museum-portal {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Character layer — real DOM spans positioned by pretext */
+.portal-chars {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.portal-char {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  white-space: pre;
+  cursor: text;
+  line-height: 1;
+}
+
+.portal-char--hero {
+  color: var(--color-text);
+}
+
+.portal-char--heading {
+  color: var(--color-text);
+}
+
+.portal-char--body {
+  color: var(--color-text-tertiary);
+}
+
+.portal-char--metric {
+  color: var(--color-text);
+}
+
+.portal-char--metric-label {
+  color: var(--color-text-tertiary);
+}
+
+.portal-char::selection {
+  background: var(--color-accent-glow);
+  color: var(--color-text);
+}
+
+/* Track cards below the character portal */
+.portal-tracks {
+  padding: var(--space-12) var(--space-8) var(--space-20);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+[data-flipped="true"] .portal-tracks {
+  transform: scaleY(-1);
+}
+
+[data-flipped="true"] .portal-tracks > * {
+  transform: scaleY(-1);
+}
+
+/* CTA overlay — floats above canvas, fades in after text settles */
+.museum-portal__content {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  z-index: 1;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s var(--ease-dramatic), transform 1.5s var(--ease-dramatic);
+}
+
+.museum-portal__content.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.museum-portal__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  transition: all var(--duration-slow) var(--ease-out);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  pointer-events: all;
+}
+
+.museum-portal__cta:hover {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-bright);
+  background: rgba(129, 140, 248, 0.04);
+}
+
+/* Scroll cue */
+.museum-portal__scroll-cue {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-tertiary);
+  opacity: 0.25;
+  animation: museum-float 4s ease-in-out infinite;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes museum-float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(5px); }
+}
+
+/* Below-fold museum content */
+.museum-below-fold {
+  padding: var(--space-32) var(--space-8) var(--space-40);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.museum-section {
+  margin-bottom: var(--space-32);
+  text-align: center;
+}
+
+.museum-section__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-6);
+  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.museum-section__text {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+/* Museum metrics — big stats */
+.museum-metrics {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  margin: var(--space-24) 0 var(--space-32);
+  padding: var(--space-12) 0;
+}
+
+.museum-metric {
+  text-align: center;
+}
+
+.museum-metric__value {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.museum-metric__label {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .museum-below-fold {
+    padding: var(--space-16) var(--space-4) var(--space-20);
+  }
+
+  .museum-section__title {
+    font-size: var(--text-2xl);
+  }
+
+  .museum-section__text {
+    font-size: var(--text-base);
+  }
+
+  .museum-metrics {
+    flex-direction: column;
+    gap: var(--space-8);
+    margin: var(--space-16) 0;
+  }
+
+  .museum-metric__value {
+    font-size: var(--text-3xl);
+  }
 }

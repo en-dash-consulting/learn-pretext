@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[data-theme="light"] {
+  color-scheme: light;
+}
+
 body {
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -14,8 +18,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  overflow-x: hidden;
 }
 
+/* Museum typography — dramatic, cinematic headings */
 h1, h2, h3, h4 {
   line-height: var(--leading-tight);
   font-weight: var(--font-weight-semibold);
@@ -24,7 +30,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: var(--text-3xl);
+  font-size: var(--text-4xl);
   font-weight: var(--font-weight-bold);
 }
 
@@ -133,4 +139,37 @@ textarea:focus-visible {
 .skip-link:focus {
   top: var(--space-4);
   color: var(--color-text-inverse);
+}
+
+/* Museum scroll-reveal animation base */
+.museum-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--duration-slow) var(--ease-dramatic),
+              transform var(--duration-slow) var(--ease-dramatic);
+}
+
+.museum-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children reveal */
+.museum-stagger > .museum-reveal:nth-child(1) { transition-delay: 0ms; }
+.museum-stagger > .museum-reveal:nth-child(2) { transition-delay: 80ms; }
+.museum-stagger > .museum-reveal:nth-child(3) { transition-delay: 160ms; }
+.museum-stagger > .museum-reveal:nth-child(4) { transition-delay: 240ms; }
+.museum-stagger > .museum-reveal:nth-child(5) { transition-delay: 320ms; }
+.museum-stagger > .museum-reveal:nth-child(6) { transition-delay: 400ms; }
+.museum-stagger > .museum-reveal:nth-child(7) { transition-delay: 480ms; }
+.museum-stagger > .museum-reveal:nth-child(8) { transition-delay: 560ms; }
+
+/* Ambient vignette overlay */
+.museum-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  background: var(--gradient-vignette);
+  opacity: 0.5;
 }

@@ -1,51 +1,78 @@
 :root {
-  /* Colors — rich dark palette with warm undertones */
-  --color-bg: #09090b;
-  --color-bg-raised: #12121a;
-  --color-bg-elevated: #18181f;
-  --color-bg-surface: #1e1e28;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-subtle: rgba(255, 255, 255, 0.03);
-  --color-border-bright: rgba(255, 255, 255, 0.1);
+  /* Museum palette — deep, dramatic, cinematic */
+  --color-bg: #050507;
+  --color-bg-raised: #0a0a0f;
+  --color-bg-elevated: #101018;
+  --color-bg-surface: #16161f;
+  --color-border: rgba(255, 255, 255, 0.04);
+  --color-border-subtle: rgba(255, 255, 255, 0.02);
+  --color-border-bright: rgba(255, 255, 255, 0.08);
 
-  --color-text: #ededf0;
-  --color-text-secondary: #b8b8ca;
-  --color-text-tertiary: #8585a0;
-  --color-text-inverse: #09090b;
+  --color-text: #f0f0f5;
+  --color-text-secondary: #a0a0b8;
+  --color-text-tertiary: #606078;
+  --color-text-inverse: #050507;
 
-  /* Accent — electric indigo with warm glow */
+  /* Accent — luminous indigo with depth */
   --color-accent: #818cf8;
   --color-accent-hover: #a5b4fc;
-  --color-accent-muted: rgba(129, 140, 248, 0.1);
-  --color-accent-glow: rgba(129, 140, 248, 0.25);
+  --color-accent-muted: rgba(129, 140, 248, 0.08);
+  --color-accent-glow: rgba(129, 140, 248, 0.2);
 
   --color-success: #34d399;
   --color-warning: #fbbf24;
   --color-error: #fb7185;
 
-  --color-code-bg: #0d0d14;
-  --color-code-border: rgba(255, 255, 255, 0.05);
+  --color-code-bg: #08080e;
+  --color-code-border: rgba(255, 255, 255, 0.04);
+
+  /* En Dash brand colors (subtle accents) */
+  --endash-blue: #4f8ef7;
+  --endash-purple: #9b6dff;
+  --endash-teal: #008f72;
+  --endash-orange: #c43d10;
+  --endash-green: #007a53;
+  --endash-gradient: linear-gradient(135deg, #008f72 0%, #4f8ef7 100%);
+
+  /* Track atmospheres */
+  --track-foundations: #f59e0b;
+  --track-foundations-glow: rgba(245, 158, 11, 0.15);
+  --track-core: #06b6d4;
+  --track-core-glow: rgba(6, 182, 212, 0.15);
+  --track-advanced: #e2e8f0;
+  --track-advanced-glow: rgba(226, 232, 240, 0.1);
+  --track-creative: #c084fc;
+  --track-creative-glow: rgba(192, 132, 252, 0.15);
+  --track-reference: #a78bfa;
+  --track-reference-glow: rgba(167, 139, 250, 0.1);
+
+  /* Active track (set by JS per page) */
+  --track-color: var(--color-accent);
+  --track-glow: var(--color-accent-glow);
 
   /* Gradients */
-  --gradient-surface: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+  --gradient-surface: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
   --gradient-accent: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-  --gradient-accent-soft: linear-gradient(135deg, rgba(129,140,248,0.15) 0%, rgba(192,132,252,0.08) 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(129,140,248,0.08) 0%, transparent 60%);
+  --gradient-accent-soft: linear-gradient(135deg, rgba(129,140,248,0.1) 0%, rgba(192,132,252,0.05) 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(129,140,248,0.06) 0%, transparent 60%);
+  --gradient-vignette: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.4) 100%);
 
-  /* Typography */
+  /* Typography — cinematic scale */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-code: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
   --text-xs: 0.75rem;
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-lg: 1.125rem;    /* 18px */
-  --text-xl: 1.375rem;    /* 22px */
-  --text-2xl: 1.875rem;   /* 30px */
-  --text-3xl: 2.75rem;    /* 44px */
-  --text-4xl: 3.75rem;    /* 60px */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.75rem;
+  --text-5xl: 5rem;
+  --text-6xl: 7rem;
 
-  --leading-tight: 1.15;
+  --leading-tight: 1.1;
   --leading-normal: 1.55;
   --leading-relaxed: 1.65;
 
@@ -54,11 +81,11 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --tracking-tight: -0.025em;
+  --tracking-tight: -0.03em;
   --tracking-normal: -0.01em;
   --tracking-wide: 0.08em;
 
-  /* Spacing */
+  /* Spacing — generous museum breathing room */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -71,33 +98,107 @@
   --space-16: 4rem;
   --space-20: 5rem;
   --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
 
-  /* Layout */
-  --sidebar-width: 220px;
-  --header-height: 52px;
+  /* Layout — museum proportions */
+  --header-height: 0px;
+  --nav-height: 56px;
   --content-max-width: 64ch;
-  --content-wide-max-width: 920px;
+  --content-wide-max-width: 1000px;
   --page-padding: var(--space-6);
+  --section-gap: var(--space-32);
 
   /* Radius */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
   --radius-xl: 20px;
+  --radius-2xl: 28px;
 
-  /* Transitions */
-  --duration-fast: 120ms;
-  --duration-normal: 220ms;
-  --duration-slow: 400ms;
+  /* Transitions — cinematic timing */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+  --duration-dramatic: 1200ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-dramatic: cubic-bezier(0.22, 1, 0.36, 1);
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.15);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.2);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
-  --shadow-glow: 0 0 20px rgba(129,140,248,0.15), 0 0 60px rgba(129,140,248,0.05);
+  /* Shadows — dramatic depth */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-xl: 0 24px 80px rgba(0,0,0,0.7), 0 8px 24px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 30px var(--track-glow), 0 0 80px rgba(129,140,248,0.03);
+
+  /* Canvas theme (read by JS for canvas drawing) */
+  --nav-bg: rgba(5, 5, 7, 0.75);
+
+  --canvas-bg: #050507;
+  --canvas-text-r: 160;
+  --canvas-text-g: 160;
+  --canvas-text-b: 180;
+  --canvas-text-alpha: 0.35;
+  --canvas-glow-r: 129;
+  --canvas-glow-g: 140;
+  --canvas-glow-b: 248;
+
+  /* Global text scale (controlled by slider) */
+  --text-scale: 1;
+
+  /* Sidebar (preserved for compatibility during transition) */
+  --sidebar-width: 0px;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --color-bg: #f8f8fc;
+  --color-bg-raised: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --mega-bg: rgba(255, 255, 255, 0.96);
+  --color-bg-elevated: #f0f0f6;
+  --color-bg-surface: #e8e8f0;
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-subtle: rgba(0, 0, 0, 0.03);
+  --color-border-bright: rgba(0, 0, 0, 0.1);
+
+  --color-text: #1a1a2e;
+  --color-text-secondary: #4a4a68;
+  --color-text-tertiary: #8888a0;
+  --color-text-inverse: #f8f8fc;
+
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-muted: rgba(99, 102, 241, 0.08);
+  --color-accent-glow: rgba(99, 102, 241, 0.15);
+
+  --color-code-bg: #f0f0f8;
+  --color-code-border: rgba(0, 0, 0, 0.06);
+
+  --gradient-surface: linear-gradient(145deg, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0) 100%);
+  --gradient-accent-soft: linear-gradient(135deg, rgba(99,102,241,0.06) 0%, rgba(168,85,247,0.03) 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(99,102,241,0.04) 0%, transparent 60%);
+  --gradient-vignette: radial-gradient(ellipse at center, transparent 50%, rgba(248,248,252,0.5) 100%);
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-xl: 0 24px 80px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-glow: 0 0 30px var(--track-glow), 0 0 80px rgba(99,102,241,0.03);
+
+  --canvas-bg: #f8f8fc;
+  --canvas-text-r: 60;
+  --canvas-text-g: 60;
+  --canvas-text-b: 80;
+  --canvas-text-alpha: 0.4;
+  --canvas-glow-r: 99;
+  --canvas-glow-g: 102;
+  --canvas-glow-b: 241;
+
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -105,5 +206,6 @@
     --duration-fast: 0ms;
     --duration-normal: 0ms;
     --duration-slow: 0ms;
+    --duration-dramatic: 0ms;
   }
 }

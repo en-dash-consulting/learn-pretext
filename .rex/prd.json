@@ -111,7 +111,7 @@
           "title": "Page Navigation (Prev/Next)",
           "status": "completed",
           "level": "feature",
-          "description": "← Previous / Next → links at bottom of every content page. Shows destination page title for context. Follows linear progression order across all tracks.",
+          "description": "\u2190 Previous / Next \u2192 links at bottom of every content page. Shows destination page title for context. Follows linear progression order across all tracks.",
           "acceptanceCriteria": [
             "Prev/Next links on every page except first/last",
             "Destination page title shown",
@@ -171,7 +171,7 @@
           "title": "Home / Landing Page",
           "status": "completed",
           "level": "feature",
-          "description": "Hero section with live pretext-powered text reflow animation. Tagline: \"Text layout at the speed of arithmetic\". One-paragraph description of what pretext is. Live performance counter: pretext layout() vs DOM measurement timing. \"Start Learning\" CTA → Why Pretext page. Quick-jump links to all 5 tracks for returning visitors. Font loading gate: content appears after Inter font ready.",
+          "description": "Hero section with live pretext-powered text reflow animation. Tagline: \"Text layout at the speed of arithmetic\". One-paragraph description of what pretext is. Live performance counter: pretext layout() vs DOM measurement timing. \"Start Learning\" CTA \u2192 Why Pretext page. Quick-jump links to all 5 tracks for returning visitors. Font loading gate: content appears after Inter font ready.",
           "acceptanceCriteria": [
             "Hero text reflows live on viewport resize using pretext",
             "Performance counter shows real timing comparison",
@@ -191,10 +191,10 @@
         },
         {
           "id": "ad332b2b-3c64-4d32-85d7-72d81c567cfd",
-          "title": "Why Pretext — The Problem",
+          "title": "Why Pretext \u2014 The Problem",
           "status": "completed",
           "level": "feature",
-          "description": "Explains layout thrashing with animated visual timeline. Interactive comparison: 100+ text blocks measured via DOM (interleaved reads/writes) vs pretext. Toggle between approaches — feel the frame drops vs smooth 60fps. Side-by-side ms/frame display. \"What CSS can't do\" section listing impossible layouts: obstacle avoidance, true shrink-wrap, virtualization, balanced text.",
+          "description": "Explains layout thrashing with animated visual timeline. Interactive comparison: 100+ text blocks measured via DOM (interleaved reads/writes) vs pretext. Toggle between approaches \u2014 feel the frame drops vs smooth 60fps. Side-by-side ms/frame display. \"What CSS can't do\" section listing impossible layouts: obstacle avoidance, true shrink-wrap, virtualization, balanced text.",
           "acceptanceCriteria": [
             "Animated timeline visualizes layout thrash",
             "100+ text blocks toggle between DOM and pretext measurement",
@@ -216,7 +216,7 @@
           "title": "Getting Started",
           "status": "completed",
           "level": "feature",
-          "description": "Install commands (npm, bun, yarn). First working example in ≤10 lines with live result. Two-phase mental model explained: prepare once, layout many. Interactive sandbox: user types text, picks font, drags width slider → live lineCount + height update. Font loading caveat explained with code example.",
+          "description": "Install commands (npm, bun, yarn). First working example in \u226410 lines with live result. Two-phase mental model explained: prepare once, layout many. Interactive sandbox: user types text, picks font, drags width slider \u2192 live lineCount + height update. Font loading caveat explained with code example.",
           "acceptanceCriteria": [
             "Install commands shown for npm/bun/yarn",
             "10-line example renders live result",
@@ -253,12 +253,12 @@
       "children": [
         {
           "id": "e6361419-8a0d-450e-b984-26e6ec4ae986",
-          "title": "Accordion — Height Prediction",
+          "title": "Accordion \u2014 Height Prediction",
           "status": "completed",
           "level": "feature",
-          "description": "API focus: prepare() + layout(). Demo with ≥5 expandable sections with varied text lengths. Smooth CSS height transition (heights predicted before animation starts). \"Without pretext\" toggle showing DOM measurement with visible jank on rapid toggling. Annotated source: prepare on mount, layout for height calc. User can edit accordion content and see heights recalculate.",
+          "description": "API focus: prepare() + layout(). Demo with \u22655 expandable sections with varied text lengths. Smooth CSS height transition (heights predicted before animation starts). \"Without pretext\" toggle showing DOM measurement with visible jank on rapid toggling. Annotated source: prepare on mount, layout for height calc. User can edit accordion content and see heights recalculate.",
           "acceptanceCriteria": [
-            "≥5 accordion sections with smooth height animations",
+            "\u22655 accordion sections with smooth height animations",
             "Heights calculated via prepare+layout before animation",
             "Without-pretext toggle shows jank",
             "Source viewer with annotated API calls",
@@ -277,12 +277,12 @@
         },
         {
           "id": "fbea8d75-c077-41cb-80a9-8b3c49e1fd7b",
-          "title": "Chat Bubbles — Shrink-Wrap",
+          "title": "Chat Bubbles \u2014 Shrink-Wrap",
           "status": "completed",
           "level": "feature",
-          "description": "API focus: walkLineRanges(). Chat UI with ≥20 pre-populated messages. User can type and send new messages. Each bubble width = tightest shrink-wrap via walkLineRanges(). Side-by-side comparison: CSS fit-content vs pretext optimal width. Pixel savings displayed per bubble. Annotated source.",
+          "description": "API focus: walkLineRanges(). Chat UI with \u226520 pre-populated messages. User can type and send new messages. Each bubble width = tightest shrink-wrap via walkLineRanges(). Side-by-side comparison: CSS fit-content vs pretext optimal width. Pixel savings displayed per bubble. Annotated source.",
           "acceptanceCriteria": [
-            "≥20 messages displayed in chat UI",
+            "\u226520 messages displayed in chat UI",
             "User can type and send new messages",
             "Bubbles shrink-wrapped via walkLineRanges",
             "CSS fit-content vs pretext comparison visible",
@@ -301,14 +301,14 @@
         },
         {
           "id": "c98a11b0-4ae0-4e8a-b153-5c3d84ded6fe",
-          "title": "Masonry — Card Grid",
+          "title": "Masonry \u2014 Card Grid",
           "status": "completed",
           "level": "feature",
-          "description": "API focus: prepare() + layout() at scale. 50+ cards with variable text content. Heights predicted via pretext, placed in shortest column. Responsive: 1–4 columns based on viewport width. Smooth re-layout on resize without DOM measurement. Annotated source.",
+          "description": "API focus: prepare() + layout() at scale. 50+ cards with variable text content. Heights predicted via pretext, placed in shortest column. Responsive: 1\u20134 columns based on viewport width. Smooth re-layout on resize without DOM measurement. Annotated source.",
           "acceptanceCriteria": [
             "50+ cards with varied text",
             "Heights predicted without DOM reads",
-            "1–4 columns responsive to viewport",
+            "1\u20134 columns responsive to viewport",
             "Smooth relayout on resize",
             "Annotated source viewer"
           ],
@@ -348,10 +348,10 @@
         },
         {
           "id": "cc1e9124-ab85-4553-b313-b10fedc29148",
-          "title": "The Pipeline — prepare() Deep Dive",
+          "title": "The Pipeline \u2014 prepare() Deep Dive",
           "status": "completed",
           "level": "feature",
-          "description": "Interactive visualization of the full prepare() pipeline: raw text → normalize → segment → merge/glue rules → measure → cache. User types custom text and sees segments highlighted by break kind (8 colors for text, space, preserved-space, tab, glue, zero-width-break, soft-hyphen, hard-break). Width cache visualization showing hits/misses. Timing breakdown per pipeline stage.",
+          "description": "Interactive visualization of the full prepare() pipeline: raw text \u2192 normalize \u2192 segment \u2192 merge/glue rules \u2192 measure \u2192 cache. User types custom text and sees segments highlighted by break kind (8 colors for text, space, preserved-space, tab, glue, zero-width-break, soft-hyphen, hard-break). Width cache visualization showing hits/misses. Timing breakdown per pipeline stage.",
           "acceptanceCriteria": [
             "Pipeline stages visualized step by step",
             "Custom text input with live segmentation",
@@ -392,7 +392,7 @@
           "title": "Rich API Overview",
           "status": "completed",
           "level": "feature",
-          "description": "Decision guide: when to use rich API vs fast path. What prepareWithSegments() returns (segments, widths, kinds, bidi levels). layoutWithLines() vs layout() — when you need line objects. layoutNextLine() — the iterator pattern for variable-width. Interactive: same text through all three APIs, showing outputs side by side.",
+          "description": "Decision guide: when to use rich API vs fast path. What prepareWithSegments() returns (segments, widths, kinds, bidi levels). layoutWithLines() vs layout() \u2014 when you need line objects. layoutNextLine() \u2014 the iterator pattern for variable-width. Interactive: same text through all three APIs, showing outputs side by side.",
           "acceptanceCriteria": [
             "Decision guide explains when to use each API",
             "Same text processed through all APIs with visible output comparison",
@@ -412,12 +412,12 @@
         },
         {
           "id": "9638b4d5-db9b-4d8a-bd5e-5bbf8aca780f",
-          "title": "Editorial Layout — Variable-Width Flow",
+          "title": "Editorial Layout \u2014 Variable-Width Flow",
           "status": "completed",
           "level": "feature",
-          "description": "API focus: layoutNextLine() in depth. Magazine spread with ≥2 draggable obstacle elements (images/shapes). Text flows around obstacles using per-line variable widths. 60fps maintained during obstacle drag. Multi-column flow with cross-column obstacles. Annotated source showing layoutNextLine() loop with per-line width calc.",
+          "description": "API focus: layoutNextLine() in depth. Magazine spread with \u22652 draggable obstacle elements (images/shapes). Text flows around obstacles using per-line variable widths. 60fps maintained during obstacle drag. Multi-column flow with cross-column obstacles. Annotated source showing layoutNextLine() loop with per-line width calc.",
           "acceptanceCriteria": [
-            "Magazine layout with ≥2 draggable obstacles",
+            "Magazine layout with \u22652 draggable obstacles",
             "Text reflows around obstacles at 60fps during drag",
             "Multi-column text flow works",
             "layoutNextLine loop shown in annotated source",
@@ -460,7 +460,7 @@
         },
         {
           "id": "0b0e76d0-b524-47bd-9531-a27034f9cfdf",
-          "title": "Canvas Rendering — Beyond the DOM",
+          "title": "Canvas Rendering \u2014 Beyond the DOM",
           "status": "completed",
           "level": "feature",
           "description": "API focus: prepareWithSegments() + layoutWithLines() + ctx.fillText(). Canvas element with multiline text rendering and proper word wrap matching browser behavior. Pan (mouse drag) and zoom (scroll wheel). Text re-wraps at each zoom level using pretext. Annotated source.",
@@ -489,7 +489,7 @@
           "level": "feature",
           "description": "API focus: setLocale(), segmentation across scripts. Language selector: English, Chinese, Japanese, Arabic, Thai, Hindi, Myanmar, emoji. CJK kinsoku rules visualized (prohibited line-start/end characters highlighted). Bidi text: mixed LTR/RTL rendered correctly. Emoji: ZWJ sequences, width correction. User can paste any text and see how pretext segments and measures it. Annotated source.",
           "acceptanceCriteria": [
-            "Language selector with ≥8 options",
+            "Language selector with \u22658 options",
             "CJK kinsoku rules visually highlighted",
             "RTL/bidi text renders correctly",
             "Emoji ZWJ sequences handled",
@@ -574,14 +574,18 @@
           "title": "Text Physics",
           "status": "completed",
           "level": "feature",
-          "description": "Physics simulation applied to text — use pretext measurement data for realistic text particle effects and collisions. Canvas-based 60fps animation.",
+          "description": "Physics simulation applied to text \u2014 use pretext measurement data for realistic text particle effects and collisions. Canvas-based 60fps animation.",
           "acceptanceCriteria": [
             "Text reacts to physics simulation",
             "60fps animation maintained",
             "Source viewer for demo code"
           ],
           "priority": "medium",
-          "tags": ["page", "creative", "demo"],
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -599,7 +603,11 @@
             "Source viewer for demo code"
           ],
           "priority": "medium",
-          "tags": ["page", "creative", "demo"],
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -610,14 +618,18 @@
           "title": "Text Rain",
           "status": "completed",
           "level": "feature",
-          "description": "Text rain animation — characters fall down the screen with pretext-powered real-time position tracking and measurement.",
+          "description": "Text rain animation \u2014 characters fall down the screen with pretext-powered real-time position tracking and measurement.",
           "acceptanceCriteria": [
             "Characters rain down the screen",
             "Real-time position tracking via pretext",
             "Source viewer for demo code"
           ],
           "priority": "medium",
-          "tags": ["page", "creative", "demo"],
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -635,7 +647,11 @@
             "Source viewer for demo code"
           ],
           "priority": "medium",
-          "tags": ["page", "creative", "demo"],
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -646,14 +662,18 @@
           "title": "Text Flood",
           "status": "completed",
           "level": "feature",
-          "description": "Text flood fill animation — dynamic text expansion using pretext for real-time measurement and flow.",
+          "description": "Text flood fill animation \u2014 dynamic text expansion using pretext for real-time measurement and flow.",
           "acceptanceCriteria": [
             "Text flood fill animation runs",
             "Pretext used for text expansion measurement",
             "Source viewer for demo code"
           ],
           "priority": "medium",
-          "tags": ["page", "creative", "demo"],
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -664,14 +684,18 @@
           "title": "Breaking Spaces",
           "status": "completed",
           "level": "feature",
-          "description": "Interactive exploration of breaking spaces and word-wrap behavior — visualize how pretext handles line breaks across different Unicode break types.",
+          "description": "Interactive exploration of breaking spaces and word-wrap behavior \u2014 visualize how pretext handles line breaks across different Unicode break types.",
           "acceptanceCriteria": [
             "Break types visualized with colors",
             "User can input custom text",
             "Source viewer for demo code"
           ],
           "priority": "medium",
-          "tags": ["page", "creative", "demo"],
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -765,14 +789,18 @@
           "title": "Accessibility Page",
           "status": "completed",
           "level": "feature",
-          "description": "Dedicated accessibility guide for pretext — how to ensure text measured with pretext remains accessible to screen readers and assistive technology. Covers ARIA patterns, focus management, and content reflow accessibility.",
+          "description": "Dedicated accessibility guide for pretext \u2014 how to ensure text measured with pretext remains accessible to screen readers and assistive technology. Covers ARIA patterns, focus management, and content reflow accessibility.",
           "acceptanceCriteria": [
             "Screen reader guidance documented",
             "ARIA patterns for pretext-driven layouts explained",
             "Practical code examples provided"
           ],
           "priority": "medium",
-          "tags": ["page", "reference", "a11y"],
+          "tags": [
+            "page",
+            "reference",
+            "a11y"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -790,7 +818,10 @@
             "Links to relevant resources"
           ],
           "priority": "low",
-          "tags": ["page", "reference"],
+          "tags": [
+            "page",
+            "reference"
+          ],
           "startedAt": "2026-03-30T02:00:00.000Z",
           "completedAt": "2026-03-30T02:00:00.000Z",
           "resolutionType": "code-change",
@@ -803,7 +834,7 @@
       "title": "Non-Functional Requirements",
       "status": "completed",
       "level": "epic",
-      "description": "Cross-cutting quality requirements: Performance (< 800ms first paint, 60fps demos, < 50KB per-page bundle), Accessibility (keyboard nav, ARIA, WCAG AA, no user-select:none on content), Responsive (320px–2560px+, touch support), Browser Support (Chrome 94+, Safari 17.4+, Firefox 125+), Code Quality (strict TS, no any).",
+      "description": "Cross-cutting quality requirements: Performance (< 800ms first paint, 60fps demos, < 50KB per-page bundle), Accessibility (keyboard nav, ARIA, WCAG AA, no user-select:none on content), Responsive (320px\u20132560px+, touch support), Browser Support (Chrome 94+, Safari 17.4+, Firefox 125+), Code Quality (strict TS, no any).",
       "priority": "high",
       "tags": [
         "nfr",
@@ -818,7 +849,7 @@
           "level": "feature",
           "description": "Per-page first paint < 800ms. Per-page interactive < 1.5s. Per-page JS bundle < 50KB (excluding shared). Shared JS bundle < 60KB. All demos maintain 60fps during interaction. Pretext layout() calls < 1ms on all demos.",
           "acceptanceCriteria": [
-            "Lighthouse performance score ≥90 on all pages",
+            "Lighthouse performance score \u226590 on all pages",
             "No demo drops below 60fps during interaction",
             "Bundle sizes within budget"
           ],
@@ -886,7 +917,7 @@
       "title": "Design System",
       "status": "completed",
       "level": "epic",
-      "description": "Visual design system: Dark theme (#0a0a0a–#1a1a1a), typography scale (12–64px, Inter body, JetBrains Mono code), CSS custom properties, animation guidelines (subtle transitions, rAF for pretext animations, prefers-reduced-motion), interaction patterns (focus indicators, hover states, drag handles, slider labels).",
+      "description": "Visual design system: Dark theme (#0a0a0a\u2013#1a1a1a), typography scale (12\u201364px, Inter body, JetBrains Mono code), CSS custom properties, animation guidelines (subtle transitions, rAF for pretext animations, prefers-reduced-motion), interaction patterns (focus indicators, hover states, drag handles, slider labels).",
       "priority": "high",
       "tags": [
         "design",
@@ -901,7 +932,7 @@
           "title": "Visual Theme & Typography",
           "status": "completed",
           "level": "feature",
-          "description": "Dark background (#0a0a0a–#1a1a1a). Light text with high contrast. Accent color for interactive elements. Inter for body (matches pretext test corpus), JetBrains Mono for code. Type scale: 12/14/16/20/24/32/48/64px. Line heights: 1.2 headings, 1.5 body, 1.6 code. Max reading width 65ch. CSS custom properties for all values.",
+          "description": "Dark background (#0a0a0a\u2013#1a1a1a). Light text with high contrast. Accent color for interactive elements. Inter for body (matches pretext test corpus), JetBrains Mono for code. Type scale: 12/14/16/20/24/32/48/64px. Line heights: 1.2 headings, 1.5 body, 1.6 code. Max reading width 65ch. CSS custom properties for all values.",
           "acceptanceCriteria": [
             "Dark theme applied globally",
             "Inter and JetBrains Mono render correctly",
@@ -945,7 +976,7 @@
     },
     {
       "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-      "title": "Interactive Homepage — Newspaper Editor",
+      "title": "Interactive Homepage \u2014 Newspaper Editor",
       "status": "completed",
       "level": "epic",
       "description": "Transform the homepage into an interactive canvas-rendered newspaper front page where visitors drag procedurally-drawn images from a tray onto a multi-column layout and text reflows around them in real-time at 60fps using pretext's layoutNextLine() API.",
@@ -971,7 +1002,10 @@
             "ResizeObserver triggers re-render on container resize"
           ],
           "priority": "critical",
-          "tags": ["canvas", "layout"],
+          "tags": [
+            "canvas",
+            "layout"
+          ],
           "startedAt": "2026-04-01T00:00:00.000Z",
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
@@ -990,7 +1024,10 @@
             "Reflow completes in under 1ms for 60fps"
           ],
           "priority": "critical",
-          "tags": ["layout", "interaction"],
+          "tags": [
+            "layout",
+            "interaction"
+          ],
           "startedAt": "2026-04-01T00:00:00.000Z",
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
@@ -1009,7 +1046,10 @@
             "Hint text appears for first-time visitors"
           ],
           "priority": "high",
-          "tags": ["canvas", "art"],
+          "tags": [
+            "canvas",
+            "art"
+          ],
           "startedAt": "2026-04-01T00:00:00.000Z",
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
@@ -1020,7 +1060,7 @@
           "title": "Drag-and-Drop Interaction",
           "status": "completed",
           "level": "feature",
-          "description": "Desktop mouse and mobile touch interaction for dragging images from tray to canvas, repositioning placed images, and returning images to tray via double-click/double-tap. State machine: idle → dragging-from-tray / dragging-placed → idle.",
+          "description": "Desktop mouse and mobile touch interaction for dragging images from tray to canvas, repositioning placed images, and returning images to tray via double-click/double-tap. State machine: idle \u2192 dragging-from-tray / dragging-placed \u2192 idle.",
           "acceptanceCriteria": [
             "Desktop: drag from tray to place, drag placed to reposition, double-click to return",
             "Mobile: tap tray to select, tap canvas to place, long-press to drag, double-tap to return",
@@ -1028,7 +1068,10 @@
             "Text reflows in real-time during drag at 60fps"
           ],
           "priority": "high",
-          "tags": ["interaction", "touch"],
+          "tags": [
+            "interaction",
+            "touch"
+          ],
           "startedAt": "2026-04-01T00:00:00.000Z",
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
@@ -1047,7 +1090,10 @@
             "Dateline shows live performance metrics"
           ],
           "priority": "medium",
-          "tags": ["animation", "performance"],
+          "tags": [
+            "animation",
+            "performance"
+          ],
           "startedAt": "2026-04-01T00:00:00.000Z",
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
@@ -1065,7 +1111,10 @@
             "Track navigation cards preserved and functional"
           ],
           "priority": "medium",
-          "tags": ["content", "navigation"],
+          "tags": [
+            "content",
+            "navigation"
+          ],
           "startedAt": "2026-04-01T00:00:00.000Z",
           "completedAt": "2026-04-01T00:00:00.000Z",
           "resolutionType": "code-change",
@@ -1080,7 +1129,11 @@
       "level": "epic",
       "description": "Comprehensive SEO, GEO (Generative Engine Optimization), and AEO (AI Engine Optimization) overhaul. Favicon update to match endash.us branding, unique meta descriptions per page, Open Graph and Twitter Card metadata, canonical URLs, JSON-LD structured data, robots.txt, XML sitemap, and apple-touch-icon.",
       "priority": "high",
-      "tags": ["seo", "branding", "infrastructure"],
+      "tags": [
+        "seo",
+        "branding",
+        "infrastructure"
+      ],
       "startedAt": "2026-04-01T13:00:00.000Z",
       "completedAt": "2026-04-01T13:30:00.000Z",
       "children": [
@@ -1089,14 +1142,16 @@
           "title": "Favicon & Branding Update",
           "status": "completed",
           "level": "feature",
-          "description": "Updated favicon to match endash.us branding — purple background, no border, rounded corners. Added favicon.ico (from endash.us), updated favicon.svg, and added apple-touch-icon.png. All 26 HTML pages reference SVG, ICO, and apple-touch-icon formats.",
+          "description": "Updated favicon to match endash.us branding \u2014 purple background, no border, rounded corners. Added favicon.ico (from endash.us), updated favicon.svg, and added apple-touch-icon.png. All 26 HTML pages reference SVG, ICO, and apple-touch-icon formats.",
           "acceptanceCriteria": [
             "Favicon matches endash.us purple branding",
             "favicon.svg, favicon.ico, apple-touch-icon.png all present",
             "All 26 pages reference all three favicon formats"
           ],
           "priority": "high",
-          "tags": ["branding"],
+          "tags": [
+            "branding"
+          ],
           "startedAt": "2026-04-01T13:00:00.000Z",
           "completedAt": "2026-04-01T13:10:00.000Z",
           "resolutionType": "code-change",
@@ -1115,7 +1170,9 @@
             "meta robots index,follow on all pages"
           ],
           "priority": "high",
-          "tags": ["seo"],
+          "tags": [
+            "seo"
+          ],
           "startedAt": "2026-04-01T13:10:00.000Z",
           "completedAt": "2026-04-01T13:25:00.000Z",
           "resolutionType": "code-change",
@@ -1134,7 +1191,10 @@
             "Valid JSON-LD passes schema.org validation"
           ],
           "priority": "high",
-          "tags": ["seo", "structured-data"],
+          "tags": [
+            "seo",
+            "structured-data"
+          ],
           "startedAt": "2026-04-01T13:10:00.000Z",
           "completedAt": "2026-04-01T13:25:00.000Z",
           "resolutionType": "code-change",
@@ -1152,11 +1212,154 @@
             "Priority values reflect page importance hierarchy"
           ],
           "priority": "high",
-          "tags": ["seo"],
+          "tags": [
+            "seo"
+          ],
           "startedAt": "2026-04-01T13:25:00.000Z",
           "completedAt": "2026-04-01T13:30:00.000Z",
           "resolutionType": "code-change",
           "resolutionDetail": "public/robots.txt and public/sitemap.xml created. Sitemap covers all 26 pages with priority 1.0 (home) to 0.5 (about)."
+        }
+      ]
+    },
+    {
+      "id": "05b2cab8-1fff-452d-ad4e-5cf5e4a2f5f3",
+      "title": "Interactive Museum Redesign",
+      "status": "pending",
+      "level": "epic",
+      "description": "Ground-up reimagining of the site UX \u2014 transforming it from a traditional sidebar-nav tutorial site into an immersive, interactive museum exhibit where users fall into and flow through pretext's learning path. The site itself becomes the most compelling demonstration of what pretext can do. Every page, transition, and interaction should feel like walking through a curated exhibit that makes users say \"how is this possible in a browser?\"",
+      "priority": "high",
+      "tags": [
+        "design",
+        "ux",
+        "immersive"
+      ],
+      "source": "user-conversation",
+      "children": [
+        {
+          "id": "13c51a1a-2991-44f9-9c09-ac7fc30471b5",
+          "title": "Immersive Entry Experience",
+          "status": "pending",
+          "level": "feature",
+          "description": "Replace the current homepage with a full-screen, gravity-pulling entrance \u2014 a portal that draws users in. Think: falling through text that measures and repositions itself around you. The very first moment should make users say \"how is this possible in a browser?\"",
+          "acceptanceCriteria": [
+            "Full-screen immersive entry replaces current homepage layout",
+            "Uses pretext layout engine for real-time text positioning effects",
+            "Draws users into the learning path with a sense of falling/gravity",
+            "Works responsively across desktop, tablet, and mobile",
+            "Performance remains smooth (60fps) during entrance animation"
+          ],
+          "priority": "high",
+          "tags": [
+            "homepage",
+            "animation",
+            "entry"
+          ]
+        },
+        {
+          "id": "5493cb91-2495-4760-a6bb-5cb6200c7c39",
+          "title": "Flow-Based Navigation",
+          "status": "pending",
+          "level": "feature",
+          "description": "Replace sidebar + prev/next with a continuous, scroll-driven journey. Pages dissolve into each other like rooms in a museum. The learning path has a physical, spatial feeling \u2014 you are moving through concepts, not clicking between them.",
+          "acceptanceCriteria": [
+            "Sidebar navigation replaced with flow-based spatial navigation",
+            "Scroll-driven transitions between pages/sections",
+            "Pages dissolve or morph into each other seamlessly",
+            "Users can still jump to specific sections when needed",
+            "Navigation state is preserved (back button, deep links work)",
+            "Learning path feels like physical movement through space"
+          ],
+          "priority": "high",
+          "tags": [
+            "navigation",
+            "scroll",
+            "transitions"
+          ]
+        },
+        {
+          "id": "84c44c23-8ca0-4d2a-bffe-c14d476d5ed8",
+          "title": "Living Demos",
+          "status": "pending",
+          "level": "feature",
+          "description": "Every demo should feel like a museum installation \u2014 not a code sample in a box. Demos break out of their containers, respond to the user's presence (cursor, scroll position, viewport), and transition seamlessly into the next concept.",
+          "acceptanceCriteria": [
+            "Demos break out of traditional boxed containers",
+            "Demos respond to cursor position and scroll state",
+            "Seamless visual transitions between demos and explanatory content",
+            "Each demo feels like a standalone museum installation",
+            "Demos are aware of viewport and adapt their presentation accordingly"
+          ],
+          "priority": "high",
+          "tags": [
+            "demos",
+            "interaction",
+            "immersive"
+          ]
+        },
+        {
+          "id": "43a30d2e-12bd-4d35-a1a6-86cf299d429a",
+          "title": "Spatial Typography System",
+          "status": "pending",
+          "level": "feature",
+          "description": "Redesign the typography to be a character in the story. Text doesn't just sit on a page \u2014 it breathes, arranges, and responds. Headings could assemble themselves using pretext's layout engine. The type is the exhibit.",
+          "acceptanceCriteria": [
+            "Headings and key text elements animate using pretext layout engine",
+            "Typography responds to user interaction (scroll, cursor)",
+            "Text arrangement itself demonstrates pretext capabilities",
+            "Consistent typographic system that feels alive without being distracting",
+            "Accessible \u2014 animations respect prefers-reduced-motion"
+          ],
+          "priority": "medium",
+          "tags": [
+            "typography",
+            "animation",
+            "design-system"
+          ]
+        },
+        {
+          "id": "ba4636c3-6df3-457f-8cba-ed3dab5d2a34",
+          "title": "Curated Learning Corridors",
+          "status": "pending",
+          "level": "feature",
+          "description": "Restructure the 5 tracks as distinct \"wings\" of the museum, each with its own visual atmosphere and personality. Foundations feels like an origin story; Creative feels like an art gallery; Advanced feels like a research lab.",
+          "acceptanceCriteria": [
+            "Each of the 5 tracks has a distinct visual atmosphere",
+            "Foundations track feels like an origin story",
+            "Core Patterns track has a workshop/lab feel",
+            "Advanced track feels like a research facility",
+            "Creative track feels like an art gallery",
+            "Reference track feels like an archive/library",
+            "Transitions between tracks feel like moving between museum wings"
+          ],
+          "priority": "medium",
+          "tags": [
+            "tracks",
+            "theming",
+            "atmosphere"
+          ]
+        },
+        {
+          "id": "a4c7087a-06ce-47f1-a120-cea93d9642d6",
+          "title": "Ambient Interaction Layer",
+          "status": "pending",
+          "level": "feature",
+          "description": "Subtle, ever-present interactions that make the whole site feel alive \u2014 parallax depth, cursor-responsive text reflow, ambient particle systems, scroll-triggered transitions. Nothing gratuitous; everything demonstrates pretext.",
+          "acceptanceCriteria": [
+            "Parallax depth effects throughout the site",
+            "Cursor-responsive text reflow using pretext",
+            "Scroll-triggered transitions and reveals",
+            "Ambient effects that make the site feel alive",
+            "All effects serve to demonstrate pretext capabilities",
+            "Performance budget maintained (no jank or dropped frames)",
+            "Respects prefers-reduced-motion"
+          ],
+          "priority": "medium",
+          "tags": [
+            "interaction",
+            "ambient",
+            "polish"
+          ]
         }
       ]
     }
