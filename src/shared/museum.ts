@@ -14,10 +14,12 @@ export function initMuseumReveals() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible')
+          // Stop observing once revealed — no need to re-hide
+          revealObserver?.unobserve(entry.target)
         }
       })
     },
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' },
+    { threshold: 0, rootMargin: '0px 0px -20px 0px' },
   )
 
   // Watch for page content being populated
