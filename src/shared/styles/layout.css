@@ -85,6 +85,12 @@
   background: rgba(255,255,255,0.04);
 }
 
+.museum-nav__link:focus-visible {
+  color: var(--color-text-secondary);
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
 .museum-nav__link.active {
   color: var(--track-color, var(--color-accent));
   background: rgba(129, 140, 248, 0.08);
@@ -126,11 +132,16 @@
   color: var(--color-text);
 }
 
-.mega-panel__item:hover,
+.mega-panel__item:hover {
+  background: var(--color-accent-muted);
+  color: var(--color-text);
+}
+
 .mega-panel__item:focus-visible {
   background: var(--color-accent-muted);
   color: var(--color-text);
-  outline: none;
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
 }
 
 .mega-panel__item--current {

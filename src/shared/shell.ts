@@ -375,16 +375,35 @@ function initScrollReveal() {
     nav.classList.add('visible')
   } else {
     const threshold = window.innerHeight * 0.3
-    let visible = false
+    let scrollVisible = false
+    let focusVisible = false
     const navEl = nav
+
+    function updateNav() {
+      navEl.classList.toggle('visible', scrollVisible || focusVisible)
+    }
+
     function checkScroll() {
       const shouldShow = window.scrollY > threshold
-      if (shouldShow !== visible) {
-        visible = shouldShow
-        navEl.classList.toggle('visible', visible)
+      if (shouldShow !== scrollVisible) {
+        scrollVisible = shouldShow
+        updateNav()
       }
     }
     window.addEventListener('scroll', checkScroll, { passive: true })
+
+    // Show nav when it receives keyboard focus
+    navEl.addEventListener('focusin', () => {
+      focusVisible = true
+      updateNav()
+    })
+    navEl.addEventListener('focusout', (e) => {
+      // Only hide if focus moved outside the nav entirely
+      if (!navEl.contains((e as FocusEvent).relatedTarget as Node)) {
+        focusVisible = false
+        updateNav()
+      }
+    })
   }
 
   // Museum scroll reveal for content sections
