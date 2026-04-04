@@ -295,6 +295,9 @@ function initMegaMenu() {
   }
 
   dropdowns.forEach(dropdown => {
+    const trigger = dropdown.querySelector('button')
+    const panel = dropdown.querySelector('.mega-panel')
+
     // Mouse: hover to open, leave to close with delay
     dropdown.addEventListener('mouseenter', () => {
       cancelClose()
@@ -304,31 +307,37 @@ function initMegaMenu() {
       scheduleClose()
     })
 
-    // Keyboard: Enter/Space on trigger, Escape to close
-    const trigger = dropdown.querySelector('button')
+    // Open on focus (Tab into trigger)
+    trigger?.addEventListener('focus', () => {
+      cancelClose()
+      openMenu(dropdown)
+    })
+
+    // Click toggles
     trigger?.addEventListener('click', () => {
       const expanded = trigger.getAttribute('aria-expanded') === 'true'
       if (expanded) {
         closeMenu()
       } else {
         openMenu(dropdown)
-        // Focus first item
         const firstItem = dropdown.querySelector('.mega-panel__item') as HTMLElement
         firstItem?.focus()
       }
     })
 
+    // Arrow keys on trigger
     trigger?.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowDown') {
         e.preventDefault()
         openMenu(dropdown)
         const firstItem = dropdown.querySelector('.mega-panel__item') as HTMLElement
         firstItem?.focus()
+      } else if (e.key === 'Escape') {
+        closeMenu()
       }
     })
 
     // Keyboard nav within panel
-    const panel = dropdown.querySelector('.mega-panel')
     panel?.addEventListener('keydown', (e: Event) => {
       const ke = e as KeyboardEvent
       const items = Array.from(panel.querySelectorAll('.mega-panel__item')) as HTMLElement[]
@@ -341,7 +350,6 @@ function initMegaMenu() {
       } else if (ke.key === 'ArrowUp') {
         ke.preventDefault()
         if (idx <= 0) {
-          closeMenu()
           trigger?.focus()
         } else {
           items[idx - 1]?.focus()
@@ -350,9 +358,19 @@ function initMegaMenu() {
         ke.preventDefault()
         closeMenu()
         trigger?.focus()
-      } else if (ke.key === 'Tab') {
-        closeMenu()
       }
+    })
+
+    // Close when focus leaves the entire dropdown
+    dropdown.addEventListener('focusout', (e) => {
+      const related = (e as FocusEvent).relatedTarget as Node | null
+      if (!related || !dropdown.contains(related)) {
+        scheduleClose()
+      }
+    })
+
+    dropdown.addEventListener('focusin', () => {
+      cancelClose()
     })
   })
 
