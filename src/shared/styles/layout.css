@@ -324,34 +324,34 @@
 /* En Dash CTA — prominent branding section */
 .footer__endash-cta {
   text-align: center;
-  padding: var(--space-24) var(--space-8) var(--space-20);
+  padding: var(--space-20) var(--space-8) var(--space-16);
   max-width: var(--content-wide-max-width);
   margin: 0 auto;
   position: relative;
 }
 
 .footer__endash-bar {
-  width: 60px;
+  width: 48px;
   height: 3px;
   background: var(--endash-gradient);
-  margin: 0 auto var(--space-6);
+  margin: 0 auto var(--space-5);
   border-radius: 2px;
 }
 
 .footer__endash-pre {
   font-size: var(--text-sm);
-  color: var(--color-text-tertiary);
-  margin-bottom: var(--space-2);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-1);
   font-weight: var(--font-weight-normal);
 }
 
 .footer__endash-headline {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
-  max-width: 500px;
-  margin: 0 auto var(--space-4);
-  line-height: var(--leading-tight);
+  max-width: 420px;
+  margin: 0 auto var(--space-3);
+  line-height: var(--leading-normal);
   letter-spacing: var(--tracking-tight);
 }
 
@@ -360,40 +360,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.footer__endash-sub {
-  font-size: var(--text-base);
-  color: var(--color-text-tertiary);
-  margin: 0 auto var(--space-6);
-  max-width: 400px;
-}
-
-.footer__endash-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  padding: var(--space-3) var(--space-6);
-  border: 1px solid var(--color-border-bright);
-  border-radius: var(--radius-lg);
-  transition: all var(--duration-normal) var(--ease-out);
-}
-
-.footer__endash-link:hover {
-  color: var(--color-text);
-  border-color: rgba(79, 142, 247, 0.3);
-  background: rgba(79, 142, 247, 0.05);
-  box-shadow: 0 0 30px rgba(79, 142, 247, 0.08);
-  transform: translateY(-1px);
+  white-space: nowrap;
 }
 
 .footer__endash-contrib {
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  margin: var(--space-3) auto var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  margin: 0 auto var(--space-5);
 }
 
 .footer__endash-contrib a {
@@ -404,6 +377,34 @@
 
 .footer__endash-contrib a:hover {
   color: var(--color-accent-hover);
+}
+
+.footer__endash-sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  margin: 0 auto var(--space-5);
+  max-width: 360px;
+}
+
+.footer__endash-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-border-bright);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.footer__endash-link:hover {
+  color: var(--color-text);
+  border-color: rgba(79, 142, 247, 0.3);
+  background: rgba(79, 142, 247, 0.05);
+  box-shadow: 0 0 20px rgba(79, 142, 247, 0.06);
+  transform: translateY(-1px);
 }
 
 /* Footer — minimal, museum-like */
@@ -654,14 +655,10 @@
   }
 
   .footer__endash-cta {
-    padding: var(--space-16) var(--space-4) var(--space-12);
+    padding: var(--space-12) var(--space-4) var(--space-10);
   }
 
   .footer__endash-headline {
-    font-size: var(--text-xl);
-  }
-
-  .footer__endash-sub {
-    font-size: var(--text-sm);
+    font-size: var(--text-lg);
   }
 }
