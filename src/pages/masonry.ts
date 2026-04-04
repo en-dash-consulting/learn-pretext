@@ -116,10 +116,11 @@ async function init() {
 
   function doLayout() {
     const containerWidth = wrapper.clientWidth
+    if (containerWidth < 1) return // not yet laid out by browser
     const cols = getColumnCount(containerWidth)
     const colWidth = (containerWidth - GAP * (cols - 1)) / cols
 
-    const textWidth = colWidth - CARD_PADDING - 2 // subtract padding + border
+    const textWidth = Math.max(colWidth - CARD_PADDING - 2, 10) // subtract padding + border
 
     const { elapsed } = timeExecution(() => {
       const colHeights = new Array(cols).fill(0)
@@ -155,7 +156,14 @@ async function init() {
     ])
   }
 
-  doLayout()
+  // Defer initial layout to next frame so browser has computed dimensions
+  requestAnimationFrame(() => {
+    doLayout()
+    // Retry once more if width was still 0 (mobile paint timing)
+    if (wrapper.clientWidth < 1) {
+      requestAnimationFrame(doLayout)
+    }
+  })
   onResize(wrapper, () => doLayout())
 
   const sourceCode = `import { prepare, layout } from '@chenglou/pretext'
