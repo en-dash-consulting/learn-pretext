@@ -384,18 +384,19 @@
 }
 
 .footer__endash-contrib {
-  margin-top: var(--space-4);
-  font-size: var(--text-xs);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: var(--space-3) auto var(--space-6);
 }
 
 .footer__endash-contrib a {
-  color: var(--color-text-tertiary);
-  font-style: italic;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
   transition: color var(--duration-fast) var(--ease-out);
 }
 
 .footer__endash-contrib a:hover {
-  color: var(--color-text-secondary);
+  color: var(--color-accent-hover);
 }
 
 /* Footer — minimal, museum-like */
