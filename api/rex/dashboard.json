@@ -1,0 +1,200 @@
+{
+  "title": "Learn Pretext",
+  "stats": {
+    "total": 47,
+    "completed": 47,
+    "inProgress": 0,
+    "pending": 0,
+    "failing": 0,
+    "deferred": 0,
+    "blocked": 0,
+    "deleted": 0
+  },
+  "percentComplete": 100,
+  "epics": [
+    {
+      "id": "d271ba4e-9b6f-4a11-9e7d-4d8788fcc2bd",
+      "title": "Site Shell & Infrastructure",
+      "status": "completed",
+      "priority": "critical",
+      "stats": {
+        "total": 6,
+        "completed": 6,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "7d6202f1-cfbf-453a-ab31-977c681dde94",
+      "title": "Foundations Track",
+      "status": "completed",
+      "priority": "critical",
+      "stats": {
+        "total": 3,
+        "completed": 3,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "ba2fa61a-c689-4b7d-8e6b-830370ce8b73",
+      "title": "Core Patterns Track",
+      "status": "completed",
+      "priority": "high",
+      "stats": {
+        "total": 5,
+        "completed": 5,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "07e67b04-1e69-4fb7-ba9f-2a77e1968ac3",
+      "title": "Advanced Track",
+      "status": "completed",
+      "priority": "high",
+      "stats": {
+        "total": 5,
+        "completed": 5,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "bebd5052-6761-435f-b072-6d1e2c9e68cd",
+      "title": "Creative Track",
+      "status": "completed",
+      "priority": "medium",
+      "stats": {
+        "total": 8,
+        "completed": 8,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "d08e1b27-9ce4-486b-8cc1-b9836f1554f7",
+      "title": "Reference Track",
+      "status": "completed",
+      "priority": "medium",
+      "stats": {
+        "total": 5,
+        "completed": 5,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "87bf1bc3-77f0-4663-b638-dd32d37ebe3d",
+      "title": "Non-Functional Requirements",
+      "status": "completed",
+      "priority": "high",
+      "stats": {
+        "total": 3,
+        "completed": 3,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "3b107d39-55eb-4a75-871e-96ee27dfa7fa",
+      "title": "Design System",
+      "status": "completed",
+      "priority": "high",
+      "stats": {
+        "total": 2,
+        "completed": 2,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "title": "Interactive Homepage — Newspaper Editor",
+      "status": "completed",
+      "priority": "high",
+      "stats": {
+        "total": 6,
+        "completed": 6,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    },
+    {
+      "id": "d1e2f3a4-7001-4000-a001-000000000000",
+      "title": "SEO, GEO & Branding",
+      "status": "completed",
+      "priority": "high",
+      "stats": {
+        "total": 4,
+        "completed": 4,
+        "inProgress": 0,
+        "pending": 0,
+        "failing": 0,
+        "deferred": 0,
+        "blocked": 0,
+        "deleted": 0
+      },
+      "percentComplete": 100
+    }
+  ],
+  "nextTask": null,
+  "priorities": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unset": 0
+  },
+  "requirements": {
+    "totalRequirements": 0,
+    "itemsWithRequirements": 0,
+    "byCategory": {},
+    "byValidationType": {}
+  }
+}

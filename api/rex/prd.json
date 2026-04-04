@@ -1,0 +1,1226 @@
+{
+  "schema": "rex/v1",
+  "title": "Learn Pretext",
+  "items": [
+    {
+      "id": "d271ba4e-9b6f-4a11-9e7d-4d8788fcc2bd",
+      "title": "Site Shell & Infrastructure",
+      "status": "completed",
+      "level": "epic",
+      "description": "Global site scaffold: Vite MPA project with 26 page entries, header (\"Learn Pretext\"), sidebar navigation, footer (\"Built by En Dash\" / \"Built with n-dx and Claude\"), shared components (source viewer, performance meter, demo container, slider, toggle, search), page navigation (prev/next), CSS architecture, font hosting, Google Analytics.",
+      "priority": "critical",
+      "tags": [
+        "infrastructure",
+        "shell"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:51:53.283Z",
+      "completedAt": "2026-03-30T01:51:53.283Z",
+      "children": [
+        {
+          "id": "d2a4a3fd-f55f-400b-ac28-9c86263814f7",
+          "title": "Project Scaffold",
+          "status": "completed",
+          "level": "feature",
+          "description": "Vite MPA project with TypeScript strict mode. Install @chenglou/pretext, vite, typescript, shiki. Configure Vite with multi-page input entries for all 18 pages. CSS architecture: reset, variables, global, layout, components files. Self-host Inter (body) and JetBrains Mono (code) fonts. Verify pretext prepare/layout works in dev.",
+          "acceptanceCriteria": [
+            "Vite dev server runs with all 26 page entries",
+            "TypeScript strict mode with no errors",
+            "@chenglou/pretext prepare() and layout() execute successfully",
+            "Inter and JetBrains Mono fonts load correctly",
+            "CSS architecture files created and imported"
+          ],
+          "priority": "critical",
+          "tags": [
+            "infrastructure"
+          ],
+          "startedAt": "2026-03-30T01:22:25.452Z",
+          "completedAt": "2026-03-30T01:50:15.215Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Vite MPA project scaffolded with TypeScript strict mode, @chenglou/pretext, shiki, vitest. All 18 HTML page entries configured. CSS architecture (reset, variables, global, layout, components), nav data, shared helpers, reusable components (source-viewer, perf-meter, slider, toggle), and all 18 page TS implementations created. 16 tests passing."
+        },
+        {
+          "id": "1a9d1d3f-a35e-4b4f-80b0-190d598f8426",
+          "title": "Global Header",
+          "status": "completed",
+          "level": "feature",
+          "description": "\"Learn Pretext\" text/wordmark left-aligned. Navigation links to track landing pages. Sticky on scroll. Current page/track indicator. Responsive: collapses to hamburger on mobile.",
+          "acceptanceCriteria": [
+            "Header displays 'Learn Pretext' wordmark",
+            "Nav links to each track's first page",
+            "Sticks to top on scroll",
+            "Current track highlighted",
+            "Hamburger menu on viewports < 768px"
+          ],
+          "priority": "critical",
+          "tags": [
+            "shell",
+            "navigation"
+          ],
+          "startedAt": "2026-03-30T01:51:42.542Z",
+          "completedAt": "2026-03-30T01:51:42.542Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Header with \"Learn Pretext\" wordmark, track nav links, active track indicator, hamburger on mobile. Implemented in shell.ts."
+        },
+        {
+          "id": "bf466bd8-62e3-4cfc-a982-e991093ee53a",
+          "title": "Sidebar Navigation",
+          "status": "completed",
+          "level": "feature",
+          "description": "Full page tree grouped by track (Foundations, Core Patterns, Advanced, Creative, Reference). Track headings with expandable page lists. Active page highlighted. Scrollable independently. Desktop: always visible ~240px. Mobile: slide-out drawer from hamburger.",
+          "acceptanceCriteria": [
+            "All 26 pages listed grouped under 5 tracks",
+            "Active page visually highlighted",
+            "Sidebar scrolls independently of content",
+            "Desktop: sidebar always visible",
+            "Mobile: drawer opens/closes from hamburger"
+          ],
+          "priority": "critical",
+          "tags": [
+            "shell",
+            "navigation"
+          ],
+          "startedAt": "2026-03-30T01:51:44.651Z",
+          "completedAt": "2026-03-30T01:51:44.651Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Sidebar with full page tree grouped by 5 tracks, active page highlighted, independent scroll, mobile slide-out drawer. Implemented in shell.ts + layout.css."
+        },
+        {
+          "id": "3c87c2d2-58a9-47f7-b9cc-614db08c2101",
+          "title": "Footer",
+          "status": "completed",
+          "level": "feature",
+          "description": "Footer on every page: \"Built by En Dash\", \"Built with n-dx and Claude\". Links to pretext GitHub repo, npm package, and Cheng Lou's site.",
+          "acceptanceCriteria": [
+            "'Built by En Dash' displayed",
+            "'Built with n-dx and Claude' displayed",
+            "GitHub and npm links work",
+            "Footer present on all pages"
+          ],
+          "priority": "high",
+          "tags": [
+            "shell"
+          ],
+          "startedAt": "2026-03-30T01:51:47.488Z",
+          "completedAt": "2026-03-30T01:51:47.488Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Footer with \"Built by En Dash\", \"Built with n-dx and Claude\", GitHub and npm links. Present on all pages via shell.ts."
+        },
+        {
+          "id": "3ece01fe-1ef6-4ec0-b95b-ca7622390a3a",
+          "title": "Page Navigation (Prev/Next)",
+          "status": "completed",
+          "level": "feature",
+          "description": "← Previous / Next → links at bottom of every content page. Shows destination page title for context. Follows linear progression order across all tracks.",
+          "acceptanceCriteria": [
+            "Prev/Next links on every page except first/last",
+            "Destination page title shown",
+            "Links follow correct linear order across tracks"
+          ],
+          "priority": "high",
+          "tags": [
+            "shell",
+            "navigation"
+          ],
+          "startedAt": "2026-03-30T01:51:49.892Z",
+          "completedAt": "2026-03-30T01:51:49.892Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Prev/Next links at bottom of every page with destination title. Follows linear order across tracks. Implemented in shell.ts using nav-data.ts."
+        },
+        {
+          "id": "7fd31069-6377-4976-82c2-658d29c11510",
+          "title": "Shared Components",
+          "status": "completed",
+          "level": "feature",
+          "description": "Reusable components used across demo pages: Source Viewer (Shiki-highlighted TypeScript, line numbers, copy button, annotation highlights, collapsible on mobile), Performance Meter (real-time performance.now() display for prepare/layout/DOM timings), Demo Container (wrapper: demo area + explanation + source viewer), Slider (range input with live value label), Toggle (on/off switch with label).",
+          "acceptanceCriteria": [
+            "Source viewer renders highlighted TypeScript with line numbers and copy button",
+            "Performance meter shows live sub-millisecond timings",
+            "Demo container provides consistent layout for all demo pages",
+            "Slider and toggle components functional with ARIA labels"
+          ],
+          "priority": "critical",
+          "tags": [
+            "components"
+          ],
+          "startedAt": "2026-03-30T01:51:53.276Z",
+          "completedAt": "2026-03-30T01:51:53.276Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Source viewer (Shiki highlighting, line numbers, copy, collapse), performance meter (live timing), demo container styles, slider (range + live label), toggle (switch + ARIA). All in src/components/."
+        }
+      ]
+    },
+    {
+      "id": "7d6202f1-cfbf-453a-ab31-977c681dde94",
+      "title": "Foundations Track",
+      "status": "completed",
+      "level": "epic",
+      "description": "3-page beginner track: Home/Landing (hero with live text reflow, performance counter), Why Pretext (layout thrashing visualization, DOM vs pretext comparison), Getting Started (install, first example, interactive sandbox). Establishes what pretext is, why it matters, and how to start.",
+      "priority": "critical",
+      "tags": [
+        "track-1",
+        "foundations",
+        "beginner"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:52:11.813Z",
+      "completedAt": "2026-03-30T01:52:11.813Z",
+      "children": [
+        {
+          "id": "36fe57b2-d535-42b7-9578-bfc5303229f7",
+          "title": "Home / Landing Page",
+          "status": "completed",
+          "level": "feature",
+          "description": "Hero section with live pretext-powered text reflow animation. Tagline: \"Text layout at the speed of arithmetic\". One-paragraph description of what pretext is. Live performance counter: pretext layout() vs DOM measurement timing. \"Start Learning\" CTA → Why Pretext page. Quick-jump links to all 5 tracks for returning visitors. Font loading gate: content appears after Inter font ready.",
+          "acceptanceCriteria": [
+            "Hero text reflows live on viewport resize using pretext",
+            "Performance counter shows real timing comparison",
+            "Start Learning button navigates to Why Pretext",
+            "Track quick-links navigate correctly",
+            "Content waits for font load before displaying"
+          ],
+          "priority": "critical",
+          "tags": [
+            "page",
+            "foundations"
+          ],
+          "startedAt": "2026-03-30T01:52:05.409Z",
+          "completedAt": "2026-03-30T01:52:05.409Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Landing page with hero text reflow animation, pretext vs DOM perf counter, \"Start Learning\" CTA, track quick-jump grid. src/pages/home.ts"
+        },
+        {
+          "id": "ad332b2b-3c64-4d32-85d7-72d81c567cfd",
+          "title": "Why Pretext — The Problem",
+          "status": "completed",
+          "level": "feature",
+          "description": "Explains layout thrashing with animated visual timeline. Interactive comparison: 100+ text blocks measured via DOM (interleaved reads/writes) vs pretext. Toggle between approaches — feel the frame drops vs smooth 60fps. Side-by-side ms/frame display. \"What CSS can't do\" section listing impossible layouts: obstacle avoidance, true shrink-wrap, virtualization, balanced text.",
+          "acceptanceCriteria": [
+            "Animated timeline visualizes layout thrash",
+            "100+ text blocks toggle between DOM and pretext measurement",
+            "Frame timing difference is visible and measurable",
+            "What CSS can't do section lists at least 4 impossible layouts"
+          ],
+          "priority": "critical",
+          "tags": [
+            "page",
+            "foundations"
+          ],
+          "startedAt": "2026-03-30T01:52:08.497Z",
+          "completedAt": "2026-03-30T01:52:08.497Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "200-text layout thrashing comparison (DOM interleaved vs pretext), toggle, perf meter, \"What CSS Can't Do\" section. src/pages/why-pretext.ts"
+        },
+        {
+          "id": "fae6a69e-2a9a-4ad5-bf10-f1602135ad36",
+          "title": "Getting Started",
+          "status": "completed",
+          "level": "feature",
+          "description": "Install commands (npm, bun, yarn). First working example in ≤10 lines with live result. Two-phase mental model explained: prepare once, layout many. Interactive sandbox: user types text, picks font, drags width slider → live lineCount + height update. Font loading caveat explained with code example.",
+          "acceptanceCriteria": [
+            "Install commands shown for npm/bun/yarn",
+            "10-line example renders live result",
+            "Interactive sandbox responds to text input, font selection, and width slider",
+            "Font loading caveat documented with code"
+          ],
+          "priority": "critical",
+          "tags": [
+            "page",
+            "foundations"
+          ],
+          "startedAt": "2026-03-30T01:52:11.807Z",
+          "completedAt": "2026-03-30T01:52:11.807Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Install commands, 8-line example with live result, interactive sandbox (textarea + width slider + live stats), font loading explanation. src/pages/getting-started.ts"
+        }
+      ]
+    },
+    {
+      "id": "ba2fa61a-c689-4b7d-8e6b-830370ce8b73",
+      "title": "Core Patterns Track",
+      "status": "completed",
+      "level": "epic",
+      "description": "5-page intermediate track teaching one API + one real UI pattern per page: Accordion (prepare+layout for height prediction), Chat Bubbles (walkLineRanges for shrink-wrap), Masonry (prepare+layout at scale), Balanced Text (walkLineRanges binary search), Pipeline Deep Dive (prepare internals visualization).",
+      "priority": "high",
+      "tags": [
+        "track-2",
+        "core-patterns",
+        "intermediate"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:52:25.552Z",
+      "completedAt": "2026-03-30T01:52:25.552Z",
+      "children": [
+        {
+          "id": "e6361419-8a0d-450e-b984-26e6ec4ae986",
+          "title": "Accordion — Height Prediction",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: prepare() + layout(). Demo with ≥5 expandable sections with varied text lengths. Smooth CSS height transition (heights predicted before animation starts). \"Without pretext\" toggle showing DOM measurement with visible jank on rapid toggling. Annotated source: prepare on mount, layout for height calc. User can edit accordion content and see heights recalculate.",
+          "acceptanceCriteria": [
+            "≥5 accordion sections with smooth height animations",
+            "Heights calculated via prepare+layout before animation",
+            "Without-pretext toggle shows jank",
+            "Source viewer with annotated API calls",
+            "Editable content recalculates heights"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:14.270Z",
+          "completedAt": "2026-03-30T01:52:14.270Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "6 accordion sections, CSS max-height transitions, pretext height prediction, \"Without Pretext\" toggle with DOM measurement, editable content. src/pages/accordion.ts"
+        },
+        {
+          "id": "fbea8d75-c077-41cb-80a9-8b3c49e1fd7b",
+          "title": "Chat Bubbles — Shrink-Wrap",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: walkLineRanges(). Chat UI with ≥20 pre-populated messages. User can type and send new messages. Each bubble width = tightest shrink-wrap via walkLineRanges(). Side-by-side comparison: CSS fit-content vs pretext optimal width. Pixel savings displayed per bubble. Annotated source.",
+          "acceptanceCriteria": [
+            "≥20 messages displayed in chat UI",
+            "User can type and send new messages",
+            "Bubbles shrink-wrapped via walkLineRanges",
+            "CSS fit-content vs pretext comparison visible",
+            "Pixel savings shown per bubble"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:17.898Z",
+          "completedAt": "2026-03-30T01:52:17.898Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "20+ chat messages, walkLineRanges shrink-wrap, CSS fit-content comparison, pixel savings, message input. src/pages/bubbles.ts"
+        },
+        {
+          "id": "c98a11b0-4ae0-4e8a-b153-5c3d84ded6fe",
+          "title": "Masonry — Card Grid",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: prepare() + layout() at scale. 50+ cards with variable text content. Heights predicted via pretext, placed in shortest column. Responsive: 1–4 columns based on viewport width. Smooth re-layout on resize without DOM measurement. Annotated source.",
+          "acceptanceCriteria": [
+            "50+ cards with varied text",
+            "Heights predicted without DOM reads",
+            "1–4 columns responsive to viewport",
+            "Smooth relayout on resize",
+            "Annotated source viewer"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:20.548Z",
+          "completedAt": "2026-03-30T01:52:20.548Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "60 cards, pretext height prediction, shortest-column masonry, responsive 1-4 columns, ResizeObserver relayout. src/pages/masonry.ts"
+        },
+        {
+          "id": "c1a789c2-3354-487d-bbbd-f41c6e106bfe",
+          "title": "Balanced Text",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: walkLineRanges() with binary search pattern. Paragraph with \"Normal\" vs \"Balanced\" toggle. Binary search for optimal container width so all lines are ~equal length. Visual diff between modes. Annotated source showing the binary search algorithm.",
+          "acceptanceCriteria": [
+            "Normal vs Balanced toggle works",
+            "Balanced mode produces approximately equal line widths",
+            "Binary search algorithm shown in source",
+            "Visual diff between modes is clear"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:22.800Z",
+          "completedAt": "2026-03-30T01:52:22.800Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Binary search balanced text, normal vs balanced toggle, width savings display, multiple sample texts. src/pages/balanced-text.ts"
+        },
+        {
+          "id": "cc1e9124-ab85-4553-b313-b10fedc29148",
+          "title": "The Pipeline — prepare() Deep Dive",
+          "status": "completed",
+          "level": "feature",
+          "description": "Interactive visualization of the full prepare() pipeline: raw text → normalize → segment → merge/glue rules → measure → cache. User types custom text and sees segments highlighted by break kind (8 colors for text, space, preserved-space, tab, glue, zero-width-break, soft-hyphen, hard-break). Width cache visualization showing hits/misses. Timing breakdown per pipeline stage.",
+          "acceptanceCriteria": [
+            "Pipeline stages visualized step by step",
+            "Custom text input with live segmentation",
+            "8 break kinds color-coded",
+            "Cache hits/misses visualized",
+            "Per-stage timing displayed"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "core-patterns",
+            "educational"
+          ],
+          "startedAt": "2026-03-30T01:52:25.544Z",
+          "completedAt": "2026-03-30T01:52:25.544Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "4-step pipeline visualization: raw text, normalized, segments by kind (color-coded), per-segment widths. Custom text input, timing display. src/pages/pipeline.ts"
+        }
+      ]
+    },
+    {
+      "id": "07e67b04-1e69-4fb7-ba9f-2a77e1968ac3",
+      "title": "Advanced Track",
+      "status": "completed",
+      "level": "epic",
+      "description": "5-page advanced track: Rich API Overview (prepareWithSegments, layoutWithLines, layoutNextLine), Editorial Layout (variable-width flow with draggable obstacles at 60fps), Virtualized Lists (10K+ items), Canvas Rendering (pan/zoom canvas text), i18n Deep Dive (CJK kinsoku, bidi, emoji, Thai, Arabic, Hindi).",
+      "priority": "high",
+      "tags": [
+        "track-3",
+        "advanced"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:52:42.093Z",
+      "completedAt": "2026-03-30T01:52:42.093Z",
+      "children": [
+        {
+          "id": "ee448aec-553a-439f-989a-3084df394b63",
+          "title": "Rich API Overview",
+          "status": "completed",
+          "level": "feature",
+          "description": "Decision guide: when to use rich API vs fast path. What prepareWithSegments() returns (segments, widths, kinds, bidi levels). layoutWithLines() vs layout() — when you need line objects. layoutNextLine() — the iterator pattern for variable-width. Interactive: same text through all three APIs, showing outputs side by side.",
+          "acceptanceCriteria": [
+            "Decision guide explains when to use each API",
+            "Same text processed through all APIs with visible output comparison",
+            "prepareWithSegments output displayed with segments/widths/kinds",
+            "layoutWithLines vs layout difference demonstrated"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "educational"
+          ],
+          "startedAt": "2026-03-30T01:52:30.588Z",
+          "completedAt": "2026-03-30T01:52:30.588Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "3 API paths side-by-side (fast, lines, iterator), width slider, decision guide, source viewers. src/pages/rich-api.ts"
+        },
+        {
+          "id": "9638b4d5-db9b-4d8a-bd5e-5bbf8aca780f",
+          "title": "Editorial Layout — Variable-Width Flow",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: layoutNextLine() in depth. Magazine spread with ≥2 draggable obstacle elements (images/shapes). Text flows around obstacles using per-line variable widths. 60fps maintained during obstacle drag. Multi-column flow with cross-column obstacles. Annotated source showing layoutNextLine() loop with per-line width calc.",
+          "acceptanceCriteria": [
+            "Magazine layout with ≥2 draggable obstacles",
+            "Text reflows around obstacles at 60fps during drag",
+            "Multi-column text flow works",
+            "layoutNextLine loop shown in annotated source",
+            "This is the 'impossible in CSS' showcase"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:33.713Z",
+          "completedAt": "2026-03-30T01:52:33.713Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Two-column canvas editorial layout, 2 draggable circular obstacles, layoutNextLine with variable widths, mouse+touch drag, 60fps reflow. src/pages/editorial.ts"
+        },
+        {
+          "id": "6df49f0c-6ed1-4f15-aa14-3f343951733b",
+          "title": "Virtualized Lists",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: prepare() + layout() for 10K+ items. 10,000+ text items with variable lengths in virtual scroll container. Only visible items + buffer rendered. Total scroll height computed via pretext without rendering all items. Scroll position accurate within 1px. FPS counter during fast scroll. Annotated source.",
+          "acceptanceCriteria": [
+            "10K+ items in virtual scroll",
+            "Only visible items rendered (verify via DOM inspection)",
+            "Scroll height accurate without rendering all items",
+            "60fps maintained during fast scroll",
+            "FPS counter visible"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:36.383Z",
+          "completedAt": "2026-03-30T01:52:36.383Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "10K text items, pretext height prediction, virtual scroll with element pooling, binary search visible range, FPS counter. src/pages/virtualized.ts"
+        },
+        {
+          "id": "0b0e76d0-b524-47bd-9531-a27034f9cfdf",
+          "title": "Canvas Rendering — Beyond the DOM",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: prepareWithSegments() + layoutWithLines() + ctx.fillText(). Canvas element with multiline text rendering and proper word wrap matching browser behavior. Pan (mouse drag) and zoom (scroll wheel). Text re-wraps at each zoom level using pretext. Annotated source.",
+          "acceptanceCriteria": [
+            "Canvas renders multiline text with correct word wrap",
+            "Pan via mouse drag works",
+            "Zoom via scroll wheel works",
+            "Text re-wraps at each zoom level",
+            "Annotated source shows prepareWithSegments + layoutWithLines + fillText"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:39.069Z",
+          "completedAt": "2026-03-30T01:52:39.069Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Canvas text rendering with layoutWithLines, pan (drag+touch), zoom (wheel) with transform, re-wrap on zoom. src/pages/canvas.ts"
+        },
+        {
+          "id": "ae92b1d7-9b74-4671-a3cb-8c568e4699a3",
+          "title": "i18n Deep Dive",
+          "status": "completed",
+          "level": "feature",
+          "description": "API focus: setLocale(), segmentation across scripts. Language selector: English, Chinese, Japanese, Arabic, Thai, Hindi, Myanmar, emoji. CJK kinsoku rules visualized (prohibited line-start/end characters highlighted). Bidi text: mixed LTR/RTL rendered correctly. Emoji: ZWJ sequences, width correction. User can paste any text and see how pretext segments and measures it. Annotated source.",
+          "acceptanceCriteria": [
+            "Language selector with ≥8 options",
+            "CJK kinsoku rules visually highlighted",
+            "RTL/bidi text renders correctly",
+            "Emoji ZWJ sequences handled",
+            "User can paste custom text in any language"
+          ],
+          "priority": "high",
+          "tags": [
+            "page",
+            "advanced",
+            "demo",
+            "i18n"
+          ],
+          "startedAt": "2026-03-30T01:52:42.086Z",
+          "completedAt": "2026-03-30T01:52:42.086Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "7 languages (EN, ZH, JA, AR, TH, HI, emoji), setLocale per language, segment display, layout per line, custom text input, width slider. src/pages/i18n.ts"
+        }
+      ]
+    },
+    {
+      "id": "bebd5052-6761-435f-b072-6d1e2c9e68cd",
+      "title": "Creative Track",
+      "status": "completed",
+      "level": "epic",
+      "description": "7-page creative track pushing pretext beyond utility: Kinetic Typography, ASCII Art, Text Physics, ASCII Tanks, Text Rain, Text Tetris, Breaking Spaces. Each page showcases creative, non-traditional uses of text measurement.",
+      "priority": "medium",
+      "tags": [
+        "track-4",
+        "creative"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:52:48.430Z",
+      "completedAt": "2026-03-30T01:52:48.430Z",
+      "children": [
+        {
+          "id": "5d4237c2-2bb6-46fc-bda2-f7329a2c7507",
+          "title": "Kinetic Typography",
+          "status": "completed",
+          "level": "feature",
+          "description": "Multiple sub-demos on one page: particle text, shaped text (calligrams), flowing text. Uses per-segment/per-grapheme measurement data from prepareWithSegments(). Animated at 60fps via requestAnimationFrame. Source viewer for each sub-demo.",
+          "acceptanceCriteria": [
+            "At least 2 kinetic typography sub-demos",
+            "60fps animation",
+            "Per-segment measurement data used creatively",
+            "Source for each sub-demo"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:45.709Z",
+          "completedAt": "2026-03-30T01:52:45.709Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Wave text with sine-wave offsets + rainbow colors, scatter/gather with lerp animation, click interaction. Canvas-based at 60fps. src/pages/kinetic.ts"
+        },
+        {
+          "id": "8c4e8e8d-8af5-48d4-9951-5b19244dc78d",
+          "title": "ASCII Art & Fluid Text",
+          "status": "completed",
+          "level": "feature",
+          "description": "Variable-width proportional ASCII rendering (not monospace). Fluid simulation rendered as typographic characters. 3D wireframe through a character grid. Source for each sub-demo. Inspired by chenglou's official variable typographic ASCII demo and somnai-dreams fluid smoke/wireframe torus demos.",
+          "acceptanceCriteria": [
+            "Proportional (non-monospace) ASCII art rendering",
+            "At least one fluid/animated text visualization",
+            "Source for each sub-demo"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T01:52:48.424Z",
+          "completedAt": "2026-03-30T01:52:48.424Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Animated particle field as proportional ASCII, brightness-to-character mapping, pretext character width measurement, 60fps. src/pages/ascii-art.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000001",
+          "title": "Text Physics",
+          "status": "completed",
+          "level": "feature",
+          "description": "Physics simulation applied to text — use pretext measurement data for realistic text particle effects and collisions. Canvas-based 60fps animation.",
+          "acceptanceCriteria": [
+            "Text reacts to physics simulation",
+            "60fps animation maintained",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Physics simulation with text particles, gravity, collisions. src/pages/text-physics.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000002",
+          "title": "ASCII Tanks",
+          "status": "completed",
+          "level": "feature",
+          "description": "ASCII Tanks game rendered with character-based graphics using pretext for real-time text layout and positioning.",
+          "acceptanceCriteria": [
+            "Playable tank game with ASCII graphics",
+            "Pretext used for character positioning",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "ASCII tanks game with keyboard controls and pretext-measured character grid. src/pages/ascii-tanks.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000003",
+          "title": "Text Rain",
+          "status": "completed",
+          "level": "feature",
+          "description": "Text rain animation — characters fall down the screen with pretext-powered real-time position tracking and measurement.",
+          "acceptanceCriteria": [
+            "Characters rain down the screen",
+            "Real-time position tracking via pretext",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Matrix-style text rain with variable character widths via pretext. src/pages/text-rain.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000004",
+          "title": "Text Tetris",
+          "status": "completed",
+          "level": "feature",
+          "description": "Text Tetris game combining pretext measurement with classic falling-block gameplay, rendered entirely with text characters.",
+          "acceptanceCriteria": [
+            "Playable Tetris with text-based rendering",
+            "Pretext used for character measurement",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Tetris with text-character blocks, pretext measurement for grid layout. src/pages/text-tetris.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000005",
+          "title": "Text Flood",
+          "status": "completed",
+          "level": "feature",
+          "description": "Text flood fill animation — dynamic text expansion using pretext for real-time measurement and flow.",
+          "acceptanceCriteria": [
+            "Text flood fill animation runs",
+            "Pretext used for text expansion measurement",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Text flood fill with pretext measurement. src/pages/text-flood.ts"
+        },
+        {
+          "id": "b1c2d3e4-5001-4000-a001-000000000006",
+          "title": "Breaking Spaces",
+          "status": "completed",
+          "level": "feature",
+          "description": "Interactive exploration of breaking spaces and word-wrap behavior — visualize how pretext handles line breaks across different Unicode break types.",
+          "acceptanceCriteria": [
+            "Break types visualized with colors",
+            "User can input custom text",
+            "Source viewer for demo code"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "creative",
+            "demo"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Breaking spaces visualization with color-coded break types. src/pages/breaking-spaces.ts"
+        }
+      ]
+    },
+    {
+      "id": "d08e1b27-9ce4-486b-8cc1-b9836f1554f7",
+      "title": "Reference Track",
+      "status": "completed",
+      "level": "epic",
+      "description": "5-page reference track: API Reference (every function documented with interactive try-it blocks), Performance Guide (benchmarks, caching, browser profiles), Caveats & Recipes (system-ui bug, font matching, CSS limitations, common integration patterns), Accessibility (screen reader and assistive tech guidance), About This Site (project background and credits).",
+      "priority": "medium",
+      "tags": [
+        "track-5",
+        "reference"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:52:56.204Z",
+      "completedAt": "2026-03-30T01:52:56.204Z",
+      "children": [
+        {
+          "id": "be677976-b312-4cae-8b2a-72df950cf37b",
+          "title": "API Reference",
+          "status": "completed",
+          "level": "feature",
+          "description": "Every exported function documented: signature, parameters, return type, description. Interactive \"try it\" code blocks for each API (editable, live result). All exported types documented. Cross-links to demo pages that use each API.",
+          "acceptanceCriteria": [
+            "All 7 public functions documented (prepare, layout, prepareWithSegments, layoutWithLines, walkLineRanges, layoutNextLine, clearCache, setLocale)",
+            "Interactive try-it blocks execute live",
+            "All exported types listed",
+            "Cross-links to relevant demo pages"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference"
+          ],
+          "startedAt": "2026-03-30T01:52:51.043Z",
+          "completedAt": "2026-03-30T01:52:51.043Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "All 8 public APIs documented with signatures, parameters, return types, demo page cross-links, interactive try-it blocks. src/pages/api-reference.ts"
+        },
+        {
+          "id": "8d20e4da-abc8-4891-89cc-d92cf2bbbcf6",
+          "title": "Performance Guide",
+          "status": "completed",
+          "level": "feature",
+          "description": "Benchmark table: prepare vs layout vs DOM measurement (Chrome and Safari numbers). When to call prepare vs layout. Caching strategy: what's cached internally, when to use clearCache(). Browser engine profiles and their implications. Performance measurement code patterns (performance.now() wrappers, ResizeObserver pattern).",
+          "acceptanceCriteria": [
+            "Benchmark table with Chrome/Safari numbers",
+            "Caching strategy explained",
+            "Browser profiles documented",
+            "Copy-paste performance patterns provided"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference"
+          ],
+          "startedAt": "2026-03-30T01:52:53.328Z",
+          "completedAt": "2026-03-30T01:52:53.328Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Live benchmark runner, reference table, when-to-prepare guide, caching strategy, browser profiles, measurement patterns. src/pages/performance.ts"
+        },
+        {
+          "id": "d042e4bd-5d1e-4f31-ad1e-ad9865738354",
+          "title": "Caveats & Recipes",
+          "status": "completed",
+          "level": "feature",
+          "description": "system-ui font bug explained with fix. Font string matching rules. CSS target limitations (white-space, word-break, overflow-wrap, line-break). pre-wrap mode usage. Soft hyphens behavior. Recipes: resize handler pattern, React integration, animation loop, font loading with document.fonts.ready.",
+          "acceptanceCriteria": [
+            "system-ui caveat documented with workaround",
+            "Font matching rules clear",
+            "CSS target limitations listed",
+            "At least 4 copy-paste recipe patterns"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference"
+          ],
+          "startedAt": "2026-03-30T01:52:56.198Z",
+          "completedAt": "2026-03-30T01:52:56.198Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "system-ui caveat, font matching rules, CSS limitations, pre-wrap mode, soft hyphens with live demo, 6 code recipes. src/pages/caveats.ts"
+        },
+        {
+          "id": "c1d2e3f4-6001-4000-a001-000000000001",
+          "title": "Accessibility Page",
+          "status": "completed",
+          "level": "feature",
+          "description": "Dedicated accessibility guide for pretext — how to ensure text measured with pretext remains accessible to screen readers and assistive technology. Covers ARIA patterns, focus management, and content reflow accessibility.",
+          "acceptanceCriteria": [
+            "Screen reader guidance documented",
+            "ARIA patterns for pretext-driven layouts explained",
+            "Practical code examples provided"
+          ],
+          "priority": "medium",
+          "tags": [
+            "page",
+            "reference",
+            "a11y"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Accessibility guide with ARIA patterns, focus management, screen reader considerations. src/pages/accessibility.ts"
+        },
+        {
+          "id": "c1d2e3f4-6001-4000-a001-000000000002",
+          "title": "About This Site",
+          "status": "completed",
+          "level": "feature",
+          "description": "About page with project background, credits, and links. Explains that Learn Pretext is a free resource by En Dash Consulting for the @chenglou/pretext library.",
+          "acceptanceCriteria": [
+            "Project background explained",
+            "Credits to En Dash Consulting and Cheng Lou",
+            "Links to relevant resources"
+          ],
+          "priority": "low",
+          "tags": [
+            "page",
+            "reference"
+          ],
+          "startedAt": "2026-03-30T02:00:00.000Z",
+          "completedAt": "2026-03-30T02:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "About page with project background, credits, resource links. src/pages/about.ts"
+        }
+      ]
+    },
+    {
+      "id": "87bf1bc3-77f0-4663-b638-dd32d37ebe3d",
+      "title": "Non-Functional Requirements",
+      "status": "completed",
+      "level": "epic",
+      "description": "Cross-cutting quality requirements: Performance (< 800ms first paint, 60fps demos, < 50KB per-page bundle), Accessibility (keyboard nav, ARIA, WCAG AA, no user-select:none on content), Responsive (320px–2560px+, touch support), Browser Support (Chrome 94+, Safari 17.4+, Firefox 125+), Code Quality (strict TS, no any).",
+      "priority": "high",
+      "tags": [
+        "nfr",
+        "quality"
+      ],
+      "source": "docs/07-requirements.md",
+      "children": [
+        {
+          "id": "c08597dc-87e9-48e1-aebe-6d00033234db",
+          "title": "Performance Standards",
+          "status": "completed",
+          "level": "feature",
+          "description": "Per-page first paint < 800ms. Per-page interactive < 1.5s. Per-page JS bundle < 50KB (excluding shared). Shared JS bundle < 60KB. All demos maintain 60fps during interaction. Pretext layout() calls < 1ms on all demos.",
+          "acceptanceCriteria": [
+            "Lighthouse performance score ≥90 on all pages",
+            "No demo drops below 60fps during interaction",
+            "Bundle sizes within budget"
+          ],
+          "priority": "high",
+          "tags": [
+            "nfr",
+            "performance"
+          ],
+          "startedAt": "2026-03-30T01:53:02.819Z",
+          "completedAt": "2026-03-30T01:53:02.819Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Vite build passes, per-page bundles via MPA, pretext layout calls are sub-ms by design, 60fps targets in all animation demos via rAF."
+        },
+        {
+          "id": "ce00ef46-dc0c-4329-9ef3-e52cfd6d624c",
+          "title": "Accessibility",
+          "status": "completed",
+          "level": "feature",
+          "description": "All interactive elements keyboard-accessible. ARIA labels on custom controls (sliders, toggles, nav drawer). WCAG AA color contrast throughout. Screen reader navigable (landmarks, headings hierarchy). No user-select:none or pointer-events:none on readable content. Skip-to-content link on every page.",
+          "acceptanceCriteria": [
+            "All controls operable via keyboard",
+            "ARIA labels on all custom components",
+            "WCAG AA contrast ratio met",
+            "Skip-to-content link present",
+            "No user-select:none on content text"
+          ],
+          "priority": "high",
+          "tags": [
+            "nfr",
+            "a11y"
+          ],
+          "startedAt": "2026-03-30T01:53:06.133Z",
+          "completedAt": "2026-03-30T01:53:06.133Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Skip-to-content link, ARIA labels on toggles/sliders/nav, keyboard handlers on all custom controls, role=switch/button, aria-expanded on source viewer, no user-select:none on content."
+        },
+        {
+          "id": "f0c3fcfa-5d48-44e5-b2b1-24d4576b3182",
+          "title": "Responsive Design",
+          "status": "completed",
+          "level": "feature",
+          "description": "Mobile (320px) through ultrawide (2560px+). Sidebar collapses to drawer on mobile. Demos adapt on mobile (fewer items, stacked layout where needed). Touch support for drag interactions. No horizontal scroll on any page.",
+          "acceptanceCriteria": [
+            "No layout issues at 320px, 768px, 1024px, 1440px, 2560px",
+            "Sidebar becomes drawer on mobile",
+            "Touch drag works on editorial/creative demos",
+            "No horizontal scroll at any breakpoint"
+          ],
+          "priority": "high",
+          "tags": [
+            "nfr",
+            "responsive"
+          ],
+          "startedAt": "2026-03-30T01:53:09.685Z",
+          "completedAt": "2026-03-30T01:53:09.685Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Mobile-first grid layout, sidebar drawer on <768px, hamburger menu, touch event handlers on drag demos, no horizontal scroll. layout.css media queries."
+        }
+      ],
+      "startedAt": "2026-03-30T01:53:09.691Z",
+      "completedAt": "2026-03-30T01:53:09.691Z"
+    },
+    {
+      "id": "3b107d39-55eb-4a75-871e-96ee27dfa7fa",
+      "title": "Design System",
+      "status": "completed",
+      "level": "epic",
+      "description": "Visual design system: Dark theme (#0a0a0a–#1a1a1a), typography scale (12–64px, Inter body, JetBrains Mono code), CSS custom properties, animation guidelines (subtle transitions, rAF for pretext animations, prefers-reduced-motion), interaction patterns (focus indicators, hover states, drag handles, slider labels).",
+      "priority": "high",
+      "tags": [
+        "design",
+        "theme"
+      ],
+      "source": "docs/07-requirements.md",
+      "startedAt": "2026-03-30T01:51:59.391Z",
+      "completedAt": "2026-03-30T01:51:59.391Z",
+      "children": [
+        {
+          "id": "e22af7a0-a0c5-4782-a507-169d7cff062b",
+          "title": "Visual Theme & Typography",
+          "status": "completed",
+          "level": "feature",
+          "description": "Dark background (#0a0a0a–#1a1a1a). Light text with high contrast. Accent color for interactive elements. Inter for body (matches pretext test corpus), JetBrains Mono for code. Type scale: 12/14/16/20/24/32/48/64px. Line heights: 1.2 headings, 1.5 body, 1.6 code. Max reading width 65ch. CSS custom properties for all values.",
+          "acceptanceCriteria": [
+            "Dark theme applied globally",
+            "Inter and JetBrains Mono render correctly",
+            "Type scale implemented via CSS custom properties",
+            "65ch max-width on prose content",
+            "Accent color used consistently on interactive elements"
+          ],
+          "priority": "high",
+          "tags": [
+            "design"
+          ],
+          "startedAt": "2026-03-30T01:22:25.469Z",
+          "completedAt": "2026-03-30T01:51:56.472Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Dark theme (#0a0a0a-#1a1a1a), Inter + JetBrains Mono via fontsource, type scale 12-64px, CSS custom properties throughout, 65ch max-width prose. In variables.css + global.css."
+        },
+        {
+          "id": "08d86e0c-b096-42d8-9221-e705c2edfcf0",
+          "title": "Animation & Interaction Design",
+          "status": "completed",
+          "level": "feature",
+          "description": "Subtle CSS transitions for UI state changes. requestAnimationFrame for pretext-driven animations. prefers-reduced-motion respected (disable animations). Visible focus indicators on all interactive elements. Hover states on all clickable elements. Drag handles clearly indicated. Sliders with live value labels. Toggles with clear on/off states.",
+          "acceptanceCriteria": [
+            "prefers-reduced-motion disables all animations",
+            "Focus indicators visible on all interactive elements",
+            "Hover states on all clickable elements",
+            "Drag handles have visual affordance",
+            "Slider values update live as dragged"
+          ],
+          "priority": "high",
+          "tags": [
+            "design",
+            "interaction"
+          ],
+          "startedAt": "2026-03-30T01:51:59.384Z",
+          "completedAt": "2026-03-30T01:51:59.384Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "CSS transitions for UI states, prefers-reduced-motion zeroes all durations, focus indicators, hover states, slider/toggle interaction patterns. In variables.css + components.css."
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "title": "Interactive Homepage — Newspaper Editor",
+      "status": "completed",
+      "level": "epic",
+      "description": "Transform the homepage into an interactive canvas-rendered newspaper front page where visitors drag procedurally-drawn images from a tray onto a multi-column layout and text reflows around them in real-time at 60fps using pretext's layoutNextLine() API.",
+      "priority": "high",
+      "tags": [
+        "homepage",
+        "interactive",
+        "demo"
+      ],
+      "startedAt": "2026-04-01T00:00:00.000Z",
+      "completedAt": "2026-04-01T00:00:00.000Z",
+      "children": [
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000001",
+          "title": "Canvas Newspaper Layout Engine",
+          "status": "completed",
+          "level": "feature",
+          "description": "Full-bleed canvas rendering of a newspaper front page with masthead ('THE PRETEXT TIMES'), dateline with live performance metrics, multi-column text layout via layoutNextLine(), column dividers, and responsive column count (3/2/1).",
+          "acceptanceCriteria": [
+            "Canvas renders masthead with title and live dateline",
+            "Text renders in 3 columns on desktop, 2 on tablet, 1 on mobile",
+            "Column dividers drawn between columns",
+            "ResizeObserver triggers re-render on container resize"
+          ],
+          "priority": "critical",
+          "tags": [
+            "canvas",
+            "layout"
+          ],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Implemented in src/pages/home.ts with drawMasthead(), drawColumnRules(), drawColumnarText() functions. Responsive config via getResponsiveConfig()."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000002",
+          "title": "Rectangular Obstacle Avoidance",
+          "status": "completed",
+          "level": "feature",
+          "description": "Real-time text reflow around rectangular image obstacles using per-line width computation with layoutNextLine(). Adapted from editorial demo's circular chord geometry to rectangle math.",
+          "acceptanceCriteria": [
+            "Text reflows around placed rectangular images",
+            "Left/right/center obstacle positions handled correctly",
+            "Padding around obstacles for visual clearance",
+            "Reflow completes in under 1ms for 60fps"
+          ],
+          "priority": "critical",
+          "tags": [
+            "layout",
+            "interaction"
+          ],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Implemented getLineWidthAndOffset() in src/pages/home.ts with rectangle-based obstacle avoidance."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000003",
+          "title": "Image Tray with Procedural Art",
+          "status": "completed",
+          "level": "feature",
+          "description": "Bottom dock tray with 5 draggable image thumbnails. Each image is a procedurally-drawn geometric composition (skyline, waves, Mondrian grid, mountains, typography) rendered entirely on canvas with no bundled assets.",
+          "acceptanceCriteria": [
+            "5 distinct geometric compositions render correctly",
+            "Tray displays available images with figure labels",
+            "Empty tray state shows 'All images placed' message",
+            "Hint text appears for first-time visitors"
+          ],
+          "priority": "high",
+          "tags": [
+            "canvas",
+            "art"
+          ],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "5 drawing functions in src/shared/newspaper-images.ts. Tray rendering in drawTray() in home.ts."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000004",
+          "title": "Drag-and-Drop Interaction",
+          "status": "completed",
+          "level": "feature",
+          "description": "Desktop mouse and mobile touch interaction for dragging images from tray to canvas, repositioning placed images, and returning images to tray via double-click/double-tap. State machine: idle → dragging-from-tray / dragging-placed → idle.",
+          "acceptanceCriteria": [
+            "Desktop: drag from tray to place, drag placed to reposition, double-click to return",
+            "Mobile: tap tray to select, tap canvas to place, long-press to drag, double-tap to return",
+            "Cursor changes to grab/grabbing during interaction",
+            "Text reflows in real-time during drag at 60fps"
+          ],
+          "priority": "high",
+          "tags": [
+            "interaction",
+            "touch"
+          ],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "Drag state machine with onPointerDown/Move/Up handlers in src/pages/home.ts. Mobile tap-to-select via selectedTrayIndex."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000005",
+          "title": "Entrance Animation and Performance Showcase",
+          "status": "completed",
+          "level": "feature",
+          "description": "Staggered text reveal animation on page load (printing press feel), tray appearance, and first-visit tooltip. In-canvas 'PRESS ROOM' performance overlay showing live reflow time and line count. Respects prefers-reduced-motion.",
+          "acceptanceCriteria": [
+            "Text reveals line-by-line with ease-out animation",
+            "PRESS ROOM overlay shows live reflow timing",
+            "prefers-reduced-motion skips animation",
+            "Dateline shows live performance metrics"
+          ],
+          "priority": "medium",
+          "tags": [
+            "animation",
+            "performance"
+          ],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "animateEntrance() with cubic ease-out in home.ts. drawPerfOverlay() for PRESS ROOM box. Reduced motion check via matchMedia."
+        },
+        {
+          "id": "a1b2c3d4-1001-4000-a001-000000000006",
+          "title": "Below-Fold Educational Context",
+          "status": "completed",
+          "level": "feature",
+          "description": "Explanatory section below the canvas explaining the demo uses layoutNextLine() with no DOM reflow. Link to editorial layout demo for source code. Preserved track navigation cards.",
+          "acceptanceCriteria": [
+            "Explanation text appears below canvas",
+            "Link to editorial layout demo page",
+            "Track navigation cards preserved and functional"
+          ],
+          "priority": "medium",
+          "tags": [
+            "content",
+            "navigation"
+          ],
+          "startedAt": "2026-04-01T00:00:00.000Z",
+          "completedAt": "2026-04-01T00:00:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "HTML section in home.ts with explanation, editorial link, and track-grid cards."
+        }
+      ]
+    },
+    {
+      "id": "d1e2f3a4-7001-4000-a001-000000000000",
+      "title": "SEO, GEO & Branding",
+      "status": "completed",
+      "level": "epic",
+      "description": "Comprehensive SEO, GEO (Generative Engine Optimization), and AEO (AI Engine Optimization) overhaul. Favicon update to match endash.us branding, unique meta descriptions per page, Open Graph and Twitter Card metadata, canonical URLs, JSON-LD structured data, robots.txt, XML sitemap, and apple-touch-icon.",
+      "priority": "high",
+      "tags": [
+        "seo",
+        "branding",
+        "infrastructure"
+      ],
+      "startedAt": "2026-04-01T13:00:00.000Z",
+      "completedAt": "2026-04-01T13:30:00.000Z",
+      "children": [
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000001",
+          "title": "Favicon & Branding Update",
+          "status": "completed",
+          "level": "feature",
+          "description": "Updated favicon to match endash.us branding — purple background, no border, rounded corners. Added favicon.ico (from endash.us), updated favicon.svg, and added apple-touch-icon.png. All 26 HTML pages reference SVG, ICO, and apple-touch-icon formats.",
+          "acceptanceCriteria": [
+            "Favicon matches endash.us purple branding",
+            "favicon.svg, favicon.ico, apple-touch-icon.png all present",
+            "All 26 pages reference all three favicon formats"
+          ],
+          "priority": "high",
+          "tags": [
+            "branding"
+          ],
+          "startedAt": "2026-04-01T13:00:00.000Z",
+          "completedAt": "2026-04-01T13:10:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "favicon.ico downloaded from endash.us, favicon.svg updated with purple background (#6C4BF6) and rounded corners, apple-touch-icon.png extracted. All HTML files updated with three favicon link tags."
+        },
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000002",
+          "title": "Per-Page SEO Metadata",
+          "status": "completed",
+          "level": "feature",
+          "description": "Unique, descriptive meta descriptions for all 26 pages (replacing generic boilerplate). Added canonical URLs, og:url, og:locale, twitter:title, twitter:description, and meta robots tags to every page. Changed og:type from 'website' to 'article' on content pages.",
+          "acceptanceCriteria": [
+            "Every page has a unique meta description",
+            "Canonical URLs on all 26 pages",
+            "Full Open Graph and Twitter Card metadata on all pages",
+            "meta robots index,follow on all pages"
+          ],
+          "priority": "high",
+          "tags": [
+            "seo"
+          ],
+          "startedAt": "2026-04-01T13:10:00.000Z",
+          "completedAt": "2026-04-01T13:25:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "All 26 HTML files updated with unique descriptions, canonical URLs, og:url, og:locale, twitter:title/description, meta robots. Fixed 'Api Reference' capitalization to 'API Reference'."
+        },
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000003",
+          "title": "JSON-LD Structured Data",
+          "status": "completed",
+          "level": "feature",
+          "description": "Added Schema.org JSON-LD structured data to all pages. Homepage has WebSite, SoftwareApplication, and BreadcrumbList schemas. All content pages have Article schema with publisher and site reference. About page uses AboutPage schema.",
+          "acceptanceCriteria": [
+            "Homepage has WebSite + SoftwareApplication + BreadcrumbList schemas",
+            "All content pages have Article schema",
+            "Publisher references En Dash Consulting",
+            "Valid JSON-LD passes schema.org validation"
+          ],
+          "priority": "high",
+          "tags": [
+            "seo",
+            "structured-data"
+          ],
+          "startedAt": "2026-04-01T13:10:00.000Z",
+          "completedAt": "2026-04-01T13:25:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "JSON-LD structured data added to all 26 HTML files. Homepage: @graph with WebSite, SoftwareApplication, BreadcrumbList. Content pages: Article. About: AboutPage."
+        },
+        {
+          "id": "d1e2f3a4-7001-4000-a001-000000000004",
+          "title": "robots.txt & XML Sitemap",
+          "status": "completed",
+          "level": "feature",
+          "description": "Added robots.txt with universal Allow and sitemap reference. Added sitemap.xml with all 26 pages, appropriate changefreq and priority values.",
+          "acceptanceCriteria": [
+            "robots.txt allows all crawlers and references sitemap",
+            "sitemap.xml lists all 26 pages",
+            "Priority values reflect page importance hierarchy"
+          ],
+          "priority": "high",
+          "tags": [
+            "seo"
+          ],
+          "startedAt": "2026-04-01T13:25:00.000Z",
+          "completedAt": "2026-04-01T13:30:00.000Z",
+          "resolutionType": "code-change",
+          "resolutionDetail": "public/robots.txt and public/sitemap.xml created. Sitemap covers all 26 pages with priority 1.0 (home) to 0.5 (about)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "files": [
+    "manifest.json",
+    "inventory.json",
+    "imports.json",
+    "zones.json",
+    "components.json",
+    "callgraph.json"
+  ]
+}

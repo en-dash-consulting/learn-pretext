@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "toolVersion": "0.1.0",
+  "analyzedAt": "2026-04-04T02:58:56.631Z",
+  "targetPath": "/Users/nick/development/endash/ts-css",
+  "modules": {
+    "inventory": {
+      "status": "complete",
+      "startedAt": "2026-04-04T02:36:20.371Z",
+      "completedAt": "2026-04-04T02:36:20.414Z"
+    },
+    "imports": {
+      "status": "complete",
+      "startedAt": "2026-04-04T02:36:20.415Z",
+      "completedAt": "2026-04-04T02:36:20.501Z"
+    },
+    "classifications": {
+      "status": "complete",
+      "startedAt": "2026-04-04T02:36:20.501Z",
+      "completedAt": "2026-04-04T02:36:36.374Z"
+    },
+    "zones": {
+      "status": "complete",
+      "startedAt": "2026-04-04T02:36:36.375Z",
+      "completedAt": "2026-04-04T02:58:56.469Z"
+    },
+    "components": {
+      "status": "complete",
+      "startedAt": "2026-04-04T02:58:56.472Z",
+      "completedAt": "2026-04-04T02:58:56.511Z"
+    },
+    "callgraph": {
+      "status": "complete",
+      "startedAt": "2026-04-04T02:58:56.512Z",
+      "completedAt": "2026-04-04T02:58:56.631Z"
+    }
+  },
+  "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd",
+  "gitBranch": "feature/redesign-0403",
+  "language": "typescript",
+  "languages": [
+    "typescript"
+  ],
+  "zoneOutputs": true,
+  "tokenUsage": {
+    "calls": 9,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "vendor": "claude",
+    "model": "claude-sonnet-4-6"
+  }
+}

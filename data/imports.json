@@ -1,0 +1,897 @@
+{
+  "edges": [
+    {
+      "from": "src/components/search.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks"
+      ]
+    },
+    {
+      "from": "src/pages/accessibility.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/accessibility.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ]
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/toggle.ts",
+      "type": "static",
+      "symbols": [
+        "createToggle"
+      ]
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/api-reference.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/api-reference.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/ascii-art.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/ascii-art.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ]
+    },
+    {
+      "from": "src/pages/ascii-tanks.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/ascii-tanks.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ]
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ]
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/toggle.ts",
+      "type": "static",
+      "symbols": [
+        "createToggle"
+      ]
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/breaking-spaces.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/breaking-spaces.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ]
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ]
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks"
+      ]
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/newspaper-images.ts",
+      "type": "static",
+      "symbols": [
+        "TRAY_IMAGES"
+      ]
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/newspaper-images.ts",
+      "type": "type",
+      "symbols": [
+        "TrayImageDef"
+      ]
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/newspaper-text.ts",
+      "type": "static",
+      "symbols": [
+        "NEWSPAPER_TITLE",
+        "NEWSPAPER_TEXT"
+      ]
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ]
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/kinetic.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/kinetic.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution",
+        "onResize"
+      ]
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ]
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/text-flood.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/text-flood.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/text-physics.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/text-physics.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/text-rain.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/text-rain.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT"
+      ]
+    },
+    {
+      "from": "src/pages/text-tetris.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/text-tetris.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ]
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ]
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/shared/nav-data.test.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks",
+        "getPageIndex",
+        "getPrevPage",
+        "getNextPage"
+      ]
+    },
+    {
+      "from": "src/shared/pretext-helpers.test.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/components/search.ts",
+      "type": "static",
+      "symbols": [
+        "createSearchButton",
+        "initSearch",
+        "openSearch"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/analytics.ts",
+      "type": "static",
+      "symbols": [
+        "initAnalytics"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks",
+        "getCurrentSlug",
+        "getPrevPage",
+        "getNextPage",
+        "getTrackForSlug",
+        "getBase"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/styles/components.css",
+      "type": "static",
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/styles/global.css",
+      "type": "static",
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/styles/layout.css",
+      "type": "static",
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/styles/reset.css",
+      "type": "static",
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/styles/variables.css",
+      "type": "static",
+      "symbols": [
+        "*"
+      ]
+    }
+  ],
+  "external": [
+    {
+      "package": "@chenglou/pretext",
+      "importedBy": [
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts",
+        "src/pages/ascii-art.ts",
+        "src/pages/ascii-tanks.ts",
+        "src/pages/balanced-text.ts",
+        "src/pages/breaking-spaces.ts",
+        "src/pages/bubbles.ts",
+        "src/pages/canvas.ts",
+        "src/pages/caveats.ts",
+        "src/pages/editorial.ts",
+        "src/pages/getting-started.ts",
+        "src/pages/home.ts",
+        "src/pages/i18n.ts",
+        "src/pages/kinetic.ts",
+        "src/pages/masonry.ts",
+        "src/pages/performance.ts",
+        "src/pages/pipeline.ts",
+        "src/pages/rich-api.ts",
+        "src/pages/text-flood.ts",
+        "src/pages/text-physics.ts",
+        "src/pages/text-rain.ts",
+        "src/pages/text-tetris.ts",
+        "src/pages/virtualized.ts",
+        "src/pages/why-pretext.ts",
+        "src/shared/pretext-helpers.ts"
+      ],
+      "symbols": [
+        "LayoutCursor",
+        "PreparedText",
+        "PreparedTextWithSegments",
+        "clearCache",
+        "layout",
+        "layoutNextLine",
+        "layoutWithLines",
+        "prepare",
+        "prepareWithSegments",
+        "setLocale",
+        "walkLineRanges"
+      ]
+    },
+    {
+      "package": "@fontsource/inter",
+      "importedBy": [
+        "src/shared/shell.ts"
+      ],
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "package": "@fontsource/jetbrains-mono",
+      "importedBy": [
+        "src/shared/shell.ts"
+      ],
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "package": "path",
+      "importedBy": [
+        "vite.config.ts"
+      ],
+      "symbols": [
+        "resolve"
+      ]
+    },
+    {
+      "package": "shiki",
+      "importedBy": [
+        "src/components/source-viewer.ts"
+      ],
+      "symbols": [
+        "codeToHtml"
+      ]
+    },
+    {
+      "package": "vite",
+      "importedBy": [
+        "vite.config.ts"
+      ],
+      "symbols": [
+        "defineConfig"
+      ]
+    },
+    {
+      "package": "vitest",
+      "importedBy": [
+        "src/shared/nav-data.test.ts",
+        "src/shared/pretext-helpers.test.ts"
+      ],
+      "symbols": [
+        "describe",
+        "expect",
+        "it"
+      ]
+    }
+  ],
+  "summary": {
+    "totalEdges": 82,
+    "totalExternal": 7,
+    "circularCount": 0,
+    "circulars": [],
+    "mostImported": [
+      {
+        "path": "src/shared/pretext-helpers.ts",
+        "count": 26
+      },
+      {
+        "path": "src/components/source-viewer.ts",
+        "count": 24
+      },
+      {
+        "path": "src/components/performance-meter.ts",
+        "count": 11
+      },
+      {
+        "path": "src/components/slider.ts",
+        "count": 5
+      },
+      {
+        "path": "src/shared/nav-data.ts",
+        "count": 4
+      },
+      {
+        "path": "src/components/toggle.ts",
+        "count": 2
+      },
+      {
+        "path": "src/components/search.ts",
+        "count": 1
+      },
+      {
+        "path": "src/shared/analytics.ts",
+        "count": 1
+      },
+      {
+        "path": "src/shared/newspaper-images.ts",
+        "count": 1
+      },
+      {
+        "path": "src/shared/newspaper-text.ts",
+        "count": 1
+      },
+      {
+        "path": "src/shared/styles/components.css",
+        "count": 1
+      },
+      {
+        "path": "src/shared/styles/global.css",
+        "count": 1
+      },
+      {
+        "path": "src/shared/styles/layout.css",
+        "count": 1
+      },
+      {
+        "path": "src/shared/styles/reset.css",
+        "count": 1
+      },
+      {
+        "path": "src/shared/styles/variables.css",
+        "count": 1
+      }
+    ],
+    "avgImportsPerFile": 2.83
+  }
+}

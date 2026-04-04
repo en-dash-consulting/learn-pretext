@@ -1,0 +1,11 @@
+{
+  "overall": 86,
+  "dimensions": {
+    "depth": 100,
+    "balance": 82,
+    "granularity": 100,
+    "completeness": 59,
+    "staleness": 100
+  },
+  "suggestions": []
+}

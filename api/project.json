@@ -1,0 +1,12 @@
+{
+  "name": "Learn Pretext",
+  "description": null,
+  "version": null,
+  "git": {
+    "branch": "feature/redesign-0403",
+    "sha": "8bf45d7",
+    "remoteUrl": "git@github.com:en-dash-consulting/learn-pretext.git",
+    "repoName": "learn-pretext"
+  },
+  "nameSource": "prd"
+}
