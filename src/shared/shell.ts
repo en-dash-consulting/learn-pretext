@@ -72,15 +72,63 @@ function buildShell() {
   initScrollReveal()
 }
 
+// Short descriptions for mega menu
+const PAGE_DESCRIPTIONS: Record<string, string> = {
+  'home': 'Interactive landing experience',
+  'why-pretext': 'The problem pretext solves',
+  'getting-started': 'Install and first layout',
+  'accordion': 'Smooth height animations',
+  'bubbles': 'Shrink-wrap chat bubbles',
+  'masonry': 'Card grid layout',
+  'balanced-text': 'Even line lengths',
+  'pipeline': 'prepare() deep dive',
+  'rich-api': 'Full API walkthrough',
+  'editorial': 'Variable-width text flow',
+  'virtualized': 'Virtual scrolling',
+  'canvas': 'Beyond the DOM',
+  'i18n': 'Internationalization',
+  'kinetic': 'Animated typography',
+  'ascii-art': 'Fluid text art',
+  'text-physics': 'Physics simulation',
+  'ascii-tanks': 'ASCII game demo',
+  'text-rain': 'Falling characters',
+  'text-tetris': 'Text block game',
+  'text-flood': 'Flood fill text',
+  'breaking-spaces': 'Space handling',
+  'api-reference': 'Complete API docs',
+  'performance': 'Optimization guide',
+  'caveats': 'Tips and recipes',
+  'accessibility': 'A11y considerations',
+  'about': 'About this site',
+}
+
 function buildFloatingNav(): string {
   return `
     <nav class="museum-nav" id="museum-nav" aria-label="Site navigation">
       <a href="${getBase()}/" class="museum-nav__logo">Learn Pretext</a>
       <div class="museum-nav__links">
-        ${tracks.map(t => {
-          // For Foundations, link to "Why Pretext" (skip Home)
-          const linkPage = t.title === 'Foundations' ? (t.pages[1] ?? t.pages[0]!) : t.pages[0]!
-          return `<a href="${linkPage.href}" class="museum-nav__link${t.title === currentTrack?.title ? ' active' : ''}">${t.title}</a>`
+        ${tracks.map((t, i) => {
+          const isActive = t.title === currentTrack?.title
+          // Filter out Home from Foundations in menu
+          const menuPages = t.title === 'Foundations' ? t.pages.filter(p => p.slug !== 'home') : t.pages
+          return `
+            <div class="museum-nav__dropdown" data-track-idx="${i}">
+              <button
+                class="museum-nav__link${isActive ? ' active' : ''}"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="mega-panel-${i}"
+              >${t.title}</button>
+              <div class="mega-panel" id="mega-panel-${i}" role="menu" aria-label="${t.title} pages">
+                ${menuPages.map(p => `
+                  <a href="${p.href}" class="mega-panel__item${p.slug === slug ? ' mega-panel__item--current' : ''}" role="menuitem">
+                    <span class="mega-panel__title">${p.title}</span>
+                    <span class="mega-panel__desc">${PAGE_DESCRIPTIONS[p.slug] ?? ''}</span>
+                  </a>
+                `).join('')}
+              </div>
+            </div>
+          `
         }).join('')}
       </div>
       <div class="museum-nav__actions">
@@ -149,6 +197,7 @@ function buildFooter(): string {
         <p class="footer__endash-headline">Built for people everywhere, by people at <a href="https://endash.us" target="_blank" rel="noopener">En Dash</a></p>
         <p class="footer__endash-sub">We build tools that make work better and feel better.</p>
         <a href="https://endash.us" target="_blank" rel="noopener" class="footer__endash-link">Learn more about En Dash &rarr;</a>
+        <p class="footer__endash-contrib"><a href="https://github.com/en-dash-consulting/learn-pretext" target="_blank" rel="noopener">"Your Name Here" &larr; Contribute!</a></p>
       </div>
       <div class="footer__inner">
         <div class="footer__brand">
@@ -200,6 +249,119 @@ function bindEvents() {
   initSearch()
   const searchTrigger = document.getElementById('search-trigger')
   searchTrigger?.addEventListener('click', openSearch)
+
+  // Mega menu
+  initMegaMenu()
+}
+
+function initMegaMenu() {
+  const dropdowns = document.querySelectorAll('.museum-nav__dropdown')
+  let openPanel: HTMLElement | null = null
+  let openTrigger: HTMLElement | null = null
+  let closeTimeout: ReturnType<typeof setTimeout> | null = null
+
+  function openMenu(dropdown: Element) {
+    const trigger = dropdown.querySelector('button') as HTMLElement
+    const panel = dropdown.querySelector('.mega-panel') as HTMLElement
+    if (!trigger || !panel) return
+
+    // Close any other open panel
+    if (openPanel && openPanel !== panel) {
+      closeMenu()
+    }
+
+    if (closeTimeout) { clearTimeout(closeTimeout); closeTimeout = null }
+
+    trigger.setAttribute('aria-expanded', 'true')
+    panel.classList.add('open')
+    openPanel = panel
+    openTrigger = trigger
+  }
+
+  function closeMenu() {
+    if (openTrigger) openTrigger.setAttribute('aria-expanded', 'false')
+    if (openPanel) openPanel.classList.remove('open')
+    openPanel = null
+    openTrigger = null
+  }
+
+  function scheduleClose() {
+    if (closeTimeout) clearTimeout(closeTimeout)
+    closeTimeout = setTimeout(closeMenu, 200)
+  }
+
+  function cancelClose() {
+    if (closeTimeout) { clearTimeout(closeTimeout); closeTimeout = null }
+  }
+
+  dropdowns.forEach(dropdown => {
+    // Mouse: hover to open, leave to close with delay
+    dropdown.addEventListener('mouseenter', () => {
+      cancelClose()
+      openMenu(dropdown)
+    })
+    dropdown.addEventListener('mouseleave', () => {
+      scheduleClose()
+    })
+
+    // Keyboard: Enter/Space on trigger, Escape to close
+    const trigger = dropdown.querySelector('button')
+    trigger?.addEventListener('click', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true'
+      if (expanded) {
+        closeMenu()
+      } else {
+        openMenu(dropdown)
+        // Focus first item
+        const firstItem = dropdown.querySelector('.mega-panel__item') as HTMLElement
+        firstItem?.focus()
+      }
+    })
+
+    trigger?.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        openMenu(dropdown)
+        const firstItem = dropdown.querySelector('.mega-panel__item') as HTMLElement
+        firstItem?.focus()
+      }
+    })
+
+    // Keyboard nav within panel
+    const panel = dropdown.querySelector('.mega-panel')
+    panel?.addEventListener('keydown', (e: Event) => {
+      const ke = e as KeyboardEvent
+      const items = Array.from(panel.querySelectorAll('.mega-panel__item')) as HTMLElement[]
+      const idx = items.indexOf(document.activeElement as HTMLElement)
+
+      if (ke.key === 'ArrowDown') {
+        ke.preventDefault()
+        const next = items[idx + 1] ?? items[0]
+        next?.focus()
+      } else if (ke.key === 'ArrowUp') {
+        ke.preventDefault()
+        if (idx <= 0) {
+          closeMenu()
+          trigger?.focus()
+        } else {
+          items[idx - 1]?.focus()
+        }
+      } else if (ke.key === 'Escape') {
+        ke.preventDefault()
+        closeMenu()
+        trigger?.focus()
+      } else if (ke.key === 'Tab') {
+        closeMenu()
+      }
+    })
+  })
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (openPanel && !(e.target as Element).closest('.museum-nav__dropdown')) {
+      closeMenu()
+    }
+  })
 }
 
 // Floating nav appears after scrolling past the hero
