@@ -758,8 +758,6 @@
 
 .portal-char--metric-label {
   color: var(--color-text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .portal-char::selection {

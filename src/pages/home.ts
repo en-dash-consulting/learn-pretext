@@ -36,8 +36,8 @@ function metricFont(scale: number, mobile: boolean) {
 }
 
 function metricLabelFont(scale: number) {
-  const size = Math.round(11 * scale)
-  return `600 ${size}px Inter`
+  const size = Math.round(12 * scale)
+  return `500 ${size}px Inter`
 }
 
 const BLOCKS: TextBlock[] = [
@@ -100,9 +100,9 @@ const BLOCKS: TextBlock[] = [
     marginTop: (s, m) => Math.round((m ? 60 : 80) * s),
   },
   {
-    text: 'layout time',
+    text: 'LAYOUT TIME',
     font: metricLabelFont,
-    lineHeight: (s) => Math.round(11 * s * 1.6),
+    lineHeight: (s) => Math.round(12 * s * 1.6),
     align: 'center',
     cssClass: 'portal-char--metric-label',
     marginTop: (s) => Math.round(8 * s),
@@ -124,16 +124,16 @@ const BLOCKS: TextBlock[] = [
     marginTop: (s, m) => Math.round((m ? 40 : 50) * s),
   },
   {
-    text: 'than DOM measurement',
+    text: 'THAN DOM MEASUREMENT',
     font: metricLabelFont,
-    lineHeight: (s) => Math.round(11 * s * 1.6),
+    lineHeight: (s) => Math.round(12 * s * 1.6),
     align: 'center',
     cssClass: 'portal-char--metric-label',
     marginTop: (s) => Math.round(8 * s),
   },
-  // Section: The Exhibition
+  // Section: Explore
   {
-    text: 'The Exhibition',
+    text: 'Explore',
     font: h2Font,
     lineHeight: (s, m) => Math.round((m ? 24 : 36) * s * 1.15),
     align: 'center',
@@ -141,7 +141,7 @@ const BLOCKS: TextBlock[] = [
     marginTop: (s, m) => Math.round((m ? 100 : 160) * s),
   },
   {
-    text: 'Five wings. Twenty-five interactive installations. Each one built on the same quiet insight: text layout is arithmetic, and arithmetic is free.',
+    text: 'Twenty-five interactive demos across five tracks. Each one built on the same quiet insight: text layout is arithmetic, and arithmetic is free.',
     font: (s) => bodyFont(s),
     lineHeight: (s) => Math.round(16 * s * 1.65),
     align: 'center',
