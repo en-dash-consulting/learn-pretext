@@ -334,8 +334,15 @@
   width: 60px;
   height: 3px;
   background: var(--endash-gradient);
-  margin: 0 auto var(--space-8);
+  margin: 0 auto var(--space-6);
   border-radius: 2px;
+}
+
+.footer__endash-pre {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-normal);
 }
 
 .footer__endash-headline {

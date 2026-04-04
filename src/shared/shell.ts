@@ -194,6 +194,7 @@ function buildFooter(): string {
     <footer class="footer">
       <div class="footer__endash-cta">
         <div class="footer__endash-bar"></div>
+        <p class="footer__endash-pre">This community learning site was</p>
         <p class="footer__endash-headline">Built for people everywhere, by people at <a href="https://endash.us" target="_blank" rel="noopener">En Dash</a></p>
         <p class="footer__endash-contrib">And... Your Name Here! <a href="https://github.com/en-dash-consulting/learn-pretext" target="_blank" rel="noopener">Contribute on GitHub :D</a></p>
         <p class="footer__endash-sub">We build tools that make work better and feel better.</p>
