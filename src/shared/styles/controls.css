@@ -1,0 +1,193 @@
+/* Control bar — two states: hero (large) and docked (normal) */
+.controlbar {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%) scale(var(--bar-scale, 1.35));
+  transform-origin: bottom center;
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--nav-bg, rgba(5, 5, 7, 0.75));
+  border: 1px solid var(--color-border-bright);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.5s var(--ease-out),
+              padding 0.5s var(--ease-out),
+              bottom 0.5s var(--ease-out),
+              gap 0.5s var(--ease-out);
+}
+
+/* Docked state (after scroll) */
+.controlbar.docked {
+  --bar-scale: 1;
+  bottom: var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  gap: var(--space-1);
+}
+
+.controlbar__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.controlbar__btn:hover {
+  color: var(--color-text-secondary);
+  background: var(--color-accent-muted);
+}
+
+.controlbar__btn.active {
+  color: var(--color-accent);
+}
+
+.controlbar__sep {
+  width: 1px;
+  height: 18px;
+  background: var(--color-border);
+  margin: 0 var(--space-1);
+  flex-shrink: 0;
+}
+
+.controlbar__label {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+.controlbar__label--lg {
+  font-size: 16px;
+}
+
+.controlbar__slider {
+  width: 80px;
+  height: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-border-bright);
+  border-radius: 2px;
+  outline: none;
+  margin: 0 var(--space-1);
+  flex-shrink: 0;
+}
+
+.controlbar__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(129,140,248,0.15);
+}
+
+.controlbar__slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 4px rgba(129,140,248,0.25);
+}
+
+.controlbar__modes {
+  display: flex;
+  gap: 2px;
+}
+
+.controlbar__mode {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.controlbar__mode:hover {
+  color: var(--color-text-secondary);
+}
+
+.controlbar__mode.active {
+  color: var(--color-accent);
+  background: var(--color-accent-muted);
+}
+
+/* Content responds to controls */
+[data-flipped="true"] .museum-below-fold {
+  transform: scaleY(-1);
+}
+
+[data-flipped="true"] .museum-below-fold > * {
+  transform: scaleY(-1);
+}
+
+/* Text scale for non-portal content */
+.museum-below-fold {
+  font-size: calc(1rem * var(--text-scale, 1));
+}
+
+.museum-below-fold .museum-section__title {
+  font-size: calc(var(--text-3xl) * var(--text-scale, 1));
+}
+
+.museum-below-fold .museum-section__text {
+  font-size: calc(var(--text-lg) * var(--text-scale, 1));
+}
+
+.museum-below-fold .museum-metric__value {
+  font-size: calc(var(--text-4xl) * var(--text-scale, 1));
+}
+
+.museum-below-fold .track-card__title {
+  font-size: calc(var(--text-sm) * var(--text-scale, 1));
+}
+
+.museum-below-fold .track-card__desc {
+  font-size: calc(var(--text-xs) * var(--text-scale, 1));
+}
+
+@media (max-width: 640px) {
+  .controlbar {
+    --bar-scale: 1.15;
+    bottom: var(--space-3);
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .controlbar.docked {
+    --bar-scale: 1;
+    bottom: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    gap: 0;
+  }
+
+  .controlbar__slider {
+    width: 56px;
+  }
+
+  .controlbar__sep {
+    margin: 0 2px;
+  }
+
+  .controlbar__label {
+    display: none;
+  }
+}

@@ -10,16 +10,38 @@ import './styles/variables.css'
 import './styles/global.css'
 import './styles/layout.css'
 import './styles/components.css'
+import './styles/controls.css'
 
 import { tracks, getCurrentSlug, getPrevPage, getNextPage, getTrackForSlug, getBase } from './nav-data'
 import { createSearchButton, initSearch, openSearch } from '../components/search'
 import { initAnalytics } from './analytics'
+import { initMuseum } from './museum'
+import { buildControls, initControls } from './controls'
 
 const slug = getCurrentSlug()
+const currentTrack = getTrackForSlug(slug)
+
+// Set track-specific CSS variables
+function setTrackTheme() {
+  const root = document.documentElement
+  const trackMap: Record<string, { color: string; glow: string }> = {
+    'Foundations': { color: 'var(--track-foundations)', glow: 'var(--track-foundations-glow)' },
+    'Core Patterns': { color: 'var(--track-core)', glow: 'var(--track-core-glow)' },
+    'Advanced': { color: 'var(--track-advanced)', glow: 'var(--track-advanced-glow)' },
+    'Creative': { color: 'var(--track-creative)', glow: 'var(--track-creative-glow)' },
+    'Reference': { color: 'var(--track-reference)', glow: 'var(--track-reference-glow)' },
+  }
+  if (currentTrack && trackMap[currentTrack.title]) {
+    root.style.setProperty('--track-color', trackMap[currentTrack.title]!.color)
+    root.style.setProperty('--track-glow', trackMap[currentTrack.title]!.glow)
+  }
+}
 
 function buildShell() {
   const app = document.getElementById('app')
   if (!app) return
+
+  setTrackTheme()
 
   const skipLink = document.createElement('a')
   skipLink.href = '#content'
@@ -27,59 +49,69 @@ function buildShell() {
   skipLink.textContent = 'Skip to content'
   document.body.prepend(skipLink)
 
+  // Vignette overlay
+  const vignette = document.createElement('div')
+  vignette.className = 'museum-vignette'
+  document.body.prepend(vignette)
+
   app.className = 'site'
   app.innerHTML = `
-    ${buildHeader()}
-    ${buildSidebar()}
+    ${buildFloatingNav()}
+    ${buildMobileMenu()}
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <main class="content" id="content">
       <div class="content__body" id="page-content"></div>
       ${buildPageNav()}
     </main>
     ${buildFooter()}
+    ${slug === 'home' ? buildControls() : ''}
   `
 
   bindEvents()
+  if (slug === 'home') initControls()
+  initScrollReveal()
 }
 
-function buildHeader(): string {
-  const activeTrack = getTrackForSlug(slug)
+function buildFloatingNav(): string {
   return `
-    <header class="header">
-      <a href="${getBase()}/" class="header__logo">Learn Pretext</a>
-      <nav class="header__nav" aria-label="Track navigation">
-        ${tracks.map(t => `
-          <a href="${t.pages[0]!.href}"${t.title === activeTrack?.title ? ' class="active"' : ''}>${t.title}</a>
-        `).join('')}
-      </nav>
-      ${createSearchButton()}
-      <a href="https://github.com/en-dash-consulting/learn-pretext" target="_blank" rel="noopener" class="header__star" aria-label="Star this repo on GitHub">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
-        <span class="header__star-text">Star this Repo</span>
-      </a>
-      <button class="header__hamburger" id="hamburger" aria-label="Open navigation">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-    </header>
+    <nav class="museum-nav" id="museum-nav" aria-label="Site navigation">
+      <a href="${getBase()}/" class="museum-nav__logo">Learn Pretext</a>
+      <div class="museum-nav__links">
+        ${tracks.map(t => {
+          // For Foundations, link to "Why Pretext" (skip Home)
+          const linkPage = t.title === 'Foundations' ? (t.pages[1] ?? t.pages[0]!) : t.pages[0]!
+          return `<a href="${linkPage.href}" class="museum-nav__link${t.title === currentTrack?.title ? ' active' : ''}">${t.title}</a>`
+        }).join('')}
+      </div>
+      <div class="museum-nav__actions">
+        ${createSearchButton()}
+        <a href="https://github.com/en-dash-consulting/learn-pretext" target="_blank" rel="noopener" class="header__star museum-nav__action" aria-label="Star on GitHub">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
+        </a>
+        <button class="museum-nav__hamburger" id="hamburger" aria-label="Open navigation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
   `
 }
 
-function buildSidebar(): string {
+function buildMobileMenu(): string {
   return `
-    <aside class="sidebar" id="sidebar" aria-label="Page navigation">
+    <div class="mobile-menu" id="mobile-menu">
       ${tracks.map(t => `
-        <div class="sidebar__track">
-          <div class="sidebar__track-title">${t.title}</div>
+        <div class="mobile-menu__track">
+          <div class="mobile-menu__track-title">${t.title}</div>
           ${t.pages.map(p => `
-            <a href="${p.href}" class="sidebar__link${p.slug === slug ? ' active' : ''}">${p.title}</a>
+            <a href="${p.href}" class="mobile-menu__link${p.slug === slug ? ' active' : ''}">${p.title}</a>
           `).join('')}
         </div>
       `).join('')}
-    </aside>
+    </div>
   `
 }
 
@@ -112,6 +144,12 @@ function buildFooter(): string {
   const aboutPage = tracks[4]?.pages[4]
   return `
     <footer class="footer">
+      <div class="footer__endash-cta">
+        <div class="footer__endash-bar"></div>
+        <p class="footer__endash-headline">Built for people everywhere, by people at <a href="https://endash.us" target="_blank" rel="noopener">En Dash</a></p>
+        <p class="footer__endash-sub">We build tools that make work better and feel better.</p>
+        <a href="https://endash.us" target="_blank" rel="noopener" class="footer__endash-link">Learn more about En Dash &rarr;</a>
+      </div>
       <div class="footer__inner">
         <div class="footer__brand">
           <div class="footer__logo">Learn Pretext</div>
@@ -147,16 +185,16 @@ function buildFooter(): string {
 
 function bindEvents() {
   const hamburger = document.getElementById('hamburger')
-  const sidebar = document.getElementById('sidebar')
+  const mobileMenu = document.getElementById('mobile-menu')
   const overlay = document.getElementById('sidebar-overlay')
 
-  function toggleSidebar() {
-    sidebar?.classList.toggle('open')
+  function toggleMenu() {
+    mobileMenu?.classList.toggle('open')
     overlay?.classList.toggle('visible')
   }
 
-  hamburger?.addEventListener('click', toggleSidebar)
-  overlay?.addEventListener('click', toggleSidebar)
+  hamburger?.addEventListener('click', toggleMenu)
+  overlay?.addEventListener('click', toggleMenu)
 
   // Search
   initSearch()
@@ -164,5 +202,47 @@ function bindEvents() {
   searchTrigger?.addEventListener('click', openSearch)
 }
 
+// Floating nav appears after scrolling past the hero
+function initScrollReveal() {
+  const nav = document.getElementById('museum-nav')
+  if (!nav) return
+
+  // On homepage, show after scrolling past the portal
+  // On all other pages, show immediately
+  if (slug !== 'home') {
+    nav.classList.add('visible')
+  } else {
+    const threshold = window.innerHeight * 0.3
+    let visible = false
+    const navEl = nav
+    function checkScroll() {
+      const shouldShow = window.scrollY > threshold
+      if (shouldShow !== visible) {
+        visible = shouldShow
+        navEl.classList.toggle('visible', visible)
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true })
+  }
+
+  // Museum scroll reveal for content sections
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+  )
+
+  // Observe all museum-reveal elements
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.museum-reveal').forEach(el => observer.observe(el))
+  })
+}
+
 buildShell()
 initAnalytics()
+initMuseum()
