@@ -25,7 +25,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "TechArticle",
     "headline": "Pretext.js i18n — Bidirectional Text Layout and Unicode Line Breaking",
     "description": "Handle international text with pretext.js — bidirectional text layout, CJK support, RTL text measurement, and Unicode line breaking in JavaScript without DOM.",
     "keywords": "pretextjs i18n, pretext.js internationalization, bidirectional text layout javascript, unicode line breaking javascript, RTL text measurement, CJK text layout",
@@ -36,7 +36,21 @@
   </script>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <!-- Static fallback for crawlers without JavaScript; replaced at runtime by the interactive shell. -->
+    <header>
+      <h1>Pretext.js i18n</h1>
+      <p>Handle international text with pretext.js (pretextjs) — bidirectional text layout, CJK support, RTL text measurement, and Unicode line breaking in JavaScript. Cross-locale text measurement without DOM.</p>
+    </header>
+    <p>
+      This page is part of <a href="/">Learn Pretext</a> — interactive tutorials and live demos for
+      pretext.js, the zero-dependency JavaScript text measurement library by Cheng Lou.
+      New to the library? Start with the <a href="/pages/getting-started.html">pretext.js tutorial</a>,
+      read <a href="/pages/why-pretext.html">why pretext exists</a>, or browse the
+      <a href="/pages/api-reference.html">API reference</a>.
+      Enable JavaScript to run the live interactive demo and view its annotated source code.
+    </p>
+  </div>
   <script type="module" src="/src/shared/shell.ts"></script>
   <script type="module" src="/src/pages/i18n.ts"></script>
 </body>

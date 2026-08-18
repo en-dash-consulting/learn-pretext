@@ -1,0 +1,75 @@
+# Learn Pretext
+
+> An interactive learning site for @chenglou/pretext (pretext.js) — a zero-dependency JavaScript library for multiline text measurement and layout without DOM reflow. 26 pages of live demos, tutorials, and reference docs, each with annotated source code.
+
+## About
+
+Learn Pretext (https://learn-pretext.com) is an independent educational resource built by En Dash Consulting (https://endash.us). It teaches developers how to use the pretext library through interactive demos with annotated source code.
+
+Pretext is a library by Cheng Lou (https://github.com/chenglou/pretext) that computes multiline text line breaks, heights, and widths using pure arithmetic over cached glyph widths — no DOM reads, no layout thrashing, hundreds of times faster than `getBoundingClientRect()`.
+
+Note: this pretext is unrelated to PreTeXt, the XML markup language for authoring math textbooks. This site covers only the JavaScript text measurement library.
+
+This site is NOT an official project of Cheng Lou or the pretext library.
+
+## Key pretext concepts
+
+- `prepare(text, font)` — one-time measurement pass, caches glyph widths (~0.1ms)
+- `layout(prepared, maxWidth, lineHeight)` — pure arithmetic layout, returns lineCount + height (~0.005ms)
+- `prepareWithSegments()` — like prepare but exposes segment data (text, widths, break kinds)
+- `layoutWithLines()` — returns array of LayoutLine objects with per-line text and width
+- `layoutNextLine()` — iterator-style, one line at a time with variable maxWidth per line
+- `walkLineRanges()` — callback per line with width data, no string allocation
+
+## Foundations
+
+- [Home](https://learn-pretext.com/): Interactive canvas newspaper demo — drag images into a multi-column layout and watch text reflow at 60fps
+- [Why Pretext](https://learn-pretext.com/pages/why-pretext.html): The layout-thrashing problem, DOM measurement vs pretext benchmark
+- [Getting Started](https://learn-pretext.com/pages/getting-started.html): Tutorial — npm install @chenglou/pretext, first prepare() + layout() call, interactive sandbox
+
+## Core Patterns
+
+- [Accordion](https://learn-pretext.com/pages/accordion.html): Predict text height before rendering to animate expand/collapse without reflow
+- [Chat Bubbles](https://learn-pretext.com/pages/bubbles.html): Shrink-wrap message bubbles to their text with walkLineRanges()
+- [Masonry](https://learn-pretext.com/pages/masonry.html): Card grid arranged by pre-measured text heights
+- [Balanced Text](https://learn-pretext.com/pages/balanced-text.html): Binary-search for even line lengths — a JS alternative to CSS text-wrap: balance
+- [The Pipeline](https://learn-pretext.com/pages/pipeline.html): Visualization of what prepare() does internally
+
+## Advanced
+
+- [Rich API](https://learn-pretext.com/pages/rich-api.html): The three API paths (layout, layoutWithLines, layoutNextLine) compared side by side
+- [Editorial Layout](https://learn-pretext.com/pages/editorial.html): layoutNextLine() flowing text around draggable obstacles at 60fps
+- [Virtualized Lists](https://learn-pretext.com/pages/virtualized.html): 10,000-item virtual scroll with pretext-predicted row heights
+- [Canvas Rendering](https://learn-pretext.com/pages/canvas.html): Multiline text on HTML canvas — a measureText alternative with pan/zoom
+- [i18n Deep Dive](https://learn-pretext.com/pages/i18n.html): CJK, Arabic, Thai, Hindi, and emoji handling with Unicode line breaking
+
+## Creative
+
+- [Kinetic Typography](https://learn-pretext.com/pages/kinetic.html): Wave text and scatter/gather animation from per-character positions
+- [ASCII Art](https://learn-pretext.com/pages/ascii-art.html): Proportional ASCII rendering with pretext-measured widths
+- [Text Physics](https://learn-pretext.com/pages/text-physics.html): Physics simulation with text particle collisions
+- [ASCII Tanks](https://learn-pretext.com/pages/ascii-tanks.html): Text-based artillery game with real-time character layout
+- [Text Rain](https://learn-pretext.com/pages/text-rain.html): Matrix-style falling text with position tracking
+- [Text Tetris](https://learn-pretext.com/pages/text-tetris.html): Falling-block gameplay rendered entirely in measured text
+- [Word Golf](https://learn-pretext.com/pages/text-flood.html): Dynamic text expansion and flow animation
+- [Breaking Spaces](https://learn-pretext.com/pages/breaking-spaces.html): How Unicode line breaking and wrap points behave
+
+## Reference
+
+- [API Reference](https://learn-pretext.com/pages/api-reference.html): Every function documented with interactive try-it blocks
+- [Performance Guide](https://learn-pretext.com/pages/performance.html): Benchmarks — hundreds of times faster than getBoundingClientRect, caching strategies
+- [Caveats & Recipes](https://learn-pretext.com/pages/caveats.html): system-ui font bug, font matching, production patterns
+- [Accessibility](https://learn-pretext.com/pages/accessibility.html): Screen-reader and ARIA patterns for pretext-powered UIs
+- [About](https://learn-pretext.com/pages/about.html): Attribution and credits
+
+## Tech stack
+
+- Vanilla TypeScript + Vite (multi-page app), deployed on GitHub Pages
+- @chenglou/pretext for text measurement, Shiki for code highlighting
+
+## Links
+
+- Site: https://learn-pretext.com
+- Source: https://github.com/en-dash-consulting/learn-pretext
+- Pretext library: https://github.com/chenglou/pretext
+- En Dash Consulting: https://endash.us (Make Work Feel Better)

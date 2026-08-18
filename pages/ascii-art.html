@@ -25,7 +25,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "TechArticle",
     "headline": "ASCII Art with Pretext.js — Monospaced Text Layout",
     "description": "Generate ASCII art layouts with pretext.js — measure and arrange monospaced text into artistic compositions using DOM-free JavaScript text measurement.",
     "keywords": "pretextjs ASCII art, pretext.js monospaced text, ASCII art javascript, monospaced text layout",
@@ -36,7 +36,21 @@
   </script>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <!-- Static fallback for crawlers without JavaScript; replaced at runtime by the interactive shell. -->
+    <header>
+      <h1>ASCII Art with Pretext.js</h1>
+      <p>Generate ASCII art layouts with pretext.js — measure and arrange monospaced text into artistic compositions using DOM-free JavaScript text measurement. Creative pretextjs demo.</p>
+    </header>
+    <p>
+      This page is part of <a href="/">Learn Pretext</a> — interactive tutorials and live demos for
+      pretext.js, the zero-dependency JavaScript text measurement library by Cheng Lou.
+      New to the library? Start with the <a href="/pages/getting-started.html">pretext.js tutorial</a>,
+      read <a href="/pages/why-pretext.html">why pretext exists</a>, or browse the
+      <a href="/pages/api-reference.html">API reference</a>.
+      Enable JavaScript to run the live interactive demo and view its annotated source code.
+    </p>
+  </div>
   <script type="module" src="/src/shared/shell.ts"></script>
   <script type="module" src="/src/pages/ascii-art.ts"></script>
 </body>
