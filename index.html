@@ -84,7 +84,46 @@
   </script>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <!-- Static fallback for crawlers without JavaScript; replaced at runtime by the interactive shell. -->
+    <header>
+      <h1>Learn Pretext.js — the JavaScript Text Measurement Library</h1>
+      <p>
+        Interactive tutorials and live demos for <a href="https://github.com/chenglou/pretext">pretext</a>
+        (pretext.js) — the zero-dependency JavaScript library by Cheng Lou that measures multiline text
+        height, line breaks, and width with pure arithmetic. No DOM reads, no layout thrashing, no forced
+        reflow — hundreds of times faster than <code>getBoundingClientRect()</code>.
+      </p>
+      <p>
+        Note: this is the pretext <em>JavaScript library</em>, not PreTeXt the math-textbook authoring language.
+      </p>
+    </header>
+    <nav aria-label="Site pages">
+      <h2>Start here</h2>
+      <ul>
+        <li><a href="/pages/getting-started.html">Pretext.js tutorial — install and first measurement</a></li>
+        <li><a href="/pages/why-pretext.html">Why pretext? DOM-free measurement vs getBoundingClientRect</a></li>
+        <li><a href="/pages/api-reference.html">API reference — prepare(), layout(), layoutNextLine()</a></li>
+      </ul>
+      <h2>Live demos</h2>
+      <ul>
+        <li><a href="/pages/accordion.html">Accordion — predict text height before rendering</a></li>
+        <li><a href="/pages/bubbles.html">Chat bubbles — shrink-wrap text</a></li>
+        <li><a href="/pages/masonry.html">Masonry card grid</a></li>
+        <li><a href="/pages/balanced-text.html">Balanced text wrapping</a></li>
+        <li><a href="/pages/virtualized.html">Virtualized lists with dynamic row heights</a></li>
+        <li><a href="/pages/editorial.html">Editorial multi-column layout</a></li>
+        <li><a href="/pages/canvas.html">Canvas text rendering</a></li>
+        <li><a href="/pages/i18n.html">i18n — CJK, RTL, emoji</a></li>
+        <li><a href="/pages/kinetic.html">Kinetic typography animation</a></li>
+        <li><a href="/pages/ascii-art.html">ASCII art rendering</a></li>
+        <li><a href="/pages/text-physics.html">Text physics simulation</a></li>
+        <li><a href="/pages/text-rain.html">Matrix-style text rain</a></li>
+        <li><a href="/pages/performance.html">Performance guide and benchmarks</a></li>
+      </ul>
+    </nav>
+    <p>Enable JavaScript for the full interactive experience — a live canvas newspaper where text reflows around draggable images at 60fps.</p>
+  </div>
   <script type="module" src="/src/shared/shell.ts"></script>
   <script type="module" src="/src/pages/home.ts"></script>
 </body>
