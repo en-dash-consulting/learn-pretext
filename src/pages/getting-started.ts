@@ -11,8 +11,8 @@ async function init() {
 
   content.innerHTML = `
     <div class="content__header">
-      <h1 class="content__title">Getting Started</h1>
-      <p class="content__subtitle">Install pretext and measure your first text in under a minute.</p>
+      <h1 class="content__title">Pretext.js Tutorial: Getting Started</h1>
+      <p class="content__subtitle">How to use pretext — install @chenglou/pretext and measure your first text in under a minute.</p>
     </div>
 
     <div class="content__section">
