@@ -39,16 +39,27 @@
   <div id="app">
     <!-- Static fallback for crawlers without JavaScript; replaced at runtime by the interactive shell. -->
     <header>
-      <h1>Pretext.js Tutorial</h1>
-      <p>Step-by-step pretext.js tutorial — how to use pretext: npm install @chenglou/pretext, call prepare() and layout(), and run your first DOM-free multiline text measurement in under five minutes.</p>
+      <h1>Pretext.js Tutorial: Getting Started</h1>
+      <p>A step-by-step pretext.js tutorial — install pretext, run your first DOM-free text measurement, and render wrapped lines yourself, in under 10 minutes.</p>
     </header>
+    <p>
+      Pretext is a zero-dependency JavaScript/TypeScript library for multiline text measurement and
+      layout by Cheng Lou. It computes line breaks, line count, and pixel height with pure arithmetic —
+      no DOM reads, no layout thrashing. This tutorial walks through:
+    </p>
+    <ol>
+      <li>Install — <code>npm install @chenglou/pretext</code>, or import the ES module from a CDN with a script tag (no bundler needed).</li>
+      <li>Load fonts first — <code>await document.fonts.ready</code> before measuring, so glyph widths aren't cached from the fallback font.</li>
+      <li>First measurement — <code>prepare('Hello, world!', '16px Inter')</code> then <code>layout(prepared, 200, 24)</code> returns <code>{ lineCount: 1, height: 24 }</code>; the same prepared text at 60px wide returns <code>{ lineCount: 2, height: 48 }</code>.</li>
+      <li>Render wrapped lines — <code>prepareWithSegments()</code> + <code>layoutWithLines()</code> give you each line's text and pixel width, ready to render as elements or draw on canvas.</li>
+      <li>Where next — the <a href="/pages/accordion.html">Accordion</a>, <a href="/pages/balanced-text.html">Balanced Text</a>, <a href="/pages/virtualized.html">Virtualized Lists</a>, and <a href="/pages/canvas.html">Canvas Rendering</a> demos, plus the <a href="/pages/api-reference.html">API reference</a>.</li>
+    </ol>
     <p>
       This page is part of <a href="/">Learn Pretext</a> — interactive tutorials and live demos for
       pretext.js, the zero-dependency JavaScript text measurement library by Cheng Lou.
-      New to the library? Start with the <a href="/pages/getting-started.html">pretext.js tutorial</a>,
-      read <a href="/pages/why-pretext.html">why pretext exists</a>, or browse the
+      Read <a href="/pages/why-pretext.html">why pretext exists</a>, or browse the
       <a href="/pages/api-reference.html">API reference</a>.
-      Enable JavaScript to run the live interactive demo and view its annotated source code.
+      Enable JavaScript to run the tutorial's live examples and interactive sandbox.
     </p>
   </div>
   <script type="module" src="/src/shared/shell.ts"></script>
