@@ -198,6 +198,9 @@ function buildFooter(): string {
         <p class="footer__endash-headline">Built for people everywhere, by people at <a href="https://endash.us" target="_blank" rel="noopener">En Dash</a></p>
         <p class="footer__endash-contrib">And... Your Name Here! <a href="https://github.com/en-dash-consulting/learn-pretext" target="_blank" rel="noopener">Contribute on GitHub :D</a></p>
         <p class="footer__endash-sub">We build tools that make work better and feel better.</p>
+        <p class="footer__endash-more">More free, in the same territory as this site:
+          <a href="https://html-in-canvas.dev/" target="_blank" rel="noopener">HTML-in-Canvas</a>, a reference for painting live, accessible DOM into a canvas, and
+          <a href="https://endash.us/apps/learn-vgpu" target="_blank" rel="noopener">Learn vgpu</a>, an interactive WebGPU studio. No sign-up on either.</p>
         <a href="https://endash.us" target="_blank" rel="noopener" class="footer__endash-link">Learn more about En Dash &rarr;</a>
       </div>
       <div class="footer__inner">

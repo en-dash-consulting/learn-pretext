@@ -392,6 +392,14 @@
   margin-bottom: var(--space-4);
 }
 
+.footer__endash-more {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  line-height: 1.6;
+  max-width: 46rem;
+  margin: 0 auto var(--space-4);
+}
+
 .footer__endash-link {
   display: inline-flex;
   align-items: center;
