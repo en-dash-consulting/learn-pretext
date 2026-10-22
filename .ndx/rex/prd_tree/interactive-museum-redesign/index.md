@@ -16,9 +16,9 @@ description: "Ground-up reimagining of the site UX — transforming it from a tr
 
 | Title | Status |
 |-------|--------|
-| [Immersive Entry Experience](./immersive-entry-experience.md) | pending |
+| [Ambient Interaction Layer](./ambient-interaction-layer.md) | pending |
+| [Curated Learning Corridors](./curated-learning-corridors.md) | pending |
 | [Flow-Based Navigation](./flow-based-navigation.md) | pending |
+| [Immersive Entry Experience](./immersive-entry-experience.md) | pending |
 | [Living Demos](./living-demos.md) | pending |
 | [Spatial Typography System](./spatial-typography-system.md) | pending |
-| [Curated Learning Corridors](./curated-learning-corridors.md) | pending |
-| [Ambient Interaction Layer](./ambient-interaction-layer.md) | pending |

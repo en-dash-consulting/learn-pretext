@@ -17,8 +17,8 @@ description: "5-page advanced track: Rich API Overview (prepareWithSegments, lay
 
 | Title | Status |
 |-------|--------|
-| [Rich API Overview](./rich-api-overview.md) | completed |
-| [Editorial Layout — Variable-Width Flow](./editorial-layout-variable-width-flow.md) | completed |
-| [Virtualized Lists](./virtualized-lists.md) | completed |
 | [Canvas Rendering — Beyond the DOM](./canvas-rendering-beyond-the-dom.md) | completed |
+| [Editorial Layout — Variable-Width Flow](./editorial-layout-variable-width-flow.md) | completed |
 | [i18n Deep Dive](./i18n-deep-dive.md) | completed |
+| [Rich API Overview](./rich-api-overview.md) | completed |
+| [Virtualized Lists](./virtualized-lists.md) | completed |

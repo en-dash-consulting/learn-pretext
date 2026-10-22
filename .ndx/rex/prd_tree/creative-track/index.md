@@ -17,11 +17,11 @@ description: "7-page creative track pushing pretext beyond utility: Kinetic Typo
 
 | Title | Status |
 |-------|--------|
-| [Kinetic Typography](./kinetic-typography.md) | completed |
 | [ASCII Art & Fluid Text](./ascii-art-fluid-text.md) | completed |
-| [Text Physics](./text-physics.md) | completed |
 | [ASCII Tanks](./ascii-tanks.md) | completed |
+| [Breaking Spaces](./breaking-spaces.md) | completed |
+| [Kinetic Typography](./kinetic-typography.md) | completed |
+| [Text Flood](./text-flood.md) | completed |
+| [Text Physics](./text-physics.md) | completed |
 | [Text Rain](./text-rain.md) | completed |
 | [Text Tetris](./text-tetris.md) | completed |
-| [Text Flood](./text-flood.md) | completed |
-| [Breaking Spaces](./breaking-spaces.md) | completed |

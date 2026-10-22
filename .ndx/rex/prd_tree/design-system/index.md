@@ -17,5 +17,5 @@ description: "Visual design system: Dark theme (#0a0a0a–#1a1a1a), typography s
 
 | Title | Status |
 |-------|--------|
-| [Visual Theme & Typography](./visual-theme-typography.md) | completed |
 | [Animation & Interaction Design](./animation-interaction-design.md) | completed |
+| [Visual Theme & Typography](./visual-theme-typography.md) | completed |

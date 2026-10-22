@@ -12,6 +12,7 @@ ndx-export/
 .ndx/rex/n-dx_workflow.md
 .ndx/rex/execution-log*.jsonl
 .ndx/rex/.cache/
+.ndx/rex/.backups/
 .ndx/hench/runs/
 .ndx/hench/locks/
 .ndx/hench/usage-cursors/

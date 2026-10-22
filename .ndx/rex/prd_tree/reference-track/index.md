@@ -17,8 +17,8 @@ description: "5-page reference track: API Reference (every function documented w
 
 | Title | Status |
 |-------|--------|
-| [API Reference](./api-reference.md) | completed |
-| [Performance Guide](./performance-guide.md) | completed |
-| [Caveats & Recipes](./caveats-recipes.md) | completed |
-| [Accessibility Page](./accessibility-page.md) | completed |
 | [About This Site](./about-this-site.md) | completed |
+| [Accessibility Page](./accessibility-page.md) | completed |
+| [API Reference](./api-reference.md) | completed |
+| [Caveats & Recipes](./caveats-recipes.md) | completed |
+| [Performance Guide](./performance-guide.md) | completed |
