@@ -18,6 +18,6 @@ description: "3-page beginner track: Home/Landing (hero with live text reflow, p
 
 | Title | Status |
 |-------|--------|
+| [Getting Started](./getting-started.md) | completed |
 | [Home / Landing Page](./home-landing-page.md) | completed |
 | [Why Pretext — The Problem](./why-pretext-the-problem.md) | completed |
-| [Getting Started](./getting-started.md) | completed |

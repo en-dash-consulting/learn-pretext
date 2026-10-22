@@ -17,9 +17,9 @@ description: "Global site scaffold: Vite MPA project with 26 page entries, heade
 
 | Title | Status |
 |-------|--------|
-| [Project Scaffold](./project-scaffold.md) | completed |
-| [Global Header](./global-header.md) | completed |
-| [Sidebar Navigation](./sidebar-navigation.md) | completed |
 | [Footer](./footer.md) | completed |
+| [Global Header](./global-header.md) | completed |
 | [Page Navigation (Prev/Next)](./page-navigation-prev-next.md) | completed |
+| [Project Scaffold](./project-scaffold.md) | completed |
 | [Shared Components](./shared-components.md) | completed |
+| [Sidebar Navigation](./sidebar-navigation.md) | completed |

@@ -17,9 +17,9 @@ description: "Transform the homepage into an interactive canvas-rendered newspap
 
 | Title | Status |
 |-------|--------|
-| [Canvas Newspaper Layout Engine](./canvas-newspaper-layout-engine.md) | completed |
-| [Rectangular Obstacle Avoidance](./rectangular-obstacle-avoidance.md) | completed |
-| [Image Tray with Procedural Art](./image-tray-with-procedural-art.md) | completed |
-| [Drag-and-Drop Interaction](./drag-and-drop-interaction.md) | completed |
-| [Entrance Animation and Performance Showcase](./entrance-animation-and-a1b2c3.md) | completed |
 | [Below-Fold Educational Context](./below-fold-educational-context.md) | completed |
+| [Canvas Newspaper Layout Engine](./canvas-newspaper-layout-engine.md) | completed |
+| [Drag-and-Drop Interaction](./drag-and-drop-interaction.md) | completed |
+| [Entrance Animation and Performance Showcase](./entrance-animation-and-performance.md) | completed |
+| [Image Tray with Procedural Art](./image-tray-with-procedural-art.md) | completed |
+| [Rectangular Obstacle Avoidance](./rectangular-obstacle-avoidance.md) | completed |

@@ -19,7 +19,7 @@ description: "5-page intermediate track teaching one API + one real UI pattern p
 | Title | Status |
 |-------|--------|
 | [Accordion — Height Prediction](./accordion-height-prediction.md) | completed |
+| [Balanced Text](./balanced-text.md) | completed |
 | [Chat Bubbles — Shrink-Wrap](./chat-bubbles-shrink-wrap.md) | completed |
 | [Masonry — Card Grid](./masonry-card-grid.md) | completed |
-| [Balanced Text](./balanced-text.md) | completed |
 | [The Pipeline — prepare() Deep Dive](./the-pipeline-prepare-deep-dive.md) | completed |

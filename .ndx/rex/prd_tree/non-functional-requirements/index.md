@@ -17,6 +17,6 @@ description: "Cross-cutting quality requirements: Performance (< 800ms first pai
 
 | Title | Status |
 |-------|--------|
-| [Performance Standards](./performance-standards.md) | completed |
 | [Accessibility](./accessibility.md) | completed |
+| [Performance Standards](./performance-standards.md) | completed |
 | [Responsive Design](./responsive-design.md) | completed |

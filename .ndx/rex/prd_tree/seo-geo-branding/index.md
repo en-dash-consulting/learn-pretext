@@ -18,6 +18,6 @@ description: "Comprehensive SEO, GEO (Generative Engine Optimization), and AEO (
 | Title | Status |
 |-------|--------|
 | [Favicon & Branding Update](./favicon-branding-update.md) | completed |
-| [Per-Page SEO Metadata](./per-page-seo-metadata.md) | completed |
 | [JSON-LD Structured Data](./json-ld-structured-data.md) | completed |
+| [Per-Page SEO Metadata](./per-page-seo-metadata.md) | completed |
 | [robots.txt & XML Sitemap](./robots-txt-xml-sitemap.md) | completed |
