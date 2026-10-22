@@ -56,6 +56,7 @@ function buildShell() {
 
   app.className = 'site'
   app.innerHTML = `
+    ${buildBanner()}
     ${buildFloatingNav()}
     ${buildMobileMenu()}
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -68,6 +69,7 @@ function buildShell() {
   `
 
   bindEvents()
+  initBanner()
   if (slug === 'home') initControls()
   initScrollReveal()
 }
@@ -100,6 +102,57 @@ const PAGE_DESCRIPTIONS: Record<string, string> = {
   'caveats': 'Tips and recipes',
   'accessibility': 'A11y considerations',
   'about': 'About this site',
+}
+
+const BANNER_KEY = 'lp-banner-graview'
+
+function isBannerDismissed(): boolean {
+  try {
+    return localStorage.getItem(BANNER_KEY) === 'dismissed'
+  } catch {
+    return false
+  }
+}
+
+function buildBanner(): string {
+  if (isBannerDismissed()) return ''
+  return `
+    <aside class="site-banner" id="site-banner" aria-label="Announcement">
+      <p>New from En Dash: <a href="https://graview.dev" rel="noopener">Graview</a>, an agent-first context-graph–based app development kit</p>
+      <button type="button" class="banner-close" aria-label="Dismiss announcement"><span aria-hidden="true">×</span></button>
+    </aside>
+  `
+}
+
+// The banner sits in normal flow above the fixed nav; push the nav down by
+// however much of the banner is still on screen so they never overlap.
+function initBanner() {
+  const banner = document.getElementById('site-banner')
+  if (!banner) return
+  const root = document.documentElement
+  let height = banner.offsetHeight
+
+  function syncOffset() {
+    root.style.setProperty('--banner-offset', `${Math.max(0, height - window.scrollY)}px`)
+  }
+  function onResize() {
+    height = banner!.offsetHeight
+    syncOffset()
+  }
+
+  syncOffset()
+  window.addEventListener('scroll', syncOffset, { passive: true })
+  window.addEventListener('resize', onResize)
+
+  banner.querySelector('.banner-close')?.addEventListener('click', () => {
+    try {
+      localStorage.setItem(BANNER_KEY, 'dismissed')
+    } catch {}
+    banner.remove()
+    window.removeEventListener('scroll', syncOffset)
+    window.removeEventListener('resize', onResize)
+    root.style.removeProperty('--banner-offset')
+  })
 }
 
 function buildFloatingNav(): string {

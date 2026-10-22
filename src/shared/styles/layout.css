@@ -6,10 +6,67 @@
   position: relative;
 }
 
+/* Graview announcement banner — in flow, above the floating nav */
+.site-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  padding: var(--space-1) var(--space-4);
+  background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border-bright);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+  z-index: 95;
+}
+
+.site-banner p {
+  margin: 0;
+  text-align: center;
+}
+
+.site-banner a {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-accent);
+}
+
+.site-banner a:hover {
+  color: var(--color-accent-hover);
+}
+
+.banner-close {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--duration-fast) var(--ease-out),
+              background-color var(--duration-fast) var(--ease-out);
+}
+
+.banner-close:hover {
+  color: var(--color-text);
+  background: var(--color-accent-muted);
+}
+
 /* Floating navigation — appears on scroll */
 .museum-nav {
   position: fixed;
-  top: var(--space-4);
+  top: calc(var(--space-4) + var(--banner-offset, 0px));
   left: 50%;
   transform: translateX(-50%) translateY(-20px);
   z-index: 100;
@@ -608,6 +665,15 @@
 
 /* Mobile */
 @media (max-width: 640px) {
+  .site-banner {
+    justify-content: space-between;
+    font-size: var(--text-xs);
+  }
+
+  .site-banner p {
+    text-align: left;
+  }
+
   .museum-nav {
     left: var(--space-3);
     right: var(--space-3);
