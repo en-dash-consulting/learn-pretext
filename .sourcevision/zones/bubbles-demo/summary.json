@@ -1,0 +1,20 @@
+{
+  "id": "bubbles-demo",
+  "name": "Bubbles Demo",
+  "description": "A singleton zone containing only src/pages/bubbles.ts, isolated by the import-graph detector due to a slightly different dependency fingerprint from the main pages cluster.",
+  "files": [
+    "src/pages/bubbles.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 1,
+  "coupling": 0,
+  "fileCount": 1,
+  "lineCount": 178,
+  "riskMetrics": {
+    "cohesion": 1,
+    "coupling": 0,
+    "riskScore": 0,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

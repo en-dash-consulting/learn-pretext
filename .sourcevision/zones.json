@@ -1,0 +1,1034 @@
+{
+  "zones": [
+    {
+      "id": "bubbles-demo",
+      "name": "Bubbles Demo",
+      "description": "A singleton zone containing only src/pages/bubbles.ts, isolated by the import-graph detector due to a slightly different dependency fingerprint from the main pages cluster.",
+      "files": [
+        "src/pages/bubbles.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 1,
+      "coupling": 0,
+      "insights": [
+        "High cohesion (1) — files are tightly interconnected",
+        "Single-file zones with cohesion 1.0 and zero outbound coupling are algorithmic artifacts — bubbles.ts is architecturally identical to every other demo page",
+        "The two cross-zone imports into the pages zone confirm bubbles.ts uses shared page utilities but lacks the reverse dependency that would pull it into the main cluster",
+        "This zone and pages-3 are strong candidates for consolidation into demo-pages if the tooling supports manual zone merging",
+        "This singleton zone is an algorithmic artifact of community detection — bubbles.ts shares the same architectural pattern as all other demo pages and the separation does not reflect a real design boundary.",
+        "bubbles.ts at 179 lines with hard-coded conversation data and an embedded pretext-vs-fit-content pixel comparison is a well-scoped, self-contained demo — a good reference template for authoring new pages.",
+        "Zero outbound coupling beyond pages-zone imports confirms bubbles.ts follows the expected page isolation pattern with no unexpected shared-state or cross-page dependencies.",
+        "[call graph] 5 internal calls, 2 outgoing, 0 incoming (cohesion: 0.71, coupling: 0.29)"
+      ],
+      "riskMetrics": {
+        "cohesion": 1,
+        "coupling": 0,
+        "riskScore": 0,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "build-config",
+      "name": "Build Configuration",
+      "description": "Project root files defining the Vite multi-page build system and repository metadata, with no import relationships by design.",
+      "files": [
+        ".gitignore",
+        "LICENSE",
+        "llms.txt",
+        "vite.config.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 0,
+      "coupling": 0,
+      "insights": [
+        "Isolated files — no import edges between 4 files, cohesion is unmeasurable (reported as 0)",
+        "Zero cohesion is structurally expected — config and metadata files carry no import relationships",
+        "vite.config.ts manually enumerates all 23 HTML page entry points, creating a maintenance coupling point with nav-data.ts and sitemap.xml",
+        "Zero cohesion is normal for this zone — .gitignore, LICENSE, llms.txt, and vite.config.ts have no import relationships by nature, so the metric is not meaningful here.",
+        "vite.config.ts hard-codes all 23 rollup entry points; adding a new page requires edits in at least three places (vite.config.ts, nav-data.ts, sitemap.xml) with no enforcement between them.",
+        "llms.txt at the project root signals intentional LLM-readability documentation — a forward-looking pattern worth keeping current as new pages are added.",
+        "vite.config.ts has zero code-level imports from any internal zone — it contains only declarative path references to HTML entry points. The three-way sync problem (vite.config.ts / search.ts / sitemap.xml) is therefore a maintenance convention gap, not a structural coupling defect, and could be closed by a generation script without touching the module graph.",
+        "vite.config.ts rollup inputs list text-flood as a build entry but nav-data.ts has no corresponding page record. The two registries — build config and navigation data — are the primary synchronization points for page existence, and they are diverged. A page omitted from nav-data.ts will never appear in navigation, prev/next links, or search regardless of whether it builds.",
+        "vite.config.ts rollup input keys use inconsistent quoting and casing: single-word page names appear as unquoted bare identifiers (accordion, bubbles, masonry) while multi-word names require quoted kebab-case strings ('why-pretext', 'getting-started'). The rule mirrors slug naming and is correct, but it is implicit — a comment at the top of the input block would prevent contributors from applying camelCase to multi-word slugs.",
+        "Rollup input keys in vite.config.ts silently mix unquoted identifiers (single-word pages) and quoted kebab-case strings (multi-word pages). The rule follows slug convention but is undocumented. A one-line comment (`// key = page slug; single-word: bare identifier, multi-word: quoted kebab-case`) prevents future inconsistency without any code change."
+      ],
+      "riskMetrics": {
+        "cohesion": 0,
+        "coupling": 0,
+        "riskScore": 0.5,
+        "riskLevel": "at-risk",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "demo-pages",
+      "name": "Demo Pages",
+      "description": "The 26 self-contained interactive demo pages and their four supporting UI components, collectively demonstrating pretext library features across all learning tracks.",
+      "files": [
+        "src/components/performance-meter.ts",
+        "src/components/slider.ts",
+        "src/components/source-viewer.ts",
+        "src/components/toggle.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts",
+        "src/pages/ascii-art.ts",
+        "src/pages/ascii-tanks.ts",
+        "src/pages/balanced-text.ts",
+        "src/pages/breaking-spaces.ts",
+        "src/pages/canvas.ts",
+        "src/pages/editorial.ts",
+        "src/pages/getting-started.ts",
+        "src/pages/i18n.ts",
+        "src/pages/kinetic.ts",
+        "src/pages/masonry.ts",
+        "src/pages/performance.ts",
+        "src/pages/pipeline.ts",
+        "src/pages/rich-api.ts",
+        "src/pages/text-flood.ts",
+        "src/pages/text-physics.ts",
+        "src/pages/text-rain.ts",
+        "src/pages/text-tetris.ts",
+        "src/pages/virtualized.ts",
+        "src/pages/why-pretext.ts",
+        "src/shared/pretext-helpers.test.ts",
+        "src/shared/pretext-helpers.ts"
+      ],
+      "entryPoints": [
+        "src/components/source-viewer.ts",
+        "src/shared/pretext-helpers.ts"
+      ],
+      "cohesion": 0.96,
+      "coupling": 0.04,
+      "insights": [
+        "High cohesion (0.96) — files are tightly interconnected",
+        "Cohesion 0.96 confirms that pages and their direct leaf components form a near-perfect cluster correctly identified by the import graph",
+        "Components (performance-meter, slider, source-viewer, toggle) live in src/components/ but belong here because demo pages are their only consumers",
+        "src/shared/pretext-helpers.ts is a zone entry point, bridging shared utilities into the page layer without pulling it into the shared zone",
+        "Cohesion 0.96 with coupling 0.04 is excellent — pages and their leaf components form a tight, well-bounded cluster reflecting a clean page-owns-its-components pattern.",
+        "Each page embeds its demo data as hard-coded TypeScript constants (e.g., the MESSAGES array in bubbles.ts); content updates require code edits rather than data-driven authoring, which is a reasonable tradeoff for a small demo site but limits non-developer contribution.",
+        "src/components/source-viewer.ts is listed as a zone entry point, implying external zones may reference it directly — if cross-zone usage grows, consider promoting it to the site-shell zone alongside search.ts.",
+        "Demo pages consistently import @chenglou/pretext directly alongside pretext-helpers.ts for specialized functions (e.g. walkLineRanges, layoutNextLine, prepareWithSegments) — pretext-helpers is a convenience partial facade, not a complete abstraction boundary. Pages that need uncommon library APIs must still understand the underlying library, which is intentional but undocumented.",
+        "Pages are true leaf nodes with respect to each other: zero inter-page imports exist across all 38 pages, making the zone a pure hub-and-spoke where each page depends on shared utilities but never on a sibling page.",
+        "pretext-helpers.ts centralizes only the most common pretext operations; demo pages routinely import @chenglou/pretext directly alongside it for specialized APIs. The helper reduces but does not eliminate direct library coupling. Whether a function belongs in the helper vs. called directly is undocumented, leaving future authors to guess the convention.",
+        "All 25 non-home demo pages import exclusively from the external @chenglou/pretext library, pretext-helpers, and the components zone — zero imports from site-shell or peer pages. This uniform dependency profile is a clean and intentional architectural constraint worth preserving.",
+        "home.ts crosses into the site-shell zone (imports tracks from nav-data.ts) while every other demo page is strictly limited to pretext-helpers and components. This asymmetric coupling makes home.ts an architectural outlier within its own zone and increases the blast radius of any nav-data API change.",
+        "search.ts imports `tracks` from nav-data on line 1 but the symbol is never referenced anywhere in the 340-line file — the import is dead code, creating a false impression that searchIndex is derived from or validated against nav-data.ts.",
+        "The NavPage interface in nav-data.ts (slug, title, href only) is structurally incomplete for search purposes — description and keywords exist only in search.ts's parallel searchIndex. This interface gap is the root cause of the parallel-registry anti-pattern: augmenting NavPage with optional description and keywords fields would allow searchIndex to be generated from tracks rather than hand-maintained separately.",
+        "search.ts line 1 imports `tracks` from nav-data but never uses the symbol anywhere in the file. The 23-entry searchIndex array (lines 11–36) is fully hand-written rather than derived from nav-data, meaning the import conveys false intent and masks that the two registries are completely independent with no shared derivation.",
+        "search.ts line 330 uses the deprecated `navigator.platform` API to detect macOS for keyboard shortcut display. The recommended replacement is `navigator.userAgentData.platform` (with `navigator.platform` as a fallback), or a simpler `navigator.userAgent.includes('Mac')` check.",
+        "text-flood.ts is a navigational orphan: present in src/pages/ and vite.config.ts rollup inputs and sitemap.xml, but absent from nav-data.ts and search.ts. The page builds successfully and is submitted to crawlers, but has no in-site navigation entry point and cannot be found via search. It is discoverable only by direct URL or external link.",
+        "All page modules follow an implicit side-effect-only convention: each defines an internal async function init() and invokes it immediately at module scope. This pattern is consistent across all 38 pages but entirely undocumented — future authors have no signal that pages must not export symbols or that init() is the required entry-point name.",
+        "search.ts defines SearchEntry and SearchResult interfaces internally but does not export them. Every other component in the zone (source-viewer, toggle, slider, performance-meter) exports its option interface as part of its public API. search.ts is the only component that encapsulates its types, breaking the zone's implicit export-your-interface convention.",
+        "pipeline.ts:241, i18n.ts:258, and rich-api.ts:175 and 190 contain console.log calls that execute at runtime in production builds. These are not inside code-example template strings — they are live JS that logs to the browser console on every page interaction.",
+        "initSearch() in search.ts:315 registers a permanent document-level keydown listener with no idempotency guard. A second call to initSearch() (e.g., under Vite HMR or in a test harness) silently accumulates a duplicate listener — the only protection is the module-level isOpen flag, which does not prevent double-registration.",
+        "pipeline.ts:241, i18n.ts:258, and rich-api.ts:175/190 contain console.log calls in live runtime code paths that reach production builds. Remove them or wrap in `if (import.meta.env.DEV)` to avoid logging to end-user consoles.",
+        "initSearch() (search.ts:315) adds a document keydown listener with no guard against double-invocation. Add a module-level `let initialized = false` flag so repeat calls are no-ops — prevents duplicate listeners under HMR or any future test setup.",
+        "search.ts defines SearchEntry and SearchResult interfaces privately while every other component exports its interface type. Either export these interfaces to align with the component zone convention, or add a comment documenting the intentional encapsulation.",
+        "The side-effect module + auto-invoked init() pattern is uniform across all 38 pages but entirely implicit. A short comment at the top of any new page file (or a note in a contributing guide) would prevent future authors from accidentally exporting from a page or choosing a different entry-point name.",
+        "[call graph] 284 internal calls, 0 outgoing, 10 incoming (cohesion: 1, coupling: 0)"
+      ],
+      "riskMetrics": {
+        "cohesion": 0.96,
+        "coupling": 0.04,
+        "riskScore": 0.04000000000000002,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "deployment-assets",
+      "name": "Deployment Assets",
+      "description": "Static files served verbatim by the web host — domain binding, crawler rules, and the XML sitemap — with no build-time dependencies.",
+      "files": [
+        "public/CNAME",
+        "public/robots.txt",
+        "public/sitemap.xml"
+      ],
+      "entryPoints": [],
+      "cohesion": 0,
+      "coupling": 0,
+      "insights": [
+        "Isolated files — no import edges between 3 files, cohesion is unmeasurable (reported as 0)",
+        "Zero cohesion and coupling are correct for verbatim-served static assets that are never imported",
+        "sitemap.xml must be manually kept in sync with vite.config.ts entry points and nav-data.ts, with no automated generation in place",
+        "sitemap.xml is manually maintained and must mirror the 23 page entries in vite.config.ts and nav-data.ts; silent drift between them would degrade SEO coverage without any build-time warning.",
+        "Zero coupling to any source zone is architecturally correct — these are runtime deployment artifacts, not build-time dependencies.",
+        "CNAME and robots.txt are minimal single-value files; their clean separation from application source confirms good static-vs-dynamic boundary discipline.",
+        "sitemap.xml includes /pages/text-flood.html, which has no entry in nav-data.ts and no search index entry. Submitting an orphaned page to search engines increases crawl budget consumption for a page users cannot reach through normal navigation, and creates an SEO surface for content that is not part of the defined site structure."
+      ],
+      "riskMetrics": {
+        "cohesion": 0,
+        "coupling": 0,
+        "riskScore": 0.5,
+        "riskLevel": "at-risk",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "newspaper-layout-demo",
+      "name": "Newspaper Layout Demo",
+      "description": "The home page's flagship interactive canvas demo — a full newspaper layout engine with multi-column text flow, draggable images, and obstacle-aware reflow — grouped with its exclusive data modules and the About page.",
+      "files": [
+        "src/pages/about.ts",
+        "src/pages/home.ts",
+        "src/shared/newspaper-images.ts",
+        "src/shared/newspaper-text.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 0.67,
+      "coupling": 0.33,
+      "insights": [
+        "The newspaper-images.ts and newspaper-text.ts support files live in src/shared/ but are exclusively consumed by home.ts; this inflates shared/ with demo-specific content that would be better co-located in a src/pages/home/ feature folder.",
+        "about.ts landed in this zone as a community detection artifact — it shares no imports with the newspaper data files and has no semantic relationship to the demo, making it a misleading grouping.",
+        "home.ts exceeds 12K tokens implementing canvas rendering, drag-and-drop, animation, responsive layout, and obstacle geometry in a single file — this is the most complex file in the codebase and a natural candidate for a feature-folder split.",
+        "newspaper-images.ts and newspaper-text.ts are placed in src/shared/ but have no consumers other than home.ts. The shared/ directory implies cross-cutting reuse; these files create false structural gravity. Moving them into a src/pages/home/ feature folder would make ownership explicit.",
+        "about.ts is grouped here purely by import-graph proximity, not by domain relationship. It is a static informational page with no connection to the newspaper demo — it should be classified alongside other non-demo pages if such a grouping exists.",
+        "home.ts is a high-complexity single file combining canvas rendering, drag-and-drop state machine, entrance and grow-in animations, mobile drift behavior, and multi-column layout arithmetic. While it works well now, future feature additions will be harder to isolate and test without splitting into focused modules.",
+        "home.ts is the only demo page in the codebase that imports from nav-data.ts — it uses `tracks` to populate newspaper columns with site page listings. Every other demo page is a pure library demonstration with no dependency on site infrastructure data. This makes the newspaper demo zone architecturally unique: a runtime dependency on the page registry means nav-data shape changes affect home.ts in ways they do not affect any other page.",
+        "home.ts imports `tracks` from nav-data to drive its newspaper column layout, creating a content coupling between the demo and the site's page registry. If nav-data.ts adds, removes, or renames pages or tracks, home.ts rendering is affected — a dependency no other demo page has. This is the only inbound edge from the site-infrastructure layer into a demo page.",
+        "newspaper-text.ts and newspaper-images.ts are consumed exclusively by home.ts — a strict one-to-one relationship. Their placement in src/shared/ implies shared reuse that does not exist; they are effectively private data modules of the home page.",
+        "newspaper-images.ts uses the bare literal 3 as a phase offset into a deterministic seed array for star Y-position placement: `seed[(i + 3) % seed.length]`. The value is visually load-bearing — changing it would silently alter the rendered decoration — but has no name, no comment, and no derivation. It is the only magic number in an otherwise well-structured file.",
+        "newspaper-images.ts contains a bare magic number `3` used as a seed-array phase offset for star Y positions. Extract it as a named constant (e.g., STAR_SEED_Y_PHASE) with a short comment noting it was chosen for visual distribution. The value is not mathematically derived and would be opaque to any future editor.",
+        "[call graph] 57 internal calls, 2 outgoing, 0 incoming (cohesion: 0.97, coupling: 0.03)"
+      ],
+      "riskMetrics": {
+        "cohesion": 0.67,
+        "coupling": 0.33,
+        "riskScore": 0.32999999999999996,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "pretext-reference-page",
+      "name": "Pretext Reference Page",
+      "description": "Single documentation page covering known pretext limitations, font matching gotchas, and copy-paste implementation recipes with a live soft-hyphen demo.",
+      "files": [
+        "src/pages/caveats.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 1,
+      "coupling": 0,
+      "insights": [
+        "High cohesion (1) — files are tightly interconnected",
+        "This is the only standalone single-file page zone outside of Bubbles Demo — it follows the same init() page pattern as Demo Pages and may be a candidate for absorption into that zone.",
+        "The page blends static reference content (caveats, CSS limitations) with an interactive live demo (soft hyphen resizer), giving it a dual documentation-and-demo character.",
+        "Zero outgoing coupling to non-shared zones means the page is self-contained and safe to relocate or merge without ripple effects.",
+        "caveats.ts is a single-file zone with cohesion 1.0 and coupling 0 — it follows the same page initialization pattern as Demo Pages but was separated by the import graph, likely because it was authored later or has a different import signature. Consider whether it belongs in the Demo Pages zone.",
+        "The page embeds inline recipe code as raw string literals inside createSourceViewer calls. If new recipes are added, this file will grow significantly — a separate recipes data module would improve maintainability at that scale.",
+        "caveats.ts follows the identical import signature as demo-pages zone files (external lib → pretext-helpers → components), confirming it is architecturally indistinguishable from a demo page at the dependency level — the zone boundary is a community-detection artifact, not a structural one.",
+        "[call graph] 3 internal calls, 7 outgoing, 0 incoming (cohesion: 0.3, coupling: 0.7)"
+      ],
+      "riskMetrics": {
+        "cohesion": 1,
+        "coupling": 0,
+        "riskScore": 0,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "site-shell",
+      "name": "Site Shell",
+      "description": "Core site infrastructure — the page shell compositor, navigation data model, search modal, analytics integration, and the global CSS design system — consumed by every page.",
+      "files": [
+        "src/components/search.ts",
+        "src/shared/analytics.ts",
+        "src/shared/nav-data.test.ts",
+        "src/shared/nav-data.ts",
+        "src/shared/shell.ts",
+        "src/shared/styles/components.css",
+        "src/shared/styles/global.css",
+        "src/shared/styles/layout.css",
+        "src/shared/styles/reset.css",
+        "src/shared/styles/variables.css"
+      ],
+      "entryPoints": [
+        "src/shared/nav-data.ts"
+      ],
+      "cohesion": 0.95,
+      "coupling": 0.05,
+      "insights": [
+        "High cohesion (0.95) — files are tightly interconnected",
+        "Cohesion 0.95 reflects a tightly integrated foundation where shell.ts, nav-data.ts, analytics.ts, and search.ts are intentionally interdependent",
+        "shell.ts functions as the composition root of the entire site, importing nav-data, search, and analytics in one place — a clear single-responsibility hub",
+        "The five CSS files follow a layered design-system pattern (reset → variables → global → layout → components), correctly co-located in src/shared/styles/",
+        "search.ts contains a hand-maintained search index of all 23 pages; this is a third place (alongside vite.config.ts and sitemap.xml) that must be updated when pages are added or renamed, with no automated enforcement.",
+        "nav-data.test.ts is the only test file in the codebase; its presence confirms the navigation helpers are correctly identified as the most critical utility to unit-test — a sound prioritization for a site where broken prev/next navigation would affect every page.",
+        "analytics.ts is a clean 18-line module with a localhost guard preventing dev noise from polluting GA4 data — a small but well-executed production hygiene detail.",
+        "search.ts imports `tracks` from nav-data on line 1 but never references it anywhere in the file body — confirmed dead import. The entire searchIndex is a hardcoded array with no programmatic relationship to nav-data, making the import actively misleading about the actual coupling.",
+        "shell.ts is the sole file that bridges two zones in a single import scope: it consumes nav-data (shared zone) and search (components zone) together. It uses only their public exports and injects no internal implementation details from either — a clean orchestrator pattern with no abstraction leakage.",
+        "search.ts line 1 imports `tracks` from nav-data.ts but the symbol is never used in the file. The searchIndex is fully hardcoded. The dead import creates a false signal that search is data-driven from nav-data when it is not, and will cause confusion for any developer attempting to trace how search content is populated.",
+        "shell.ts cleanly orchestrates both the shared zone (nav-data) and the components zone (search) using only their public exports. It is the only file in the codebase that spans two architectural tiers within a single import scope, and it does so without accessing internals — a correct and healthy orchestrator pattern.",
+        "analytics.ts is imported exclusively by shell.ts and has no other consumers — it is a private implementation detail of the site-shell zone, not a shared utility. Its src/shared/ location implies broader reuse that does not exist.",
+        "search.ts hardcodes all 24 href values as absolute root-relative paths (e.g. /pages/why-pretext.html) without importing or calling getBase() from nav-data.ts. nav-data.ts exports getBase() precisely for this purpose. shell.ts uses relative path construction consistent with deployment context; search.ts does not — any sub-path deployment will produce broken search result links while navigation continues to work correctly.",
+        "search.ts builds its searchIndex with hardcoded absolute href strings (/pages/xxx.html) instead of using the getBase() function exported by nav-data.ts. This makes search result links environment-specific while the rest of the shell correctly adapts to deployment path. The inconsistency means search is silently broken on any non-root deployment.",
+        "nav-data.test.ts line 9 has a stale test description: the it() label reads 'has 20 total pages' but the assertion is toBe(24). The description was not updated when pages were added, creating a misleading signal for anyone reading test output.",
+        "search.ts is the only component in src/components/ that does not follow the factory pattern: toggle, slider, and performance-meter all export a single createX() function returning {element, ...methods}, while search.ts exports four independent top-level functions (openSearch, closeSearch, initSearch, createSearchButton). The inconsistency makes search.ts harder to compose and breaks the implicit component API contract.",
+        "--color-border-subtle and --color-warning are defined in variables.css but never referenced in any .css file — they are exclusively consumed via inline style template literals inside .ts page files. Standard CSS tooling will flag them as unused, masking their actual usage pattern. Developers working in CSS alone have no signal these tokens exist.",
+        "Two unrelated UI elements share z-index 1000 with no defined stacking context: .skip-link in global.css (line 122) and the search overlay in components.css (line 544). While a functional conflict is unlikely (skip-link is off-screen until keyboard focus), co-opting the same raw value for semantically distinct layers is a maintenance hazard as the UI grows.",
+        "Fix stale test description in nav-data.test.ts line 9: change 'has 20 total pages' to 'has 24 total pages' to match the toBe(24) assertion. Stale descriptions erode trust in the test suite and produce confusing failure messages.",
+        "Unify search.ts exports to match the factory pattern used by toggle.ts, slider.ts, and performance-meter.ts. Currently search.ts exports four independent functions while every other component returns {element, ...methods} from a single createX() call. A createSearch() factory returning {button, open, close, init} would make the API predictable and composable.",
+        "Add a z-index scale to variables.css (e.g. --z-header: 100, --z-sidebar: 50, --z-overlay: 49, --z-modal: 1000) and replace all raw z-index values in layout.css and components.css. Currently four raw values are scattered across three files with no shared reference; global.css and components.css both independently use 1000 with no coordination.",
+        "Document that --color-border-subtle and --color-warning are intentionally consumed via TS inline style strings rather than CSS class files. A comment in variables.css grouping these as 'tokens used in dynamic inline styles' would prevent future developers from removing them as apparent dead code.",
+        "[call graph] 75 internal calls, 0 outgoing, 1 incoming (cohesion: 1, coupling: 0)"
+      ],
+      "riskMetrics": {
+        "cohesion": 0.95,
+        "coupling": 0.05,
+        "riskScore": 0.050000000000000024,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    }
+  ],
+  "crossings": [
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "bubbles-demo",
+      "toZone": "demo-pages"
+    },
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "bubbles-demo",
+      "toZone": "demo-pages"
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "newspaper-layout-demo",
+      "toZone": "demo-pages"
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/nav-data.ts",
+      "fromZone": "newspaper-layout-demo",
+      "toZone": "site-shell"
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pretext-reference-page",
+      "toZone": "demo-pages"
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pretext-reference-page",
+      "toZone": "demo-pages"
+    }
+  ],
+  "unzoned": [
+    ".rex/execution-log.jsonl",
+    "src/env.d.ts"
+  ],
+  "insights": [
+    "Hub: src/shared/pretext-helpers.ts is imported by 3 zones — cross-cutting dependency",
+    "Size imbalance: largest zone has 28 files vs smallest with 1 — uneven decomposition",
+    "Three locations require manual synchronization when a page is added or renamed — vite.config.ts rollup inputs, search.ts hard-coded index, and public/sitemap.xml — a single generation script driven from nav-data.ts would eliminate this entire class of drift",
+    "pages-2 and pages-3 are both singleton zones that import from the main pages cluster, indicating the community detector split them on a minor dependency difference; they are architecturally part of the same demo-pages zone and should be treated as such",
+    "The newspaper zone (outside this batch) cross-imports both site-shell and demo-pages, making it the only zone with dependencies spanning two foundation layers — its architectural role warrants explicit definition",
+    "The site has three separate demo-page zones (Demo Pages, Bubbles Demo, Newspaper Layout Demo) with divergent coupling profiles. A consistent feature-folder convention (e.g. src/pages/home/, src/pages/bubbles/) would reduce community detection fragmentation and make each demo's private assets explicit.",
+    "The shared/ directory mixes genuine cross-cutting utilities (pretext-helpers, nav-data) with demo-specific data files (newspaper-images, newspaper-text). Establishing a convention — shared/ only for files with two or more consumers — would prevent this boundary from eroding further.",
+    "The Caveats & Recipes page is the only documentation-style page in the site, yet it is isolated in its own single-file zone rather than grouped with Demo Pages. This suggests the page inventory grew organically rather than from a unified routing or page-creation template.",
+    "The entire site is vanilla TypeScript with no UI framework, keeping demo pages genuinely framework-agnostic — a deliberate and appropriate choice for a library documentation site that should not suggest framework coupling.",
+    "nav-data.ts is the canonical page registry and the strongest candidate for a single source of truth, but it is not consumed by vite.config.ts or used to generate sitemap.xml — closing that gap would reduce the triplicate maintenance burden to a single file.",
+    "Test coverage consists of a single test file (nav-data.test.ts); for a visual demo site this is acceptable, but shell.ts composition logic and search.ts fuzzy-matching scoring are high-value candidates for lightweight unit tests given their site-wide impact.",
+    "Cross-zone import flow is consistently shallow and unidirectional: demo page zones import from Site Shell, never the reverse. This is a healthy layering pattern that should be preserved as the demo count grows.",
+    "The about.ts page's zone placement is a community-detection artifact with no semantic basis. If the tooling acts on zone boundaries for code ownership or bundling decisions, this misclassification could cause about.ts to be treated as part of the newspaper demo's feature surface.",
+    "src/pages/ contains files from 4 zones (bubbles-demo, demo-pages, newspaper-layout-demo, pretext-reference-page) — consider grouping into subdirectories to clarify architectural boundaries",
+    "File \"src/components/search.ts\" has 100% of import neighbors in src/shared/ but lives in src/components/ — consider relocating",
+    "The full import graph is a strict DAG with no cycles: external libraries → shared utilities → components → demo pages, with shell.ts as the sole lateral bridge between the shared and components tiers. This is the healthiest possible layering outcome for a codebase of this size.",
+    "The components zone has an internal tier split: source-viewer, slider, toggle, and performance-meter import nothing from the project (true leaf nodes), while search.ts imports from shared/nav-data and manages global keyboard state. search.ts belongs architecturally in the site-shell tier alongside shell.ts and analytics.ts — its placement in components/ is the only zone-boundary misalignment in the codebase, and it is already flagged by import neighbor analysis.",
+    "pretext-helpers.ts acts as a partial facade over @chenglou/pretext: it centralizes frequently-used functions and shared constants (FONT, LINE_HEIGHT) but was never intended to be a complete abstraction. The mixed usage pattern — some calls through the helper, others direct — is consistent but undocumented, leaving the intended scope of the helper implicit.",
+    "pretext-helpers functions as a pure adapter layer over @chenglou/pretext — it has zero internal imports (external library only), shielding all 26 demo pages from direct exposure to the library's API surface. An upstream API change requires updating only pretext-helpers, not 26 pages.",
+    "The four UI components (source-viewer, performance-meter, slider, toggle) are fully self-contained leaf nodes with no internal imports from any zone — they represent the cleanest abstraction boundary in the codebase and the lowest-risk files to extract or replace.",
+    "Two distinct 'private data in shared/' anti-patterns exist in parallel: analytics.ts (single consumer: shell.ts) and newspaper-text/newspaper-images (single consumer: home.ts). Both inflate the apparent surface area of shared/ while serving only one caller each.",
+    "The dependency graph has a clear two-layer topology: a foundation layer (pretext-helpers, components, site-shell internals) with zero internal imports, and a consumer layer (demo pages) that imports only downward. This layering is structurally sound and has no violations except home.ts crossing layers.",
+    "The codebase has no circular dependencies at any layer. The dependency order is strictly: external library → shared utilities → components → demo pages. The one deviation (search.ts in components importing from shared) mirrors the site-shell pattern rather than introducing a cycle. No enforcement mechanism (eslint-plugin-boundaries, tsconfig paths) is in place to preserve this property as the codebase grows.",
+    "The codebase has zero circular dependencies across all zones — every import edge points from consumer pages downward to utilities or outward to the external library. This acyclic topology is a strong architectural property that should be enforced (e.g., via eslint-plugin-import dependency rules) as the page count grows.",
+    "home.ts is the only file that imports from three distinct internal zones (demo-pages utilities, site-shell, newspaper-layout-demo) simultaneously. If home.ts complexity grows, it is the most likely candidate to require its own feature-folder zone to contain the sprawl.",
+    "shell.ts lines 111–112 resolve footer links via positional array access — `tracks[0]?.pages[2]` for Getting Started and `tracks[4]?.pages[4]` for About This Site — rather than by slug. Reordering any track or page in nav-data.ts silently changes footer destinations with no TypeScript or runtime error. nav-data.ts already exports page slugs; a `getPageBySlug(slug)` helper would make these lookups semantically stable.",
+    "shell.ts line 52 uses `t.pages[0]!.href` as the href for each track's header nav link, hardcoding the assumption that the first page in every track is its landing page. This positional assumption is load-bearing and undocumented — inserting a track-level intro page at index 0 would silently redirect all header nav links.",
+    "The NavPage interface (slug, title, href) is structurally narrower than what search.ts requires (description, keywords). This interface gap forces search.ts to maintain a complete parallel registry instead of augmenting the canonical source. Closing the gap in NavPage would reduce the three-file sync burden to a single file and make the dead `tracks` import in search.ts purposeful.",
+    "text-flood.ts is the concrete proof-of-failure of the triple-sync anti-pattern: the page is present in 2 of 4 required locations (vite.config.ts, sitemap.xml) but absent from nav-data.ts and search.ts. Previously this drift was described as a theoretical risk; text-flood confirms the risk has already materialized. Any page management automation should treat text-flood as the canonical example to fix first.",
+    "getBase() in nav-data.ts is exported but has only partial adoption: shell.ts navigation respects it implicitly through relative path construction, while search.ts ignores it entirely. The function exists as a base-URL abstraction but is not enforced at the callsite level, creating silent environment-specific breakage in a different subsystem than the one that defined the abstraction.",
+    "shell.ts lines 111–112 use magic positional indices (`tracks[0]?.pages[2]`, `tracks[4]?.pages[4]`) to look up specific pages for footer links. These lookups fail silently — producing wrong links with no error — if nav-data.ts entries are reordered. nav-data.ts should export a lookup helper keyed on slug so positional fragility is eliminated.",
+    "shell.ts line 52 assumes `t.pages[0]` is the canonical entry point for every track when building header navigation. The non-null assertion (`!`) suppresses the only safety signal. If a track gains a preface or index page at position 0, all header links for that track silently change destination. A `landingHref` field on NavTrack, or a dedicated first-page convention enforced in nav-data, would make the intent explicit.",
+    "The codebase has four locations that must agree on the page list: nav-data.ts, vite.config.ts, search.ts searchIndex, and sitemap.xml. text-flood.ts demonstrates these are already out of sync. There is no single authoritative source that the other three derive from — nav-data.ts is the closest candidate but is not consumed by the other three.",
+    "analytics.ts hard-codes the Google Analytics measurement ID as a bare string literal (GA_ID = 'G-7GPK6JVHS2') rather than reading from an environment variable. Changing the tracking ID requires a source edit and redeploy, and the live ID is committed to version control. Using `import.meta.env.VITE_GA_ID` would decouple configuration from code.",
+    "The page init() early-return guard (`if (!content) return`) discards initialization failures silently — a misconfigured or missing page-content element produces no console output, no thrown error, and an apparently blank but 'loaded' page. This makes integration failures invisible in staging environments where the shell template might diverge from page expectations.",
+    "The codebase defines CSS design tokens in variables.css but uses them through two distinct channels: CSS class rules (in .css files) and TS template-literal inline styles (in .ts page files). This split consumption model is invisible to any single-channel tooling — CSS linters will flag TS-only tokens as unused, and TypeScript tooling has no awareness of CSS variable validity. No convention or comment currently signals which tokens belong to which channel.",
+    "The component API surface is split between two incompatible patterns with no documented convention: factory functions that return {element, ...methods} (toggle, slider, performance-meter) vs. standalone exported functions (search). A single-line comment in a shared components/README or a JSDoc convention on each export would codify the intended pattern before a third approach is introduced.",
+    "analytics.ts:1 hard-codes the GA measurement ID as a string literal. Replace with `import.meta.env.VITE_GA_ID ?? ''` so the tracking ID is configurable without a source edit and is not committed directly to the repository.",
+    "All 38 page init() functions return silently when the expected DOM element is absent. Adding a single `console.error` (or DEV-only assertion) before the early return would surface template/page mismatches without changing production behavior — a one-line change per file or a shared assert utility.",
+    "The spacing scale in variables.css intentionally skips odd steps above --space-6 (no 7, 9, 11) following a Tailwind-style doubling pattern, but this is undocumented. A comment above the spacing block explaining the scale logic (1–6 are linear 0.25rem steps, then Tailwind T-shirt sizing) would prevent developers from adding --space-7 or similar values that break the intended rhythm.",
+    "Two separate CSS files (global.css line 122 and components.css line 544) independently assign z-index: 1000 to semantically distinct elements (.skip-link and .search-overlay) without any cross-file coordination. Introduce a z-index scale in variables.css so stacking decisions are made in one place and layer relationships are self-documenting.",
+    "[call graph] 7 calls: \"pretext-reference-page\" → \"demo-pages\""
+  ],
+  "findings": [
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "bubbles-demo",
+      "text": "High cohesion (1) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "bubbles-demo",
+      "text": "This singleton zone is an algorithmic artifact of community detection — bubbles.ts shares the same architectural pattern as all other demo pages and the separation does not reflect a real design boundary.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "bubbles-demo",
+      "text": "Zero outbound coupling beyond pages-zone imports confirms bubbles.ts follows the expected page isolation pattern with no unexpected shared-state or cross-page dependencies.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "bubbles-demo",
+      "text": "bubbles.ts at 179 lines with hard-coded conversation data and an embedded pretext-vs-fit-content pixel comparison is a well-scoped, self-contained demo — a good reference template for authoring new pages.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "build-config",
+      "text": "Isolated files — no import edges between 4 files, cohesion is unmeasurable (reported as 0)",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "build-config",
+      "text": "Zero cohesion is normal for this zone — .gitignore, LICENSE, llms.txt, and vite.config.ts have no import relationships by nature, so the metric is not meaningful here.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "build-config",
+      "text": "llms.txt at the project root signals intentional LLM-readability documentation — a forward-looking pattern worth keeping current as new pages are added.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "build-config",
+      "text": "vite.config.ts hard-codes all 23 rollup entry points; adding a new page requires edits in at least three places (vite.config.ts, nav-data.ts, sitemap.xml) with no enforcement between them.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "demo-pages",
+      "text": "High cohesion (0.96) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "demo-pages",
+      "text": "Cohesion 0.96 with coupling 0.04 is excellent — pages and their leaf components form a tight, well-bounded cluster reflecting a clean page-owns-its-components pattern.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "demo-pages",
+      "text": "Each page embeds its demo data as hard-coded TypeScript constants (e.g., the MESSAGES array in bubbles.ts); content updates require code edits rather than data-driven authoring, which is a reasonable tradeoff for a small demo site but limits non-developer contribution.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "demo-pages",
+      "text": "src/components/source-viewer.ts is listed as a zone entry point, implying external zones may reference it directly — if cross-zone usage grows, consider promoting it to the site-shell zone alongside search.ts.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "deployment-assets",
+      "text": "Isolated files — no import edges between 3 files, cohesion is unmeasurable (reported as 0)",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "deployment-assets",
+      "text": "CNAME and robots.txt are minimal single-value files; their clean separation from application source confirms good static-vs-dynamic boundary discipline.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "deployment-assets",
+      "text": "Zero coupling to any source zone is architecturally correct — these are runtime deployment artifacts, not build-time dependencies.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "deployment-assets",
+      "text": "sitemap.xml is manually maintained and must mirror the 23 page entries in vite.config.ts and nav-data.ts; silent drift between them would degrade SEO coverage without any build-time warning.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Hub: src/shared/pretext-helpers.ts is imported by 3 zones — cross-cutting dependency",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Size imbalance: largest zone has 28 files vs smallest with 1 — uneven decomposition",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "global",
+      "text": "Cross-zone import flow is consistently shallow and unidirectional: demo page zones import from Site Shell, never the reverse. This is a healthy layering pattern that should be preserved as the demo count grows.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "global",
+      "text": "Test coverage consists of a single test file (nav-data.test.ts); for a visual demo site this is acceptable, but shell.ts composition logic and search.ts fuzzy-matching scoring are high-value candidates for lightweight unit tests given their site-wide impact.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "global",
+      "text": "The about.ts page's zone placement is a community-detection artifact with no semantic basis. If the tooling acts on zone boundaries for code ownership or bundling decisions, this misclassification could cause about.ts to be treated as part of the newspaper demo's feature surface.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "global",
+      "text": "The entire site is vanilla TypeScript with no UI framework, keeping demo pages genuinely framework-agnostic — a deliberate and appropriate choice for a library documentation site that should not suggest framework coupling.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "global",
+      "text": "nav-data.ts is the canonical page registry and the strongest candidate for a single source of truth, but it is not consumed by vite.config.ts or used to generate sitemap.xml — closing that gap would reduce the triplicate maintenance burden to a single file.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Fan-in hotspot: src/shared/pretext-helpers.ts receives calls from 25 files (high fan-in expected for this module type) — high-impact module, changes may have wide ripple effects",
+      "severity": "info",
+      "related": [
+        "src/shared/pretext-helpers.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts"
+      ]
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Fan-in hotspot: src/components/source-viewer.ts receives calls from 23 files — high-impact module, changes may have wide ripple effects",
+      "severity": "warning",
+      "related": [
+        "src/components/source-viewer.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/ascii-art.ts"
+      ]
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pretext-reference-page",
+      "text": "High cohesion (1) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "pretext-reference-page",
+      "text": "The page embeds inline recipe code as raw string literals inside createSourceViewer calls. If new recipes are added, this file will grow significantly — a separate recipes data module would improve maintainability at that scale.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "pretext-reference-page",
+      "text": "caveats.ts is a single-file zone with cohesion 1.0 and coupling 0 — it follows the same page initialization pattern as Demo Pages but was separated by the import graph, likely because it was authored later or has a different import signature. Consider whether it belongs in the Demo Pages zone.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "site-shell",
+      "text": "High cohesion (0.95) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "site-shell",
+      "text": "analytics.ts is a clean 18-line module with a localhost guard preventing dev noise from polluting GA4 data — a small but well-executed production hygiene detail.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "site-shell",
+      "text": "nav-data.test.ts is the only test file in the codebase; its presence confirms the navigation helpers are correctly identified as the most critical utility to unit-test — a sound prioritization for a site where broken prev/next navigation would affect every page.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "site-shell",
+      "text": "search.ts contains a hand-maintained search index of all 23 pages; this is a third place (alongside vite.config.ts and sitemap.xml) that must be updated when pages are added or renamed, with no automated enforcement.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "src/pages/ contains files from 4 zones (bubbles-demo, demo-pages, newspaper-layout-demo, pretext-reference-page) — consider grouping into subdirectories to clarify architectural boundaries",
+      "severity": "info"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "global",
+      "text": "All 38 page init() functions return silently when the expected DOM element is absent. Adding a single `console.error` (or DEV-only assertion) before the early return would surface template/page mismatches without changing production behavior — a one-line change per file or a shared assert utility.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "global",
+      "text": "The spacing scale in variables.css intentionally skips odd steps above --space-6 (no 7, 9, 11) following a Tailwind-style doubling pattern, but this is undocumented. A comment above the spacing block explaining the scale logic (1–6 are linear 0.25rem steps, then Tailwind T-shirt sizing) would prevent developers from adding --space-7 or similar values that break the intended rhythm.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "global",
+      "text": "Two separate CSS files (global.css line 122 and components.css line 544) independently assign z-index: 1000 to semantically distinct elements (.skip-link and .search-overlay) without any cross-file coordination. Introduce a z-index scale in variables.css so stacking decisions are made in one place and layer relationships are self-documenting.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "global",
+      "text": "analytics.ts:1 hard-codes the GA measurement ID as a string literal. Replace with `import.meta.env.VITE_GA_ID ?? ''` so the tracking ID is configurable without a source edit and is not committed directly to the repository.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "Hub function: waitForFonts in src/shared/pretext-helpers.ts is called from 25 files (high fan-in expected for this module type) — changes here have wide impact, consider if responsibilities can be narrowed",
+      "severity": "info",
+      "related": [
+        "src/shared/pretext-helpers.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts"
+      ]
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "Hub function: createSourceViewer in src/components/source-viewer.ts is called from 23 files — changes here have wide impact, consider if responsibilities can be narrowed",
+      "severity": "warning",
+      "related": [
+        "src/components/source-viewer.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/ascii-art.ts"
+      ]
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "2 potentially unused exports in src/shared/pretext-helpers.ts have no incoming calls: prepareText, measureHeight",
+      "severity": "info",
+      "related": [
+        "src/shared/pretext-helpers.ts"
+      ]
+    },
+    {
+      "type": "move-file",
+      "pass": 0,
+      "scope": "global",
+      "text": "File \"src/components/search.ts\" has 100% of import neighbors in src/shared/ but lives in src/components/ — consider relocating",
+      "severity": "info",
+      "related": [
+        "src/components/search.ts"
+      ],
+      "from": "src/components/search.ts",
+      "to": "src/shared/",
+      "moveReason": "import-neighbor-majority",
+      "predictedImpact": 2
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "newspaper-layout-demo",
+      "text": "about.ts is grouped here purely by import-graph proximity, not by domain relationship. It is a static informational page with no connection to the newspaper demo — it should be classified alongside other non-demo pages if such a grouping exists.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "newspaper-layout-demo",
+      "text": "home.ts is a high-complexity single file combining canvas rendering, drag-and-drop state machine, entrance and grow-in animations, mobile drift behavior, and multi-column layout arithmetic. While it works well now, future feature additions will be harder to isolate and test without splitting into focused modules.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "observation",
+      "pass": 1,
+      "scope": "newspaper-layout-demo",
+      "text": "newspaper-images.ts and newspaper-text.ts are placed in src/shared/ but have no consumers other than home.ts. The shared/ directory implies cross-cutting reuse; these files create false structural gravity. Moving them into a src/pages/home/ feature folder would make ownership explicit.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "build-config",
+      "text": "vite.config.ts has zero code-level imports from any internal zone — it contains only declarative path references to HTML entry points. The three-way sync problem (vite.config.ts / search.ts / sitemap.xml) is therefore a maintenance convention gap, not a structural coupling defect, and could be closed by a generation script without touching the module graph.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "demo-pages",
+      "text": "All 25 non-home demo pages import exclusively from the external @chenglou/pretext library, pretext-helpers, and the components zone — zero imports from site-shell or peer pages. This uniform dependency profile is a clean and intentional architectural constraint worth preserving.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "demo-pages",
+      "text": "pretext-helpers.ts centralizes only the most common pretext operations; demo pages routinely import @chenglou/pretext directly alongside it for specialized APIs. The helper reduces but does not eliminate direct library coupling. Whether a function belongs in the helper vs. called directly is undocumented, leaving future authors to guess the convention.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "global",
+      "text": "The codebase has no circular dependencies at any layer. The dependency order is strictly: external library → shared utilities → components → demo pages. The one deviation (search.ts in components importing from shared) mirrors the site-shell pattern rather than introducing a cycle. No enforcement mechanism (eslint-plugin-boundaries, tsconfig paths) is in place to preserve this property as the codebase grows.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "global",
+      "text": "The codebase has zero circular dependencies across all zones — every import edge points from consumer pages downward to utilities or outward to the external library. This acyclic topology is a strong architectural property that should be enforced (e.g., via eslint-plugin-import dependency rules) as the page count grows.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "global",
+      "text": "home.ts is the only file that imports from three distinct internal zones (demo-pages utilities, site-shell, newspaper-layout-demo) simultaneously. If home.ts complexity grows, it is the most likely candidate to require its own feature-folder zone to contain the sprawl.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "pretext-reference-page",
+      "text": "caveats.ts follows the identical import signature as demo-pages zone files (external lib → pretext-helpers → components), confirming it is architecturally indistinguishable from a demo page at the dependency level — the zone boundary is a community-detection artifact, not a structural one.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "pattern",
+      "pass": 2,
+      "scope": "site-shell",
+      "text": "search.ts line 1 imports `tracks` from nav-data.ts but the symbol is never used in the file. The searchIndex is fully hardcoded. The dead import creates a false signal that search is data-driven from nav-data when it is not, and will cause confusion for any developer attempting to trace how search content is populated.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "relationship",
+      "pass": 2,
+      "scope": "demo-pages",
+      "text": "home.ts crosses into the site-shell zone (imports tracks from nav-data.ts) while every other demo page is strictly limited to pretext-helpers and components. This asymmetric coupling makes home.ts an architectural outlier within its own zone and increases the blast radius of any nav-data API change.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "relationship",
+      "pass": 2,
+      "scope": "newspaper-layout-demo",
+      "text": "home.ts imports `tracks` from nav-data to drive its newspaper column layout, creating a content coupling between the demo and the site's page registry. If nav-data.ts adds, removes, or renames pages or tracks, home.ts rendering is affected — a dependency no other demo page has. This is the only inbound edge from the site-infrastructure layer into a demo page.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "relationship",
+      "pass": 2,
+      "scope": "newspaper-layout-demo",
+      "text": "newspaper-text.ts and newspaper-images.ts are consumed exclusively by home.ts — a strict one-to-one relationship. Their placement in src/shared/ implies shared reuse that does not exist; they are effectively private data modules of the home page.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "relationship",
+      "pass": 2,
+      "scope": "site-shell",
+      "text": "analytics.ts is imported exclusively by shell.ts and has no other consumers — it is a private implementation detail of the site-shell zone, not a shared utility. Its src/shared/ location implies broader reuse that does not exist.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "relationship",
+      "pass": 2,
+      "scope": "site-shell",
+      "text": "shell.ts cleanly orchestrates both the shared zone (nav-data) and the components zone (search) using only their public exports. It is the only file in the codebase that spans two architectural tiers within a single import scope, and it does so without accessing internals — a correct and healthy orchestrator pattern.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "build-config",
+      "text": "vite.config.ts rollup inputs list text-flood as a build entry but nav-data.ts has no corresponding page record. The two registries — build config and navigation data — are the primary synchronization points for page existence, and they are diverged. A page omitted from nav-data.ts will never appear in navigation, prev/next links, or search regardless of whether it builds.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "demo-pages",
+      "text": "search.ts line 1 imports `tracks` from nav-data but never uses the symbol anywhere in the file. The 23-entry searchIndex array (lines 11–36) is fully hand-written rather than derived from nav-data, meaning the import conveys false intent and masks that the two registries are completely independent with no shared derivation.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "demo-pages",
+      "text": "search.ts line 330 uses the deprecated `navigator.platform` API to detect macOS for keyboard shortcut display. The recommended replacement is `navigator.userAgentData.platform` (with `navigator.platform` as a fallback), or a simpler `navigator.userAgent.includes('Mac')` check.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "demo-pages",
+      "text": "text-flood.ts is a navigational orphan: present in src/pages/ and vite.config.ts rollup inputs and sitemap.xml, but absent from nav-data.ts and search.ts. The page builds successfully and is submitted to crawlers, but has no in-site navigation entry point and cannot be found via search. It is discoverable only by direct URL or external link.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "deployment-assets",
+      "text": "sitemap.xml includes /pages/text-flood.html, which has no entry in nav-data.ts and no search index entry. Submitting an orphaned page to search engines increases crawl budget consumption for a page users cannot reach through normal navigation, and creates an SEO surface for content that is not part of the defined site structure.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "global",
+      "text": "The codebase has four locations that must agree on the page list: nav-data.ts, vite.config.ts, search.ts searchIndex, and sitemap.xml. text-flood.ts demonstrates these are already out of sync. There is no single authoritative source that the other three derive from — nav-data.ts is the closest candidate but is not consumed by the other three.",
+      "severity": "warning",
+      "category": "structural"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "global",
+      "text": "shell.ts line 52 assumes `t.pages[0]` is the canonical entry point for every track when building header navigation. The non-null assertion (`!`) suppresses the only safety signal. If a track gains a preface or index page at position 0, all header links for that track silently change destination. A `landingHref` field on NavTrack, or a dedicated first-page convention enforced in nav-data, would make the intent explicit.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "global",
+      "text": "shell.ts lines 111–112 use magic positional indices (`tracks[0]?.pages[2]`, `tracks[4]?.pages[4]`) to look up specific pages for footer links. These lookups fail silently — producing wrong links with no error — if nav-data.ts entries are reordered. nav-data.ts should export a lookup helper keyed on slug so positional fragility is eliminated.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 3,
+      "scope": "site-shell",
+      "text": "search.ts builds its searchIndex with hardcoded absolute href strings (/pages/xxx.html) instead of using the getBase() function exported by nav-data.ts. This makes search result links environment-specific while the rest of the shell correctly adapts to deployment path. The inconsistency means search is silently broken on any non-root deployment.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "build-config",
+      "text": "Rollup input keys in vite.config.ts silently mix unquoted identifiers (single-word pages) and quoted kebab-case strings (multi-word pages). The rule follows slug convention but is undocumented. A one-line comment (`// key = page slug; single-word: bare identifier, multi-word: quoted kebab-case`) prevents future inconsistency without any code change.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "build-config",
+      "text": "Zone \"Build Configuration\" (build-config) has at-risk risk (score: 0.50, cohesion: 0.00, coupling: 0.00) — unreliable: zone has only 4 files (minimum 5 for reliable metrics)",
+      "severity": "info"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "demo-pages",
+      "text": "The side-effect module + auto-invoked init() pattern is uniform across all 38 pages but entirely implicit. A short comment at the top of any new page file (or a note in a contributing guide) would prevent future authors from accidentally exporting from a page or choosing a different entry-point name.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "demo-pages",
+      "text": "initSearch() (search.ts:315) adds a document keydown listener with no guard against double-invocation. Add a module-level `let initialized = false` flag so repeat calls are no-ops — prevents duplicate listeners under HMR or any future test setup.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "demo-pages",
+      "text": "pipeline.ts:241, i18n.ts:258, and rich-api.ts:175/190 contain console.log calls in live runtime code paths that reach production builds. Remove them or wrap in `if (import.meta.env.DEV)` to avoid logging to end-user consoles.",
+      "severity": "warning",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "demo-pages",
+      "text": "search.ts defines SearchEntry and SearchResult interfaces privately while every other component exports its interface type. Either export these interfaces to align with the component zone convention, or add a comment documenting the intentional encapsulation.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "newspaper-layout-demo",
+      "text": "newspaper-images.ts contains a bare magic number `3` used as a seed-array phase offset for star Y positions. Extract it as a named constant (e.g., STAR_SEED_Y_PHASE) with a short comment noting it was chosen for visual distribution. The value is not mathematically derived and would be opaque to any future editor.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "site-shell",
+      "text": "Add a z-index scale to variables.css (e.g. --z-header: 100, --z-sidebar: 50, --z-overlay: 49, --z-modal: 1000) and replace all raw z-index values in layout.css and components.css. Currently four raw values are scattered across three files with no shared reference; global.css and components.css both independently use 1000 with no coordination.",
+      "severity": "info",
+      "category": "structural"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "site-shell",
+      "text": "Document that --color-border-subtle and --color-warning are intentionally consumed via TS inline style strings rather than CSS class files. A comment in variables.css grouping these as 'tokens used in dynamic inline styles' would prevent future developers from removing them as apparent dead code.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "site-shell",
+      "text": "Fix stale test description in nav-data.test.ts line 9: change 'has 20 total pages' to 'has 24 total pages' to match the toBe(24) assertion. Stale descriptions erode trust in the test suite and produce confusing failure messages.",
+      "severity": "info",
+      "category": "documentation"
+    },
+    {
+      "type": "suggestion",
+      "pass": 4,
+      "scope": "site-shell",
+      "text": "Unify search.ts exports to match the factory pattern used by toggle.ts, slider.ts, and performance-meter.ts. Currently search.ts exports four independent functions while every other component returns {element, ...methods} from a single createX() call. A createSearch() factory returning {button, open, close, init} would make the API predictable and composable.",
+      "severity": "info",
+      "category": "code"
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "deployment-assets",
+      "text": "Zone \"Deployment Assets\" (deployment-assets) has at-risk risk (score: 0.50, cohesion: 0.00, coupling: 0.00) — unreliable: zone has only 3 files (minimum 5 for reliable metrics)",
+      "severity": "info"
+    }
+  ],
+  "enrichmentPass": 4,
+  "structureHash": "5575142b145cf63d",
+  "zoneContentHashes": {
+    "bubbles-demo": "8ac43ecd0979f280",
+    "build-config": "3812d76368e602ad",
+    "demo-pages": "e066dfea0581d506",
+    "deployment-assets": "cd05668bcad35e02",
+    "newspaper-layout-demo": "6153f9e26d867d7e",
+    "pretext-reference-page": "7384b65862556391",
+    "site-shell": "96bb64eb1bbffb47"
+  },
+  "stability": {
+    "fileRetention": 1,
+    "persistedZones": 7,
+    "newZones": 0,
+    "removedZones": 0,
+    "reassignedFiles": []
+  }
+}

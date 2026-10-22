@@ -1,0 +1,23 @@
+{
+  "id": "newspaper-layout-demo",
+  "name": "Newspaper Layout Demo",
+  "description": "The home page's flagship interactive canvas demo — a full newspaper layout engine with multi-column text flow, draggable images, and obstacle-aware reflow — grouped with its exclusive data modules and the About page.",
+  "files": [
+    "src/pages/about.ts",
+    "src/pages/home.ts",
+    "src/shared/newspaper-images.ts",
+    "src/shared/newspaper-text.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 0.67,
+  "coupling": 0.33,
+  "fileCount": 4,
+  "lineCount": 1495,
+  "riskMetrics": {
+    "cohesion": 0.67,
+    "coupling": 0.33,
+    "riskScore": 0.32999999999999996,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

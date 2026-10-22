@@ -1,0 +1,22 @@
+{
+  "id": "deployment-assets",
+  "name": "Deployment Assets",
+  "description": "Static files served verbatim by the web host — domain binding, crawler rules, and the XML sitemap — with no build-time dependencies.",
+  "files": [
+    "public/CNAME",
+    "public/robots.txt",
+    "public/sitemap.xml"
+  ],
+  "entryPoints": [],
+  "cohesion": 0,
+  "coupling": 0,
+  "fileCount": 3,
+  "lineCount": 138,
+  "riskMetrics": {
+    "cohesion": 0,
+    "coupling": 0,
+    "riskScore": 0.5,
+    "riskLevel": "at-risk",
+    "failsThreshold": false
+  }
+}

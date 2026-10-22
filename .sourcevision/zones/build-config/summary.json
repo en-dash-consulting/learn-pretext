@@ -1,0 +1,23 @@
+{
+  "id": "build-config",
+  "name": "Build Configuration",
+  "description": "Project root files defining the Vite multi-page build system and repository metadata, with no import relationships by design.",
+  "files": [
+    ".gitignore",
+    "LICENSE",
+    "llms.txt",
+    "vite.config.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 0,
+  "coupling": 0,
+  "fileCount": 4,
+  "lineCount": 140,
+  "riskMetrics": {
+    "cohesion": 0,
+    "coupling": 0,
+    "riskScore": 0.5,
+    "riskLevel": "at-risk",
+    "failsThreshold": false
+  }
+}

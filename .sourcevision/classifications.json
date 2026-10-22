@@ -1,0 +1,1169 @@
+{
+  "archetypes": [
+    {
+      "id": "cli-command",
+      "name": "CLI Command",
+      "description": "CLI command handlers and subcommand implementations.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/commands/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/cmd/",
+          "weight": 0.7
+        }
+      ],
+      "analysisHints": {
+        "description": "CLI command modules handle user-facing terminal commands"
+      }
+    },
+    {
+      "id": "component",
+      "name": "Component",
+      "description": "React/UI component files with JSX-returning functions.",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "\\.[tj]sx$",
+          "weight": 0.4,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/components/",
+          "weight": 0.6,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/ui/",
+          "weight": 0.5,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "godFunctionThresholdMultiplier": "2",
+        "description": "Components have inflated call counts from hooks, state setters, and JSX rendering"
+      }
+    },
+    {
+      "id": "config",
+      "name": "Config",
+      "description": "Configuration files and settings modules.",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "^config\\.[tj]sx?$",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.config\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/config/",
+          "weight": 0.6
+        },
+        {
+          "kind": "filename",
+          "pattern": "^config\\.go$",
+          "weight": 0.7,
+          "languages": [
+            "go"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "hubThresholdMultiplier": "2",
+        "hotspotThresholdMultiplier": "2",
+        "deadExports": "skip",
+        "description": "High fan-in expected — config modules are widely imported"
+      }
+    },
+    {
+      "id": "entrypoint",
+      "name": "Entry Point",
+      "description": "Module entry points, public APIs, and CLI entry files where uncalled exports are expected.",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "^index\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "^main\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "^cli\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "^public\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "^mod\\.[tj]sx?$",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "^main\\.go$",
+          "weight": 0.9,
+          "languages": [
+            "go"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/cmd/",
+          "weight": 0.7,
+          "languages": [
+            "go"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "deadExports": "skip",
+        "description": "Uncalled exports are expected in entry points"
+      }
+    },
+    {
+      "id": "gateway",
+      "name": "Gateway",
+      "description": "Re-export-heavy gateway modules that concentrate cross-package imports.",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "^(?:deps|gateway|barrel)\\.[tj]sx?$",
+          "weight": 0.7
+        }
+      ],
+      "analysisHints": {
+        "deadExports": "skip",
+        "description": "Gateway modules are expected to re-export heavily"
+      }
+    },
+    {
+      "id": "hook",
+      "name": "Hook",
+      "description": "React hooks — custom hooks encapsulating reusable stateful logic.",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "^use[A-Z].*\\.[tj]sx?$",
+          "weight": 0.9,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/hooks/",
+          "weight": 0.8,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "description": "React hooks follow the use* naming convention"
+      }
+    },
+    {
+      "id": "middleware",
+      "name": "Middleware",
+      "description": "Request/response middleware in server frameworks.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/middleware/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/middlewares/",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.middleware\\.[tj]sx?$",
+          "weight": 0.9
+        }
+      ],
+      "analysisHints": {
+        "description": "Middleware modules"
+      }
+    },
+    {
+      "id": "model",
+      "name": "Model",
+      "description": "Data models, schemas, and ORM definitions.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/models/",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.model\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.schema\\.[tj]sx?$",
+          "weight": 0.8
+        }
+      ],
+      "analysisHints": {
+        "description": "Data model definitions"
+      }
+    },
+    {
+      "id": "page",
+      "name": "Page",
+      "description": "Page-level components, views, or screens — top-level UI entry points for routes.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/pages/",
+          "weight": 0.8,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/views/",
+          "weight": 0.7,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/screens/",
+          "weight": 0.7,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "godFunctionThresholdMultiplier": "2",
+        "description": "Page/view components orchestrate many sub-components and have inflated call counts"
+      }
+    },
+    {
+      "id": "route-handler",
+      "name": "Route Handler",
+      "description": "Server-side HTTP route handlers (Express, Hono, Koa, etc.).",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "^routes?[-.]",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "^router\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/routes/",
+          "weight": 0.7
+        },
+        {
+          "kind": "directory",
+          "pattern": "/api/",
+          "weight": 0.6
+        },
+        {
+          "kind": "filename",
+          "pattern": "^handlers?\\.go$",
+          "weight": 0.8,
+          "languages": [
+            "go"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/handler/",
+          "weight": 0.8,
+          "languages": [
+            "go"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/handlers/",
+          "weight": 0.8,
+          "languages": [
+            "go"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "description": "Server-side route handlers"
+      }
+    },
+    {
+      "id": "route-module",
+      "name": "Route Module",
+      "description": "Framework convention route modules (Remix/React Router) with loader/action/default exports.",
+      "signals": [
+        {
+          "kind": "export",
+          "pattern": "^(loader|action|default|meta|links|headers|ErrorBoundary)$",
+          "weight": 0.8,
+          "languages": [
+            "typescript",
+            "javascript"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "deadExports": "skip",
+        "description": "Convention exports are expected in route modules"
+      }
+    },
+    {
+      "id": "schema",
+      "name": "Schema",
+      "description": "Runtime validation schemas and data shape definitions (Zod, Yup, Joi, etc.).",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/schema/",
+          "weight": 0.7
+        },
+        {
+          "kind": "directory",
+          "pattern": "/schemas/",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "^validate\\.[tj]sx?$",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "^validation\\.[tj]sx?$",
+          "weight": 0.7
+        }
+      ],
+      "analysisHints": {
+        "deadExports": "skip",
+        "description": "Schema modules define runtime data shapes for validation"
+      }
+    },
+    {
+      "id": "service",
+      "name": "Service",
+      "description": "Service layer modules — API clients, data fetching, and business logic orchestration.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/services/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/service/",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.service\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "directory",
+          "pattern": "/clients/",
+          "weight": 0.6
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.client\\.[tj]sx?$",
+          "weight": 0.7
+        }
+      ],
+      "analysisHints": {
+        "description": "Service modules orchestrate business logic and external calls"
+      }
+    },
+    {
+      "id": "store",
+      "name": "Store",
+      "description": "State management stores and slices where high fan-in is expected.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/store/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/stores/",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.store\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.slice\\.[tj]sx?$",
+          "weight": 0.9
+        }
+      ],
+      "analysisHints": {
+        "hubThresholdMultiplier": "2",
+        "hotspotThresholdMultiplier": "2",
+        "description": "High fan-in is expected for state management modules"
+      }
+    },
+    {
+      "id": "test-helper",
+      "name": "Test Helper",
+      "description": "Test utilities, fixtures, and mocks.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/fixtures/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/mocks/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/__mocks__/",
+          "weight": 0.9
+        },
+        {
+          "kind": "directory",
+          "pattern": "/__fixtures__/",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "^test-utils\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "^test-helpers\\.[tj]sx?$",
+          "weight": 0.8
+        },
+        {
+          "kind": "filename",
+          "pattern": "^setup\\.[tj]sx?$",
+          "weight": 0.5
+        },
+        {
+          "kind": "directory",
+          "pattern": "/testdata/",
+          "weight": 0.9,
+          "languages": [
+            "go"
+          ]
+        },
+        {
+          "kind": "directory",
+          "pattern": "/testutil/",
+          "weight": 0.8,
+          "languages": [
+            "go"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "description": "Test utility files"
+      }
+    },
+    {
+      "id": "types",
+      "name": "Types & Constants",
+      "description": "Type definitions, constants, and enums — companion files, not logic.",
+      "signals": [
+        {
+          "kind": "filename",
+          "pattern": "^types\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "^constants\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "^enums\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.types\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.constants\\.[tj]sx?$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "\\.d\\.ts$",
+          "weight": 0.9
+        },
+        {
+          "kind": "filename",
+          "pattern": "^types\\.go$",
+          "weight": 0.9,
+          "languages": [
+            "go"
+          ]
+        },
+        {
+          "kind": "filename",
+          "pattern": "^models\\.go$",
+          "weight": 0.8,
+          "languages": [
+            "go"
+          ]
+        },
+        {
+          "kind": "filename",
+          "pattern": "^entities\\.go$",
+          "weight": 0.8,
+          "languages": [
+            "go"
+          ]
+        }
+      ],
+      "analysisHints": {
+        "couplingExpectation": "unidirectional",
+        "hubThresholdMultiplier": "2",
+        "hotspotThresholdMultiplier": "2",
+        "deadExports": "skip",
+        "description": "Unidirectional coupling and high fan-in expected for type files"
+      }
+    },
+    {
+      "id": "utility",
+      "name": "Utility",
+      "description": "Shared utility, helper, and infrastructure modules where high fan-in is expected.",
+      "signals": [
+        {
+          "kind": "directory",
+          "pattern": "/core/",
+          "weight": 0.7
+        },
+        {
+          "kind": "directory",
+          "pattern": "/utils/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/helpers/",
+          "weight": 0.8
+        },
+        {
+          "kind": "directory",
+          "pattern": "/lib/",
+          "weight": 0.6
+        },
+        {
+          "kind": "filename",
+          "pattern": "^output\\.[tj]sx?$",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "^logger\\.[tj]sx?$",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "^logging\\.[tj]sx?$",
+          "weight": 0.7
+        },
+        {
+          "kind": "filename",
+          "pattern": "^errors\\.[tj]sx?$",
+          "weight": 0.7
+        }
+      ],
+      "analysisHints": {
+        "hubThresholdMultiplier": "2",
+        "hotspotThresholdMultiplier": "2",
+        "description": "High fan-in is expected for utility modules"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "src/components/performance-meter.ts",
+      "archetype": "component",
+      "confidence": 0.6,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "component",
+          "signalKind": "directory",
+          "detail": "path contains \"/components/\"",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "path": "src/components/search.ts",
+      "archetype": "component",
+      "confidence": 0.6,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "component",
+          "signalKind": "directory",
+          "detail": "path contains \"/components/\"",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "path": "src/components/slider.ts",
+      "archetype": "component",
+      "confidence": 0.6,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "component",
+          "signalKind": "directory",
+          "detail": "path contains \"/components/\"",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "path": "src/components/source-viewer.ts",
+      "archetype": "component",
+      "confidence": 0.6,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "component",
+          "signalKind": "directory",
+          "detail": "path contains \"/components/\"",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "path": "src/components/toggle.ts",
+      "archetype": "component",
+      "confidence": 0.6,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "component",
+          "signalKind": "directory",
+          "detail": "path contains \"/components/\"",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "path": "src/pages/about.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/accessibility.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/accordion.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/api-reference.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/ascii-art.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/ascii-tanks.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/balanced-text.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/breaking-spaces.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/bubbles.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/canvas.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/caveats.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/editorial.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/getting-started.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/home.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/i18n.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/kinetic.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/masonry.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/performance.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/pipeline.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/rich-api.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/text-flood.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/text-physics.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/text-rain.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/text-tetris.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/virtualized.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/pages/why-pretext.ts",
+      "archetype": "page",
+      "confidence": 0.8,
+      "source": "algorithmic",
+      "evidence": [
+        {
+          "archetypeId": "page",
+          "signalKind": "directory",
+          "detail": "path contains \"/pages/\"",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "path": "src/shared/analytics.ts",
+      "archetype": "utility",
+      "confidence": 0.7,
+      "source": "llm",
+      "evidence": [
+        {
+          "archetypeId": "utility",
+          "signalKind": "path",
+          "detail": "Initializes Google Analytics by injecting a script tag and configuring gtag — a side-effectful setup utility with no framework-specific role.",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "path": "src/shared/nav-data.ts",
+      "archetype": "utility",
+      "confidence": 0.7,
+      "source": "llm",
+      "evidence": [
+        {
+          "archetypeId": "utility",
+          "signalKind": "path",
+          "detail": "Exports static nav data structures plus pure helper functions (getCurrentSlug, getPrevPage, getNextPage, etc.) consumed across the app — a shared data/logic utility module.",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "path": "src/shared/newspaper-images.ts",
+      "archetype": "utility",
+      "confidence": 0.7,
+      "source": "llm",
+      "evidence": [
+        {
+          "archetypeId": "utility",
+          "signalKind": "path",
+          "detail": "Defines and exports TRAY_IMAGES — a collection of canvas-drawing functions and their metadata used as static data/assets by page components.",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "path": "src/shared/newspaper-text.ts",
+      "archetype": "types",
+      "confidence": 0.7,
+      "source": "llm",
+      "evidence": [
+        {
+          "archetypeId": "types",
+          "signalKind": "path",
+          "detail": "Contains only exported string constants (NEWSPAPER_TITLE, NEWSPAPER_TEXT) with no logic — a pure constants/data file.",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "path": "src/shared/pretext-helpers.ts",
+      "archetype": "utility",
+      "confidence": 0.7,
+      "source": "llm",
+      "evidence": [
+        {
+          "archetypeId": "utility",
+          "signalKind": "path",
+          "detail": "Wraps @chenglou/pretext APIs (prepare, layout) and browser primitives (ResizeObserver, performance.now) into shared helper functions used across pages.",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "path": "src/shared/shell.ts",
+      "archetype": "utility",
+      "confidence": 0.7,
+      "source": "llm",
+      "evidence": [
+        {
+          "archetypeId": "utility",
+          "signalKind": "path",
+          "detail": "Builds and mounts the full site chrome (header, sidebar, footer, nav) imperatively into the DOM — a shared layout bootstrap utility called by every page entry point.",
+          "weight": 0.7
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalClassified": 37,
+    "totalUnclassified": 0,
+    "byArchetype": {
+      "component": 5,
+      "page": 26,
+      "utility": 5,
+      "types": 1
+    },
+    "bySource": {
+      "algorithmic": 31,
+      "llm": 6
+    }
+  }
+}
