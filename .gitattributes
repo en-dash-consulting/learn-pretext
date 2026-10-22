@@ -1,15 +1,15 @@
 # n-dx tools write these files with LF. Pin them so Windows checkouts
 # (core.autocrlf=true) don't show line-ending-only churn on every tool write.
-.rex/**/*.md text eol=lf
-.rex/**/*.json text eol=lf
-.rex/**/*.jsonl text eol=lf
-.rex/**/*.yaml text eol=lf
-.hench/**/*.md text eol=lf
-.hench/**/*.json text eol=lf
-.sourcevision/**/*.md text eol=lf
-.sourcevision/**/*.json text eol=lf
-.sourcevision/**/*.txt text eol=lf
-.n-dx.json text eol=lf
+.ndx/rex/**/*.md text eol=lf
+.ndx/rex/**/*.json text eol=lf
+.ndx/rex/**/*.jsonl text eol=lf
+.ndx/rex/**/*.yaml text eol=lf
+.ndx/hench/**/*.md text eol=lf
+.ndx/hench/**/*.json text eol=lf
+.ndx/sourcevision/**/*.md text eol=lf
+.ndx/sourcevision/**/*.json text eol=lf
+.ndx/sourcevision/**/*.txt text eol=lf
+.ndx/config.json text eol=lf
 AGENTS.md  text eol=lf
 CLAUDE.md  text eol=lf
 .agents/**/*.md text eol=lf
@@ -18,6 +18,6 @@ CLAUDE.md  text eol=lf
 # PRD tree markdown merges through the rex-prd driver (three-way,
 # frontmatter-aware); v2 state.yaml through rex-state (rows by item id).
 # The drivers are registered in git config by 'ndx init'.
-.rex/prd_tree/** merge=rex-prd
-.rex/product/**/state.yaml merge=rex-state
-.rex/changes/**/state.yaml merge=rex-state
+.ndx/rex/prd_tree/** merge=rex-prd
+.ndx/rex/product/**/state.yaml merge=rex-state
+.ndx/rex/changes/**/state.yaml merge=rex-state
