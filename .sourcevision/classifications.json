@@ -1082,6 +1082,18 @@
       ]
     },
     {
+      "path": "src/shared/controls.ts",
+      "archetype": null,
+      "confidence": 0,
+      "source": "algorithmic"
+    },
+    {
+      "path": "src/shared/museum.ts",
+      "archetype": null,
+      "confidence": 0,
+      "source": "algorithmic"
+    },
+    {
       "path": "src/shared/nav-data.ts",
       "archetype": "utility",
       "confidence": 0.7,
@@ -1139,31 +1151,23 @@
     },
     {
       "path": "src/shared/shell.ts",
-      "archetype": "utility",
-      "confidence": 0.7,
-      "source": "llm",
-      "evidence": [
-        {
-          "archetypeId": "utility",
-          "signalKind": "path",
-          "detail": "Builds and mounts the full site chrome (header, sidebar, footer, nav) imperatively into the DOM — a shared layout bootstrap utility called by every page entry point.",
-          "weight": 0.7
-        }
-      ]
+      "archetype": null,
+      "confidence": 0,
+      "source": "algorithmic"
     }
   ],
   "summary": {
-    "totalClassified": 37,
-    "totalUnclassified": 0,
+    "totalClassified": 36,
+    "totalUnclassified": 3,
     "byArchetype": {
       "component": 5,
       "page": 26,
-      "utility": 5,
+      "utility": 4,
       "types": 1
     },
     "bySource": {
-      "algorithmic": 31,
-      "llm": 6
+      "algorithmic": 34,
+      "llm": 5
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "primaryLanguage": "typescript",
+  "languages": [
+    "typescript"
+  ],
+  "frameworks": [
+    "vite",
+    "vitest"
+  ],
+  "releaseInfrastructure": [
+    {
+      "kind": "package.json",
+      "evidence": "package.json"
+    }
+  ],
+  "buildSurfaces": [],
+  "ciSurfaces": [
+    {
+      "path": ".github/workflows/deploy.yml",
+      "kind": "GitHub Actions"
+    }
+  ],
+  "importGraphQuality": "rich"
+}

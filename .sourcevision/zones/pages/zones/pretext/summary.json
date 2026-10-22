@@ -1,0 +1,21 @@
+{
+  "id": "pages/pretext",
+  "name": "Pretext",
+  "description": "7 files, primarily TypeScript",
+  "files": [
+    "src/pages/getting-started.ts",
+    "src/pages/performance.ts",
+    "src/pages/rich-api.ts",
+    "src/pages/text-flood.ts",
+    "src/pages/why-pretext.ts",
+    "src/shared/pretext-helpers.test.ts",
+    "src/shared/pretext-helpers.ts"
+  ],
+  "entryPoints": [
+    "src/shared/pretext-helpers.ts"
+  ],
+  "cohesion": 0.38,
+  "coupling": 0.62,
+  "fileCount": 7,
+  "lineCount": 1251
+}

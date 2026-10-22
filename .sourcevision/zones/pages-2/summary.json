@@ -1,0 +1,30 @@
+{
+  "id": "pages-2",
+  "name": "Pages 2",
+  "description": "9 files, primarily TypeScript",
+  "files": [
+    "src/components/source-viewer.ts",
+    "src/pages/accessibility.ts",
+    "src/pages/ascii-art.ts",
+    "src/pages/ascii-tanks.ts",
+    "src/pages/breaking-spaces.ts",
+    "src/pages/caveats.ts",
+    "src/pages/kinetic.ts",
+    "src/pages/text-physics.ts",
+    "src/pages/text-rain.ts"
+  ],
+  "entryPoints": [
+    "src/components/source-viewer.ts"
+  ],
+  "cohesion": 0.4,
+  "coupling": 0.6,
+  "fileCount": 9,
+  "lineCount": 4203,
+  "riskMetrics": {
+    "cohesion": 0.4,
+    "coupling": 0.6,
+    "riskScore": 0.6,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

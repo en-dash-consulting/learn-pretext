@@ -1,0 +1,17 @@
+{
+  "id": "pages/pages-2",
+  "name": "Pages 2",
+  "description": "5 files, primarily TypeScript",
+  "files": [
+    "src/components/toggle.ts",
+    "src/pages/accordion.ts",
+    "src/pages/api-reference.ts",
+    "src/pages/balanced-text.ts",
+    "src/pages/bubbles.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 0.36,
+  "coupling": 0.64,
+  "fileCount": 5,
+  "lineCount": 944
+}

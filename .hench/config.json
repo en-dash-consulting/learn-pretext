@@ -45,5 +45,6 @@
     "maxDelayMs": 30000
   },
   "loopPauseMs": 2000,
-  "maxFailedAttempts": 3
+  "maxFailedAttempts": 3,
+  "claudePath": "claude"
 }

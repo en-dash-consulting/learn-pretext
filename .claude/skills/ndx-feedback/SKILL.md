@@ -59,3 +59,10 @@ Submit feedback about n-dx — bug reports, feature requests, suggestions, or ge
 | Improvement | `enhancement` |
 | Question / docs gap | `question` |
 | UX / ergonomics | `ux` |
+
+## Done when
+
+The feedback is submitted and its URL reported back to the user. This skill does
+not fix what the feedback describes, does not open a PRD item for it, and does
+not commit anything — it reports outward only. Acting on the issue is a separate
+run.

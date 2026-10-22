@@ -1,0 +1,161 @@
+{
+  "overall": 55,
+  "dimensions": {
+    "testing": {
+      "score": 70,
+      "weight": 0.2,
+      "evidence": [
+        {
+          "kind": "manifest-script",
+          "path": "package.json",
+          "confidence": "certain",
+          "excerpt": "\"test\": \"vitest run\""
+        },
+        {
+          "kind": "dependency",
+          "path": "package.json",
+          "confidence": "certain",
+          "excerpt": "vitest"
+        },
+        {
+          "kind": "file-present",
+          "path": "src/shared/nav-data.test.ts",
+          "confidence": "likely"
+        }
+      ],
+      "gaps": [
+        {
+          "summary": "Unit tests are the only kind found; nothing exercises the system end to end.",
+          "wouldRaiseScore": "Tests under an `integration/`, `e2e/`, `contract/` or `smoke/` directory, which prove the pieces work together."
+        },
+        {
+          "summary": "Coverage is not measured.",
+          "wouldRaiseScore": "A coverage tool configured in a manifest or a CI step, ideally with a threshold that fails the build."
+        }
+      ]
+    },
+    "ci": {
+      "score": 60,
+      "weight": 0.15,
+      "evidence": [
+        {
+          "kind": "workflow-file",
+          "path": ".github/workflows/deploy.yml",
+          "confidence": "certain"
+        }
+      ],
+      "gaps": [
+        {
+          "summary": "No CI job runs the tests, so nothing stops a broken change merging.",
+          "wouldRaiseScore": "A step in a pipeline whose command runs the test suite."
+        },
+        {
+          "summary": "CI does not lint or type-check.",
+          "wouldRaiseScore": "A lint or type-check step in a pipeline."
+        }
+      ]
+    },
+    "cd": {
+      "score": 80,
+      "weight": 0.15,
+      "evidence": [
+        {
+          "kind": "workflow-job",
+          "path": ".github/workflows/deploy.yml",
+          "confidence": "likely",
+          "excerpt": "deploy"
+        }
+      ],
+      "gaps": [
+        {
+          "summary": "Only one environment is deployed to, so changes reach production unrehearsed.",
+          "wouldRaiseScore": "A second deploy job that names a staging or preview environment ahead of production."
+        }
+      ]
+    },
+    "rollback": {
+      "score": 100,
+      "weight": 0.1,
+      "evidence": [
+        {
+          "kind": "manifest-version",
+          "path": "package.json",
+          "confidence": "likely",
+          "excerpt": "\"version\": \"1.0.0\""
+        }
+      ],
+      "gaps": []
+    },
+    "migrations": {
+      "score": 0,
+      "weight": 0.1,
+      "evidence": [],
+      "gaps": [
+        {
+          "summary": "No data migrations were detected.",
+          "wouldRaiseScore": "A migrations directory for a recognised tool — Prisma, Alembic, Rails, Flyway. A repository with no database legitimately scores zero here."
+        }
+      ]
+    },
+    "featureFlags": {
+      "score": 0,
+      "weight": 0.05,
+      "evidence": [],
+      "gaps": [
+        {
+          "summary": "No feature-flag system was detected.",
+          "wouldRaiseScore": "A dependency on a flag provider — LaunchDarkly, Unleash, Split, Flagsmith — or an in-house toggle module, so a change can ship dark."
+        }
+      ]
+    },
+    "qualityGates": {
+      "score": 0,
+      "weight": 0.1,
+      "evidence": [],
+      "gaps": [
+        {
+          "summary": "No merge-blocking gate was detected.",
+          "wouldRaiseScore": "A CODEOWNERS file, a pre-commit hook config, or branch protection requiring review and status checks. Branch protection is only visible through the host's API, which this analysis does not call."
+        }
+      ]
+    },
+    "observability": {
+      "score": 0,
+      "weight": 0.05,
+      "evidence": [],
+      "gaps": [
+        {
+          "summary": "No instrumentation was detected, so a failed change would be invisible.",
+          "wouldRaiseScore": "A logging, metrics, tracing or error-reporting dependency — OpenTelemetry, Sentry, Prometheus, pino — in a manifest."
+        }
+      ]
+    },
+    "agentSafety": {
+      "score": 95,
+      "weight": 0.1,
+      "evidence": [
+        {
+          "kind": "agent-config",
+          "path": ".hench/config.json",
+          "confidence": "certain"
+        },
+        {
+          "kind": "agent-config",
+          "path": ".rex/config.json",
+          "confidence": "certain"
+        }
+      ],
+      "gaps": [
+        {
+          "summary": "Does not block credential files (.env, keys); the current defaults do. Blocked anyway until trusted.",
+          "wouldRaiseScore": "Bring the setting in line with the current defaults, or record a review with `n-dx trust accept`."
+        }
+      ]
+    }
+  },
+  "suggestions": [
+    "Migrations: No data migrations were detected. A migrations directory for a recognised tool — Prisma, Alembic, Rails, Flyway. A repository with no database legitimately scores zero here.",
+    "Quality gates: No merge-blocking gate was detected. A CODEOWNERS file, a pre-commit hook config, or branch protection requiring review and status checks. Branch protection is only visible through the host's API, which this analysis does not call.",
+    "Feature flags: No feature-flag system was detected. A dependency on a flag provider — LaunchDarkly, Unleash, Split, Flagsmith — or an in-house toggle module, so a change can ship dark."
+  ]
+}

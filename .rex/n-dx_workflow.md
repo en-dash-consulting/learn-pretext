@@ -5,6 +5,9 @@ Fight entropy. Leave the codebase better than you found it.
    Fix and commit if anything fails.
 1. Call get_next_task. If no actionable task exists, report COMPLETE and exit.
 2. Read the task's full context: parent chain, description, acceptance criteria.
+   On a v2 PRD (product/ and changes/) the brief lists the capabilities the
+   change affects, trimmed to fit its budget. When a trimmed entry cannot tell
+   you whether the change is finished, call get_capability for the full node.
 3. If you enter Plan mode, execute your recommended steps without waiting for input.
    If the plan requires splitting the task, use add_item to create subtasks and
    proceed with the first one.
@@ -12,9 +15,13 @@ Fight entropy. Leave the codebase better than you found it.
 5. Run validation and tests.
 6. Call update_task_status to mark the task complete.
 7. Call append_log with what was done, decisions made, and issues encountered.
+   If the rex MCP server is not connected, run `ndx log <event> --detail="..."` instead.
 8. Commit changes.
 9. If ending in plan mode, use add_item to break down remaining work with enough
-   detail that the next session won't need to re-plan. Then exit.
+   detail that the next session won't need to re-plan. On a v2 PRD a change
+   added without a parent lands in the Inbox awaiting placement: call
+   place_change to put it on the capability or constraint it belongs to, or it
+   is never selected autonomously. Then exit.
 10. Exit after one task. One task per execution, no exceptions.
 
 PROHIBITED CHANGES (mark the task as failing instead):

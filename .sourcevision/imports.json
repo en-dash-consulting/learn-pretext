@@ -6,7 +6,8 @@
       "type": "static",
       "symbols": [
         "tracks"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/accessibility.ts",
@@ -14,7 +15,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 5
     },
     {
       "from": "src/pages/accessibility.ts",
@@ -22,7 +24,8 @@
       "type": "static",
       "symbols": [
         "waitForFonts"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/accordion.ts",
@@ -30,7 +33,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/accordion.ts",
@@ -38,7 +42,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/accordion.ts",
@@ -46,7 +51,8 @@
       "type": "static",
       "symbols": [
         "createToggle"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/accordion.ts",
@@ -57,7 +63,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 9
     },
     {
       "from": "src/pages/api-reference.ts",
@@ -65,7 +72,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/api-reference.ts",
@@ -75,7 +83,8 @@
         "waitForFonts",
         "FONT",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 9
     },
     {
       "from": "src/pages/ascii-art.ts",
@@ -83,7 +92,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/ascii-art.ts",
@@ -91,7 +101,8 @@
       "type": "static",
       "symbols": [
         "waitForFonts"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/ascii-tanks.ts",
@@ -99,7 +110,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/ascii-tanks.ts",
@@ -107,7 +119,8 @@
       "type": "static",
       "symbols": [
         "waitForFonts"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/balanced-text.ts",
@@ -115,7 +128,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/balanced-text.ts",
@@ -123,7 +137,8 @@
       "type": "static",
       "symbols": [
         "createSlider"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/balanced-text.ts",
@@ -131,7 +146,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/balanced-text.ts",
@@ -139,7 +155,8 @@
       "type": "static",
       "symbols": [
         "createToggle"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/balanced-text.ts",
@@ -150,7 +167,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 7
     },
     {
       "from": "src/pages/breaking-spaces.ts",
@@ -158,7 +176,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/breaking-spaces.ts",
@@ -167,7 +186,8 @@
       "symbols": [
         "waitForFonts",
         "timeExecution"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/bubbles.ts",
@@ -175,7 +195,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/bubbles.ts",
@@ -185,7 +206,8 @@
         "waitForFonts",
         "FONT",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 6
     },
     {
       "from": "src/pages/canvas.ts",
@@ -193,7 +215,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/canvas.ts",
@@ -201,7 +224,8 @@
       "type": "static",
       "symbols": [
         "createSlider"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/canvas.ts",
@@ -209,7 +233,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/canvas.ts",
@@ -220,7 +245,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 7
     },
     {
       "from": "src/pages/caveats.ts",
@@ -228,7 +254,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 6
     },
     {
       "from": "src/pages/caveats.ts",
@@ -238,7 +265,8 @@
         "waitForFonts",
         "FONT",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 5
     },
     {
       "from": "src/pages/editorial.ts",
@@ -246,7 +274,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/editorial.ts",
@@ -254,7 +283,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/editorial.ts",
@@ -264,7 +294,8 @@
         "waitForFonts",
         "FONT",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 7
     },
     {
       "from": "src/pages/getting-started.ts",
@@ -272,7 +303,8 @@
       "type": "static",
       "symbols": [
         "createSlider"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/getting-started.ts",
@@ -280,7 +312,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/getting-started.ts",
@@ -291,7 +324,27 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 10
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/controls.ts",
+      "type": "static",
+      "symbols": [
+        "getControlState",
+        "onControlChange"
+      ],
+      "weight": 2
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/controls.ts",
+      "type": "type",
+      "symbols": [
+        "InteractionMode"
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/home.ts",
@@ -299,42 +352,17 @@
       "type": "static",
       "symbols": [
         "tracks"
-      ]
-    },
-    {
-      "from": "src/pages/home.ts",
-      "to": "src/shared/newspaper-images.ts",
-      "type": "static",
-      "symbols": [
-        "TRAY_IMAGES"
-      ]
-    },
-    {
-      "from": "src/pages/home.ts",
-      "to": "src/shared/newspaper-images.ts",
-      "type": "type",
-      "symbols": [
-        "TrayImageDef"
-      ]
-    },
-    {
-      "from": "src/pages/home.ts",
-      "to": "src/shared/newspaper-text.ts",
-      "type": "static",
-      "symbols": [
-        "NEWSPAPER_TITLE",
-        "NEWSPAPER_TEXT"
-      ]
+      ],
+      "weight": 3
     },
     {
       "from": "src/pages/home.ts",
       "to": "src/shared/pretext-helpers.ts",
       "type": "static",
       "symbols": [
-        "waitForFonts",
-        "FONT",
-        "LINE_HEIGHT"
-      ]
+        "waitForFonts"
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/i18n.ts",
@@ -342,7 +370,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/i18n.ts",
@@ -350,7 +379,8 @@
       "type": "static",
       "symbols": [
         "createSlider"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/i18n.ts",
@@ -358,7 +388,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/i18n.ts",
@@ -368,7 +399,8 @@
         "waitForFonts",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 6
     },
     {
       "from": "src/pages/kinetic.ts",
@@ -376,7 +408,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 2
     },
     {
       "from": "src/pages/kinetic.ts",
@@ -385,7 +418,8 @@
       "symbols": [
         "waitForFonts",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/masonry.ts",
@@ -393,7 +427,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/masonry.ts",
@@ -401,7 +436,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/masonry.ts",
@@ -413,7 +449,8 @@
         "LINE_HEIGHT",
         "timeExecution",
         "onResize"
-      ]
+      ],
+      "weight": 7
     },
     {
       "from": "src/pages/performance.ts",
@@ -421,7 +458,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/performance.ts",
@@ -429,7 +467,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/performance.ts",
@@ -440,7 +479,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 10
     },
     {
       "from": "src/pages/pipeline.ts",
@@ -448,7 +488,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/pipeline.ts",
@@ -456,7 +497,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/pipeline.ts",
@@ -467,7 +509,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 3
     },
     {
       "from": "src/pages/rich-api.ts",
@@ -475,7 +518,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/rich-api.ts",
@@ -483,7 +527,8 @@
       "type": "static",
       "symbols": [
         "createSlider"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/rich-api.ts",
@@ -491,7 +536,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 3
     },
     {
       "from": "src/pages/rich-api.ts",
@@ -502,7 +548,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 10
     },
     {
       "from": "src/pages/text-flood.ts",
@@ -510,7 +557,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/text-flood.ts",
@@ -521,7 +569,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 9
     },
     {
       "from": "src/pages/text-physics.ts",
@@ -529,7 +578,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/text-physics.ts",
@@ -538,7 +588,8 @@
       "symbols": [
         "waitForFonts",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/text-rain.ts",
@@ -546,7 +597,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/text-rain.ts",
@@ -555,7 +607,8 @@
       "symbols": [
         "waitForFonts",
         "LINE_HEIGHT"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/text-tetris.ts",
@@ -563,7 +616,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/text-tetris.ts",
@@ -574,7 +628,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 3
     },
     {
       "from": "src/pages/virtualized.ts",
@@ -582,7 +637,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/virtualized.ts",
@@ -590,7 +646,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/virtualized.ts",
@@ -601,7 +658,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 8
     },
     {
       "from": "src/pages/why-pretext.ts",
@@ -609,7 +667,8 @@
       "type": "static",
       "symbols": [
         "createPerfMeter"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/why-pretext.ts",
@@ -617,7 +676,8 @@
       "type": "static",
       "symbols": [
         "createSourceViewer"
-      ]
+      ],
+      "weight": 1
     },
     {
       "from": "src/pages/why-pretext.ts",
@@ -628,7 +688,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 10
     },
     {
       "from": "src/shared/nav-data.test.ts",
@@ -639,7 +700,8 @@
         "getPageIndex",
         "getPrevPage",
         "getNextPage"
-      ]
+      ],
+      "weight": 10
     },
     {
       "from": "src/shared/pretext-helpers.test.ts",
@@ -649,7 +711,8 @@
         "FONT",
         "LINE_HEIGHT",
         "timeExecution"
-      ]
+      ],
+      "weight": 6
     },
     {
       "from": "src/shared/shell.ts",
@@ -659,7 +722,8 @@
         "createSearchButton",
         "initSearch",
         "openSearch"
-      ]
+      ],
+      "weight": 3
     },
     {
       "from": "src/shared/shell.ts",
@@ -667,7 +731,27 @@
       "type": "static",
       "symbols": [
         "initAnalytics"
-      ]
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/controls.ts",
+      "type": "static",
+      "symbols": [
+        "buildControls",
+        "initControls"
+      ],
+      "weight": 2
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/museum.ts",
+      "type": "static",
+      "symbols": [
+        "initMuseum"
+      ],
+      "weight": 1
     },
     {
       "from": "src/shared/shell.ts",
@@ -680,47 +764,8 @@
         "getNextPage",
         "getTrackForSlug",
         "getBase"
-      ]
-    },
-    {
-      "from": "src/shared/shell.ts",
-      "to": "src/shared/styles/components.css",
-      "type": "static",
-      "symbols": [
-        "*"
-      ]
-    },
-    {
-      "from": "src/shared/shell.ts",
-      "to": "src/shared/styles/global.css",
-      "type": "static",
-      "symbols": [
-        "*"
-      ]
-    },
-    {
-      "from": "src/shared/shell.ts",
-      "to": "src/shared/styles/layout.css",
-      "type": "static",
-      "symbols": [
-        "*"
-      ]
-    },
-    {
-      "from": "src/shared/shell.ts",
-      "to": "src/shared/styles/reset.css",
-      "type": "static",
-      "symbols": [
-        "*"
-      ]
-    },
-    {
-      "from": "src/shared/shell.ts",
-      "to": "src/shared/styles/variables.css",
-      "type": "static",
-      "symbols": [
-        "*"
-      ]
+      ],
+      "weight": 10
     }
   ],
   "external": [
@@ -826,7 +871,7 @@
     }
   ],
   "summary": {
-    "totalEdges": 82,
+    "totalEdges": 78,
     "totalExternal": 7,
     "circularCount": 0,
     "circulars": [],
@@ -856,6 +901,10 @@
         "count": 2
       },
       {
+        "path": "src/shared/controls.ts",
+        "count": 2
+      },
+      {
         "path": "src/components/search.ts",
         "count": 1
       },
@@ -864,34 +913,10 @@
         "count": 1
       },
       {
-        "path": "src/shared/newspaper-images.ts",
-        "count": 1
-      },
-      {
-        "path": "src/shared/newspaper-text.ts",
-        "count": 1
-      },
-      {
-        "path": "src/shared/styles/components.css",
-        "count": 1
-      },
-      {
-        "path": "src/shared/styles/global.css",
-        "count": 1
-      },
-      {
-        "path": "src/shared/styles/layout.css",
-        "count": 1
-      },
-      {
-        "path": "src/shared/styles/reset.css",
-        "count": 1
-      },
-      {
-        "path": "src/shared/styles/variables.css",
+        "path": "src/shared/museum.ts",
         "count": 1
       }
     ],
-    "avgImportsPerFile": 2.83
+    "avgImportsPerFile": 2.69
   }
 }

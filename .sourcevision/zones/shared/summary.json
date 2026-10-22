@@ -1,0 +1,21 @@
+{
+  "id": "shared",
+  "name": "Shared",
+  "description": "2 files, primarily TypeScript",
+  "files": [
+    "src/shared/newspaper-images.ts",
+    "src/shared/newspaper-text.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 0,
+  "coupling": 0,
+  "fileCount": 2,
+  "lineCount": 267,
+  "riskMetrics": {
+    "cohesion": 0,
+    "coupling": 0,
+    "riskScore": 0.5,
+    "riskLevel": "at-risk",
+    "failsThreshold": false
+  }
+}

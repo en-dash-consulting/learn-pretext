@@ -1,0 +1,20 @@
+{
+  "id": "root",
+  "name": "Root",
+  "description": "1 files, primarily TypeScript",
+  "files": [
+    "vite.config.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 1,
+  "coupling": 0,
+  "fileCount": 1,
+  "lineCount": 42,
+  "riskMetrics": {
+    "cohesion": 1,
+    "coupling": 0,
+    "riskScore": 0,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

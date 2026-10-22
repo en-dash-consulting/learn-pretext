@@ -627,7 +627,7 @@
     {
       "file": "src/pages/getting-started.ts",
       "name": "init",
-      "line": 6,
+      "line": 9,
       "column": 0,
       "qualifiedName": "init",
       "isExported": false
@@ -635,257 +635,105 @@
     {
       "file": "src/pages/getting-started.ts",
       "name": "updateSandbox",
-      "line": 107,
+      "line": 179,
       "column": 2,
       "qualifiedName": "updateSandbox",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "getResponsiveConfig",
-      "line": 98,
+      "name": "heroFont",
+      "line": 18,
       "column": 0,
-      "qualifiedName": "getResponsiveConfig",
+      "qualifiedName": "heroFont",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "sizeCanvas",
-      "line": 106,
+      "name": "h2Font",
+      "line": 23,
       "column": 0,
-      "qualifiedName": "sizeCanvas",
+      "qualifiedName": "h2Font",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "getLineWidthAndOffset",
-      "line": 122,
+      "name": "bodyFont",
+      "line": 28,
       "column": 0,
-      "qualifiedName": "getLineWidthAndOffset",
+      "qualifiedName": "bodyFont",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawMasthead",
-      "line": 164,
+      "name": "metricFont",
+      "line": 33,
       "column": 0,
-      "qualifiedName": "drawMasthead",
+      "qualifiedName": "metricFont",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawColumnRules",
-      "line": 219,
+      "name": "metricLabelFont",
+      "line": 38,
       "column": 0,
-      "qualifiedName": "drawColumnRules",
+      "qualifiedName": "metricLabelFont",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawColumnarText",
-      "line": 231,
+      "name": "buildCharSpans",
+      "line": 192,
       "column": 0,
-      "qualifiedName": "drawColumnarText",
+      "qualifiedName": "buildCharSpans",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawPlacedImage",
-      "line": 282,
-      "column": 0,
-      "qualifiedName": "drawPlacedImage",
+      "name": "getSpan",
+      "line": 204,
+      "column": 2,
+      "qualifiedName": "getSpan",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawFloatingImage",
-      "line": 306,
+      "name": "update",
+      "line": 265,
       "column": 0,
-      "qualifiedName": "drawFloatingImage",
+      "qualifiedName": "update",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawTray",
-      "line": 342,
+      "name": "tick",
+      "line": 345,
       "column": 0,
-      "qualifiedName": "drawTray",
+      "qualifiedName": "tick",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "drawPerfOverlay",
-      "line": 422,
+      "name": "buildTrackCards",
+      "line": 353,
       "column": 0,
-      "qualifiedName": "drawPerfOverlay",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "buildObstacles",
-      "line": 455,
-      "column": 0,
-      "qualifiedName": "buildObstacles",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "render",
-      "line": 502,
-      "column": 0,
-      "qualifiedName": "render",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "animateEntrance",
-      "line": 567,
-      "column": 0,
-      "qualifiedName": "animateEntrance",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "animateGrow",
-      "line": 589,
-      "column": 0,
-      "qualifiedName": "animateGrow",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "startDrift",
-      "line": 610,
-      "column": 0,
-      "qualifiedName": "startDrift",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "animateDrift",
-      "line": 639,
-      "column": 0,
-      "qualifiedName": "animateDrift",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "getEventPos",
-      "line": 678,
-      "column": 0,
-      "qualifiedName": "getEventPos",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "getTrayThumbBounds",
-      "line": 691,
-      "column": 0,
-      "qualifiedName": "getTrayThumbBounds",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "hitTestTray",
-      "line": 709,
-      "column": 0,
-      "qualifiedName": "hitTestTray",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "hitTestPlaced",
-      "line": 718,
-      "column": 0,
-      "qualifiedName": "hitTestPlaced",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "hitTestDrift",
-      "line": 728,
-      "column": 0,
-      "qualifiedName": "hitTestDrift",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "getNextAvailableTrayIndex",
-      "line": 738,
-      "column": 0,
-      "qualifiedName": "getNextAvailableTrayIndex",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "startFloatingFromTray",
-      "line": 745,
-      "column": 0,
-      "qualifiedName": "startFloatingFromTray",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "onPointerDown",
-      "line": 773,
-      "column": 0,
-      "qualifiedName": "onPointerDown",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "onPointerMove",
-      "line": 882,
-      "column": 0,
-      "qualifiedName": "onPointerMove",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "onPointerUp",
-      "line": 930,
-      "column": 0,
-      "qualifiedName": "onPointerUp",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "onMouseLeave",
-      "line": 973,
-      "column": 0,
-      "qualifiedName": "onMouseLeave",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "onDoubleClick",
-      "line": 1002,
-      "column": 0,
-      "qualifiedName": "onDoubleClick",
-      "isExported": false
-    },
-    {
-      "file": "src/pages/home.ts",
-      "name": "placeInitialImages",
-      "line": 1016,
-      "column": 0,
-      "qualifiedName": "placeInitialImages",
+      "qualifiedName": "buildTrackCards",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
       "name": "init",
-      "line": 1065,
+      "line": 370,
       "column": 0,
       "qualifiedName": "init",
       "isExported": false
     },
     {
       "file": "src/pages/home.ts",
-      "name": "setCanvasHeight",
-      "line": 1115,
-      "column": 2,
-      "qualifiedName": "setCanvasHeight",
+      "name": "trackMouse",
+      "line": 400,
+      "column": 8,
+      "qualifiedName": "trackMouse",
       "isExported": false
     },
     {
@@ -1465,6 +1313,118 @@
       "isExported": true
     },
     {
+      "file": "src/shared/controls.ts",
+      "name": "getControlState",
+      "line": 26,
+      "column": 0,
+      "qualifiedName": "getControlState",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "onControlChange",
+      "line": 30,
+      "column": 0,
+      "qualifiedName": "onControlChange",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "notify",
+      "line": 34,
+      "column": 0,
+      "qualifiedName": "notify",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "applyToPage",
+      "line": 42,
+      "column": 0,
+      "qualifiedName": "applyToPage",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "loadState",
+      "line": 51,
+      "column": 0,
+      "qualifiedName": "loadState",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "buildControls",
+      "line": 75,
+      "column": 0,
+      "qualifiedName": "buildControls",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "initControls",
+      "line": 98,
+      "column": 0,
+      "qualifiedName": "initControls",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/controls.ts",
+      "name": "checkDock",
+      "line": 147,
+      "column": 4,
+      "qualifiedName": "checkDock",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/museum.ts",
+      "name": "initMuseumReveals",
+      "line": 11,
+      "column": 0,
+      "qualifiedName": "initMuseumReveals",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/museum.ts",
+      "name": "enhanceContent",
+      "line": 39,
+      "column": 0,
+      "qualifiedName": "enhanceContent",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/museum.ts",
+      "name": "initCursorGlow",
+      "line": 71,
+      "column": 0,
+      "qualifiedName": "initCursorGlow",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/museum.ts",
+      "name": "updateGlow",
+      "line": 110,
+      "column": 2,
+      "qualifiedName": "updateGlow",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/museum.ts",
+      "name": "initParallaxDepth",
+      "line": 126,
+      "column": 0,
+      "qualifiedName": "initParallaxDepth",
+      "isExported": true
+    },
+    {
+      "file": "src/shared/museum.ts",
+      "name": "initMuseum",
+      "line": 139,
+      "column": 0,
+      "qualifiedName": "initMuseum",
+      "isExported": true
+    },
+    {
       "file": "src/shared/nav-data.ts",
       "name": "href",
       "line": 14,
@@ -1602,32 +1562,80 @@
     },
     {
       "file": "src/shared/shell.ts",
+      "name": "setTrackTheme",
+      "line": 25,
+      "column": 0,
+      "qualifiedName": "setTrackTheme",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
       "name": "buildShell",
-      "line": 20,
+      "line": 40,
       "column": 0,
       "qualifiedName": "buildShell",
       "isExported": false
     },
     {
       "file": "src/shared/shell.ts",
-      "name": "buildHeader",
-      "line": 45,
+      "name": "isBannerDismissed",
+      "line": 109,
       "column": 0,
-      "qualifiedName": "buildHeader",
+      "qualifiedName": "isBannerDismissed",
       "isExported": false
     },
     {
       "file": "src/shared/shell.ts",
-      "name": "buildSidebar",
-      "line": 71,
+      "name": "buildBanner",
+      "line": 117,
       "column": 0,
-      "qualifiedName": "buildSidebar",
+      "qualifiedName": "buildBanner",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "initBanner",
+      "line": 129,
+      "column": 0,
+      "qualifiedName": "initBanner",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "syncOffset",
+      "line": 135,
+      "column": 2,
+      "qualifiedName": "syncOffset",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "onResize",
+      "line": 138,
+      "column": 2,
+      "qualifiedName": "onResize",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "buildFloatingNav",
+      "line": 158,
+      "column": 0,
+      "qualifiedName": "buildFloatingNav",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "buildMobileMenu",
+      "line": 204,
+      "column": 0,
+      "qualifiedName": "buildMobileMenu",
       "isExported": false
     },
     {
       "file": "src/shared/shell.ts",
       "name": "buildPageNav",
-      "line": 86,
+      "line": 219,
       "column": 0,
       "qualifiedName": "buildPageNav",
       "isExported": false
@@ -1635,7 +1643,7 @@
     {
       "file": "src/shared/shell.ts",
       "name": "buildFooter",
-      "line": 110,
+      "line": 243,
       "column": 0,
       "qualifiedName": "buildFooter",
       "isExported": false
@@ -1643,17 +1651,81 @@
     {
       "file": "src/shared/shell.ts",
       "name": "bindEvents",
-      "line": 148,
+      "line": 292,
       "column": 0,
       "qualifiedName": "bindEvents",
       "isExported": false
     },
     {
       "file": "src/shared/shell.ts",
-      "name": "toggleSidebar",
-      "line": 153,
+      "name": "toggleMenu",
+      "line": 297,
       "column": 2,
-      "qualifiedName": "toggleSidebar",
+      "qualifiedName": "toggleMenu",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "initMegaMenu",
+      "line": 314,
+      "column": 0,
+      "qualifiedName": "initMegaMenu",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "openMenu",
+      "line": 320,
+      "column": 2,
+      "qualifiedName": "openMenu",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "closeMenu",
+      "line": 338,
+      "column": 2,
+      "qualifiedName": "closeMenu",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "scheduleClose",
+      "line": 345,
+      "column": 2,
+      "qualifiedName": "scheduleClose",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "cancelClose",
+      "line": 350,
+      "column": 2,
+      "qualifiedName": "cancelClose",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "initScrollReveal",
+      "line": 443,
+      "column": 0,
+      "qualifiedName": "initScrollReveal",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "updateNav",
+      "line": 457,
+      "column": 4,
+      "qualifiedName": "updateNav",
+      "isExported": false
+    },
+    {
+      "file": "src/shared/shell.ts",
+      "name": "checkScroll",
+      "line": 461,
+      "column": 4,
+      "qualifiedName": "checkScroll",
       "isExported": false
     }
   ],
@@ -10124,7 +10196,7 @@
       "calleeFile": "src/pages/getting-started.ts",
       "callee": "init",
       "type": "direct",
-      "line": 164,
+      "line": 248,
       "column": 0
     },
     {
@@ -10133,7 +10205,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 7,
+      "line": 10,
       "column": 18
     },
     {
@@ -10142,7 +10214,7 @@
       "calleeFile": "src/shared/pretext-helpers.ts",
       "callee": "waitForFonts",
       "type": "direct",
-      "line": 10,
+      "line": 13,
       "column": 8
     },
     {
@@ -10151,7 +10223,7 @@
       "calleeFile": null,
       "callee": "prepare",
       "type": "direct",
-      "line": 95,
+      "line": 165,
       "column": 26
     },
     {
@@ -10160,8 +10232,17 @@
       "calleeFile": null,
       "callee": "layout",
       "type": "direct",
-      "line": 96,
-      "column": 24
+      "line": 166,
+      "column": 15
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "layout",
+      "type": "direct",
+      "line": 167,
+      "column": 17
     },
     {
       "callerFile": "src/pages/getting-started.ts",
@@ -10169,7 +10250,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 97,
+      "line": 168,
       "column": 2
     },
     {
@@ -10178,7 +10259,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 101,
+      "line": 173,
       "column": 23
     },
     {
@@ -10187,7 +10268,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 102,
+      "line": 174,
       "column": 23
     },
     {
@@ -10196,7 +10277,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 103,
+      "line": 175,
       "column": 25
     },
     {
@@ -10205,7 +10286,7 @@
       "calleeFile": "src/components/slider.ts",
       "callee": "createSlider",
       "type": "direct",
-      "line": 131,
+      "line": 203,
       "column": 2
     },
     {
@@ -10214,7 +10295,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 131,
+      "line": 203,
       "column": 15
     },
     {
@@ -10223,7 +10304,7 @@
       "calleeFile": "src/pages/getting-started.ts",
       "callee": "updateSandbox",
       "type": "direct",
-      "line": 140,
+      "line": 212,
       "column": 6
     },
     {
@@ -10232,7 +10313,7 @@
       "calleeFile": null,
       "callee": "sandboxInput.addEventListener",
       "type": "method",
-      "line": 144,
+      "line": 216,
       "column": 2
     },
     {
@@ -10241,7 +10322,7 @@
       "calleeFile": "src/pages/getting-started.ts",
       "callee": "updateSandbox",
       "type": "direct",
-      "line": 145,
+      "line": 217,
       "column": 2
     },
     {
@@ -10250,7 +10331,7 @@
       "calleeFile": "src/components/source-viewer.ts",
       "callee": "createSourceViewer",
       "type": "direct",
-      "line": 158,
+      "line": 230,
       "column": 8
     },
     {
@@ -10259,8 +10340,89 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 158,
+      "line": 230,
       "column": 27
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "prepareWithSegments",
+      "type": "direct",
+      "line": 236,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "layoutWithLines",
+      "type": "direct",
+      "line": 237,
+      "column": 21
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 238,
+      "column": 21
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "document.createElement",
+      "type": "method",
+      "line": 240,
+      "column": 16
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "taskOutput.appendChild",
+      "type": "method",
+      "line": 242,
+      "column": 4
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 244,
+      "column": 2
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "join",
+      "type": "method",
+      "line": 245,
+      "column": 84
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "taskResult.lines.map",
+      "type": "property-chain",
+      "line": 245,
+      "column": 84
+    },
+    {
+      "callerFile": "src/pages/getting-started.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 245,
+      "column": 113
     },
     {
       "callerFile": "src/pages/getting-started.ts",
@@ -10268,7 +10430,7 @@
       "calleeFile": null,
       "callee": "text.trim",
       "type": "method",
-      "line": 109,
+      "line": 181,
       "column": 9
     },
     {
@@ -10277,7 +10439,7 @@
       "calleeFile": "src/shared/pretext-helpers.ts",
       "callee": "timeExecution",
       "type": "direct",
-      "line": 115,
+      "line": 187,
       "column": 55
     },
     {
@@ -10286,7 +10448,7 @@
       "calleeFile": null,
       "callee": "prepare",
       "type": "direct",
-      "line": 115,
+      "line": 187,
       "column": 75
     },
     {
@@ -10295,7 +10457,7 @@
       "calleeFile": "src/shared/pretext-helpers.ts",
       "callee": "timeExecution",
       "type": "direct",
-      "line": 116,
+      "line": 188,
       "column": 44
     },
     {
@@ -10304,7 +10466,7 @@
       "calleeFile": null,
       "callee": "layout",
       "type": "direct",
-      "line": 116,
+      "line": 188,
       "column": 64
     },
     {
@@ -10313,7 +10475,7 @@
       "calleeFile": null,
       "callee": "prepareTime.toFixed",
       "type": "method",
-      "line": 122,
+      "line": 194,
       "column": 67
     },
     {
@@ -10322,8 +10484,287 @@
       "calleeFile": null,
       "callee": "layoutTime.toFixed",
       "type": "method",
-      "line": 123,
+      "line": 195,
       "column": 66
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 47,
+      "column": 26
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 50,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "bodyFont",
+      "type": "direct",
+      "line": 54,
+      "column": 17
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 55,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 58,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "bodyFont",
+      "type": "direct",
+      "line": 62,
+      "column": 17
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 63,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 66,
+      "column": 22
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "bodyFont",
+      "type": "direct",
+      "line": 70,
+      "column": 17
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 71,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 74,
+      "column": 22
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 80,
+      "column": 26
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 83,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "bodyFont",
+      "type": "direct",
+      "line": 87,
+      "column": 17
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 88,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 91,
+      "column": 22
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 97,
+      "column": 26
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 100,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 105,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 108,
+      "column": 22
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 113,
+      "column": 26
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 116,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 121,
+      "column": 26
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 124,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 129,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 132,
+      "column": 22
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 138,
+      "column": 26
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 141,
+      "column": 25
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "bodyFont",
+      "type": "direct",
+      "line": 145,
+      "column": 17
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 146,
+      "column": 23
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "<module>",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 149,
+      "column": 22
     },
     {
       "callerFile": "src/pages/home.ts",
@@ -10331,881 +10772,188 @@
       "calleeFile": "src/pages/home.ts",
       "callee": "init",
       "type": "direct",
-      "line": 1156,
+      "line": 438,
       "column": 0
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "animateDrift",
+      "caller": "bodyFont",
       "calleeFile": null,
-      "callee": "Math.cos",
+      "callee": "Math.round",
       "type": "method",
-      "line": 647,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateDrift",
-      "calleeFile": null,
-      "callee": "Math.sin",
-      "type": "method",
-      "line": 648,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateDrift",
-      "calleeFile": null,
-      "callee": "Math.sin",
-      "type": "method",
-      "line": 652,
-      "column": 16
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateDrift",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 672,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateDrift",
-      "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 673,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateEntrance",
-      "calleeFile": null,
-      "callee": "Math.min",
-      "type": "method",
-      "line": 572,
-      "column": 12
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateEntrance",
-      "calleeFile": null,
-      "callee": "Math.pow",
-      "type": "method",
-      "line": 573,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateEntrance",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 576,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateEntrance",
-      "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 579,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateEntrance",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "startDrift",
-      "type": "direct",
-      "line": 582,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateEntrance",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 583,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateGrow",
-      "calleeFile": null,
-      "callee": "Math.min",
-      "type": "method",
-      "line": 593,
-      "column": 12
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateGrow",
-      "calleeFile": null,
-      "callee": "Math.pow",
-      "type": "method",
-      "line": 595,
-      "column": 31
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateGrow",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 597,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateGrow",
-      "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 600,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "animateGrow",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 604,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "buildObstacles",
-      "calleeFile": null,
-      "callee": "placedImages.map",
-      "type": "method",
-      "line": 456,
-      "column": 36
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "buildObstacles",
-      "calleeFile": null,
-      "callee": "obstacles.push",
-      "type": "method",
-      "line": 479,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "buildObstacles",
-      "calleeFile": null,
-      "callee": "obstacles.push",
-      "type": "method",
-      "line": 490,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnRules",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 224,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnRules",
-      "calleeFile": null,
-      "callee": "ctx.moveTo",
-      "type": "method",
-      "line": 225,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnRules",
-      "calleeFile": null,
-      "callee": "ctx.lineTo",
-      "type": "method",
-      "line": 226,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnRules",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 227,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnarText",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getLineWidthAndOffset",
-      "type": "direct",
-      "line": 259,
-      "column": 41
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnarText",
-      "calleeFile": null,
-      "callee": "layoutNextLine",
-      "type": "direct",
-      "line": 266,
-      "column": 17
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawColumnarText",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 272,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawFloatingImage",
-      "calleeFile": null,
-      "callee": "ctx.save",
-      "type": "method",
-      "line": 317,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawFloatingImage",
-      "calleeFile": null,
-      "callee": "ctx.strokeRect",
-      "type": "method",
-      "line": 325,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawFloatingImage",
-      "calleeFile": null,
-      "callee": "dragState.sourceDef.draw",
-      "type": "property-chain",
-      "line": 326,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawFloatingImage",
-      "calleeFile": null,
-      "callee": "ctx.restore",
-      "type": "method",
-      "line": 328,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawFloatingImage",
-      "calleeFile": null,
-      "callee": "Math.max",
-      "type": "method",
-      "line": 333,
-      "column": 22
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawFloatingImage",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 336,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 171,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.moveTo",
-      "type": "method",
-      "line": 172,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.lineTo",
-      "type": "method",
-      "line": 173,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 174,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 178,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.moveTo",
-      "type": "method",
-      "line": 179,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.lineTo",
-      "type": "method",
-      "line": 180,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 181,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "Math.max",
-      "type": "method",
-      "line": 184,
-      "column": 38
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "Math.min",
-      "type": "method",
-      "line": 184,
-      "column": 67
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 189,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "Math.max",
-      "type": "method",
-      "line": 192,
-      "column": 33
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "Math.min",
-      "type": "method",
-      "line": 192,
-      "column": 63
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "lastReflowMs.toFixed",
-      "type": "method",
-      "line": 195,
-      "column": 52
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 199,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 205,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.moveTo",
-      "type": "method",
-      "line": 206,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.lineTo",
-      "type": "method",
-      "line": 207,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 208,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 210,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.moveTo",
-      "type": "method",
-      "line": 211,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.lineTo",
-      "type": "method",
-      "line": 212,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawMasthead",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 213,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 429,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.roundRect",
-      "type": "method",
-      "line": 430,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.fill",
-      "type": "method",
-      "line": 431,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 435,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.roundRect",
-      "type": "method",
-      "line": 436,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 437,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 442,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "lastReflowMs.toFixed",
-      "type": "method",
-      "line": 444,
-      "column": 52
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 447,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPerfOverlay",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 450,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPlacedImage",
-      "calleeFile": null,
-      "callee": "ctx.save",
-      "type": "method",
-      "line": 284,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPlacedImage",
-      "calleeFile": null,
-      "callee": "ctx.strokeRect",
-      "type": "method",
-      "line": 292,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPlacedImage",
-      "calleeFile": null,
-      "callee": "img.def.draw",
-      "type": "property-chain",
-      "line": 294,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPlacedImage",
-      "calleeFile": null,
-      "callee": "ctx.restore",
-      "type": "method",
-      "line": 296,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPlacedImage",
-      "calleeFile": null,
-      "callee": "Math.max",
-      "type": "method",
-      "line": 299,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawPlacedImage",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 302,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.createLinearGradient",
-      "type": "method",
-      "line": 346,
-      "column": 19
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "fadeGrad.addColorStop",
-      "type": "method",
-      "line": 347,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "fadeGrad.addColorStop",
-      "type": "method",
-      "line": 348,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.fillRect",
-      "type": "method",
-      "line": 350,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.fillRect",
-      "type": "method",
-      "line": 353,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 358,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.moveTo",
-      "type": "method",
-      "line": 359,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.lineTo",
-      "type": "method",
-      "line": 360,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 361,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "trayAvailable.filter",
-      "type": "method",
-      "line": 363,
-      "column": 25
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 369,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.beginPath",
-      "type": "method",
-      "line": 393,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.roundRect",
-      "type": "method",
-      "line": 394,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.stroke",
-      "type": "method",
-      "line": 395,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "def.draw",
-      "type": "method",
-      "line": 397,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 402,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "drawTray",
-      "calleeFile": null,
-      "callee": "ctx.fillText",
-      "type": "method",
-      "line": 417,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "getEventPos",
-      "calleeFile": null,
-      "callee": "canvasEl.getBoundingClientRect",
-      "type": "method",
-      "line": 679,
+      "line": 29,
       "column": 15
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "getLineWidthAndOffset",
+      "caller": "buildCharSpans",
       "calleeFile": null,
-      "callee": "Math.max",
+      "callee": "Math.min",
       "type": "method",
-      "line": 144,
+      "line": 195,
       "column": 19
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "getLineWidthAndOffset",
+      "caller": "buildCharSpans",
       "calleeFile": null,
-      "callee": "Math.max",
+      "callee": "document.createElement",
       "type": "method",
-      "line": 146,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "getLineWidthAndOffset",
-      "calleeFile": null,
-      "callee": "Math.max",
-      "type": "method",
-      "line": 149,
-      "column": 22
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "getLineWidthAndOffset",
-      "calleeFile": null,
-      "callee": "Math.max",
-      "type": "method",
-      "line": 151,
+      "line": 198,
       "column": 21
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "getLineWidthAndOffset",
+      "caller": "buildCharSpans",
       "calleeFile": null,
-      "callee": "Math.max",
+      "callee": "getContext",
       "type": "method",
-      "line": 158,
-      "column": 11
+      "line": 198,
+      "column": 21
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "getTrayThumbBounds",
+      "caller": "buildCharSpans",
       "calleeFile": null,
-      "callee": "trayAvailable.filter",
+      "callee": "block.font",
       "type": "method",
-      "line": 693,
-      "column": 25
+      "line": 216,
+      "column": 17
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "getTrayThumbBounds",
+      "caller": "buildCharSpans",
       "calleeFile": null,
-      "callee": "bounds.push",
+      "callee": "block.lineHeight",
       "type": "method",
-      "line": 703,
+      "line": 217,
+      "column": 15
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "block.marginTop",
+      "type": "method",
+      "line": 218,
+      "column": 9
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "prepareWithSegments",
+      "type": "direct",
+      "line": 220,
+      "column": 21
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "layoutWithLines",
+      "type": "direct",
+      "line": 221,
+      "column": 19
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "measureCtx.measureText",
+      "type": "method",
+      "line": 225,
+      "column": 24
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "measureCtx.measureText",
+      "type": "method",
+      "line": 231,
+      "column": 19
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "getSpan",
+      "type": "direct",
+      "line": 232,
+      "column": 21
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "newChars.push",
+      "type": "method",
+      "line": 242,
+      "column": 8
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildCharSpans",
+      "calleeFile": null,
+      "callee": "el.remove",
+      "type": "method",
+      "line": 256,
       "column": 4
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "hitTestTray",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getTrayThumbBounds",
-      "type": "direct",
-      "line": 710,
-      "column": 18
+      "caller": "buildTrackCards",
+      "calleeFile": null,
+      "callee": "join",
+      "type": "method",
+      "line": 354,
+      "column": 9
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "buildTrackCards",
+      "calleeFile": "src/shared/nav-data.ts",
+      "callee": "tracks.map",
+      "type": "method",
+      "line": 354,
+      "column": 9
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "getSpan",
+      "calleeFile": null,
+      "callee": "document.createElement",
+      "type": "method",
+      "line": 208,
+      "column": 17
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "getSpan",
+      "calleeFile": null,
+      "callee": "charLayer.appendChild",
+      "type": "method",
+      "line": 210,
+      "column": 4
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "h2Font",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 24,
+      "column": 15
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "heroFont",
+      "calleeFile": null,
+      "callee": "Math.round",
+      "type": "method",
+      "line": 19,
+      "column": 15
     },
     {
       "callerFile": "src/pages/home.ts",
@@ -11213,26 +10961,8 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 1066,
+      "line": 371,
       "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "content.closest",
-      "type": "method",
-      "line": 1070,
-      "column": 22
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "contentArea.classList.add",
-      "type": "property-chain",
-      "line": 1071,
-      "column": 19
     },
     {
       "callerFile": "src/pages/home.ts",
@@ -11240,79 +10970,70 @@
       "calleeFile": "src/shared/pretext-helpers.ts",
       "callee": "waitForFonts",
       "type": "direct",
-      "line": 1073,
+      "line": 374,
       "column": 8
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
-      "calleeFile": "src/shared/newspaper-images.ts",
-      "callee": "TRAY_IMAGES.map",
+      "calleeFile": null,
+      "callee": "document.querySelector",
       "type": "method",
-      "line": 1075,
-      "column": 18
+      "line": 376,
+      "column": 22
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": null,
-      "callee": "prepareWithSegments",
+      "callee": "mainContent.classList.add",
+      "type": "property-chain",
+      "line": 377,
+      "column": 19
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "init",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "getControlState",
       "type": "direct",
-      "line": 1076,
-      "column": 13
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "join",
-      "type": "method",
-      "line": 1100,
-      "column": 10
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": "src/shared/nav-data.ts",
-      "callee": "tracks.map",
-      "type": "method",
-      "line": 1100,
-      "column": 10
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "document.getElementById",
-      "type": "method",
-      "line": 1110,
-      "column": 16
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "document.getElementById",
-      "type": "method",
-      "line": 1111,
-      "column": 13
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "canvasEl.getContext",
-      "type": "method",
-      "line": 1112,
-      "column": 8
+      "line": 379,
+      "column": 20
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": "src/pages/home.ts",
-      "callee": "setCanvasHeight",
+      "callee": "buildTrackCards",
       "type": "direct",
-      "line": 1121,
+      "line": 389,
+      "column": 32
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 393,
+      "column": 13
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 394,
+      "column": 14
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "init",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "buildCharSpans",
+      "type": "direct",
+      "line": 397,
       "column": 2
     },
     {
@@ -11321,97 +11042,43 @@
       "calleeFile": null,
       "callee": "window.addEventListener",
       "type": "method",
-      "line": 1122,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "sizeCanvas",
-      "type": "direct",
-      "line": 1128,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "placeInitialImages",
-      "type": "direct",
-      "line": 1129,
-      "column": 17
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
-      "type": "method",
-      "line": 1132,
+      "line": 406,
       "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
+      "callee": "window.addEventListener",
       "type": "method",
-      "line": 1133,
+      "line": 407,
       "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
+      "callee": "document.addEventListener",
       "type": "method",
-      "line": 1134,
+      "line": 409,
       "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
+      "callee": "charLayer.getBoundingClientRect",
       "type": "method",
-      "line": 1135,
-      "column": 2
+      "line": 410,
+      "column": 14
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
+      "callee": "document.addEventListener",
       "type": "method",
-      "line": 1136,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
-      "type": "method",
-      "line": 1137,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
-      "type": "method",
-      "line": 1138,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "canvasEl.addEventListener",
-      "type": "method",
-      "line": 1139,
+      "line": 416,
       "column": 2
     },
     {
@@ -11420,44 +11087,35 @@
       "calleeFile": null,
       "callee": "observe",
       "type": "method",
-      "line": 1141,
+      "line": 419,
       "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
       "caller": "init",
       "calleeFile": "src/pages/home.ts",
-      "callee": "render",
+      "callee": "buildCharSpans",
       "type": "direct",
-      "line": 1142,
-      "column": 67
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": null,
-      "callee": "window.matchMedia",
-      "type": "method",
-      "line": 1145,
-      "column": 31
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "startDrift",
-      "type": "direct",
-      "line": 1147,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "init",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 1148,
+      "line": 421,
       "column": 4
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "init",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "onControlChange",
+      "type": "direct",
+      "line": 425,
+      "column": 2
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "init",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "buildCharSpans",
+      "type": "direct",
+      "line": 430,
+      "column": 6
     },
     {
       "callerFile": "src/pages/home.ts",
@@ -11465,611 +11123,107 @@
       "calleeFile": null,
       "callee": "requestAnimationFrame",
       "type": "direct",
-      "line": 1152,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onDoubleClick",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getEventPos",
-      "type": "direct",
-      "line": 1003,
-      "column": 14
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onDoubleClick",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "hitTestPlaced",
-      "type": "direct",
-      "line": 1004,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onDoubleClick",
-      "calleeFile": "src/shared/newspaper-images.ts",
-      "callee": "TRAY_IMAGES.findIndex",
-      "type": "method",
-      "line": 1007,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onDoubleClick",
-      "calleeFile": null,
-      "callee": "placedImages.splice",
-      "type": "method",
-      "line": 1009,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onDoubleClick",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 1010,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onMouseLeave",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 986,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onMouseLeave",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 998,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getEventPos",
-      "type": "direct",
-      "line": 774,
-      "column": 14
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 784,
-      "column": 6
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "e.preventDefault",
-      "type": "method",
-      "line": 804,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 805,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "hitTestDrift",
-      "type": "direct",
-      "line": 810,
-      "column": 45
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 813,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "e.preventDefault",
-      "type": "method",
-      "line": 829,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 830,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "hitTestTray",
-      "type": "direct",
-      "line": 836,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getResponsiveConfig",
-      "type": "direct",
-      "line": 839,
-      "column": 21
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 844,
-      "column": 6
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "e.preventDefault",
-      "type": "method",
-      "line": 852,
-      "column": 6
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 853,
-      "column": 6
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "hitTestPlaced",
-      "type": "direct",
-      "line": 859,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": null,
-      "callee": "e.preventDefault",
-      "type": "method",
-      "line": 876,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerDown",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 877,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getEventPos",
-      "type": "direct",
-      "line": 883,
-      "column": 14
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": null,
-      "callee": "e.preventDefault",
-      "type": "method",
-      "line": 887,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 890,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": null,
-      "callee": "e.preventDefault",
-      "type": "method",
-      "line": 895,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 898,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getNextAvailableTrayIndex",
-      "type": "direct",
-      "line": 909,
-      "column": 22
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "startFloatingFromTray",
-      "type": "direct",
-      "line": 912,
-      "column": 8
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "hitTestTray",
-      "type": "direct",
-      "line": 918,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "startFloatingFromTray",
-      "type": "direct",
-      "line": 920,
-      "column": 6
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerMove",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "hitTestPlaced",
-      "type": "direct",
-      "line": 925,
-      "column": 23
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerUp",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 941,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerUp",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getEventPos",
-      "type": "direct",
-      "line": 947,
-      "column": 16
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerUp",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 953,
-      "column": 6
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "onPointerUp",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "render",
-      "type": "direct",
-      "line": 969,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "placeInitialImages",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getResponsiveConfig",
-      "type": "direct",
-      "line": 1017,
-      "column": 17
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "placeInitialImages",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 1027,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "placeInitialImages",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 1040,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "placeInitialImages",
-      "calleeFile": null,
-      "callee": "placedImages.push",
-      "type": "method",
-      "line": 1052,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "sizeCanvas",
-      "type": "direct",
-      "line": 503,
-      "column": 28
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getResponsiveConfig",
-      "type": "direct",
-      "line": 504,
-      "column": 17
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": null,
-      "callee": "ctx.fillRect",
-      "type": "method",
-      "line": 508,
+      "line": 435,
       "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawMasthead",
-      "type": "direct",
-      "line": 510,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
+      "caller": "metricFont",
       "calleeFile": null,
-      "callee": "columns.push",
+      "callee": "Math.round",
       "type": "method",
-      "line": 520,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawColumnRules",
-      "type": "direct",
-      "line": 526,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "buildObstacles",
-      "type": "direct",
-      "line": 528,
-      "column": 20
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": null,
-      "callee": "performance.now",
-      "type": "method",
-      "line": 531,
-      "column": 16
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": null,
-      "callee": "Math.ceil",
-      "type": "method",
-      "line": 532,
-      "column": 33
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawColumnarText",
-      "type": "direct",
-      "line": 533,
-      "column": 18
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": null,
-      "callee": "performance.now",
-      "type": "method",
-      "line": 534,
-      "column": 17
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": null,
-      "callee": "placedImages.forEach",
-      "type": "method",
-      "line": 537,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawPlacedImage",
-      "type": "direct",
-      "line": 539,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawPlacedImage",
-      "type": "direct",
-      "line": 545,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawFloatingImage",
-      "type": "direct",
-      "line": 553,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawPlacedImage",
-      "type": "direct",
-      "line": 558,
-      "column": 4
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawTray",
-      "type": "direct",
-      "line": 561,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "render",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "drawPerfOverlay",
-      "type": "direct",
-      "line": 562,
-      "column": 2
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "sizeCanvas",
-      "calleeFile": null,
-      "callee": "containerEl.getBoundingClientRect",
-      "type": "method",
-      "line": 107,
+      "line": 34,
       "column": 15
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "sizeCanvas",
+      "caller": "metricLabelFont",
       "calleeFile": null,
-      "callee": "ctx.setTransform",
+      "callee": "Math.round",
       "type": "method",
-      "line": 114,
+      "line": 39,
+      "column": 15
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "tick",
+      "calleeFile": "src/pages/home.ts",
+      "callee": "update",
+      "type": "direct",
+      "line": 347,
       "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "startDrift",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getResponsiveConfig",
+      "caller": "tick",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
       "type": "direct",
-      "line": 612,
-      "column": 17
+      "line": 348,
+      "column": 2
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "startDrift",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getNextAvailableTrayIndex",
-      "type": "direct",
-      "line": 617,
+      "caller": "trackMouse",
+      "calleeFile": null,
+      "callee": "charLayer.getBoundingClientRect",
+      "type": "method",
+      "line": 401,
       "column": 14
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "startDrift",
+      "caller": "update",
+      "calleeFile": null,
+      "callee": "Math.sqrt",
+      "type": "method",
+      "line": 269,
+      "column": 38
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "update",
+      "calleeFile": null,
+      "callee": "Math.sqrt",
+      "type": "method",
+      "line": 283,
+      "column": 19
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "update",
+      "calleeFile": null,
+      "callee": "Math.min",
+      "type": "method",
+      "line": 289,
+      "column": 30
+    },
+    {
+      "callerFile": "src/pages/home.ts",
+      "caller": "update",
       "calleeFile": null,
       "callee": "Math.random",
       "type": "method",
-      "line": 635,
-      "column": 32
+      "line": 296,
+      "column": 21
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "startDrift",
+      "caller": "update",
       "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 636,
-      "column": 2
+      "callee": "Math.random",
+      "type": "method",
+      "line": 297,
+      "column": 21
     },
     {
       "callerFile": "src/pages/home.ts",
-      "caller": "startFloatingFromTray",
-      "calleeFile": "src/pages/home.ts",
-      "callee": "getResponsiveConfig",
-      "type": "direct",
-      "line": 747,
-      "column": 17
-    },
-    {
-      "callerFile": "src/pages/home.ts",
-      "caller": "startFloatingFromTray",
+      "caller": "update",
       "calleeFile": null,
-      "callee": "requestAnimationFrame",
-      "type": "direct",
-      "line": 768,
-      "column": 2
+      "callee": "Math.sqrt",
+      "type": "method",
+      "line": 335,
+      "column": 19
     },
     {
       "callerFile": "src/pages/i18n.ts",
@@ -13256,7 +12410,7 @@
       "calleeFile": "src/pages/masonry.ts",
       "callee": "init",
       "type": "direct",
-      "line": 200,
+      "line": 208,
       "column": 0
     },
     {
@@ -13265,8 +12419,17 @@
       "calleeFile": "src/pages/masonry.ts",
       "callee": "getColumnCount",
       "type": "direct",
-      "line": 119,
+      "line": 120,
       "column": 17
+    },
+    {
+      "callerFile": "src/pages/masonry.ts",
+      "caller": "doLayout",
+      "calleeFile": null,
+      "callee": "Math.max",
+      "type": "method",
+      "line": 123,
+      "column": 22
     },
     {
       "callerFile": "src/pages/masonry.ts",
@@ -13274,7 +12437,7 @@
       "calleeFile": "src/shared/pretext-helpers.ts",
       "callee": "timeExecution",
       "type": "direct",
-      "line": 124,
+      "line": 125,
       "column": 24
     },
     {
@@ -13283,7 +12446,7 @@
       "calleeFile": null,
       "callee": "fill",
       "type": "method",
-      "line": 125,
+      "line": 126,
       "column": 25
     },
     {
@@ -13292,7 +12455,7 @@
       "calleeFile": null,
       "callee": "CARDS.forEach",
       "type": "method",
-      "line": 127,
+      "line": 128,
       "column": 6
     },
     {
@@ -13301,7 +12464,7 @@
       "calleeFile": null,
       "callee": "layout",
       "type": "direct",
-      "line": 128,
+      "line": 129,
       "column": 39
     },
     {
@@ -13310,7 +12473,7 @@
       "calleeFile": null,
       "callee": "Math.max",
       "type": "method",
-      "line": 148,
+      "line": 149,
       "column": 24
     },
     {
@@ -13319,7 +12482,7 @@
       "calleeFile": null,
       "callee": "perfMeter.update",
       "type": "method",
-      "line": 152,
+      "line": 153,
       "column": 4
     },
     {
@@ -13424,11 +12587,29 @@
     {
       "callerFile": "src/pages/masonry.ts",
       "caller": "init",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
+      "type": "direct",
+      "line": 160,
+      "column": 2
+    },
+    {
+      "callerFile": "src/pages/masonry.ts",
+      "caller": "init",
       "calleeFile": "src/pages/masonry.ts",
       "callee": "doLayout",
       "type": "direct",
-      "line": 158,
-      "column": 2
+      "line": 161,
+      "column": 4
+    },
+    {
+      "callerFile": "src/pages/masonry.ts",
+      "caller": "init",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
+      "type": "direct",
+      "line": 164,
+      "column": 6
     },
     {
       "callerFile": "src/pages/masonry.ts",
@@ -13436,7 +12617,7 @@
       "calleeFile": "src/shared/pretext-helpers.ts",
       "callee": "onResize",
       "type": "direct",
-      "line": 159,
+      "line": 167,
       "column": 2
     },
     {
@@ -13445,7 +12626,7 @@
       "calleeFile": "src/pages/masonry.ts",
       "callee": "doLayout",
       "type": "direct",
-      "line": 159,
+      "line": 167,
       "column": 26
     },
     {
@@ -13454,7 +12635,7 @@
       "calleeFile": "src/components/source-viewer.ts",
       "callee": "createSourceViewer",
       "type": "direct",
-      "line": 194,
+      "line": 202,
       "column": 8
     },
     {
@@ -13463,7 +12644,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 194,
+      "line": 202,
       "column": 27
     },
     {
@@ -19083,6 +18264,672 @@
       "column": 2
     },
     {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "applyToPage",
+      "calleeFile": null,
+      "callee": "root.setAttribute",
+      "type": "method",
+      "line": 44,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "applyToPage",
+      "calleeFile": null,
+      "callee": "root.style.setProperty",
+      "type": "property-chain",
+      "line": 46,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "applyToPage",
+      "calleeFile": null,
+      "callee": "String",
+      "type": "direct",
+      "line": 46,
+      "column": 41
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "applyToPage",
+      "calleeFile": null,
+      "callee": "root.setAttribute",
+      "type": "method",
+      "line": 48,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "applyToPage",
+      "calleeFile": null,
+      "callee": "String",
+      "type": "direct",
+      "line": 48,
+      "column": 36
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "checkDock",
+      "calleeFile": null,
+      "callee": "barEl.classList.toggle",
+      "type": "property-chain",
+      "line": 151,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "loadState",
+      "type": "direct",
+      "line": 99,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "applyToPage",
+      "type": "direct",
+      "line": 100,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 103,
+      "column": 19
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 104,
+      "column": 20
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "themeBtn.addEventListener",
+      "type": "method",
+      "line": 105,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "notify",
+      "type": "direct",
+      "line": 108,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 112,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "flipBtn.classList.toggle",
+      "type": "property-chain",
+      "line": 113,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "flipBtn.addEventListener",
+      "type": "method",
+      "line": 114,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "flipBtn.classList.toggle",
+      "type": "property-chain",
+      "line": 116,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "notify",
+      "type": "direct",
+      "line": 117,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 121,
+      "column": 21
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "String",
+      "type": "direct",
+      "line": 123,
+      "column": 23
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "sizeSlider.addEventListener",
+      "type": "method",
+      "line": 124,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "parseFloat",
+      "type": "direct",
+      "line": 125,
+      "column": 24
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "notify",
+      "type": "direct",
+      "line": 126,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 131,
+      "column": 25
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "modesContainer.addEventListener",
+      "type": "method",
+      "line": 132,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "closest",
+      "type": "method",
+      "line": 133,
+      "column": 16
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "forEach",
+      "type": "method",
+      "line": 136,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "modesContainer.querySelectorAll",
+      "type": "method",
+      "line": 136,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "b.classList.remove",
+      "type": "property-chain",
+      "line": 136,
+      "column": 70
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "btn.classList.add",
+      "type": "property-chain",
+      "line": 137,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "notify",
+      "type": "direct",
+      "line": 138,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 142,
+      "column": 14
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": null,
+      "callee": "window.addEventListener",
+      "type": "method",
+      "line": 154,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "checkDock",
+      "type": "direct",
+      "line": 155,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "initControls",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "notify",
+      "type": "direct",
+      "line": 159,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "loadState",
+      "calleeFile": null,
+      "callee": "localStorage.getItem",
+      "type": "method",
+      "line": 53,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "loadState",
+      "calleeFile": null,
+      "callee": "JSON.parse",
+      "type": "method",
+      "line": 55,
+      "column": 21
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "loadState",
+      "calleeFile": null,
+      "callee": "localStorage.getItem",
+      "type": "method",
+      "line": 59,
+      "column": 7
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "loadState",
+      "calleeFile": null,
+      "callee": "window.matchMedia",
+      "type": "method",
+      "line": 60,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "notify",
+      "calleeFile": null,
+      "callee": "fn",
+      "type": "direct",
+      "line": 35,
+      "column": 30
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "notify",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "applyToPage",
+      "type": "direct",
+      "line": 36,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "notify",
+      "calleeFile": null,
+      "callee": "localStorage.setItem",
+      "type": "method",
+      "line": 38,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "notify",
+      "calleeFile": null,
+      "callee": "JSON.stringify",
+      "type": "method",
+      "line": 38,
+      "column": 38
+    },
+    {
+      "callerFile": "src/shared/controls.ts",
+      "caller": "onControlChange",
+      "calleeFile": null,
+      "callee": "listeners.push",
+      "type": "method",
+      "line": 31,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "container.querySelectorAll",
+      "type": "method",
+      "line": 43,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "forEach",
+      "type": "method",
+      "line": 43,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "section.classList.contains",
+      "type": "property-chain",
+      "line": 44,
+      "column": 9
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "section.classList.add",
+      "type": "property-chain",
+      "line": 45,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "observe",
+      "type": "method",
+      "line": 47,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "container.querySelector",
+      "type": "method",
+      "line": 52,
+      "column": 17
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "header.classList.contains",
+      "type": "property-chain",
+      "line": 53,
+      "column": 17
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "header.classList.add",
+      "type": "property-chain",
+      "line": 54,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "revealObserver.observe",
+      "type": "method",
+      "line": 57,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "container.querySelectorAll",
+      "type": "method",
+      "line": 61,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "forEach",
+      "type": "method",
+      "line": 61,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "enhanceContent",
+      "calleeFile": null,
+      "callee": "observe",
+      "type": "method",
+      "line": 62,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initCursorGlow",
+      "calleeFile": null,
+      "callee": "document.createElement",
+      "type": "method",
+      "line": 75,
+      "column": 11
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initCursorGlow",
+      "calleeFile": null,
+      "callee": "document.body.appendChild",
+      "type": "property-chain",
+      "line": 88,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initCursorGlow",
+      "calleeFile": null,
+      "callee": "document.addEventListener",
+      "type": "method",
+      "line": 96,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initCursorGlow",
+      "calleeFile": null,
+      "callee": "document.addEventListener",
+      "type": "method",
+      "line": 105,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initCursorGlow",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
+      "type": "direct",
+      "line": 120,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseum",
+      "calleeFile": "src/shared/museum.ts",
+      "callee": "initMuseumReveals",
+      "type": "direct",
+      "line": 140,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseum",
+      "calleeFile": "src/shared/museum.ts",
+      "callee": "initCursorGlow",
+      "type": "direct",
+      "line": 141,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseum",
+      "calleeFile": "src/shared/museum.ts",
+      "callee": "initParallaxDepth",
+      "type": "direct",
+      "line": 142,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": null,
+      "callee": "entries.forEach",
+      "type": "method",
+      "line": 14,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": null,
+      "callee": "entry.target.classList.add",
+      "type": "property-chain",
+      "line": 16,
+      "column": 10
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": null,
+      "callee": "revealObserver.unobserve",
+      "type": "method",
+      "line": 18,
+      "column": 10
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 26,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": "src/shared/museum.ts",
+      "callee": "enhanceContent",
+      "type": "direct",
+      "line": 30,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": null,
+      "callee": "contentObserver.observe",
+      "type": "method",
+      "line": 33,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
+      "type": "direct",
+      "line": 36,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initMuseumReveals",
+      "calleeFile": "src/shared/museum.ts",
+      "callee": "enhanceContent",
+      "type": "direct",
+      "line": 36,
+      "column": 30
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initParallaxDepth",
+      "calleeFile": null,
+      "callee": "document.querySelector",
+      "type": "method",
+      "line": 127,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "initParallaxDepth",
+      "calleeFile": null,
+      "callee": "window.addEventListener",
+      "type": "method",
+      "line": 130,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/museum.ts",
+      "caller": "updateGlow",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
+      "type": "direct",
+      "line": 117,
+      "column": 4
+    },
+    {
       "callerFile": "src/shared/nav-data.test.ts",
       "caller": "<module>",
       "calleeFile": null,
@@ -20888,8 +20735,17 @@
       "calleeFile": "src/shared/nav-data.ts",
       "callee": "getCurrentSlug",
       "type": "direct",
-      "line": 18,
+      "line": 21,
       "column": 13
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "<module>",
+      "calleeFile": "src/shared/nav-data.ts",
+      "callee": "getTrackForSlug",
+      "type": "direct",
+      "line": 22,
+      "column": 21
     },
     {
       "callerFile": "src/shared/shell.ts",
@@ -20897,7 +20753,7 @@
       "calleeFile": "src/shared/shell.ts",
       "callee": "buildShell",
       "type": "direct",
-      "line": 167,
+      "line": 502,
       "column": 0
     },
     {
@@ -20906,7 +20762,16 @@
       "calleeFile": "src/shared/analytics.ts",
       "callee": "initAnalytics",
       "type": "direct",
-      "line": 168,
+      "line": 503,
+      "column": 0
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "<module>",
+      "calleeFile": "src/shared/museum.ts",
+      "callee": "initMuseum",
+      "type": "direct",
+      "line": 504,
       "column": 0
     },
     {
@@ -20915,7 +20780,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 149,
+      "line": 293,
       "column": 20
     },
     {
@@ -20924,8 +20789,8 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 150,
-      "column": 18
+      "line": 294,
+      "column": 21
     },
     {
       "callerFile": "src/shared/shell.ts",
@@ -20933,7 +20798,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 151,
+      "line": 295,
       "column": 18
     },
     {
@@ -20942,7 +20807,7 @@
       "calleeFile": null,
       "callee": "hamburger.addEventListener",
       "type": "method",
-      "line": 158,
+      "line": 302,
       "column": 2
     },
     {
@@ -20951,7 +20816,7 @@
       "calleeFile": null,
       "callee": "overlay.addEventListener",
       "type": "method",
-      "line": 159,
+      "line": 303,
       "column": 2
     },
     {
@@ -20960,7 +20825,7 @@
       "calleeFile": "src/components/search.ts",
       "callee": "initSearch",
       "type": "direct",
-      "line": 162,
+      "line": 306,
       "column": 2
     },
     {
@@ -20969,7 +20834,7 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 163,
+      "line": 307,
       "column": 24
     },
     {
@@ -20978,53 +20843,125 @@
       "calleeFile": null,
       "callee": "searchTrigger.addEventListener",
       "type": "method",
-      "line": 164,
+      "line": 308,
       "column": 2
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildHeader",
-      "calleeFile": "src/shared/nav-data.ts",
-      "callee": "getTrackForSlug",
+      "caller": "bindEvents",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "initMegaMenu",
       "type": "direct",
-      "line": 46,
-      "column": 22
+      "line": 311,
+      "column": 2
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildHeader",
+      "caller": "buildBanner",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "isBannerDismissed",
+      "type": "direct",
+      "line": 118,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildFloatingNav",
       "calleeFile": "src/shared/nav-data.ts",
       "callee": "getBase",
       "type": "direct",
-      "line": 49,
+      "line": 161,
       "column": 17
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildHeader",
+      "caller": "buildFloatingNav",
       "calleeFile": null,
       "callee": "join",
       "type": "method",
-      "line": 51,
+      "line": 163,
       "column": 10
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildHeader",
+      "caller": "buildFloatingNav",
       "calleeFile": "src/shared/nav-data.ts",
       "callee": "tracks.map",
       "type": "method",
-      "line": 51,
+      "line": 163,
       "column": 10
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildHeader",
+      "caller": "buildFloatingNav",
+      "calleeFile": null,
+      "callee": "t.pages.filter",
+      "type": "property-chain",
+      "line": 166,
+      "column": 56
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildFloatingNav",
+      "calleeFile": null,
+      "callee": "join",
+      "type": "method",
+      "line": 176,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildFloatingNav",
+      "calleeFile": null,
+      "callee": "menuPages.map",
+      "type": "method",
+      "line": 176,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildFloatingNav",
       "calleeFile": "src/components/search.ts",
       "callee": "createSearchButton",
       "type": "direct",
-      "line": 55,
+      "line": 188,
+      "column": 10
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildMobileMenu",
+      "calleeFile": null,
+      "callee": "join",
+      "type": "method",
+      "line": 207,
       "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildMobileMenu",
+      "calleeFile": "src/shared/nav-data.ts",
+      "callee": "tracks.map",
+      "type": "method",
+      "line": 207,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildMobileMenu",
+      "calleeFile": null,
+      "callee": "join",
+      "type": "method",
+      "line": 210,
+      "column": 12
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildMobileMenu",
+      "calleeFile": null,
+      "callee": "t.pages.map",
+      "type": "property-chain",
+      "line": 210,
+      "column": 12
     },
     {
       "callerFile": "src/shared/shell.ts",
@@ -21032,7 +20969,7 @@
       "calleeFile": "src/shared/nav-data.ts",
       "callee": "getPrevPage",
       "type": "direct",
-      "line": 87,
+      "line": 220,
       "column": 15
     },
     {
@@ -21041,7 +20978,7 @@
       "calleeFile": "src/shared/nav-data.ts",
       "callee": "getNextPage",
       "type": "direct",
-      "line": 88,
+      "line": 221,
       "column": 15
     },
     {
@@ -21050,8 +20987,17 @@
       "calleeFile": null,
       "callee": "document.getElementById",
       "type": "method",
-      "line": 21,
+      "line": 41,
       "column": 14
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "setTrackTheme",
+      "type": "direct",
+      "line": 44,
+      "column": 2
     },
     {
       "callerFile": "src/shared/shell.ts",
@@ -21059,7 +21005,7 @@
       "calleeFile": null,
       "callee": "document.createElement",
       "type": "method",
-      "line": 24,
+      "line": 46,
       "column": 19
     },
     {
@@ -21068,25 +21014,52 @@
       "calleeFile": null,
       "callee": "document.body.prepend",
       "type": "property-chain",
-      "line": 28,
+      "line": 50,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": null,
+      "callee": "document.createElement",
+      "type": "method",
+      "line": 53,
+      "column": 19
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": null,
+      "callee": "document.body.prepend",
+      "type": "property-chain",
+      "line": 55,
       "column": 2
     },
     {
       "callerFile": "src/shared/shell.ts",
       "caller": "buildShell",
       "calleeFile": "src/shared/shell.ts",
-      "callee": "buildHeader",
+      "callee": "buildBanner",
       "type": "direct",
-      "line": 32,
+      "line": 59,
       "column": 6
     },
     {
       "callerFile": "src/shared/shell.ts",
       "caller": "buildShell",
       "calleeFile": "src/shared/shell.ts",
-      "callee": "buildSidebar",
+      "callee": "buildFloatingNav",
       "type": "direct",
-      "line": 33,
+      "line": 60,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "buildMobileMenu",
+      "type": "direct",
+      "line": 61,
       "column": 6
     },
     {
@@ -21095,7 +21068,7 @@
       "calleeFile": "src/shared/shell.ts",
       "callee": "buildPageNav",
       "type": "direct",
-      "line": 37,
+      "line": 65,
       "column": 8
     },
     {
@@ -21104,8 +21077,17 @@
       "calleeFile": "src/shared/shell.ts",
       "callee": "buildFooter",
       "type": "direct",
-      "line": 39,
+      "line": 67,
       "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "buildControls",
+      "type": "direct",
+      "line": 68,
+      "column": 24
     },
     {
       "callerFile": "src/shared/shell.ts",
@@ -21113,62 +21095,845 @@
       "calleeFile": "src/shared/shell.ts",
       "callee": "bindEvents",
       "type": "direct",
-      "line": 42,
+      "line": 71,
       "column": 2
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildSidebar",
-      "calleeFile": null,
-      "callee": "join",
-      "type": "method",
+      "caller": "buildShell",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "initBanner",
+      "type": "direct",
+      "line": 72,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": "src/shared/controls.ts",
+      "callee": "initControls",
+      "type": "direct",
+      "line": 73,
+      "column": 23
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "buildShell",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "initScrollReveal",
+      "type": "direct",
       "line": 74,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "cancelClose",
+      "calleeFile": null,
+      "callee": "clearTimeout",
+      "type": "direct",
+      "line": 351,
+      "column": 24
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "checkScroll",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "updateNav",
+      "type": "direct",
+      "line": 465,
       "column": 8
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildSidebar",
-      "calleeFile": "src/shared/nav-data.ts",
-      "callee": "tracks.map",
+      "caller": "closeMenu",
+      "calleeFile": null,
+      "callee": "openTrigger.setAttribute",
       "type": "method",
-      "line": 74,
-      "column": 8
+      "line": 339,
+      "column": 21
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "buildSidebar",
+      "caller": "closeMenu",
       "calleeFile": null,
-      "callee": "join",
-      "type": "method",
-      "line": 77,
-      "column": 12
-    },
-    {
-      "callerFile": "src/shared/shell.ts",
-      "caller": "buildSidebar",
-      "calleeFile": null,
-      "callee": "t.pages.map",
+      "callee": "openPanel.classList.remove",
       "type": "property-chain",
-      "line": 77,
-      "column": 12
+      "line": 340,
+      "column": 19
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "toggleSidebar",
+      "caller": "initBanner",
       "calleeFile": null,
-      "callee": "sidebar.classList.toggle",
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 130,
+      "column": 17
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "syncOffset",
+      "type": "direct",
+      "line": 143,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "window.addEventListener",
+      "type": "method",
+      "line": 144,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "window.addEventListener",
+      "type": "method",
+      "line": 145,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "addEventListener",
+      "type": "method",
+      "line": 147,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "banner.querySelector",
+      "type": "method",
+      "line": 147,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "localStorage.setItem",
+      "type": "method",
+      "line": 149,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "banner.remove",
+      "type": "method",
+      "line": 151,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "window.removeEventListener",
+      "type": "method",
+      "line": 152,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "window.removeEventListener",
+      "type": "method",
+      "line": 153,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initBanner",
+      "calleeFile": null,
+      "callee": "root.style.removeProperty",
       "type": "property-chain",
       "line": 154,
       "column": 4
     },
     {
       "callerFile": "src/shared/shell.ts",
-      "caller": "toggleSidebar",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "document.querySelectorAll",
+      "type": "method",
+      "line": 315,
+      "column": 20
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdowns.forEach",
+      "type": "method",
+      "line": 354,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.querySelector",
+      "type": "method",
+      "line": 355,
+      "column": 20
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.querySelector",
+      "type": "method",
+      "line": 356,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.addEventListener",
+      "type": "method",
+      "line": 359,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "cancelClose",
+      "type": "direct",
+      "line": 360,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "openMenu",
+      "type": "direct",
+      "line": 361,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.addEventListener",
+      "type": "method",
+      "line": 363,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "scheduleClose",
+      "type": "direct",
+      "line": 364,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "trigger.addEventListener",
+      "type": "method",
+      "line": 368,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "cancelClose",
+      "type": "direct",
+      "line": 369,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "openMenu",
+      "type": "direct",
+      "line": 370,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "trigger.addEventListener",
+      "type": "method",
+      "line": 374,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "trigger.getAttribute",
+      "type": "method",
+      "line": 375,
+      "column": 23
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "closeMenu",
+      "type": "direct",
+      "line": 377,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "openMenu",
+      "type": "direct",
+      "line": 379,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.querySelector",
+      "type": "method",
+      "line": 380,
+      "column": 26
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "firstItem.focus",
+      "type": "method",
+      "line": 381,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "trigger.addEventListener",
+      "type": "method",
+      "line": 386,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "e.preventDefault",
+      "type": "method",
+      "line": 388,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "openMenu",
+      "type": "direct",
+      "line": 389,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.querySelector",
+      "type": "method",
+      "line": 390,
+      "column": 26
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "firstItem.focus",
+      "type": "method",
+      "line": 391,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "closeMenu",
+      "type": "direct",
+      "line": 393,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "panel.addEventListener",
+      "type": "method",
+      "line": 398,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "Array.from",
+      "type": "method",
+      "line": 400,
+      "column": 20
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "panel.querySelectorAll",
+      "type": "method",
+      "line": 400,
+      "column": 31
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "items.indexOf",
+      "type": "method",
+      "line": 401,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "ke.preventDefault",
+      "type": "method",
+      "line": 404,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "next.focus",
+      "type": "method",
+      "line": 406,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "ke.preventDefault",
+      "type": "method",
+      "line": 408,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "trigger.focus",
+      "type": "method",
+      "line": 410,
+      "column": 10
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "focus",
+      "type": "method",
+      "line": 412,
+      "column": 10
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "ke.preventDefault",
+      "type": "method",
+      "line": 415,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "closeMenu",
+      "type": "direct",
+      "line": 416,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "trigger.focus",
+      "type": "method",
+      "line": 417,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.addEventListener",
+      "type": "method",
+      "line": 422,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.contains",
+      "type": "method",
+      "line": 424,
+      "column": 23
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "scheduleClose",
+      "type": "direct",
+      "line": 425,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "dropdown.addEventListener",
+      "type": "method",
+      "line": 429,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "cancelClose",
+      "type": "direct",
+      "line": 430,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "document.addEventListener",
+      "type": "method",
+      "line": 435,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": null,
+      "callee": "closest",
+      "type": "method",
+      "line": 436,
+      "column": 22
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initMegaMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "closeMenu",
+      "type": "direct",
+      "line": 437,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "document.getElementById",
+      "type": "method",
+      "line": 444,
+      "column": 14
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "nav.classList.add",
+      "type": "property-chain",
+      "line": 450,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "window.addEventListener",
+      "type": "method",
+      "line": 468,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "navEl.addEventListener",
+      "type": "method",
+      "line": 471,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "updateNav",
+      "type": "direct",
+      "line": 473,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "navEl.addEventListener",
+      "type": "method",
+      "line": 475,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "navEl.contains",
+      "type": "method",
+      "line": 477,
+      "column": 11
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "updateNav",
+      "type": "direct",
+      "line": 479,
+      "column": 8
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "entries.forEach",
+      "type": "method",
+      "line": 487,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "entry.target.classList.add",
+      "type": "property-chain",
+      "line": 489,
+      "column": 10
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "requestAnimationFrame",
+      "type": "direct",
+      "line": 497,
+      "column": 2
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "document.querySelectorAll",
+      "type": "method",
+      "line": 498,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "forEach",
+      "type": "method",
+      "line": 498,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "initScrollReveal",
+      "calleeFile": null,
+      "callee": "observer.observe",
+      "type": "method",
+      "line": 498,
+      "column": 62
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "isBannerDismissed",
+      "calleeFile": null,
+      "callee": "localStorage.getItem",
+      "type": "method",
+      "line": 111,
+      "column": 11
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "onResize",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "syncOffset",
+      "type": "direct",
+      "line": 140,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "openMenu",
+      "calleeFile": null,
+      "callee": "dropdown.querySelector",
+      "type": "method",
+      "line": 321,
+      "column": 20
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "openMenu",
+      "calleeFile": null,
+      "callee": "dropdown.querySelector",
+      "type": "method",
+      "line": 322,
+      "column": 18
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "openMenu",
+      "calleeFile": "src/shared/shell.ts",
+      "callee": "closeMenu",
+      "type": "direct",
+      "line": 327,
+      "column": 6
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "openMenu",
+      "calleeFile": null,
+      "callee": "clearTimeout",
+      "type": "direct",
+      "line": 330,
+      "column": 24
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "openMenu",
+      "calleeFile": null,
+      "callee": "trigger.setAttribute",
+      "type": "method",
+      "line": 332,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "openMenu",
+      "calleeFile": null,
+      "callee": "panel.classList.add",
+      "type": "property-chain",
+      "line": 333,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "scheduleClose",
+      "calleeFile": null,
+      "callee": "clearTimeout",
+      "type": "direct",
+      "line": 346,
+      "column": 22
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "scheduleClose",
+      "calleeFile": null,
+      "callee": "setTimeout",
+      "type": "direct",
+      "line": 347,
+      "column": 19
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "setTrackTheme",
+      "calleeFile": null,
+      "callee": "root.style.setProperty",
+      "type": "property-chain",
+      "line": 35,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "setTrackTheme",
+      "calleeFile": null,
+      "callee": "root.style.setProperty",
+      "type": "property-chain",
+      "line": 36,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "syncOffset",
+      "calleeFile": null,
+      "callee": "root.style.setProperty",
+      "type": "property-chain",
+      "line": 136,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "syncOffset",
+      "calleeFile": null,
+      "callee": "Math.max",
+      "type": "method",
+      "line": 136,
+      "column": 49
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "toggleMenu",
+      "calleeFile": null,
+      "callee": "mobileMenu.classList.toggle",
+      "type": "property-chain",
+      "line": 298,
+      "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "toggleMenu",
       "calleeFile": null,
       "callee": "overlay.classList.toggle",
       "type": "property-chain",
-      "line": 155,
+      "line": 299,
       "column": 4
+    },
+    {
+      "callerFile": "src/shared/shell.ts",
+      "caller": "updateNav",
+      "calleeFile": null,
+      "callee": "navEl.classList.toggle",
+      "type": "property-chain",
+      "line": 458,
+      "column": 6
     },
     {
       "callerFile": "vite.config.ts",
@@ -21415,14 +22180,14 @@
     }
   ],
   "summary": {
-    "totalFunctions": 207,
-    "totalCalls": 2195,
-    "filesWithCalls": 39,
+    "totalFunctions": 216,
+    "totalCalls": 2272,
+    "filesWithCalls": 41,
     "mostCalled": [
       {
         "qualifiedName": "document.getElementById",
         "file": "<external>",
-        "callerCount": 33
+        "callerCount": 37
       },
       {
         "qualifiedName": "requestAnimationFrame",
@@ -21430,14 +22195,9 @@
         "callerCount": 28
       },
       {
-        "qualifiedName": "Math.max",
+        "qualifiedName": "document.createElement",
         "file": "<external>",
         "callerCount": 27
-      },
-      {
-        "qualifiedName": "Math.min",
-        "file": "<external>",
-        "callerCount": 25
       },
       {
         "qualifiedName": "waitForFonts",
@@ -21445,14 +22205,29 @@
         "callerCount": 25
       },
       {
+        "qualifiedName": "Math.max",
+        "file": "<external>",
+        "callerCount": 24
+      },
+      {
+        "qualifiedName": "Math.min",
+        "file": "<external>",
+        "callerCount": 24
+      },
+      {
         "qualifiedName": "createSourceViewer",
         "file": "src/components/source-viewer.ts",
         "callerCount": 23
       },
       {
-        "qualifiedName": "document.createElement",
+        "qualifiedName": "Math.round",
         "file": "<external>",
-        "callerCount": 23
+        "callerCount": 20
+      },
+      {
+        "qualifiedName": "prepareWithSegments",
+        "file": "<external>",
+        "callerCount": 19
       },
       {
         "qualifiedName": "layout",
@@ -21460,12 +22235,7 @@
         "callerCount": 18
       },
       {
-        "qualifiedName": "prepareWithSegments",
-        "file": "<external>",
-        "callerCount": 18
-      },
-      {
-        "qualifiedName": "ctx.fillText",
+        "qualifiedName": "join",
         "file": "<external>",
         "callerCount": 17
       },
@@ -21475,49 +22245,44 @@
         "callerCount": 16
       },
       {
-        "qualifiedName": "ctx.beginPath",
-        "file": "<external>",
-        "callerCount": 16
-      },
-      {
-        "qualifiedName": "join",
-        "file": "<external>",
-        "callerCount": 16
-      },
-      {
-        "qualifiedName": "ctx.fillRect",
-        "file": "<external>",
-        "callerCount": 15
-      },
-      {
-        "qualifiedName": "ctx.lineTo",
-        "file": "<external>",
-        "callerCount": 15
-      },
-      {
-        "qualifiedName": "ctx.moveTo",
-        "file": "<external>",
-        "callerCount": 15
-      },
-      {
-        "qualifiedName": "ctx.stroke",
+        "qualifiedName": "prepare",
         "file": "<external>",
         "callerCount": 15
       },
       {
         "qualifiedName": "performance.now",
         "file": "<external>",
-        "callerCount": 15
-      },
-      {
-        "qualifiedName": "prepare",
-        "file": "<external>",
-        "callerCount": 15
+        "callerCount": 14
       },
       {
         "qualifiedName": "timeExecution",
         "file": "src/shared/pretext-helpers.ts",
         "callerCount": 14
+      },
+      {
+        "qualifiedName": "Math.floor",
+        "file": "<external>",
+        "callerCount": 13
+      },
+      {
+        "qualifiedName": "ctx.fillRect",
+        "file": "<external>",
+        "callerCount": 13
+      },
+      {
+        "qualifiedName": "layoutWithLines",
+        "file": "<external>",
+        "callerCount": 13
+      },
+      {
+        "qualifiedName": "ctx.beginPath",
+        "file": "<external>",
+        "callerCount": 12
+      },
+      {
+        "qualifiedName": "ctx.lineTo",
+        "file": "<external>",
+        "callerCount": 12
       }
     ],
     "mostCalling": [
@@ -21562,6 +22327,11 @@
         "calleeCount": 24
       },
       {
+        "qualifiedName": "initMegaMenu",
+        "file": "src/shared/shell.ts",
+        "calleeCount": 23
+      },
+      {
         "qualifiedName": "render",
         "file": "src/pages/canvas.ts",
         "calleeCount": 22
@@ -21578,11 +22348,6 @@
       },
       {
         "qualifiedName": "init",
-        "file": "src/pages/home.ts",
-        "calleeCount": 19
-      },
-      {
-        "qualifiedName": "init",
         "file": "src/pages/virtualized.ts",
         "calleeCount": 19
       },
@@ -21594,6 +22359,11 @@
       {
         "qualifiedName": "init",
         "file": "src/pages/text-rain.ts",
+        "calleeCount": 18
+      },
+      {
+        "qualifiedName": "initControls",
+        "file": "src/shared/controls.ts",
         "calleeCount": 18
       },
       {
@@ -21614,11 +22384,6 @@
       {
         "qualifiedName": "init",
         "file": "src/pages/i18n.ts",
-        "calleeCount": 17
-      },
-      {
-        "qualifiedName": "render",
-        "file": "src/pages/text-physics.ts",
         "calleeCount": 17
       }
     ],

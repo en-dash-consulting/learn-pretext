@@ -1,7 +1,7 @@
 ## Summary
 
-**Branch:** `feature/redesign-0403`
-**Base:** `main`
+**Branch:** `feature/graview-banner`
+**Base:** `origin/main`
 **Completed items:** 0
 
 ## Completed Work

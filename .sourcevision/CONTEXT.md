@@ -6,41 +6,40 @@
 <architecture>
 
 Project: ts-css
-Git: feature/redesign-0403 @ 8bf45d7
-Files: 113, Lines: 19508
-Languages: TypeScript(41) HTML(26) Markdown(21) JSON(8) Other(7)
+Git: feature/graview-banner @ 05aaa30
+Files: 43, Lines: 10989
+Languages: TypeScript(43)
 Zones: 7, Described: 7
-Weighted avg cohesion: 0.96, coupling: 0.04 (2 zones with ≥5 files)
-Unweighted avg cohesion: 0.96, coupling: 0.05
+Weighted avg cohesion: 0.69, coupling: 0.31 (2 zones with ≥5 files)
+Unweighted avg cohesion: 0.59, coupling: 0.41
 Small zones excluded from averages: 5 (<5 files, unreliable metrics)
-Import edges: 82, External packages: 7
+Import edges: 78, External packages: 7
 
 </architecture>
 
 <zones>
 
-[bubbles-demo] Bubbles Demo (1 files, coh=1.00 coup=0.00)
-  A singleton zone containing only src/pages/bubbles.ts, isolated by the import-graph detector due to a slightly different dependency fingerprint from the main pages cluster.
-  files: src/pages/bubbles.ts [page]
-[build-config] Build Configuration (4 files, coh=0.00 coup=0.00)
-  Project root files defining the Vite multi-page build system and repository metadata, with no import relationships by design.
-  files: .gitignore, LICENSE, llms.txt, vite.config.ts
-[demo-pages] Demo Pages (28 files, coh=0.96 coup=0.04)
-  The 26 self-contained interactive demo pages and their four supporting UI components, collectively demonstrating pretext library features across all learning tracks.
-  files: src/components/performance-meter.ts [component], src/components/slider.ts [component], src/components/source-viewer.ts [component], src/components/toggle.ts [component], src/pages/accessibility.ts [page], src/pages/accordion.ts [page], src/pages/api-reference.ts [page], src/pages/ascii-art.ts [page], src/pages/ascii-tanks.ts [page], src/pages/balanced-text.ts [page] +18
-[deployment-assets] Deployment Assets (3 files, coh=0.00 coup=0.00)
-  Static files served verbatim by the web host — domain binding, crawler rules, and the XML sitemap — with no build-time dependencies.
-  files: public/CNAME, public/robots.txt, public/sitemap.xml
-[newspaper-layout-demo] Newspaper Layout Demo (4 files, coh=0.67 coup=0.33)
-  The home page's flagship interactive canvas demo — a full newspaper layout engine with multi-column text flow, draggable images, and obstacle-aware reflow — grouped with its exclusive data modules and the About page.
-  files: src/pages/about.ts [page], src/pages/home.ts [page], src/shared/newspaper-images.ts [utility], src/shared/newspaper-text.ts [types]
-[pretext-reference-page] Pretext Reference Page (1 files, coh=1.00 coup=0.00)
-  Single documentation page covering known pretext limitations, font matching gotchas, and copy-paste implementation recipes with a live soft-hyphen demo.
-  files: src/pages/caveats.ts [page]
-[site-shell] Site Shell (10 files, coh=0.95 coup=0.05)
-  Core site infrastructure — the page shell compositor, navigation data model, search modal, analytics integration, and the global CSS design system — consumed by every page.
-  files: src/components/search.ts [component], src/shared/analytics.ts [utility], src/shared/nav-data.test.ts, src/shared/nav-data.ts [utility], src/shared/shell.ts [utility], src/shared/styles/components.css, src/shared/styles/global.css, src/shared/styles/layout.css, src/shared/styles/reset.css, src/shared/styles/variables.css
-[unzoned] 2 files: .rex/execution-log.jsonl, src/env.d.ts
+[pages] Pages (28 files, coh=0.78 coup=0.22)
+  28 files, primarily TypeScript
+  files: src/components/performance-meter.ts [component], src/components/search.ts [component], src/components/slider.ts [component], src/components/toggle.ts [component], src/pages/accordion.ts [page], src/pages/api-reference.ts [page], src/pages/balanced-text.ts [page], src/pages/bubbles.ts [page], src/pages/canvas.ts [page], src/pages/editorial.ts [page] +18
+[pages-2] Pages 2 (9 files, coh=0.40 coup=0.60)
+  9 files, primarily TypeScript
+  files: src/components/source-viewer.ts [component], src/pages/accessibility.ts [page], src/pages/ascii-art.ts [page], src/pages/ascii-tanks.ts [page], src/pages/breaking-spaces.ts [page], src/pages/caveats.ts [page], src/pages/kinetic.ts [page], src/pages/text-physics.ts [page], src/pages/text-rain.ts [page]
+[pages-3] Pages 3 (1 files, coh=1.00 coup=0.00)
+  1 files, primarily TypeScript
+  files: src/pages/about.ts [page]
+[pages-4] Pages 4 (1 files, coh=1.00 coup=0.00)
+  1 files, primarily TypeScript
+  files: src/pages/text-tetris.ts [page]
+[root] Root (1 files, coh=1.00 coup=0.00)
+  1 files, primarily TypeScript
+  files: vite.config.ts
+[shared] Shared (2 files, coh=0.00 coup=0.00)
+  2 files, primarily TypeScript
+  files: src/shared/newspaper-images.ts [utility], src/shared/newspaper-text.ts [types]
+[src] Src (1 files, coh=1.00 coup=0.00)
+  1 files, primarily TypeScript
+  files: src/env.d.ts
 
 Detailed zone context: .sourcevision/zones/{id}/context.md
 
@@ -55,78 +54,60 @@ Most imported:
   src/components/slider.ts ← src/pages/balanced-text.ts, src/pages/canvas.ts, src/pages/getting-started.ts, src/pages/i18n.ts, src/pages/rich-api.ts
   src/shared/nav-data.ts ← src/components/search.ts, src/pages/home.ts, src/shared/nav-data.test.ts, src/shared/shell.ts
   src/components/toggle.ts ← src/pages/accordion.ts, src/pages/balanced-text.ts
+  src/shared/controls.ts ← src/pages/home.ts, src/pages/home.ts, src/shared/shell.ts
   src/components/search.ts ← src/shared/shell.ts
   src/shared/analytics.ts ← src/shared/shell.ts
-  src/shared/newspaper-images.ts ← src/pages/home.ts, src/pages/home.ts
-  src/shared/newspaper-text.ts ← src/pages/home.ts
+  src/shared/museum.ts ← src/shared/shell.ts
 
 </imports>
 
 <findings>
 
-[warning] vite.config.ts hard-codes all 23 rollup entry points; adding a new page requires edits in at least three places (vite.config.ts, nav-data.ts, sitemap.xml) with no enforcement between them. [build-config]
-[warning] sitemap.xml is manually maintained and must mirror the 23 page entries in vite.config.ts and nav-data.ts; silent drift between them would degrade SEO coverage without any build-time warning. [deployment-assets]
-[warning] The about.ts page's zone placement is a community-detection artifact with no semantic basis. If the tooling acts on zone boundaries for code ownership or bundling decisions, this misclassification could cause about.ts to be treated as part of the newspaper demo's feature surface.
-[warning] nav-data.ts is the canonical page registry and the strongest candidate for a single source of truth, but it is not consumed by vite.config.ts or used to generate sitemap.xml — closing that gap would reduce the triplicate maintenance burden to a single file.
+[warning] Bidirectional coupling: "pages" ↔ "pages-2" (15+8 crossings) — consider extracting shared interface
 [warning] Fan-in hotspot: src/components/source-viewer.ts receives calls from 23 files — high-impact module, changes may have wide ripple effects
-[warning] search.ts contains a hand-maintained search index of all 23 pages; this is a third place (alongside vite.config.ts and sitemap.xml) that must be updated when pages are added or renamed, with no automated enforcement. [site-shell]
-[warning] Two separate CSS files (global.css line 122 and components.css line 544) independently assign z-index: 1000 to semantically distinct elements (.skip-link and .search-overlay) without any cross-file coordination. Introduce a z-index scale in variables.css so stacking decisions are made in one place and layer relationships are self-documenting.
-[warning] analytics.ts:1 hard-codes the GA measurement ID as a string literal. Replace with `import.meta.env.VITE_GA_ID ?? ''` so the tracking ID is configurable without a source edit and is not committed directly to the repository.
+[warning] Generic zone name "Pages 2" — enrichment did not assign a meaningful name reflecting this zone's domain purpose [pages-2]
+[warning] Generic zone name "Pages 3" — enrichment did not assign a meaningful name reflecting this zone's domain purpose [pages-3]
+[warning] Generic zone name "Pages 4" — enrichment did not assign a meaningful name reflecting this zone's domain purpose [pages-4]
 [warning] Hub function: createSourceViewer in src/components/source-viewer.ts is called from 23 files — changes here have wide impact, consider if responsibilities can be narrowed
-[warning] newspaper-images.ts and newspaper-text.ts are placed in src/shared/ but have no consumers other than home.ts. The shared/ directory implies cross-cutting reuse; these files create false structural gravity. Moving them into a src/pages/home/ feature folder would make ownership explicit. [newspaper-layout-demo]
-[warning] search.ts line 1 imports `tracks` from nav-data.ts but the symbol is never used in the file. The searchIndex is fully hardcoded. The dead import creates a false signal that search is data-driven from nav-data when it is not, and will cause confusion for any developer attempting to trace how search content is populated. [site-shell]
-[warning] home.ts crosses into the site-shell zone (imports tracks from nav-data.ts) while every other demo page is strictly limited to pretext-helpers and components. This asymmetric coupling makes home.ts an architectural outlier within its own zone and increases the blast radius of any nav-data API change. [demo-pages]
-[warning] home.ts imports `tracks` from nav-data to drive its newspaper column layout, creating a content coupling between the demo and the site's page registry. If nav-data.ts adds, removes, or renames pages or tracks, home.ts rendering is affected — a dependency no other demo page has. This is the only inbound edge from the site-infrastructure layer into a demo page. [newspaper-layout-demo]
-[warning] newspaper-text.ts and newspaper-images.ts are consumed exclusively by home.ts — a strict one-to-one relationship. Their placement in src/shared/ implies shared reuse that does not exist; they are effectively private data modules of the home page. [newspaper-layout-demo]
-[warning] vite.config.ts rollup inputs list text-flood as a build entry but nav-data.ts has no corresponding page record. The two registries — build config and navigation data — are the primary synchronization points for page existence, and they are diverged. A page omitted from nav-data.ts will never appear in navigation, prev/next links, or search regardless of whether it builds. [build-config]
-... +8 more
+[warning] Zone "pages-2" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID [pages-2]
+[warning] Zone "pages-3" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID [pages-3]
+[warning] Zone "pages-4" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID [pages-4]
+[warning] "Pages 2" imports "Pages" on 8 edge(s) while the 15 edge(s) between them run the other way — the minority direction looks like a layering violation [pages-2]
+[warning] "src/shared/newspaper-images.ts" exports 2 declaration(s) (TrayImageDef, TRAY_IMAGES) that no file in the project imports [shared]
 
 </findings>
 
 <next-steps>
 
-[high] Hub function: createSourceViewer in src/components/source-viewer.ts is called f…
+[high] CreateSourceViewer in src/components/source-viewer.ts is called from 23 files
   category: refactor
-[high] Fan-in hotspot: src/components/source-viewer.ts receives calls from 23 files — …
+[high] Fan-in hotspot: src/components/source-viewer.ts receives calls from 23 files
   category: refactor
-[medium] home.ts imports `tracks` from nav-data to drive its newspap… (+1 related)
-  files: src/pages/about.ts, src/pages/home.ts, src/shared/newspaper-images.ts
-  category: extract
-[medium] vite.config.ts rollup inputs list text-flood as a build entry but nav-data.ts h…
-  files: .gitignore, LICENSE, llms.txt
+[high] "Pages 2" imports "Pages" on 8 edge(s) while the 15 edge(s) between them run th…
+  files: src/components/source-viewer.ts, src/pages/accessibility.ts, src/pages/ascii-art.ts
   category: refactor
-[medium] sitemap.xml includes /pages/text-flood.html, which has no entry in nav-data.ts …
-  files: public/CNAME, public/robots.txt, public/sitemap.xml
+[high] Zone "pages-2" has a numeric suffix indicating an overflow community
+  files: src/components/source-viewer.ts, src/pages/accessibility.ts, src/pages/ascii-art.ts
   category: refactor
-[medium] vite.config.ts hard-codes all 23 rollup entry points; adding a new page require…
-  files: .gitignore, LICENSE, llms.txt
+[high] Generic zone name "Pages 2"
+  files: src/components/source-viewer.ts, src/pages/accessibility.ts, src/pages/ascii-art.ts
   category: refactor
-[medium] sitemap.xml is manually maintained and must mirror the 23 page entries in vite.…
-  files: public/CNAME, public/robots.txt, public/sitemap.xml
+[medium] "src/shared/newspaper-images.ts" exports 2 declaration(s) (TrayImageDef, TRAY_I…
+  files: src/shared/newspaper-images.ts, src/shared/newspaper-text.ts
   category: refactor
-[medium] newspaper-images.ts and newspaper-text.ts are placed in src/shared/ but have no…
-  files: src/pages/about.ts, src/pages/home.ts, src/shared/newspaper-images.ts
+[medium] Zone "pages-3" has a numeric suffix indicating an overflow community
+  files: src/pages/about.ts
   category: refactor
-[medium] search.ts builds its searchIndex with hardcoded absolute href strings (/pages/x…
-  files: src/components/search.ts, src/shared/analytics.ts, src/shared/nav-data.test.ts
+[medium] Zone "pages-4" has a numeric suffix indicating an overflow community
+  files: src/pages/text-tetris.ts
   category: refactor
-[medium] search.ts line 1 imports `tracks` from nav-data.ts but the symbol is never used…
-  files: src/components/search.ts, src/shared/analytics.ts, src/shared/nav-data.test.ts
-  category: extract
-[medium] search.ts contains a hand-maintained search index of all 23 pages; this is a th…
-  files: src/components/search.ts, src/shared/analytics.ts, src/shared/nav-data.test.ts
+[medium] "pages" ↔ "pages-2" (15+8 crossings)
   category: refactor
-[medium] search.ts line 1 imports `tracks` from nav-data but never uses the symbol anywh…
-  files: src/components/performance-meter.ts, src/components/slider.ts, src/components/source-viewer.ts
+[medium] Generic zone name "Pages 3"
+  files: src/pages/about.ts
   category: refactor
-[medium] home.ts crosses into the site-shell zone (imports tracks from nav-data.ts) whil…
-  files: src/components/performance-meter.ts, src/components/slider.ts, src/components/source-viewer.ts
-  category: extract
-[medium] initSearch() (search.ts:315) adds a document keydown listener with no guard aga…
-  files: src/components/performance-meter.ts, src/components/slider.ts, src/components/source-viewer.ts
-  category: refactor
-[medium] pipeline.ts:241, i18n.ts:258, and rich-api.ts:175/190 contain console.log calls…
-  files: src/components/performance-meter.ts, src/components/slider.ts, src/components/source-viewer.ts
+[medium] Generic zone name "Pages 4"
+  files: src/pages/text-tetris.ts
   category: refactor
 
 </next-steps>

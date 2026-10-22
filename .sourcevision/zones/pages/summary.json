@@ -1,0 +1,49 @@
+{
+  "id": "pages",
+  "name": "Pages",
+  "description": "28 files, primarily TypeScript",
+  "files": [
+    "src/components/performance-meter.ts",
+    "src/components/search.ts",
+    "src/components/slider.ts",
+    "src/components/toggle.ts",
+    "src/pages/accordion.ts",
+    "src/pages/api-reference.ts",
+    "src/pages/balanced-text.ts",
+    "src/pages/bubbles.ts",
+    "src/pages/canvas.ts",
+    "src/pages/editorial.ts",
+    "src/pages/getting-started.ts",
+    "src/pages/home.ts",
+    "src/pages/i18n.ts",
+    "src/pages/masonry.ts",
+    "src/pages/performance.ts",
+    "src/pages/pipeline.ts",
+    "src/pages/rich-api.ts",
+    "src/pages/text-flood.ts",
+    "src/pages/virtualized.ts",
+    "src/pages/why-pretext.ts",
+    "src/shared/analytics.ts",
+    "src/shared/controls.ts",
+    "src/shared/museum.ts",
+    "src/shared/nav-data.test.ts",
+    "src/shared/nav-data.ts",
+    "src/shared/pretext-helpers.test.ts",
+    "src/shared/pretext-helpers.ts",
+    "src/shared/shell.ts"
+  ],
+  "entryPoints": [
+    "src/shared/pretext-helpers.ts"
+  ],
+  "cohesion": 0.78,
+  "coupling": 0.22,
+  "fileCount": 28,
+  "lineCount": 5639,
+  "riskMetrics": {
+    "cohesion": 0.78,
+    "coupling": 0.22,
+    "riskScore": 0.21999999999999997,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}
