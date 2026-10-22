@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.0.0",
+  "toolVersion": "0.1.0",
+  "analyzedAt": "2026-10-22T14:26:57.178Z",
+  "targetPath": "/Users/nick/development/endash/ts-css",
+  "modules": {
+    "inventory": {
+      "status": "complete",
+      "startedAt": "2026-10-22T14:26:56.257Z",
+      "completedAt": "2026-10-22T14:26:56.322Z"
+    },
+    "imports": {
+      "status": "complete",
+      "startedAt": "2026-10-22T14:26:56.323Z",
+      "completedAt": "2026-10-22T14:26:56.449Z"
+    },
+    "classifications": {
+      "status": "complete",
+      "startedAt": "2026-10-22T14:26:56.450Z",
+      "completedAt": "2026-10-22T14:26:56.506Z"
+    },
+    "zones": {
+      "status": "complete",
+      "startedAt": "2026-10-22T14:26:56.507Z",
+      "completedAt": "2026-10-22T14:26:56.992Z"
+    },
+    "components": {
+      "status": "complete",
+      "startedAt": "2026-10-22T14:26:56.994Z",
+      "completedAt": "2026-10-22T14:26:57.056Z"
+    },
+    "callgraph": {
+      "status": "complete",
+      "startedAt": "2026-10-22T14:26:57.057Z",
+      "completedAt": "2026-10-22T14:26:57.178Z"
+    }
+  },
+  "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab",
+  "gitBranch": "feature/graview-banner",
+  "language": "typescript",
+  "languages": [
+    "typescript"
+  ],
+  "zoneOutputs": true,
+  "tokenUsage": {
+    "calls": 3,
+    "inputTokens": 3691,
+    "outputTokens": 260,
+    "vendor": "claude",
+    "model": "claude-sonnet-5-5"
+  },
+  "repo": {
+    "name": "learn-pretext",
+    "remoteUrl": "git@github.com:en-dash-consulting/learn-pretext.git",
+    "remoteHost": "github.com",
+    "remotePath": "en-dash-consulting/learn-pretext",
+    "defaultBranch": null
+  },
+  "analysisFingerprint": "492d9f0157b912f9",
+  "lastAnalysis": {
+    "at": "2026-10-22T14:26:56.255Z",
+    "mode": "fast",
+    "durationMs": 14169,
+    "phases": {
+      "inventory": 66,
+      "imports": 126,
+      "classifications": 57,
+      "zones": 487,
+      "components": 62,
+      "callgraph": 128
+    },
+    "llm": {
+      "byTaskClass": {
+        "zone.judge": {
+          "calls": 1,
+          "inputTokens": 956,
+          "outputTokens": 99,
+          "durationMs": 171,
+          "vendor": "typesafe",
+          "model": "jev-1.14.0"
+        },
+        "finding.judge": {
+          "calls": 2,
+          "inputTokens": 2735,
+          "outputTokens": 161,
+          "durationMs": 184,
+          "vendor": "typesafe",
+          "model": "jev-1.14.0"
+        },
+        "context.distill": {
+          "calls": 1,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "durationMs": 12527,
+          "vendor": "claude",
+          "model": "claude-sonnet-5-5"
+        }
+      },
+      "judgmentCache": {
+        "hits": 0,
+        "misses": 11
+      }
+    },
+    "partition": {
+      "fingerprint": "c605d27aadb916ea",
+      "health": {
+        "zones": 7,
+        "smallZones": 5,
+        "smallShare": 0.71,
+        "numericIds": 3,
+        "largestShare": 0.65,
+        "verdict": "borderline",
+        "reasons": [
+          "zone pages holds 65% of files"
+        ]
+      },
+      "initial": true,
+      "rejected": false,
+      "reused": false
+    },
+    "outcome": {
+      "files": 43,
+      "importEdges": 78,
+      "zoneIds": [
+        "pages",
+        "pages/canvas-i18n",
+        "pages/controls-home",
+        "pages/pages",
+        "pages/pages-2",
+        "pages/pretext",
+        "pages/shared",
+        "pages-2",
+        "pages-3",
+        "pages-4",
+        "root",
+        "shared",
+        "src"
+      ],
+      "findings": {
+        "warning": [
+          "7086bf3a38",
+          "fce0fe29ff",
+          "f95b9bb744",
+          "7eabbf2754",
+          "149b39b22f",
+          "be3070494f",
+          "086c890e00",
+          "ae5598d574",
+          "e3f0049ad2",
+          "428d706969",
+          "e720624ee2"
+        ],
+        "info": [
+          "b341591291",
+          "d7694367af",
+          "1204cd4d9a",
+          "fde5952491",
+          "21d019b987",
+          "a2e6dd6ce9",
+          "8d26b39f62",
+          "06c5d97e97",
+          "e28ba81d9f",
+          "4c0f4ab5db",
+          "e00d38316d",
+          "eb8dd0952a",
+          "3cc160f082",
+          "f55591639e"
+        ]
+      }
+    }
+  }
+}

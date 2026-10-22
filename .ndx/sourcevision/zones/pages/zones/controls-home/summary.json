@@ -1,0 +1,19 @@
+{
+  "id": "pages/controls-home",
+  "name": "Controls Home",
+  "description": "4 files, primarily TypeScript",
+  "files": [
+    "src/pages/home.ts",
+    "src/shared/controls.ts",
+    "src/shared/nav-data.test.ts",
+    "src/shared/nav-data.ts"
+  ],
+  "entryPoints": [
+    "src/shared/controls.ts",
+    "src/shared/nav-data.ts"
+  ],
+  "cohesion": 0.5,
+  "coupling": 0.5,
+  "fileCount": 4,
+  "lineCount": 773
+}

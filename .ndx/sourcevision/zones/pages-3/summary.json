@@ -1,0 +1,20 @@
+{
+  "id": "pages-3",
+  "name": "Pages 3",
+  "description": "1 files, primarily TypeScript",
+  "files": [
+    "src/pages/about.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 1,
+  "coupling": 0,
+  "fileCount": 1,
+  "lineCount": 72,
+  "riskMetrics": {
+    "cohesion": 1,
+    "coupling": 0,
+    "riskScore": 0,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

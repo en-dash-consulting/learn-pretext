@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "commands": [
+    {
+      "evidence": [
+        {
+          "kind": "manifest-script",
+          "path": "package.json",
+          "confidence": "certain",
+          "excerpt": "\"build\": \"tsc && vite build\""
+        }
+      ],
+      "kind": "build",
+      "command": "npm run build",
+      "runner": "npm"
+    },
+    {
+      "evidence": [
+        {
+          "kind": "manifest-script",
+          "path": "package.json",
+          "confidence": "certain",
+          "excerpt": "\"test\": \"vitest run\""
+        }
+      ],
+      "kind": "test",
+      "command": "npm run test",
+      "runner": "npm"
+    }
+  ],
+  "tests": {
+    "frameworks": [
+      {
+        "evidence": [
+          {
+            "kind": "dependency",
+            "path": "package.json",
+            "confidence": "certain",
+            "excerpt": "vitest"
+          }
+        ],
+        "name": "vitest"
+      }
+    ],
+    "suites": [
+      {
+        "evidence": [
+          {
+            "kind": "file-present",
+            "path": "src/shared/nav-data.test.ts",
+            "confidence": "likely"
+          }
+        ],
+        "kind": "unit",
+        "fileCount": 2
+      }
+    ]
+  },
+  "ci": [
+    {
+      "evidence": [
+        {
+          "kind": "workflow-file",
+          "path": ".github/workflows/deploy.yml",
+          "confidence": "certain"
+        }
+      ],
+      "provider": "github-actions",
+      "name": "Deploy to GitHub Pages",
+      "triggers": [
+        "push",
+        "workflow_dispatch"
+      ],
+      "jobs": [
+        {
+          "name": "build",
+          "steps": [
+            {
+              "kind": "checkout",
+              "uses": "actions/checkout@v4"
+            },
+            {
+              "kind": "setup",
+              "uses": "actions/setup-node@v4"
+            },
+            {
+              "kind": "install",
+              "run": "npm ci"
+            },
+            {
+              "kind": "build",
+              "run": "npm run build"
+            },
+            {
+              "kind": "other",
+              "uses": "actions/upload-pages-artifact@v3"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "steps": [
+            {
+              "kind": "deploy",
+              "uses": "actions/deploy-pages@v4"
+            }
+          ],
+          "needs": [
+            "build"
+          ],
+          "environment": "github-pages"
+        }
+      ]
+    }
+  ],
+  "cd": [
+    {
+      "evidence": [
+        {
+          "kind": "workflow-job",
+          "path": ".github/workflows/deploy.yml",
+          "confidence": "likely",
+          "excerpt": "deploy"
+        }
+      ],
+      "environment": "github-pages",
+      "mechanism": "github-actions",
+      "automated": true
+    }
+  ],
+  "rollback": [
+    {
+      "evidence": [
+        {
+          "kind": "manifest-version",
+          "path": "package.json",
+          "confidence": "likely",
+          "excerpt": "\"version\": \"1.0.0\""
+        }
+      ],
+      "mechanism": "tagged-release",
+      "versioning": "semver"
+    }
+  ],
+  "migrations": [],
+  "featureFlags": [],
+  "qualityGates": [],
+  "observability": [],
+  "containers": [],
+  "iac": [],
+  "parseFailures": []
+}

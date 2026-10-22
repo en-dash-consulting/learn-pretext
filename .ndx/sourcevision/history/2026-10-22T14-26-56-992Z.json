@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshots": [
+    {
+      "zoneId": "pages",
+      "zoneName": "Pages",
+      "cohesion": 0.78,
+      "coupling": 0.22,
+      "riskScore": 0.21999999999999997,
+      "fileCount": 28,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    },
+    {
+      "zoneId": "pages-2",
+      "zoneName": "Pages 2",
+      "cohesion": 0.4,
+      "coupling": 0.6,
+      "riskScore": 0.6,
+      "fileCount": 9,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    },
+    {
+      "zoneId": "pages-3",
+      "zoneName": "Pages 3",
+      "cohesion": 1,
+      "coupling": 0,
+      "riskScore": 0,
+      "fileCount": 1,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    },
+    {
+      "zoneId": "pages-4",
+      "zoneName": "Pages 4",
+      "cohesion": 1,
+      "coupling": 0,
+      "riskScore": 0,
+      "fileCount": 1,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    },
+    {
+      "zoneId": "root",
+      "zoneName": "Root",
+      "cohesion": 1,
+      "coupling": 0,
+      "riskScore": 0,
+      "fileCount": 1,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    },
+    {
+      "zoneId": "shared",
+      "zoneName": "Shared",
+      "cohesion": 0,
+      "coupling": 0,
+      "riskScore": 0.5,
+      "fileCount": 2,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    },
+    {
+      "zoneId": "src",
+      "zoneName": "Src",
+      "cohesion": 1,
+      "coupling": 0,
+      "riskScore": 0,
+      "fileCount": 1,
+      "timestamp": "2026-10-22T14:26:56.992Z",
+      "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+    }
+  ],
+  "analyzedAt": "2026-10-22T14:26:56.992Z",
+  "gitSha": "05aaa30ba30b8b233c10648ab0cfb3ec4f7bddab"
+}

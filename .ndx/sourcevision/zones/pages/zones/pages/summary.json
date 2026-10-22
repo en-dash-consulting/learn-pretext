@@ -1,0 +1,19 @@
+{
+  "id": "pages/pages",
+  "name": "Pages",
+  "description": "5 files, primarily TypeScript",
+  "files": [
+    "src/components/performance-meter.ts",
+    "src/pages/editorial.ts",
+    "src/pages/masonry.ts",
+    "src/pages/pipeline.ts",
+    "src/pages/virtualized.ts"
+  ],
+  "entryPoints": [
+    "src/components/performance-meter.ts"
+  ],
+  "cohesion": 0.42,
+  "coupling": 0.58,
+  "fileCount": 5,
+  "lineCount": 1075
+}

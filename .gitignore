@@ -2,3 +2,27 @@ node_modules/
 dist/
 .DS_Store
 *.local
+
+# n-dx local / generated
+ndx-export/
+.ndx/rex/prd.json.backup-*
+.ndx/rex/prd.json.migrated
+.ndx/config.local.json
+.ndx/graview/
+.ndx/rex/n-dx_workflow.md
+.ndx/rex/execution-log*.jsonl
+.ndx/rex/.cache/
+.ndx/hench/runs/
+.ndx/hench/locks/
+.ndx/hench/usage-cursors/
+.ndx/hench/reviews/
+.ndx/hench/recovery/
+.ndx/hench/mcp/
+.ndx/hench/session-cache.json
+.hench-commit-msg.txt
+.ndx-commit-msg.txt
+.run-logs/
+.ndx/sourcevision/.cache/
+README.proposed.md
+claude_commands.log
+claude_commands.log.*

@@ -1,0 +1,12 @@
+{
+  "llm": {
+    "vendor": "claude",
+    "claude": {
+      "model": "claude-sonnet-5-5"
+    }
+  },
+  "_initVersion": "0.9.0",
+  "cli": {
+    "name": "n-dx"
+  }
+}

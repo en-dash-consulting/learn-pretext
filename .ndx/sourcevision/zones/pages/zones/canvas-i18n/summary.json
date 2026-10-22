@@ -1,0 +1,17 @@
+{
+  "id": "pages/canvas-i18n",
+  "name": "Canvas I18n",
+  "description": "3 files, primarily TypeScript",
+  "files": [
+    "src/components/slider.ts",
+    "src/pages/canvas.ts",
+    "src/pages/i18n.ts"
+  ],
+  "entryPoints": [
+    "src/components/slider.ts"
+  ],
+  "cohesion": 0.36,
+  "coupling": 0.64,
+  "fileCount": 3,
+  "lineCount": 589
+}

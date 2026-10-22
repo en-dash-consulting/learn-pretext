@@ -1,0 +1,922 @@
+{
+  "edges": [
+    {
+      "from": "src/components/search.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/accessibility.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 5
+    },
+    {
+      "from": "src/pages/accessibility.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/toggle.ts",
+      "type": "static",
+      "symbols": [
+        "createToggle"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 9
+    },
+    {
+      "from": "src/pages/api-reference.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/api-reference.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ],
+      "weight": 9
+    },
+    {
+      "from": "src/pages/ascii-art.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/ascii-art.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/ascii-tanks.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/ascii-tanks.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/toggle.ts",
+      "type": "static",
+      "symbols": [
+        "createToggle"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 7
+    },
+    {
+      "from": "src/pages/breaking-spaces.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/breaking-spaces.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "timeExecution"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ],
+      "weight": 6
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 7
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 6
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ],
+      "weight": 5
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT"
+      ],
+      "weight": 7
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 10
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/controls.ts",
+      "type": "static",
+      "symbols": [
+        "getControlState",
+        "onControlChange"
+      ],
+      "weight": 2
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/controls.ts",
+      "type": "type",
+      "symbols": [
+        "InteractionMode"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks"
+      ],
+      "weight": 3
+    },
+    {
+      "from": "src/pages/home.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 6
+    },
+    {
+      "from": "src/pages/kinetic.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 2
+    },
+    {
+      "from": "src/pages/kinetic.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution",
+        "onResize"
+      ],
+      "weight": 7
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 10
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 3
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/slider.ts",
+      "type": "static",
+      "symbols": [
+        "createSlider"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 3
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 10
+    },
+    {
+      "from": "src/pages/text-flood.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/text-flood.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 9
+    },
+    {
+      "from": "src/pages/text-physics.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/text-physics.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/text-rain.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/text-rain.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "LINE_HEIGHT"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/text-tetris.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/text-tetris.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 3
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 8
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/components/performance-meter.ts",
+      "type": "static",
+      "symbols": [
+        "createPerfMeter"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/components/source-viewer.ts",
+      "type": "static",
+      "symbols": [
+        "createSourceViewer"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "waitForFonts",
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 10
+    },
+    {
+      "from": "src/shared/nav-data.test.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks",
+        "getPageIndex",
+        "getPrevPage",
+        "getNextPage"
+      ],
+      "weight": 10
+    },
+    {
+      "from": "src/shared/pretext-helpers.test.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "type": "static",
+      "symbols": [
+        "FONT",
+        "LINE_HEIGHT",
+        "timeExecution"
+      ],
+      "weight": 6
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/components/search.ts",
+      "type": "static",
+      "symbols": [
+        "createSearchButton",
+        "initSearch",
+        "openSearch"
+      ],
+      "weight": 3
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/analytics.ts",
+      "type": "static",
+      "symbols": [
+        "initAnalytics"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/controls.ts",
+      "type": "static",
+      "symbols": [
+        "buildControls",
+        "initControls"
+      ],
+      "weight": 2
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/museum.ts",
+      "type": "static",
+      "symbols": [
+        "initMuseum"
+      ],
+      "weight": 1
+    },
+    {
+      "from": "src/shared/shell.ts",
+      "to": "src/shared/nav-data.ts",
+      "type": "static",
+      "symbols": [
+        "tracks",
+        "getCurrentSlug",
+        "getPrevPage",
+        "getNextPage",
+        "getTrackForSlug",
+        "getBase"
+      ],
+      "weight": 10
+    }
+  ],
+  "external": [
+    {
+      "package": "@chenglou/pretext",
+      "importedBy": [
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts",
+        "src/pages/ascii-art.ts",
+        "src/pages/ascii-tanks.ts",
+        "src/pages/balanced-text.ts",
+        "src/pages/breaking-spaces.ts",
+        "src/pages/bubbles.ts",
+        "src/pages/canvas.ts",
+        "src/pages/caveats.ts",
+        "src/pages/editorial.ts",
+        "src/pages/getting-started.ts",
+        "src/pages/home.ts",
+        "src/pages/i18n.ts",
+        "src/pages/kinetic.ts",
+        "src/pages/masonry.ts",
+        "src/pages/performance.ts",
+        "src/pages/pipeline.ts",
+        "src/pages/rich-api.ts",
+        "src/pages/text-flood.ts",
+        "src/pages/text-physics.ts",
+        "src/pages/text-rain.ts",
+        "src/pages/text-tetris.ts",
+        "src/pages/virtualized.ts",
+        "src/pages/why-pretext.ts",
+        "src/shared/pretext-helpers.ts"
+      ],
+      "symbols": [
+        "LayoutCursor",
+        "PreparedText",
+        "PreparedTextWithSegments",
+        "clearCache",
+        "layout",
+        "layoutNextLine",
+        "layoutWithLines",
+        "prepare",
+        "prepareWithSegments",
+        "setLocale",
+        "walkLineRanges"
+      ]
+    },
+    {
+      "package": "@fontsource/inter",
+      "importedBy": [
+        "src/shared/shell.ts"
+      ],
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "package": "@fontsource/jetbrains-mono",
+      "importedBy": [
+        "src/shared/shell.ts"
+      ],
+      "symbols": [
+        "*"
+      ]
+    },
+    {
+      "package": "path",
+      "importedBy": [
+        "vite.config.ts"
+      ],
+      "symbols": [
+        "resolve"
+      ]
+    },
+    {
+      "package": "shiki",
+      "importedBy": [
+        "src/components/source-viewer.ts"
+      ],
+      "symbols": [
+        "codeToHtml"
+      ]
+    },
+    {
+      "package": "vite",
+      "importedBy": [
+        "vite.config.ts"
+      ],
+      "symbols": [
+        "defineConfig"
+      ]
+    },
+    {
+      "package": "vitest",
+      "importedBy": [
+        "src/shared/nav-data.test.ts",
+        "src/shared/pretext-helpers.test.ts"
+      ],
+      "symbols": [
+        "describe",
+        "expect",
+        "it"
+      ]
+    }
+  ],
+  "summary": {
+    "totalEdges": 78,
+    "totalExternal": 7,
+    "circularCount": 0,
+    "circulars": [],
+    "mostImported": [
+      {
+        "path": "src/shared/pretext-helpers.ts",
+        "count": 26
+      },
+      {
+        "path": "src/components/source-viewer.ts",
+        "count": 24
+      },
+      {
+        "path": "src/components/performance-meter.ts",
+        "count": 11
+      },
+      {
+        "path": "src/components/slider.ts",
+        "count": 5
+      },
+      {
+        "path": "src/shared/nav-data.ts",
+        "count": 4
+      },
+      {
+        "path": "src/components/toggle.ts",
+        "count": 2
+      },
+      {
+        "path": "src/shared/controls.ts",
+        "count": 2
+      },
+      {
+        "path": "src/components/search.ts",
+        "count": 1
+      },
+      {
+        "path": "src/shared/analytics.ts",
+        "count": 1
+      },
+      {
+        "path": "src/shared/museum.ts",
+        "count": 1
+      }
+    ],
+    "avgImportsPerFile": 2.69
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshots": [
+    {
+      "zoneId": "bubbles-demo",
+      "zoneName": "Bubbles Demo",
+      "cohesion": 1,
+      "coupling": 0,
+      "riskScore": 0,
+      "fileCount": 1,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    },
+    {
+      "zoneId": "build-config",
+      "zoneName": "Build Configuration",
+      "cohesion": 0,
+      "coupling": 0,
+      "riskScore": 0.5,
+      "fileCount": 4,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    },
+    {
+      "zoneId": "demo-pages",
+      "zoneName": "Demo Pages",
+      "cohesion": 0.96,
+      "coupling": 0.04,
+      "riskScore": 0.04000000000000002,
+      "fileCount": 28,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    },
+    {
+      "zoneId": "deployment-assets",
+      "zoneName": "Deployment Assets",
+      "cohesion": 0,
+      "coupling": 0,
+      "riskScore": 0.5,
+      "fileCount": 3,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    },
+    {
+      "zoneId": "newspaper-layout-demo",
+      "zoneName": "Newspaper Layout Demo",
+      "cohesion": 0.67,
+      "coupling": 0.33,
+      "riskScore": 0.32999999999999996,
+      "fileCount": 4,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    },
+    {
+      "zoneId": "pretext-reference-page",
+      "zoneName": "Pretext Reference Page",
+      "cohesion": 1,
+      "coupling": 0,
+      "riskScore": 0,
+      "fileCount": 1,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    },
+    {
+      "zoneId": "site-shell",
+      "zoneName": "Site Shell",
+      "cohesion": 0.95,
+      "coupling": 0.05,
+      "riskScore": 0.050000000000000024,
+      "fileCount": 10,
+      "timestamp": "2026-04-04T02:58:56.469Z",
+      "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+    }
+  ],
+  "analyzedAt": "2026-04-04T02:58:56.469Z",
+  "gitSha": "8bf45d7013fec9bf93087ea9a18c47a96eaa91dd"
+}

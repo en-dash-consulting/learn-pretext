@@ -1,0 +1,16 @@
+{
+  "id": "pages/shared",
+  "name": "Shared",
+  "description": "4 files, primarily TypeScript",
+  "files": [
+    "src/components/search.ts",
+    "src/shared/analytics.ts",
+    "src/shared/museum.ts",
+    "src/shared/shell.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 0.67,
+  "coupling": 0.33,
+  "fileCount": 4,
+  "lineCount": 1007
+}

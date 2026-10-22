@@ -1,0 +1,50 @@
+{
+  "schema": "hench/v1",
+  "provider": "cli",
+  "model": "sonnet",
+  "maxTurns": 50,
+  "maxTokens": 8192,
+  "tokenBudget": 0,
+  "rexDir": ".rex",
+  "apiKeyEnv": "ANTHROPIC_API_KEY",
+  "guard": {
+    "blockedPaths": [
+      ".hench/**",
+      ".rex/**",
+      ".git/**",
+      "node_modules/**"
+    ],
+    "allowedCommands": [
+      "npm",
+      "npx",
+      "node",
+      "git",
+      "tsc",
+      "vitest"
+    ],
+    "commandTimeout": 30000,
+    "maxFileSize": 1048576,
+    "spawnTimeout": 300000,
+    "maxConcurrentProcesses": 3,
+    "allowedGitSubcommands": [
+      "status",
+      "add",
+      "commit",
+      "diff",
+      "log",
+      "branch",
+      "checkout",
+      "stash",
+      "show",
+      "rev-parse"
+    ]
+  },
+  "retry": {
+    "maxRetries": 3,
+    "baseDelayMs": 2000,
+    "maxDelayMs": 30000
+  },
+  "loopPauseMs": 2000,
+  "maxFailedAttempts": 3,
+  "claudePath": "claude"
+}

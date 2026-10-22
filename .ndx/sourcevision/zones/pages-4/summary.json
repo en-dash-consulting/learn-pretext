@@ -1,0 +1,20 @@
+{
+  "id": "pages-4",
+  "name": "Pages 4",
+  "description": "1 files, primarily TypeScript",
+  "files": [
+    "src/pages/text-tetris.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 1,
+  "coupling": 0,
+  "fileCount": 1,
+  "lineCount": 760,
+  "riskMetrics": {
+    "cohesion": 1,
+    "coupling": 0,
+    "riskScore": 0,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "src",
+  "name": "Src",
+  "description": "1 files, primarily TypeScript",
+  "files": [
+    "src/env.d.ts"
+  ],
+  "entryPoints": [],
+  "cohesion": 1,
+  "coupling": 0,
+  "fileCount": 1,
+  "lineCount": 6,
+  "riskMetrics": {
+    "cohesion": 1,
+    "coupling": 0,
+    "riskScore": 0,
+    "riskLevel": "healthy",
+    "failsThreshold": false
+  }
+}

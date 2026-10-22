@@ -1,0 +1,1127 @@
+{
+  "zones": [
+    {
+      "id": "pages",
+      "name": "Pages",
+      "description": "28 files, primarily TypeScript",
+      "files": [
+        "src/components/performance-meter.ts",
+        "src/components/search.ts",
+        "src/components/slider.ts",
+        "src/components/toggle.ts",
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts",
+        "src/pages/balanced-text.ts",
+        "src/pages/bubbles.ts",
+        "src/pages/canvas.ts",
+        "src/pages/editorial.ts",
+        "src/pages/getting-started.ts",
+        "src/pages/home.ts",
+        "src/pages/i18n.ts",
+        "src/pages/masonry.ts",
+        "src/pages/performance.ts",
+        "src/pages/pipeline.ts",
+        "src/pages/rich-api.ts",
+        "src/pages/text-flood.ts",
+        "src/pages/virtualized.ts",
+        "src/pages/why-pretext.ts",
+        "src/shared/analytics.ts",
+        "src/shared/controls.ts",
+        "src/shared/museum.ts",
+        "src/shared/nav-data.test.ts",
+        "src/shared/nav-data.ts",
+        "src/shared/pretext-helpers.test.ts",
+        "src/shared/pretext-helpers.ts",
+        "src/shared/shell.ts"
+      ],
+      "entryPoints": [
+        "src/shared/pretext-helpers.ts"
+      ],
+      "cohesion": 0.78,
+      "coupling": 0.22,
+      "subCrossings": [
+        {
+          "from": "src/pages/canvas.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/canvas-i18n",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/pages/i18n.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/canvas-i18n",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/pages/canvas.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/canvas-i18n",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/i18n.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/canvas-i18n",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/home.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/controls-home",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/editorial.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/masonry.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/pipeline.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/virtualized.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/balanced-text.ts",
+          "to": "src/components/slider.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/canvas-i18n"
+        },
+        {
+          "from": "src/pages/accordion.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/pages/balanced-text.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/pages/accordion.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/api-reference.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/balanced-text.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/bubbles.ts",
+          "to": "src/shared/pretext-helpers.ts",
+          "fromZone": "pages/pages-2",
+          "toZone": "pages/pretext"
+        },
+        {
+          "from": "src/pages/getting-started.ts",
+          "to": "src/components/slider.ts",
+          "fromZone": "pages/pretext",
+          "toZone": "pages/canvas-i18n"
+        },
+        {
+          "from": "src/pages/rich-api.ts",
+          "to": "src/components/slider.ts",
+          "fromZone": "pages/pretext",
+          "toZone": "pages/canvas-i18n"
+        },
+        {
+          "from": "src/pages/performance.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/pretext",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/pages/rich-api.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/pretext",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/pages/why-pretext.ts",
+          "to": "src/components/performance-meter.ts",
+          "fromZone": "pages/pretext",
+          "toZone": "pages/pages"
+        },
+        {
+          "from": "src/components/search.ts",
+          "to": "src/shared/nav-data.ts",
+          "fromZone": "pages/shared",
+          "toZone": "pages/controls-home"
+        },
+        {
+          "from": "src/shared/shell.ts",
+          "to": "src/shared/controls.ts",
+          "fromZone": "pages/shared",
+          "toZone": "pages/controls-home"
+        },
+        {
+          "from": "src/shared/shell.ts",
+          "to": "src/shared/nav-data.ts",
+          "fromZone": "pages/shared",
+          "toZone": "pages/controls-home"
+        }
+      ],
+      "subZones": [
+        {
+          "id": "pages/canvas-i18n",
+          "name": "Canvas I18n",
+          "description": "3 files, primarily TypeScript",
+          "files": [
+            "src/components/slider.ts",
+            "src/pages/canvas.ts",
+            "src/pages/i18n.ts"
+          ],
+          "entryPoints": [
+            "src/components/slider.ts"
+          ],
+          "cohesion": 0.36,
+          "coupling": 0.64,
+          "depth": 1
+        },
+        {
+          "id": "pages/controls-home",
+          "name": "Controls Home",
+          "description": "4 files, primarily TypeScript",
+          "files": [
+            "src/pages/home.ts",
+            "src/shared/controls.ts",
+            "src/shared/nav-data.test.ts",
+            "src/shared/nav-data.ts"
+          ],
+          "entryPoints": [
+            "src/shared/controls.ts",
+            "src/shared/nav-data.ts"
+          ],
+          "cohesion": 0.5,
+          "coupling": 0.5,
+          "depth": 1
+        },
+        {
+          "id": "pages/pages",
+          "name": "Pages",
+          "description": "5 files, primarily TypeScript",
+          "files": [
+            "src/components/performance-meter.ts",
+            "src/pages/editorial.ts",
+            "src/pages/masonry.ts",
+            "src/pages/pipeline.ts",
+            "src/pages/virtualized.ts"
+          ],
+          "entryPoints": [
+            "src/components/performance-meter.ts"
+          ],
+          "cohesion": 0.42,
+          "coupling": 0.58,
+          "depth": 1
+        },
+        {
+          "id": "pages/pages-2",
+          "name": "Pages 2",
+          "description": "5 files, primarily TypeScript",
+          "files": [
+            "src/components/toggle.ts",
+            "src/pages/accordion.ts",
+            "src/pages/api-reference.ts",
+            "src/pages/balanced-text.ts",
+            "src/pages/bubbles.ts"
+          ],
+          "entryPoints": [],
+          "cohesion": 0.36,
+          "coupling": 0.64,
+          "depth": 1
+        },
+        {
+          "id": "pages/pretext",
+          "name": "Pretext",
+          "description": "7 files, primarily TypeScript",
+          "files": [
+            "src/pages/getting-started.ts",
+            "src/pages/performance.ts",
+            "src/pages/rich-api.ts",
+            "src/pages/text-flood.ts",
+            "src/pages/why-pretext.ts",
+            "src/shared/pretext-helpers.test.ts",
+            "src/shared/pretext-helpers.ts"
+          ],
+          "entryPoints": [
+            "src/shared/pretext-helpers.ts"
+          ],
+          "cohesion": 0.38,
+          "coupling": 0.62,
+          "depth": 1
+        },
+        {
+          "id": "pages/shared",
+          "name": "Shared",
+          "description": "4 files, primarily TypeScript",
+          "files": [
+            "src/components/search.ts",
+            "src/shared/analytics.ts",
+            "src/shared/museum.ts",
+            "src/shared/shell.ts"
+          ],
+          "entryPoints": [],
+          "cohesion": 0.67,
+          "coupling": 0.33,
+          "depth": 1
+        }
+      ],
+      "insights": [
+        "Contains 65% of project files (28/43) — subdivided into 6 sub-zones",
+        "[call graph] 280 internal calls, 16 outgoing, 10 incoming (cohesion: 0.95, coupling: 0.05)"
+      ],
+      "riskMetrics": {
+        "cohesion": 0.78,
+        "coupling": 0.22,
+        "riskScore": 0.21999999999999997,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "pages-2",
+      "name": "Pages 2",
+      "description": "9 files, primarily TypeScript",
+      "files": [
+        "src/components/source-viewer.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/ascii-art.ts",
+        "src/pages/ascii-tanks.ts",
+        "src/pages/breaking-spaces.ts",
+        "src/pages/caveats.ts",
+        "src/pages/kinetic.ts",
+        "src/pages/text-physics.ts",
+        "src/pages/text-rain.ts"
+      ],
+      "entryPoints": [
+        "src/components/source-viewer.ts"
+      ],
+      "cohesion": 0.4,
+      "coupling": 0.6,
+      "insights": [
+        "High coupling (0.6) — 8 imports target \"pages\"",
+        "Generic zone name \"Pages 2\" — enrichment did not assign a meaningful name reflecting this zone's domain purpose",
+        "Zone \"pages-2\" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID",
+        "\"Pages 2\" imports \"Pages\" on 8 edge(s) while the 15 edge(s) between them run the other way — the minority direction looks like a layering violation",
+        "[call graph] 102 internal calls, 8 outgoing, 17 incoming (cohesion: 0.93, coupling: 0.07)"
+      ],
+      "riskMetrics": {
+        "cohesion": 0.4,
+        "coupling": 0.6,
+        "riskScore": 0.6,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "pages-3",
+      "name": "Pages 3",
+      "description": "1 files, primarily TypeScript",
+      "files": [
+        "src/pages/about.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 1,
+      "coupling": 0,
+      "insights": [
+        "High cohesion (1) — files are tightly interconnected",
+        "Generic zone name \"Pages 3\" — enrichment did not assign a meaningful name reflecting this zone's domain purpose",
+        "Zone \"pages-3\" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID",
+        "[call graph] 1 internal calls, 0 outgoing, 0 incoming (cohesion: 1, coupling: 0)"
+      ],
+      "riskMetrics": {
+        "cohesion": 1,
+        "coupling": 0,
+        "riskScore": 0,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "pages-4",
+      "name": "Pages 4",
+      "description": "1 files, primarily TypeScript",
+      "files": [
+        "src/pages/text-tetris.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 1,
+      "coupling": 0,
+      "insights": [
+        "High cohesion (1) — files are tightly interconnected",
+        "Generic zone name \"Pages 4\" — enrichment did not assign a meaningful name reflecting this zone's domain purpose",
+        "Zone \"pages-4\" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID",
+        "[call graph] 25 internal calls, 3 outgoing, 0 incoming (cohesion: 0.89, coupling: 0.11)"
+      ],
+      "riskMetrics": {
+        "cohesion": 1,
+        "coupling": 0,
+        "riskScore": 0,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "root",
+      "name": "Root",
+      "description": "1 files, primarily TypeScript",
+      "files": [
+        "vite.config.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 1,
+      "coupling": 0,
+      "insights": [
+        "High cohesion (1) — files are tightly interconnected"
+      ],
+      "riskMetrics": {
+        "cohesion": 1,
+        "coupling": 0,
+        "riskScore": 0,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "shared",
+      "name": "Shared",
+      "description": "2 files, primarily TypeScript",
+      "files": [
+        "src/shared/newspaper-images.ts",
+        "src/shared/newspaper-text.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 0,
+      "coupling": 0,
+      "insights": [
+        "Isolated files — no import edges between 2 files, cohesion is unmeasurable (reported as 0)",
+        "\"src/shared/newspaper-images.ts\" exports 2 declaration(s) (TrayImageDef, TRAY_IMAGES) that no file in the project imports",
+        "\"src/shared/newspaper-text.ts\" exports 2 declaration(s) (NEWSPAPER_TITLE, NEWSPAPER_TEXT) that no file in the project imports"
+      ],
+      "riskMetrics": {
+        "cohesion": 0,
+        "coupling": 0,
+        "riskScore": 0.5,
+        "riskLevel": "at-risk",
+        "failsThreshold": false
+      }
+    },
+    {
+      "id": "src",
+      "name": "Src",
+      "description": "1 files, primarily TypeScript",
+      "files": [
+        "src/env.d.ts"
+      ],
+      "entryPoints": [],
+      "cohesion": 1,
+      "coupling": 0,
+      "insights": [
+        "High cohesion (1) — files are tightly interconnected"
+      ],
+      "riskMetrics": {
+        "cohesion": 1,
+        "coupling": 0,
+        "riskScore": 0,
+        "riskLevel": "healthy",
+        "failsThreshold": false
+      }
+    }
+  ],
+  "crossings": [
+    {
+      "from": "src/pages/accordion.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/api-reference.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/balanced-text.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/bubbles.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/canvas.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/editorial.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/getting-started.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/i18n.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/masonry.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/performance.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/pipeline.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/rich-api.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/text-flood.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/virtualized.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/why-pretext.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages",
+      "toZone": "pages-2"
+    },
+    {
+      "from": "src/pages/accessibility.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/ascii-art.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/ascii-tanks.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/breaking-spaces.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/caveats.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/kinetic.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/text-physics.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/text-rain.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-2",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/text-tetris.ts",
+      "to": "src/shared/pretext-helpers.ts",
+      "fromZone": "pages-4",
+      "toZone": "pages"
+    },
+    {
+      "from": "src/pages/text-tetris.ts",
+      "to": "src/components/source-viewer.ts",
+      "fromZone": "pages-4",
+      "toZone": "pages-2"
+    }
+  ],
+  "unzoned": [],
+  "insights": [
+    "Bidirectional coupling: \"pages\" ↔ \"pages-2\" (15+8 crossings) — consider extracting shared interface",
+    "Size imbalance: largest zone has 28 files vs smallest with 1 — uneven decomposition",
+    "src/pages/ contains files from 4 zones (pages, pages-2, pages-3, pages-4) — consider grouping into subdirectories to clarify architectural boundaries",
+    "File \"src/components/search.ts\" has 100% of import neighbors in src/shared/ but lives in src/components/ — consider relocating",
+    "[call graph] 16 calls: \"pages\" → \"pages-2\"",
+    "[call graph] 8 calls: \"pages-2\" → \"pages\""
+  ],
+  "findings": [
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Bidirectional coupling: \"pages\" ↔ \"pages-2\" (15+8 crossings) — consider extracting shared interface",
+      "severity": "warning"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Size imbalance: largest zone has 28 files vs smallest with 1 — uneven decomposition",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Fan-in hotspot: src/shared/pretext-helpers.ts receives calls from 25 files (high fan-in expected for this module type) — high-impact module, changes may have wide ripple effects",
+      "severity": "info",
+      "related": [
+        "src/shared/pretext-helpers.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts"
+      ]
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "global",
+      "text": "Fan-in hotspot: src/components/source-viewer.ts receives calls from 23 files — high-impact module, changes may have wide ripple effects",
+      "severity": "warning",
+      "related": [
+        "src/components/source-viewer.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/ascii-art.ts"
+      ]
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages",
+      "text": "Contains 65% of project files (28/43) — subdivided into 6 sub-zones",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages-2",
+      "text": "Generic zone name \"Pages 2\" — enrichment did not assign a meaningful name reflecting this zone's domain purpose",
+      "severity": "warning",
+      "confidence": 0.52
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages-2",
+      "text": "High coupling (0.6) — 8 imports target \"pages\"",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages-3",
+      "text": "Generic zone name \"Pages 3\" — enrichment did not assign a meaningful name reflecting this zone's domain purpose",
+      "severity": "warning",
+      "confidence": 0.42
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages-3",
+      "text": "High cohesion (1) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages-4",
+      "text": "Generic zone name \"Pages 4\" — enrichment did not assign a meaningful name reflecting this zone's domain purpose",
+      "severity": "warning",
+      "confidence": 0.52
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "pages-4",
+      "text": "High cohesion (1) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "root",
+      "text": "High cohesion (1) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "shared",
+      "text": "Isolated files — no import edges between 2 files, cohesion is unmeasurable (reported as 0)",
+      "severity": "info"
+    },
+    {
+      "type": "observation",
+      "pass": 0,
+      "scope": "src",
+      "text": "High cohesion (1) — files are tightly interconnected",
+      "severity": "info"
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "src/pages/ contains files from 4 zones (pages, pages-2, pages-3, pages-4) — consider grouping into subdirectories to clarify architectural boundaries",
+      "severity": "info"
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "Hub function: waitForFonts in src/shared/pretext-helpers.ts is called from 25 files (high fan-in expected for this module type) — changes here have wide impact, consider if responsibilities can be narrowed",
+      "severity": "info",
+      "related": [
+        "src/shared/pretext-helpers.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/api-reference.ts"
+      ]
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "Hub function: createSourceViewer in src/components/source-viewer.ts is called from 23 files — changes here have wide impact, consider if responsibilities can be narrowed",
+      "severity": "warning",
+      "related": [
+        "src/components/source-viewer.ts",
+        "src/pages/accessibility.ts",
+        "src/pages/accordion.ts",
+        "src/pages/ascii-art.ts"
+      ]
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "global",
+      "text": "2 potentially unused exports in src/shared/pretext-helpers.ts have no incoming calls: prepareText, measureHeight",
+      "severity": "info",
+      "related": [
+        "src/shared/pretext-helpers.ts"
+      ]
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "pages-2",
+      "text": "Zone \"pages-2\" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID",
+      "severity": "warning",
+      "confidence": 0.51
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "pages-3",
+      "text": "Zone \"pages-3\" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID",
+      "severity": "warning",
+      "confidence": 0.36
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "pages-4",
+      "text": "Zone \"pages-4\" has a numeric suffix indicating an overflow community — pin its files to a named zone or merge with the base zone to eliminate the ambiguous ID",
+      "severity": "warning",
+      "confidence": 0.45
+    },
+    {
+      "type": "move-file",
+      "pass": 0,
+      "scope": "global",
+      "text": "File \"src/components/search.ts\" has 100% of import neighbors in src/shared/ but lives in src/components/ — consider relocating",
+      "severity": "info",
+      "related": [
+        "src/components/search.ts"
+      ],
+      "from": "src/components/search.ts",
+      "to": "src/shared/",
+      "moveReason": "import-neighbor-majority",
+      "predictedImpact": 2
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 1,
+      "scope": "pages-2",
+      "text": "\"Pages 2\" imports \"Pages\" on 8 edge(s) while the 15 edge(s) between them run the other way — the minority direction looks like a layering violation",
+      "severity": "warning",
+      "category": "structural",
+      "related": [
+        "pages"
+      ],
+      "anchors": [
+        {
+          "file": "src/pages/accessibility.ts"
+        },
+        {
+          "file": "src/shared/pretext-helpers.ts"
+        },
+        {
+          "file": "src/pages/ascii-art.ts"
+        },
+        {
+          "file": "src/pages/ascii-tanks.ts"
+        },
+        {
+          "file": "src/pages/breaking-spaces.ts"
+        },
+        {
+          "file": "src/pages/caveats.ts"
+        },
+        {
+          "file": "src/pages/kinetic.ts"
+        },
+        {
+          "file": "src/pages/text-physics.ts"
+        },
+        {
+          "file": "src/pages/text-rain.ts"
+        }
+      ],
+      "confidence": 0.5
+    },
+    {
+      "type": "anti-pattern",
+      "pass": 1,
+      "scope": "shared",
+      "text": "\"src/shared/newspaper-images.ts\" exports 2 declaration(s) (TrayImageDef, TRAY_IMAGES) that no file in the project imports",
+      "severity": "warning",
+      "category": "code",
+      "anchors": [
+        {
+          "file": "src/shared/newspaper-images.ts",
+          "lineRange": [
+            1,
+            1
+          ],
+          "symbol": "TrayImageDef"
+        },
+        {
+          "file": "src/shared/newspaper-images.ts",
+          "lineRange": [
+            234,
+            234
+          ],
+          "symbol": "TRAY_IMAGES"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "type": "suggestion",
+      "pass": 0,
+      "scope": "shared",
+      "text": "Zone \"Shared\" has an unreliable risk reading: only 2 files tracked (minimum 5 needed for reliable metrics) — cohesion: 0.00, coupling: 0.00 (risk score: 0.50)",
+      "severity": "info"
+    }
+  ],
+  "structureHash": "c1680405c3a48577",
+  "inputFingerprint": "c605d27aadb916ea",
+  "zoneContentHashes": {
+    "pages": "20c55115647ed302",
+    "pages-2": "07ed90be1ad164dd",
+    "src": "b075ecffb983a158",
+    "pages-3": "e97156238958d6ac",
+    "pages-4": "b718061aaf47e2cc",
+    "shared": "ea60f1bba7618af6",
+    "root": "2f7f48608edc9ef9"
+  },
+  "lastReset": {
+    "from": 4,
+    "to": 1
+  },
+  "stability": {
+    "fileRetention": 0,
+    "persistedZones": 0,
+    "newZones": 7,
+    "removedZones": 7,
+    "reassignedFiles": [
+      [
+        "src/components/performance-meter.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/components/search.ts",
+        "site-shell",
+        "pages"
+      ],
+      [
+        "src/components/slider.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/components/toggle.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/accordion.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/api-reference.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/balanced-text.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/bubbles.ts",
+        "bubbles-demo",
+        "pages"
+      ],
+      [
+        "src/pages/canvas.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/editorial.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/getting-started.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/home.ts",
+        "newspaper-layout-demo",
+        "pages"
+      ],
+      [
+        "src/pages/i18n.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/masonry.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/performance.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/pipeline.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/rich-api.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/text-flood.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/virtualized.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/pages/why-pretext.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/shared/analytics.ts",
+        "site-shell",
+        "pages"
+      ],
+      [
+        "src/shared/nav-data.test.ts",
+        "site-shell",
+        "pages"
+      ],
+      [
+        "src/shared/nav-data.ts",
+        "site-shell",
+        "pages"
+      ],
+      [
+        "src/shared/pretext-helpers.test.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/shared/pretext-helpers.ts",
+        "demo-pages",
+        "pages"
+      ],
+      [
+        "src/shared/shell.ts",
+        "site-shell",
+        "pages"
+      ],
+      [
+        "src/components/source-viewer.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/accessibility.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/ascii-art.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/ascii-tanks.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/breaking-spaces.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/caveats.ts",
+        "pretext-reference-page",
+        "pages-2"
+      ],
+      [
+        "src/pages/kinetic.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/text-physics.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/text-rain.ts",
+        "demo-pages",
+        "pages-2"
+      ],
+      [
+        "src/pages/about.ts",
+        "newspaper-layout-demo",
+        "pages-3"
+      ],
+      [
+        "src/pages/text-tetris.ts",
+        "demo-pages",
+        "pages-4"
+      ],
+      [
+        "src/shared/newspaper-images.ts",
+        "newspaper-layout-demo",
+        "shared"
+      ],
+      [
+        "src/shared/newspaper-text.ts",
+        "newspaper-layout-demo",
+        "shared"
+      ],
+      [
+        "vite.config.ts",
+        "build-config",
+        "root"
+      ]
+    ]
+  },
+  "partitionReview": {
+    "fingerprint": "c605d27aadb916ea",
+    "health": {
+      "zones": 7,
+      "smallZones": 5,
+      "smallShare": 0.71,
+      "numericIds": 3,
+      "largestShare": 0.65,
+      "verdict": "borderline",
+      "reasons": [
+        "zone pages holds 65% of files"
+      ]
+    },
+    "initial": true,
+    "rejected": false
+  },
+  "algorithmVersion": 6
+}
